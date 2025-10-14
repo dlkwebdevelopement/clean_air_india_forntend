@@ -71,15 +71,15 @@ const App = () => {
         <Route path="admin-list" element={<AdminList />} />
         <Route path="/blog-list" element={<BlogList />} />
         <Route path="/product2" element={<ProductPage2 />} />
-        <Route path="/ourproduct2" element={<OurProduct2 />} />
-        <Route path="/ourproduct1" element={<Ourproduct1 />} />
-        <Route path="/ourproduct3" element={<OurProduct3 />} />
-        <Route path="/ourproduct4" element={<OurProduct4 />} />
-        <Route path="/ourproduct5" element={<OurProduct5 />} />
-        <Route path="/ourproduct6" element={<OurProduct6 />} />
-        <Route path="/ourproduct7" element={<OurProduct7 />} />
-        <Route path="/ourproduct9" element={<OurProduct9 />} />
-        <Route path="/ourproduct8" element={<OurProduct8 />} />
+        <Route path="/biosafety-cabinet" element={<OurProduct2 />} />
+        <Route path="/laminar-airflow" element={<Ourproduct1 />} />
+        <Route path="/fume-exhaust-hood" element={<OurProduct3 />} />
+        <Route path="/air-shower-system" element={<OurProduct4 />} />
+        <Route path="/powder-dispensing-booth" element={<OurProduct5 />} />
+        <Route path="/pass-box" element={<OurProduct6 />} />
+        <Route path="/sterile-garment-storage-cabinet" element={<OurProduct7 />} />
+        <Route path="/softwall-cleanrooms" element={<OurProduct9 />} />
+        <Route path="/modular-cleanroom" element={<OurProduct8 />} />
         {/* <Route path="/sass-landing-two" element={<SassLandingTwo />} /> */}
         {/* <Route path="/app-landing" element={<AppLanding />} /> */}
         <Route path="/home" element={<Corporate />} />
@@ -89,12 +89,12 @@ const App = () => {
         {/* <Route path="/defi-landing" element={<DefiLanding />} />
         <Route path="/newsletter" element={<Newsletter />} />
         <Route path="/chatbot" element={<Chatbot />} /> */}
-        <Route path="/rop1" element={<Ourrp1 />} />
-        <Route path="/rop2" element={<Ourrp2 />} />
-        <Route path="/rop3" element={<Ourrp3 />} />
-        <Route path="/cer" element={<Cer />} />
-        <Route path="/gar" element={<Gar />} />
-        <Route path="/pro" element={<Pro />} />
+        <Route path="/recommended-practices-for-clean-rooms" element={<Ourrp1 />} />
+        <Route path="/recommended-practices-for-fume-exhaust-hoods" element={<Ourrp2 />} />
+        <Route path="/recommended-practices-for-biosafety-cabinets" element={<Ourrp3 />} />
+        <Route path="/accreditation" element={<Cer />} />
+        <Route path="/gallery" element={<Gar />} />
+        <Route path="/products" element={<Pro />} />
         {/* <Route path="/business" element={<Business />} />
         <Route path="/finance" element={<Finance />} />
         <Route path="/accounting" element={<Accounting />} />

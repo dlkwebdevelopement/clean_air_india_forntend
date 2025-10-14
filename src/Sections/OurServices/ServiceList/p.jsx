@@ -55,15 +55,15 @@ const PPage = () => {
 
   // URL mapping
   const urlMap = {
-    "Laminar Airflow": "/ourproduct1",
-    "Biosafety Cabinet": "/ourproduct2",
-    "Fume Exhaust Hoods": "/ourproduct3",
-    "Air Shower System": "/ourproduct4",
-    "Powder Dispensing Booth": "/ourproduct5",
-    "Pass Boxes": "/ourproduct6",
-    "Sterile Storage Cabinet": "/ourproduct7",
-    "Modular Cleanroom": "/ourproduct8",
-    "Softwall Cleanrooms": "/ourproduct9"
+    "Laminar Airflow": "/laminar-airflow",
+    "Biosafety Cabinet": "/biosafety-cabinet",
+    "Fume Exhaust Hoods": "/fume-exhaust-hood",
+    "Air Shower System": "/air-shower-system",
+    "Powder Dispensing Booth": "/powder-dispensing-booth",
+    "Pass Boxes": "/pass-box",
+    "Sterile Storage Cabinet": "/sterile-garment-storage-cabinet",
+    "Modular Cleanroom": "/modular-cleanroom",
+    "Softwall Cleanrooms": "/softwall-cleanrooms"
   };
 
   const handleItemClick = (item) => {

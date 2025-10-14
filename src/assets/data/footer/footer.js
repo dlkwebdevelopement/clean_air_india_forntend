@@ -4,23 +4,23 @@ const Data = [
     menuList: [
       {
         title: "Laminar Airflow",
-        url: "/ourproduct1",
+        url: "/laminar-airflow",
       },
       {
         title: "Biosafety Cabinet",
-        url: "/ourproduct2",
+        url: "/biosafety-cabinet",
       },
       {
         title: "Laboratory Fume Exhaust Hood",
-        url: "/ourproduct3",
+        url: "/fume-exhaust-hood",
       },
       {
         title: "Air Shower System",
-        url: "/ourproduct4",
+        url: "/air-shower-system",
       },
       {
         title: "Powder Dispensing Booth",
-        url: "/ourproduct5",
+        url: "/powder-dispensing-booth",
       },
       
 
@@ -32,19 +32,19 @@ const Data = [
       
       {
         title: "Pass Box",
-        url: "/ourproduct6",
+        url: "/pass-box",
       },
       {
         title: "Sterile Storage Cabinet",
-        url: "/ourproduct7",
+        url: "/sterile-garment-storage-cabinet",
       },
       {
         title: "Modular Cleanroom",
-        url: "/ourproduct8",
+        url: "/modular-cleanroom",
       },
       {
         title: "Softwall Cleanrooms",
-        url: "/ourproduct9",
+        url: "/softwall-cleanrooms",
       },
 
     ],
@@ -94,7 +94,7 @@ const Data = [
       },
       {
         title: "Accreditation",
-        url: "/cer",
+        url: "accreditation",
       },
       {
         title: "Contact us",

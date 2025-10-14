@@ -62,44 +62,44 @@ const Data = [
   },
   {
     title: "Product",
-    // url: "/our-services",
+    url: "/products",
     subMenus: [
       {
         title: "Laminar Airflow",
-        url: "/ourproduct1",
+        url: "/laminar-airflow",
       },
       {
         title: "Biosafety Cabinet",
-        url: "/ourproduct2",
+        url: "/biosafety-cabinet",
       },
       {
         title: "Fume Exhaust Hood",
-        url: "/ourproduct3",
+        url: "/fume-exhaust-hood",
       },
       
       {
         title: "Air Shower System",
-        url: "/ourproduct4",
+        url: "/air-shower-system",
       },
       {
         title: "Powder Dispensing Booth",
-        url: "/ourproduct5",
+        url: "/powder-dispensing-booth",
       },
       {
         title: "Pass Box",
-        url: "/ourproduct6",
+        url: "/pass-box",
       },
       {
         title: "Sterile Storage Cabinet",
-        url: "/ourproduct7",
+        url: "/sterile-garment-storage-cabinet",
       },
       {
         title: "Modular Cleanroom",
-        url: "/ourproduct8",
+        url: "/modular-cleanroom",
       },
       {
         title: "Softwall Cleanrooms",
-        url: "/ourproduct9",
+        url: "/softwall-cleanrooms",
       },
     ],
   },
@@ -109,15 +109,15 @@ const Data = [
     subMenus: [
       {
         title: "Clean Room",
-        url: "/rop1",
+        url: "/recommended-practices-for-clean-rooms",
       },
       {
         title: "Fume Exhaust Hoods",
-        url: "/rop2",
+        url: "/recommended-practices-for-fume-exhaust-hoods",
       },
       {
         title: "Biosafety Cabinets",
-        url: "/rop3",
+        url: "/recommended-practices-for-biosafety-cabinets",
       },
       
       
@@ -126,11 +126,11 @@ const Data = [
 
   {
     title: "Accreditation",
-    url: "/cer",
+    url: "/accreditation",
   },
   {
     title: "Gallery",
-    url: "/gar",
+    url: "/gallery",
   },
 
   {
