@@ -578,24 +578,24 @@ const HeaderStyleWrapper = styled.header`
     }
   }
   &.corporate {
-    .main-menu {
-      li {
-        a {
-          font-size: 15px;
-        }
-      }
-    }
-    .header-extra {
-      gap: 20px;
+  .main-menu {
+    li {
       a {
-        span {
-          font-size: 15px;
-          margin-left: 4px;
-          min-width: max-content;
-        }
+        font-size: 15px; /* Remove the custom font-size to use default */
       }
     }
   }
+  .header-extra {
+    gap: 20px;
+    a {
+      span {
+        font-size: 15px; /* Remove the custom font-size to use default */
+        margin-left: 4px;
+        min-width: max-content;
+      }
+    }
+  }
+}
 
   .menu-toggler {
     border: 0;
@@ -1395,7 +1395,7 @@ const HeaderStyleWrapper = styled.header`
 
   @media screen and (min-width: 991px) and (max-width: 1200px) {
     .header-extra {
-      gap: 25px;
+      gap: 20px;
       .btn-light-green {
         width: 130px;
       }
@@ -1972,6 +1972,7 @@ const HeaderStyleWrapper = styled.header`
       ${v2Styles}
 
       background: ${({ theme }) => theme.colors.whiteColor};
+      
     `}
     
     ${({ variant }) =>
@@ -1995,6 +1996,24 @@ const HeaderStyleWrapper = styled.header`
     css`
       ${v2Styles}
     `} /* variant style end */
+
+    ${({ variant }) =>
+  variant != "corporate" &&
+  variant != "crypto" &&
+  variant != "crypto2" &&
+  variant != "crypto-token" &&
+  variant != "defi" &&
+  variant != "finance" &&
+  variant != "account" &&
+  css`
+    .main-menu {
+      li {
+        a {
+          font-size: 15px; /* Apply 15px font-size to non-corporate variants */
+        }
+      }
+    }
+  `}
 `;
 
 export default HeaderStyleWrapper;
