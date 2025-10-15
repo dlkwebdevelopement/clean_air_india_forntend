@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PageHeader from '../blog-list/components/PageHeader';  // Adjust path
-import Pagination from '../blog-list/components/Pagination';  // Adjust path
-import ConfirmationModal from '../blog-list/components/ConfirmationModal';  // Adjust path
-import AdminTable from './AdminTable';  // Assume new component similar to BlogTable
+import PageHeader from '../blog-list/components/PageHeader';
+import Pagination from '../blog-list/components/Pagination';
+import ConfirmationModal from '../blog-list/components/ConfirmationModal';
+import AdminTable from './AdminTable';
 import Header from '../../components copy/ui/Header';
 import SidebarNavigation from '../../components copy/ui/SidebarNavigation';
-// import './AdminList.css';  // Create if needed
 
 const AdminList = () => {
   const navigate = useNavigate();
@@ -38,8 +37,6 @@ const AdminList = () => {
       }
 
       const data = await response.json();
-      // console.log("admlist",data)
-      
       setAdmins(data);
       setTotalItems(data.length);
       setTotalPages(Math.ceil(data.length / itemsPerPage));
@@ -59,15 +56,65 @@ const AdminList = () => {
   };
 
   const handleDelete = async (adminId) => {
-    // Implement delete if needed, message doesn't specify actions, so optional
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch(`https://api.cleanairindia.com/api/users/${adminId}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to delete user');
+      }
+
+      // Refresh the admin list
+      await fetchAdmins();
+      setDeleteModal({ isOpen: false, adminId: null, isBulk: false, adminIds: [] });
+      
+    } catch (error) {
+      console.error('Error deleting user:', error);
+      alert(error.message || 'Error deleting user. Please try again.');
+    }
   };
 
   const handleBulkDelete = async (adminIds) => {
-    // Implement if needed
+    try {
+      const token = localStorage.getItem('token');
+      
+      // Delete users one by one
+      for (const adminId of adminIds) {
+        const response = await fetch(`https://api.cleanairindia.com/api/users/${adminId}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || `Failed to delete user with ID: ${adminId}`);
+        }
+      }
+
+      // Refresh the admin list
+      await fetchAdmins();
+      setDeleteModal({ isOpen: false, adminId: null, isBulk: false, adminIds: [] });
+      
+    } catch (error) {
+      console.error('Error in bulk delete:', error);
+      alert(error.message || 'Error deleting users. Please try again.');
+    }
   };
 
   const confirmDelete = () => {
-    // Call handleDelete or bulk
+    if (deleteModal.isBulk) {
+      handleBulkDelete(deleteModal.adminIds);
+    } else {
+      handleDelete(deleteModal.adminId);
+    }
   };
 
   const formattedAdmins = admins.map((admin, index) => ({
@@ -77,7 +124,7 @@ const AdminList = () => {
     createdDate: new Date(admin.createdAt).toLocaleDateString(),
     published: admin.publishedCount,
     drafts: admin.draftCount,
-    role:admin.role
+    role: admin.role
   }));
 
   return (
@@ -86,8 +133,6 @@ const AdminList = () => {
       <div className={`main-content ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
         <Header onSidebarToggle={handleSidebarToggle} sidebarCollapsed={sidebarCollapsed} />
         <div className="admin-list-content">
-          {/* <PageHeader totalBlogs={totalItems} publishedCount={0} draftCount={0} />       */}
-
           {loading ? (
             <div className="loading-container">
               <div className="loading-spinner"></div>
@@ -98,7 +143,7 @@ const AdminList = () => {
               <AdminTable
                 admins={formattedAdmins}
                 onDelete={(adminId) => setDeleteModal({ isOpen: true, adminId, isBulk: false, adminIds: [] })}
-                onBulkDelete={(adminIds) => setDeleteModal({ isOpen: true, adminId: null, isBulk: true, adminIds })}
+                // onBulkDelete={(adminIds) => setDeleteModal({ isOpen: true, adminId: null, isBulk: true, adminIds })}
               />
 
               {totalPages > 1 && (
@@ -120,8 +165,8 @@ const AdminList = () => {
             isOpen={deleteModal.isOpen}
             onClose={() => setDeleteModal({ isOpen: false, adminId: null, isBulk: false, adminIds: [] })}
             onConfirm={confirmDelete}
-            title={deleteModal.isBulk ? "Delete Multiple Admins" : "Delete Admin"}
-            message={deleteModal.isBulk ? `Are you sure you want to delete ${deleteModal.adminIds.length} selected admins?` : "Are you sure you want to delete this admin?"}
+            title={deleteModal.isBulk ? "Delete Multiple Users" : "Delete User"}
+            message={deleteModal.isBulk ? `Are you sure you want to delete ${deleteModal.adminIds.length} selected users?` : "Are you sure you want to delete this user?"}
             confirmText="Delete"
             confirmVariant="destructive"
           />

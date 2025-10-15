@@ -199,7 +199,7 @@ const Dashboard = () => {
               <div className="dashboard-footer-copyright">
                 © {new Date().getFullYear()} Blog Admin Dashboard. All rights reserved.
               </div>
-              <div className="dashboard-footer-links">
+              {/* <div className="dashboard-footer-links">
                 <button className="dashboard-footer-link">
                   Help & Support
                 </button>
@@ -209,7 +209,7 @@ const Dashboard = () => {
                 <button className="dashboard-footer-link">
                   API Reference
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

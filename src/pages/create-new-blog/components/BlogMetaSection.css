@@ -100,3 +100,32 @@
     justify-content: flex-end; /* justify-end */
     gap: 12px; /* space-x-3 */
 }
+
+
+/* Add these styles to your BlogMetaSection.css file */
+
+.category-option,
+.tag-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.category-actions,
+.tag-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.category-option:hover .category-actions,
+.tag-option:hover .tag-actions {
+  opacity: 1;
+}
+
+/* Ensure the Select component displays the custom content properly */
+.select-option {
+  width: 100%;
+}

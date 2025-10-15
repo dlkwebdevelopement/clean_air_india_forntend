@@ -3,7 +3,6 @@
 .admin-table-container {
   width: 100%;
   margin-top: 5rem;
-
 }
 
 .admin-table-desktop {
@@ -41,17 +40,13 @@
   font-size: 14px;
 }
 
-.admin-table-checkbox-cell {
-  width: 48px;
-}
-
 .admin-table-serial {
   width: 60px;
 }
 
 .admin-table-actions-cell {
-  width: 120px;
-  text-align: right;
+  width: 100px;
+  text-align: center;
 }
 
 .admin-table-row {
@@ -66,10 +61,6 @@
   padding: 12px 16px;
   font-size: 14px;
   color: #374151;
-}
-
-.admin-table-checkbox {
-  cursor: pointer;
 }
 
 .admin-table-name,
@@ -105,12 +96,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-}
-
-.admin-table-mobile-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .admin-table-mobile-serial {

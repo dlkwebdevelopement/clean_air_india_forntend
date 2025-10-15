@@ -60,14 +60,14 @@ const ActionButtons = ({ onEdit, onDelete, mobile = false }) => {
   return (
     <>
       <div className="action-buttons-desktop">
-        <Button
+        {/* <Button
           variant="ghost"
           size="icon"
           onClick={onEdit}
           className="action-button-icon-edit"
         >
           <Icon name="Edit" size={16} />
-        </Button>
+        </Button> */}
         <Button
           variant="ghost"
           size="icon"

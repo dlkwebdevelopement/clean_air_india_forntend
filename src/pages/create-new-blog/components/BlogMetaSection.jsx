@@ -22,6 +22,8 @@ const BlogMetaSection = ({
   const [isTagModalOpen, setIsTagModalOpen] = useState(false);
   const [newCategoryName, setNewCategoryName] = useState('');
   const [newTagName, setNewTagName] = useState('');
+  const [editingCategory, setEditingCategory] = useState(null);
+  const [editingTag, setEditingTag] = useState(null);
 
   const handleCreateCategory = async () => {
     if (newCategoryName?.trim()) {
@@ -42,7 +44,6 @@ const BlogMetaSection = ({
           setNewCategoryName('');
           setIsCategoryModalOpen(false);
           
-          // Notify parent component to refresh categories
           if (onCategoryCreated) {
             onCategoryCreated();
           }
@@ -52,6 +53,66 @@ const BlogMetaSection = ({
       } catch (error) {
         console.error('Error creating category:', error);
         alert('Error creating category. Please try again.');
+      }
+    }
+  };
+
+  const handleUpdateCategory = async () => {
+    if (newCategoryName?.trim() && editingCategory) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`https://api.cleanairindia.com/api/categories/${editingCategory._id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ name: newCategoryName })
+        });
+        
+        if (response.ok) {
+          setNewCategoryName('');
+          setEditingCategory(null);
+          setIsCategoryModalOpen(false);
+          
+          if (onCategoryCreated) {
+            onCategoryCreated();
+          }
+        } else {
+          throw new Error('Failed to update category');
+        }
+      } catch (error) {
+        console.error('Error updating category:', error);
+        alert('Error updating category. Please try again.');
+      }
+    }
+  };
+
+  const handleDeleteCategory = async (categoryId) => {
+    if (window.confirm('Are you sure you want to delete this category?')) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`https://api.cleanairindia.com/api/categories/${categoryId}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        
+        if (response.ok) {
+          if (onCategoryCreated) {
+            onCategoryCreated();
+          }
+          // If the deleted category was selected, clear the selection
+          if (selectedCategory === categoryId) {
+            onCategoryChange('');
+          }
+        } else {
+          throw new Error('Failed to delete category');
+        }
+      } catch (error) {
+        console.error('Error deleting category:', error);
+        alert('Error deleting category. Please try again.');
       }
     }
   };
@@ -75,7 +136,6 @@ const BlogMetaSection = ({
           setNewTagName('');
           setIsTagModalOpen(false);
           
-          // Notify parent component to refresh tags
           if (onTagCreated) {
             onTagCreated();
           }
@@ -87,6 +147,90 @@ const BlogMetaSection = ({
         alert('Error creating tag. Please try again.');
       }
     }
+  };
+
+  const handleUpdateTag = async () => {
+    if (newTagName?.trim() && editingTag) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`https://api.cleanairindia.com/api/tags/${editingTag._id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ name: newTagName })
+        });
+        
+        if (response.ok) {
+          setNewTagName('');
+          setEditingTag(null);
+          setIsTagModalOpen(false);
+          
+          if (onTagCreated) {
+            onTagCreated();
+          }
+        } else {
+          throw new Error('Failed to update tag');
+        }
+      } catch (error) {
+        console.error('Error updating tag:', error);
+        alert('Error updating tag. Please try again.');
+      }
+    }
+  };
+
+  const handleDeleteTag = async (tagId) => {
+    if (window.confirm('Are you sure you want to delete this tag?')) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`https://api.cleanairindia.com/api/tags/${tagId}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        
+        if (response.ok) {
+          if (onTagCreated) {
+            onTagCreated();
+          }
+          // Remove the deleted tag from selected tags if it was selected
+          if (selectedTags.includes(tagId)) {
+            onTagsChange(selectedTags.filter(id => id !== tagId));
+          }
+        } else {
+          throw new Error('Failed to delete tag');
+        }
+      } catch (error) {
+        console.error('Error deleting tag:', error);
+        alert('Error deleting tag. Please try again.');
+      }
+    }
+  };
+
+  const openEditCategoryModal = (category) => {
+    setEditingCategory(category);
+    setNewCategoryName(category.name);
+    setIsCategoryModalOpen(true);
+  };
+
+  const openEditTagModal = (tag) => {
+    setEditingTag(tag);
+    setNewTagName(tag.name);
+    setIsTagModalOpen(true);
+  };
+
+  const closeCategoryModal = () => {
+    setIsCategoryModalOpen(false);
+    setEditingCategory(null);
+    setNewCategoryName('');
+  };
+
+  const closeTagModal = () => {
+    setIsTagModalOpen(false);
+    setEditingTag(null);
+    setNewTagName('');
   };
 
   return (
@@ -109,7 +253,36 @@ const BlogMetaSection = ({
             </Button>
           </div>
           <Select
-            options={categories.map(cat => ({ value: cat._id, label: cat.name }))}
+            options={categories.map(cat => ({ 
+              value: cat._id, 
+              label: (
+                <div className="category-option">
+                  <span>{cat.name}</span>
+                  <div className="category-actions">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openEditCategoryModal(cat);
+                      }}
+                      iconName="Edit"
+                      iconSize={12}
+                    />
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeleteCategory(cat._id);
+                      }}
+                      iconName="Trash2"
+                      iconSize={12}
+                    />
+                  </div>
+                </div>
+              )
+            }))}
             value={selectedCategory}
             onChange={onCategoryChange}
             placeholder="Select a category..."
@@ -134,7 +307,36 @@ const BlogMetaSection = ({
             </Button>
           </div>
           <Select
-            options={tags.map(tag => ({ value: tag._id, label: tag.name }))}
+            options={tags.map(tag => ({ 
+              value: tag._id, 
+              label: (
+                <div className="tag-option">
+                  <span>{tag.name}</span>
+                  <div className="tag-actions">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        openEditTagModal(tag);
+                      }}
+                      iconName="Edit"
+                      iconSize={12}
+                    />
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDeleteTag(tag._id);
+                      }}
+                      iconName="Trash2"
+                      iconSize={12}
+                    />
+                  </div>
+                </div>
+              )
+            }))}
             value={selectedTags}
             onChange={onTagsChange}
             placeholder="Select tags..."
@@ -160,11 +362,14 @@ const BlogMetaSection = ({
           </p>
         </div>
       </div>
-      {/* Category Creation Modal */}
+
+      {/* Category Creation/Edit Modal */}
       {isCategoryModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h3 className="modal-title">Create New Category</h3>
+            <h3 className="modal-title">
+              {editingCategory ? 'Edit Category' : 'Create New Category'}
+            </h3>
             <Input
               label="Category Name"
               type="text"
@@ -177,22 +382,28 @@ const BlogMetaSection = ({
             <div className="modal-actions">
               <Button
                 variant="outline"
-                onClick={() => setIsCategoryModalOpen(false)}
+                onClick={closeCategoryModal}
               >
                 Cancel
               </Button>
-              <Button onClick={handleCreateCategory}>
-                Create Category
+              <Button 
+                onClick={editingCategory ? handleUpdateCategory : handleCreateCategory}
+                disabled={!newCategoryName.trim()}
+              >
+                {editingCategory ? 'Update Category' : 'Create Category'}
               </Button>
             </div>
           </div>
         </div>
       )}
-      {/* Tag Creation Modal */}
+
+      {/* Tag Creation/Edit Modal */}
       {isTagModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h3 className="modal-title">Create New Tag</h3>
+            <h3 className="modal-title">
+              {editingTag ? 'Edit Tag' : 'Create New Tag'}
+            </h3>
             <Input
               label="Tag Name"
               type="text"
@@ -205,12 +416,15 @@ const BlogMetaSection = ({
             <div className="modal-actions">
               <Button
                 variant="outline"
-                onClick={() => setIsTagModalOpen(false)}
+                onClick={closeTagModal}
               >
                 Cancel
               </Button>
-              <Button onClick={handleCreateTag}>
-                Create Tag
+              <Button 
+                onClick={editingTag ? handleUpdateTag : handleCreateTag}
+                disabled={!newTagName.trim()}
+              >
+                {editingTag ? 'Update Tag' : 'Create Tag'}
               </Button>
             </div>
           </div>
