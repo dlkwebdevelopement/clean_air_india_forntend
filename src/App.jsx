@@ -56,7 +56,8 @@ import AdminList from "./pages/sign-up/AdminList";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <>
+    
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Corporate />} />
@@ -112,7 +113,8 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="*" element={<Error />} />
       </Routes>
-    </BrowserRouter>
+   
+    </>
   );
 };
 

@@ -15,6 +15,7 @@ const SayHello = () => {
   const [formData, setFormData] = useState({
     'user-name': '',
     'email-address': '',
+    'phone-number': '',
     'company-name': '',
     city: '',
     country: '',
@@ -83,6 +84,7 @@ const SayHello = () => {
         setFormData({
           'user-name': '',
           'email-address': '',
+          'phone-number': '',
           'company-name': '',
           city: '',
           country: '',
@@ -166,6 +168,17 @@ const SayHello = () => {
                     </div>
                     <div className="form-input-between">
                       <div className="form-input mb-20">
+                        <label htmlFor="phone-number">Phone Number</label>
+                        <input
+                          type="tel"
+                          name="phone-number"
+                          id="phone-number"
+                          value={formData['phone-number']}
+                          onChange={handleInputChange}
+                          placeholder="e.g. +91 1234567890"
+                        />
+                      </div>
+                      <div className="form-input mb-20">
                         <label htmlFor="company-name">Company Name</label>
                         <input
                           type="text"
@@ -176,6 +189,8 @@ const SayHello = () => {
                           placeholder="Your company name"
                         />
                       </div>
+                    </div>
+                    <div className="form-input-between">
                       <div className="form-input mb-20">
                         <label htmlFor="city">City</label>
                         <input
@@ -187,17 +202,17 @@ const SayHello = () => {
                           placeholder="Your city"
                         />
                       </div>
-                    </div>
-                    <div className="form-input mb-20">
-                      <label htmlFor="country">Country</label>
-                      <input
-                        type="text"
-                        name="country"
-                        id="country"
-                        value={formData.country}
-                        onChange={handleInputChange}
-                        placeholder="Your country"
-                      />
+                      <div className="form-input mb-20">
+                        <label htmlFor="country">Country</label>
+                        <input
+                          type="text"
+                          name="country"
+                          id="country"
+                          value={formData.country}
+                          onChange={handleInputChange}
+                          placeholder="Your country"
+                        />
+                      </div>
                     </div>
                     <div className="form-input mb-20">
                       <label>Products of Interest</label>
