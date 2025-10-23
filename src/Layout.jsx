@@ -61,7 +61,7 @@ const Layout = ({ pageTitle, scrollVariant, children }) => {
       {children}
 
       {/* scroll top component */}
-      <ScrollTop variant={scrollVariant} />
+      {/* <ScrollTop variant={scrollVariant} /> */}
     </HelmetProvider>
   );
 };

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
 import Home from "./pages/Home";
 import CustomerService from "./pages/customer-service";
 import TeamCollaboration from "./pages/team-collaboration";
@@ -53,12 +53,16 @@ import BlogList from "./pages/blog-list";
 import CreateAdmin from "./pages/sign-up/CreateAdmin";
 import CreateChildAdmin from "./pages/sign-up/CreateAdmin";
 import AdminList from "./pages/sign-up/AdminList";
+import WhatsAppButton from "../src/components copy/WhatsAppButton";
+import CallButton from "../src/components copy/CallButton";
+import MailButton from "./components copy/MailButton";
 
 const App = () => {
   return (
     <>
     
       <ScrollToTop />
+       
       <Routes>
         <Route path="/" element={<Corporate />} />
         {/* <Route path="/customer-service" element={<CustomerService />} />
@@ -113,7 +117,12 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="*" element={<Error />} />
       </Routes>
-   
+
+      <WhatsAppButton/>
+      <CallButton/>
+      {/* <MailButton/> */}
+
+     
     </>
   );
 };
