@@ -20,11 +20,9 @@ const ContactLocationStyle = styled.section`
   .map-info-card {
     position: absolute;
     z-index: 1;
-    top: 30px;
-    left: 30px;
     width: 350px;
-    height: 390px;
-    padding: 30px;
+    height: 490px;
+    padding: 10px;
     background-color: ${({ theme }) => theme.colors.whiteColor};
     border-radius: 20px;
 

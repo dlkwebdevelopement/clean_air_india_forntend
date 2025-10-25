@@ -28,8 +28,22 @@ const ContactLocation = () => {
                                 ))}
                               {location.emails &&
                                 location.emails?.map((email, i) => (
-                                  <p key={i}>{email}</p>
+                                  <p key={i}>
+                                    <a
+                                      href={`mailto:${email}`}
+                                      style={{
+                                        color: "#007bff",
+                                        textDecoration: "none",
+                                        fontWeight: "500",
+                                      }}
+                                      onMouseEnter={(e) => (e.target.style.textDecoration = "underline")}
+                                      onMouseLeave={(e) => (e.target.style.textDecoration = "none")}
+                                    >
+                                      {email}
+                                    </a>
+                                  </p>
                                 ))}
+
                             </div>
                           </div>
                         </li>
@@ -49,7 +63,7 @@ const ContactLocation = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
-                  
+
                 </div>
               </div>
             </div>
