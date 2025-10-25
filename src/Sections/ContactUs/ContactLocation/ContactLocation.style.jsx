@@ -73,19 +73,71 @@ const ContactLocationStyle = styled.section`
     }
   }
 
-  @media screen and (max-width: 767px) {
-    padding: 30px 0 80px;
+  /* ✅ Tablet view (max-width: 992px) */
+  @media screen and (max-width: 992px) {
+    padding: 50px 0 100px 0;
+
+    .map-info-card {
+      width: 320px;
+      left: 20px;
+      top: 20px;
+      padding: 15px;
+    }
+
+    .contact-map {
+      height: 400px;
+    }
   }
 
-  @media screen and (max-width: 575px) {
+  /* ✅ Mobile view (max-width: 767px) */
+  @media screen and (max-width: 767px) {
+    padding: 30px 0 80px 0;
+
+    .map-content {
+      display: flex;
+      flex-direction: column;
+    }
+
     .map-info-card {
-      position: absolute;
-      z-index: 1;
-      top: 30px;
-      left: 30px;
-      width: 80%;
-      height: calc(100% - 60px);
-      padding: 20px;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-map {
+      height: 350px;
+    }
+  }
+
+  /* ✅ Small mobile view (max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    padding: 20px 0 60px 0;
+
+    .map-info-card {
+      padding: 12px;
+    }
+
+    .list-item {
+      gap: 10px;
+
+      h4 {
+        font-size: 14px;
+      }
+
+      p,
+      a {
+        font-size: 13px;
+      }
+    }
+
+    .contact-map {
+      height: 300px;
     }
   }
 `;
