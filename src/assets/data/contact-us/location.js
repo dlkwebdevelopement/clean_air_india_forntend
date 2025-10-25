@@ -16,7 +16,7 @@ const data = [
   {
     icon: Icon3,
     title: "Mail Us",
-    emails: ["Info: ravi@cleanairindia.com"],
+    emails: ["ravi@cleanairindia.com"],
   },
 ];
 
