@@ -60,14 +60,14 @@ const ActionButtons = ({ onEdit, onDelete, mobile = false }) => {
   return (
     <>
       <div className="action-buttons-desktop">
-        {/* <Button
+        <Button
           variant="ghost"
           size="icon"
           onClick={onEdit}
           className="action-button-icon-edit"
         >
           <Icon name="Edit" size={16} />
-        </Button> */}
+        </Button>
         <Button
           variant="ghost"
           size="icon"
@@ -83,7 +83,7 @@ const ActionButtons = ({ onEdit, onDelete, mobile = false }) => {
         onClose={() => setShowDeleteModal(false)}
         onConfirm={confirmDelete}
         title="Delete Blog Post"
-        message="Are you sure you want to delete this blog post? This action cannot be undone."
+        message="Are you sure you want to delete this blog post?"
         confirmText="Delete"
         confirmVariant="destructive"
       />

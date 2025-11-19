@@ -100,7 +100,7 @@ const SignUpForm = ({ onToggleForm }) => {
 
     setLoading(true);
     try {
-      const response = await fetch('https://api.cleanairindia.com/api/signup', {
+      const response = await fetch('http://192.168.1.66:5000/api/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData), // ✅ username is included

@@ -26,23 +26,24 @@ const ContactLocation = () => {
                                 location.phoneNumbers?.map((phoneNumber, i) => (
                                   <p key={i}>{phoneNumber}</p>
                                 ))}
-                              {location.emails &&
-                                location.emails?.map((email, i) => (
-                                  <p key={i}>
-                                    <a
-                                      href={`mailto:${email}`}
-                                      style={{
-                                        color: "#007bff",
-                                        textDecoration: "none",
-                                        fontWeight: "500",
-                                      }}
-                                      onMouseEnter={(e) => (e.target.style.textDecoration = "underline")}
-                                      onMouseLeave={(e) => (e.target.style.textDecoration = "none")}
-                                    >
-                                      {email}
-                                    </a>
-                                  </p>
-                                ))}
+                             {Array.isArray(location.emails) &&
+  location.emails.map((email, i) => (
+    <p key={i}>
+      <a
+        href={`mailto:${email}`}
+        style={{
+          color: "#007bff",
+          textDecoration: "none",
+          fontWeight: "500",
+        }}
+        onMouseEnter={(e) => (e.target.style.textDecoration = "underline")}
+        onMouseLeave={(e) => (e.target.style.textDecoration = "none")}
+      >
+        {email}
+      </a>
+    </p>
+  ))}
+
 
                             </div>
                           </div>

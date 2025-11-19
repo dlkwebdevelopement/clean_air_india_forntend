@@ -20,7 +20,7 @@ const Sidebar = () => {
       const token = localStorage.getItem('token');
       
       // Fetch categories
-      const categoriesResponse = await fetch('https://api.cleanairindia.com/api/categories', {
+      const categoriesResponse = await fetch('http://192.168.1.66:5000/api/categories', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -32,7 +32,7 @@ const Sidebar = () => {
       }
 
       // Fetch recent posts
-      const postsResponse = await fetch('https://api.cleanairindia.com/api/blogs?page=1&limit=3&status=published', {
+      const postsResponse = await fetch('http://192.168.1.66:5000/api/blogs?page=1&limit=3&status=published', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -44,7 +44,7 @@ const Sidebar = () => {
       }
 
       // Fetch tags
-      const tagsResponse = await fetch('https://api.cleanairindia.com/api/tags', {
+      const tagsResponse = await fetch('http://192.168.1.66:5000/api/tags', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

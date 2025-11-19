@@ -33,7 +33,7 @@ const BlogList = () => {
     const fetchCategories = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://api.cleanairindia.com/api/categories', {
+        const response = await fetch('http://192.168.1.66:5000/api/categories', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -55,7 +55,7 @@ const BlogList = () => {
   const fetchTags = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/tags', {
+      const response = await fetch('http://192.168.1.66:5000/api/tags', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -126,7 +126,7 @@ useEffect(() => {
       if (filters.tag) queryParams.append('tag', filters.tag);
       if (filters.search) queryParams.append('search', filters.search);
 
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs?${queryParams.toString()}`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs?${queryParams.toString()}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -156,7 +156,7 @@ useEffect(() => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs?search=${encodeURIComponent(searchTerm)}&limit=5`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs?search=${encodeURIComponent(searchTerm)}&limit=5`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }

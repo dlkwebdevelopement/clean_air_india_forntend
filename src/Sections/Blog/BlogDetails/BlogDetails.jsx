@@ -31,7 +31,7 @@ const BlogDetails = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${blogId}`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs/${blogId}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -43,11 +43,12 @@ const BlogDetails = () => {
       
       const data = await response.json();
       setBlog(data);
+      // console.log("test",blog.content)
       
       // Fetch related blogs (same category, exclude current blog)
       if (data.category) {
         const relatedResponse = await fetch(
-          `https://api.cleanairindia.com/api/blogs?page=1&limit=3&category=${data.category._id}&status=published`,
+          `http://192.168.1.66:5000/api/blogs?page=1&limit=3&category=${data.category._id}&status=published`,
           {
             // headers: {
             //   'Authorization': `Bearer ${token}`
@@ -157,11 +158,11 @@ const BlogDetails = () => {
             <div className="col-lg-8">
               {/* blog details content */}
               <div className="blog-details-content">
-                <ScrollAnimate>
+                {/* <ScrollAnimate>
                   <div className="blog-details-img">
                     <img src={blog.featuredImage || BlogDetailsImg} alt={blog.title} />
                   </div>
-                </ScrollAnimate>
+                </ScrollAnimate> */}
                 <div className="blog-details-inner">
                   <div className="blog-details-info-list">
                     <ScrollAnimate>
@@ -196,12 +197,12 @@ const BlogDetails = () => {
                       </ul>
                     </ScrollAnimate>
                   </div>
-                  <ScrollAnimate>
+                  
                     <div 
                       className="blog-content"
                       dangerouslySetInnerHTML={{ __html: blog.content }}
                     />
-                  </ScrollAnimate>
+                  
 
                   <ScrollAnimate>
                     <div className="blog-tag-section">

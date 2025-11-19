@@ -85,7 +85,7 @@ const BlogList = () => {
 
       console.log('Fetching blogs with params:', params.toString());
 
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs?${params}`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs?${params}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -113,7 +113,7 @@ const BlogList = () => {
   const fetchAllBlogsForStats = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs?limit=1000`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs?limit=1000`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -130,7 +130,7 @@ const BlogList = () => {
   const fetchCategories = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/categories', {
+      const response = await fetch('http://192.168.1.66:5000/api/categories', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -205,7 +205,7 @@ const BlogList = () => {
   const handleDelete = async (blogId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${blogId}`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs/${blogId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -231,7 +231,7 @@ const BlogList = () => {
       
       // Delete each blog in the list
       const deletePromises = blogIds.map(id => 
-        fetch(`https://api.cleanairindia.com/api/blogs/${id}`, {
+        fetch(`http://192.168.1.66:5000/api/blogs/${id}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -256,7 +256,7 @@ const BlogList = () => {
       
       // Update each blog in the list
       const updatePromises = blogIds.map(id => 
-        fetch(`https://api.cleanairindia.com/api/blogs/${id}`, {
+        fetch(`http://192.168.1.66:5000/api/blogs/${id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

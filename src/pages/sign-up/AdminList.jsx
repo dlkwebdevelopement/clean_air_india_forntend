@@ -23,7 +23,7 @@ const AdminList = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/users`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/users`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -58,7 +58,7 @@ const AdminList = () => {
   const handleDelete = async (adminId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/users/${adminId}`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/users/${adminId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -86,7 +86,7 @@ const AdminList = () => {
       
       // Delete users one by one
       for (const adminId of adminIds) {
-        const response = await fetch(`https://api.cleanairindia.com/api/users/${adminId}`, {
+        const response = await fetch(`http://192.168.1.66:5000/api/users/${adminId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`

@@ -131,11 +131,11 @@ const BlogTable = ({
                   {getSortIcon('status')}
                 </button>
               </th>
-              {isAdmin && (
+             
                 <th className="blog-table-head-cell blog-table-actions-cell">
                   Actions
                 </th>
-              )}
+            
             </tr>
           </thead>
           <tbody className="blog-table-body">
@@ -178,14 +178,14 @@ const BlogTable = ({
                 <td className="blog-table-cell">
                   <StatusBadge status={blog?.status} />
                 </td>
-                {isAdmin && (
+                
                   <td className="blog-table-cell blog-table-actions-cell">
                     <ActionButtons
                       onEdit={() => onEdit(blog?.id)}
                       onDelete={() => onDelete(blog?.id)}
                     />
                   </td>
-                )}
+              
               </tr>
             ))}
           </tbody>
@@ -230,13 +230,13 @@ const BlogTable = ({
                   <span>{blog?.createdDate}</span>
                 </div>
               </div>
-              {isAdmin && (
+             
                 <ActionButtons
                   onEdit={() => onEdit(blog?.id)}
                   onDelete={() => onDelete(blog?.id)}
                   mobile
                 />
-              )}
+             
             </div>
           </div>
         ))}

@@ -16,7 +16,8 @@ const BlogMetaSection = ({
   onFeaturedImageChange,
   errors,
   onCategoryCreated,
-  onTagCreated
+  onTagCreated,
+  isFeaturedImageEditable = true
 }) => {
   const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false);
   const [isTagModalOpen, setIsTagModalOpen] = useState(false);
@@ -29,7 +30,7 @@ const BlogMetaSection = ({
     if (newCategoryName?.trim()) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://api.cleanairindia.com/api/categories', {
+        const response = await fetch('http://192.168.1.66:5000/api/categories', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -61,7 +62,7 @@ const BlogMetaSection = ({
     if (newCategoryName?.trim() && editingCategory) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://api.cleanairindia.com/api/categories/${editingCategory._id}`, {
+        const response = await fetch(`http://192.168.1.66:5000/api/categories/${editingCategory._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -92,7 +93,7 @@ const BlogMetaSection = ({
     if (window.confirm('Are you sure you want to delete this category?')) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://api.cleanairindia.com/api/categories/${categoryId}`, {
+        const response = await fetch(`http://192.168.1.66:5000/api/categories/${categoryId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -121,7 +122,7 @@ const BlogMetaSection = ({
     if (newTagName?.trim()) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://api.cleanairindia.com/api/tags', {
+        const response = await fetch('http://192.168.1.66:5000/api/tags', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -153,7 +154,7 @@ const BlogMetaSection = ({
     if (newTagName?.trim() && editingTag) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://api.cleanairindia.com/api/tags/${editingTag._id}`, {
+        const response = await fetch(`http://192.168.1.66:5000/api/tags/${editingTag._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -184,7 +185,7 @@ const BlogMetaSection = ({
     if (window.confirm('Are you sure you want to delete this tag?')) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`https://api.cleanairindia.com/api/tags/${tagId}`, {
+        const response = await fetch(`http://192.168.1.66:5000/api/tags/${tagId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -356,10 +357,23 @@ const BlogMetaSection = ({
             value={featuredImage}
             onChange={(e) => onFeaturedImageChange(e.target.value)}
             error={errors?.featuredImage}
+            readOnly={!isFeaturedImageEditable} // Make non-editable
+            className={!isFeaturedImageEditable ? 'read-only-field' : ''}
           />
           <p className="image-upload-text">
-            Enter the URL of your featured image
+            {isFeaturedImageEditable 
+              ? "Enter the URL of your featured image or upload an image in the editor to auto-populate this field"
+              : "Featured image is automatically set from your uploaded images"}
           </p>
+          {featuredImage && (
+            <div className="featured-image-preview">
+              <img 
+                src={featuredImage} 
+                alt="Featured preview" 
+                className="preview-img"
+              />
+            </div>
+          )}
         </div>
       </div>
 

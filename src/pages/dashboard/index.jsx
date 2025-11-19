@@ -17,6 +17,12 @@ const Dashboard = () => {
   });
   const [recentActivities, setRecentActivities] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  
+    useEffect(() => {
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+      setIsAdmin(storedUser?.role === 'admin');
+    }, []);
 
   useEffect(() => {
     fetchDashboardData();
@@ -27,7 +33,7 @@ const Dashboard = () => {
       const token = localStorage.getItem('token');
       
       // Fetch blog counts
-      const blogsResponse = await fetch('https://api.cleanairindia.com/api/blogs', {
+      const blogsResponse = await fetch('http://192.168.1.66:5000/api/blogs', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -38,7 +44,7 @@ const Dashboard = () => {
         const totalBlogs = blogsData.pagination?.total || 0;
         
         // Fetch published blogs count
-        const publishedResponse = await fetch('https://api.cleanairindia.com/api/blogs?status=published', {
+        const publishedResponse = await fetch('http://192.168.1.66:5000/api/blogs?status=published', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -48,7 +54,7 @@ const Dashboard = () => {
         const publishedCount = publishedData.pagination?.total || 0;
         
         // Fetch draft blogs count
-        const draftsResponse = await fetch('https://api.cleanairindia.com/api/blogs?status=draft', {
+        const draftsResponse = await fetch('http://192.168.1.66:5000/api/blogs?status=draft', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -152,18 +158,21 @@ const Dashboard = () => {
         <div className="dashboard-content">
           {/* Welcome Section */}
           <div className="dashboard-welcome">
-            <h1 className="dashboard-welcome-title">
-              Welcome back, Admin!
-            </h1>
-            <p className="dashboard-welcome-subtitle">
-              Here's what's happening with your blog today - {new Date().toLocaleDateString('en-US', { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
-            </p>
-          </div>
+  <h1 className="dashboard-welcome-title">
+    Welcome back, {isAdmin ? "Admin" : "Publisher"}!
+  </h1>
+
+  <p className="dashboard-welcome-subtitle">
+    Here's what's happening with your blog today -{" "}
+    {new Date().toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })}
+  </p>
+</div>
+
 
           {/* Metrics Cards - Now 3 cards */}
           <div className="metrics-grid-three">

@@ -32,9 +32,9 @@ const AdminTable = ({
               <th className="admin-table-head-cell">
                 <span>Role</span>
               </th>
-              <th className="admin-table-head-cell admin-table-actions-cell">
+              {/* <th className="admin-table-head-cell admin-table-actions-cell">
                 Actions
-              </th>
+              </th> */}
             </tr>
           </thead>
           <tbody className="admin-table-body">
@@ -66,12 +66,12 @@ const AdminTable = ({
                     {admin?.role ? admin.role.charAt(0).toUpperCase() + admin.role.slice(1) : 'Unknown'}
                   </span>
                 </td>
-                <td className="admin-table-cell admin-table-actions-cell">
+                {/* <td className="admin-table-cell admin-table-actions-cell">
                   <ActionButtons
                     onDelete={() => onDelete(admin?.id)}
                     hideEdit
                   />
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

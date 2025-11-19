@@ -40,6 +40,10 @@ const CreateNewBlog = () => {
     publish: false
   });
 
+   const handleFeaturedImageUpdate = (imagePath) => {
+    setFormData(prev => ({ ...prev, featuredImage: imagePath }));
+  };
+
   const [refreshCategories, setRefreshCategories] = useState(0);
   const [refreshTags, setRefreshTags] = useState(0);
 
@@ -64,7 +68,7 @@ const CreateNewBlog = () => {
   const fetchCategories = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/categories', {
+      const response = await fetch('http://192.168.1.66:5000/api/categories', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -81,7 +85,7 @@ const CreateNewBlog = () => {
   const fetchTags = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/tags', {
+      const response = await fetch('http://192.168.1.66:5000/api/tags', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -98,7 +102,7 @@ const CreateNewBlog = () => {
   const fetchBlogData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${editBlogId}`, {
+      const response = await fetch(`http://192.168.1.66:5000/api/blogs/${editBlogId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -185,8 +189,8 @@ const CreateNewBlog = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode
-        ? `https://api.cleanairindia.com/api/blogs/${editBlogId}`
-        : 'https://api.cleanairindia.com/api/blogs';
+        ? `http://192.168.1.66:5000/api/blogs/${editBlogId}`
+        : 'http://192.168.1.66:5000/api/blogs';
 
       const formDataToSend = new FormData();
       formDataToSend.append('title', formData.title);
@@ -230,8 +234,8 @@ const CreateNewBlog = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode
-        ? `https://api.cleanairindia.com/api/blogs/${editBlogId}`
-        : 'https://api.cleanairindia.com/api/blogs';
+        ? `http://192.168.1.66:5000/api/blogs/${editBlogId}`
+        : 'http://192.168.1.66:5000/api/blogs';
 
       const formDataToSend = new FormData();
       formDataToSend.append('title', formData.title);
@@ -321,6 +325,7 @@ const CreateNewBlog = () => {
                 onWordCountChange={setWordCount}
                 uploadedImages={uploadedImages}
                 setUploadedImages={setUploadedImages}
+                onFeaturedImageUpdate={handleFeaturedImageUpdate} // Add this prop
               />
 
               <WordCountDisplay wordCount={wordCount} />
@@ -338,6 +343,7 @@ const CreateNewBlog = () => {
                   errors={errors}
                   onCategoryCreated={handleCategoryCreated}
                   onTagCreated={handleTagCreated}
+                  isFeaturedImageEditable={false} // Add this prop
                 />
               </div>
 

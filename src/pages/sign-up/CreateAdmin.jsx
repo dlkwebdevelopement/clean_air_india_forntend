@@ -97,7 +97,7 @@ const CreateChildAdmin = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/users', {
+      const response = await fetch('http://192.168.1.66:5000/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -247,13 +247,13 @@ const CreateChildAdmin = () => {
                 <Icon name={showConfirmPassword ? "EyeOff" : "Eye"} size={20} />
               </button>
             </div>
-            <div className="role-field">
+            {/* <div className="role-field">
               <label htmlFor="role">Role</label>
               <select id="role" name="role" value={formData.role} onChange={handleInputChange}>
                 <option value="publisher">Publisher</option>
                 <option value="editor">Editor</option>
               </select>
-            </div>
+            </div> */}
             {errors.submit && (
               <div className="submit-error">
                 <Icon name="AlertCircle" size={16} />
