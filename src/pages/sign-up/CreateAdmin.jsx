@@ -97,7 +97,7 @@ const CreateChildAdmin = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://192.168.1.66:5000/api/users', {
+      const response = await fetch('https://api.cleanairindia.com/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

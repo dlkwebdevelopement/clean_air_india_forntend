@@ -53,7 +53,7 @@ const ProductPage3 = () => {
 
     try {
       // First, send the email
-      const response = await fetch('http://192.168.1.66:5000/api/product-catalogue', {
+      const response = await fetch('https://api.cleanairindia.com/api/product-catalogue', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

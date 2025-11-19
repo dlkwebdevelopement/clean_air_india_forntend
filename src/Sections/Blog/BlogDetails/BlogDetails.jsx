@@ -31,7 +31,7 @@ const BlogDetails = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`http://192.168.1.66:5000/api/blogs/${blogId}`, {
+      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${blogId}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -48,7 +48,7 @@ const BlogDetails = () => {
       // Fetch related blogs (same category, exclude current blog)
       if (data.category) {
         const relatedResponse = await fetch(
-          `http://192.168.1.66:5000/api/blogs?page=1&limit=3&category=${data.category._id}&status=published`,
+          `https://api.cleanairindia.com/api/blogs?page=1&limit=3&category=${data.category._id}&status=published`,
           {
             // headers: {
             //   'Authorization': `Bearer ${token}`

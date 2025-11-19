@@ -68,7 +68,7 @@ const CreateNewBlog = () => {
   const fetchCategories = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://192.168.1.66:5000/api/categories', {
+      const response = await fetch('https://api.cleanairindia.com/api/categories', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -85,7 +85,7 @@ const CreateNewBlog = () => {
   const fetchTags = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://192.168.1.66:5000/api/tags', {
+      const response = await fetch('https://api.cleanairindia.com/api/tags', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -102,7 +102,7 @@ const CreateNewBlog = () => {
   const fetchBlogData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://192.168.1.66:5000/api/blogs/${editBlogId}`, {
+      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${editBlogId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -189,8 +189,8 @@ const CreateNewBlog = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode
-        ? `http://192.168.1.66:5000/api/blogs/${editBlogId}`
-        : 'http://192.168.1.66:5000/api/blogs';
+        ? `https://api.cleanairindia.com/api/blogs/${editBlogId}`
+        : 'https://api.cleanairindia.com/api/blogs';
 
       const formDataToSend = new FormData();
       formDataToSend.append('title', formData.title);
@@ -234,8 +234,8 @@ const CreateNewBlog = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode
-        ? `http://192.168.1.66:5000/api/blogs/${editBlogId}`
-        : 'http://192.168.1.66:5000/api/blogs';
+        ? `https://api.cleanairindia.com/api/blogs/${editBlogId}`
+        : 'https://api.cleanairindia.com/api/blogs';
 
       const formDataToSend = new FormData();
       formDataToSend.append('title', formData.title);

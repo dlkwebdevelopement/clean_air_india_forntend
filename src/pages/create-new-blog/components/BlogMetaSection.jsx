@@ -30,7 +30,7 @@ const BlogMetaSection = ({
     if (newCategoryName?.trim()) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://192.168.1.66:5000/api/categories', {
+        const response = await fetch('https://api.cleanairindia.com/api/categories', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const BlogMetaSection = ({
     if (newCategoryName?.trim() && editingCategory) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://192.168.1.66:5000/api/categories/${editingCategory._id}`, {
+        const response = await fetch(`https://api.cleanairindia.com/api/categories/${editingCategory._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const BlogMetaSection = ({
     if (window.confirm('Are you sure you want to delete this category?')) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://192.168.1.66:5000/api/categories/${categoryId}`, {
+        const response = await fetch(`https://api.cleanairindia.com/api/categories/${categoryId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`
@@ -122,7 +122,7 @@ const BlogMetaSection = ({
     if (newTagName?.trim()) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('http://192.168.1.66:5000/api/tags', {
+        const response = await fetch('https://api.cleanairindia.com/api/tags', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ const BlogMetaSection = ({
     if (newTagName?.trim() && editingTag) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://192.168.1.66:5000/api/tags/${editingTag._id}`, {
+        const response = await fetch(`https://api.cleanairindia.com/api/tags/${editingTag._id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ const BlogMetaSection = ({
     if (window.confirm('Are you sure you want to delete this tag?')) {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://192.168.1.66:5000/api/tags/${tagId}`, {
+        const response = await fetch(`https://api.cleanairindia.com/api/tags/${tagId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`

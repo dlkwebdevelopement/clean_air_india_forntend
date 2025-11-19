@@ -29,7 +29,7 @@ const Header = ({ onSidebarToggle, sidebarCollapsed = false }) => {
         return;
       }
 
-      const response = await fetch('http://192.168.1.66:5000/api/user/profile', {
+      const response = await fetch('https://api.cleanairindia.com/api/user/profile', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,

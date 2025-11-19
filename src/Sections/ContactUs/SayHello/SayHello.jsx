@@ -65,7 +65,7 @@ const SayHello = () => {
     }
 
     try {
-      const response = await fetch('http://192.168.1.66:5000/api/contact', {
+      const response = await fetch('https://api.cleanairindia.com/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
