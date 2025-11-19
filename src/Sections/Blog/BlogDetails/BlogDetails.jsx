@@ -225,10 +225,10 @@ const BlogDetails = () => {
                       </ul>
 
                       {/* share button */}
-                      <button className="share-btn">
+                      {/* <button className="share-btn">
                         <img src={ShareIcon} alt="icon" />
                         Share
-                      </button>
+                      </button> */}
                     </div>
                   </ScrollAnimate>
                 </div>
