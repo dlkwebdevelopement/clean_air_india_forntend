@@ -28,10 +28,10 @@ const HomeOneFeatures = () => {
                 <ScrollAnimate delay={info?.animetiondelay}>
                   <div className={info?.cardclassName}>
                     <div className="feature-card-shape">
-                      <img src={FrameImage} alt="card-shape" />
+                      <img height="260" width="390" src={FrameImage} alt="card-shape" loading="lazy"/>
                     </div>
                     <div className="feature-card-icon">
-                      <img src={info?.icon} alt="feature-img" />
+                      <img src={info?.icon} alt="feature-img" loading="lazy"/>
                     </div>
                     <div className="feature-card-text">
                       <h5 className="wt-700">{info?.cardTitle}</h5>

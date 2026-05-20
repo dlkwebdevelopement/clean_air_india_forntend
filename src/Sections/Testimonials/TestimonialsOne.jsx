@@ -111,28 +111,26 @@ const TestimonialsOne = () => {
                   <div className="bg-shape">
                     <div className="shape-img img-1">
                       <ScrollAnimate delay={200}>
-                        <img src={testimonialShape1} alt="shape-img" />
+                        <img height="204" width="286" src={testimonialShape1} alt="shape-img" loading="lazy"/>
                       </ScrollAnimate>
                     </div>
                     <div className="shape-img img-2">
                       <ScrollAnimate delay={220}>
-                        <img src={testimonialShape2} alt="shape-img" />
+                        <img height="170" width="248" src={testimonialShape2} alt="shape-img" loading="lazy"/>
                       </ScrollAnimate>
                     </div>
                     <div className="shape-img img-3">
                       <ScrollAnimate delay={240}>
-                        <img src={testimonialShape3} alt="shape-img" />
+                        <img height="143" width="135" src={testimonialShape3} alt="shape-img" loading="lazy"/>
                       </ScrollAnimate>
                     </div>
                     <div className="shape-img img-4">
-                      <img
-                        className="rotate-icon"
+                      <img height="70" width="70" className="rotate-icon"
                         src={QuoteShapeImg}
                         alt="shape-img"
-                        ref={rotateIconRef}
-                      />
+                        ref={rotateIconRef} loading="lazy"/>
                       <div className="icon">
-                        <img src={QuoteIconImg} alt="shape-img" />
+                        <img height="17" width="27" src={QuoteIconImg} alt="shape-img" loading="lazy"/>
                       </div>
                     </div>
                   </div>
@@ -145,7 +143,7 @@ const TestimonialsOne = () => {
                   >
                     {Data?.map((item, i) => (
                       <div className="slider-item" key={i}>
-                        <img src={item.image} alt="slider-img" />
+                        <img src={item.image} alt="slider-img" loading="lazy"/>
                       </div>
                     ))}
                   </Slider>

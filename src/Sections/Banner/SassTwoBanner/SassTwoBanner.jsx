@@ -63,7 +63,7 @@ const SassTwoBanner = () => {
     <SassTwoBannerStyle className="sass-landing-hero-section">
       <div className="sass-landing-hero-bg">
         <div className="bg-inner">
-          <img src={sassLandingBg} alt="img" />
+          <img height="932" width="1920" src={sassLandingBg} alt="img" />
           <div className="banner-shape-list">
             <div className="banner-shape" />
             <div className="banner-shape" />
@@ -94,7 +94,7 @@ const SassTwoBanner = () => {
                   </NavLink>
                   <a href="#" className="view-demo-btn">
                     View Demo
-                    <img src={RightArrow} alt="icon" />
+                    <img height="16" width="19" src={RightArrow} alt="icon" />
                   </a>
                 </div>
                 <ul className="hero-content-list">
@@ -117,19 +117,19 @@ const SassTwoBanner = () => {
             <div className="col-lg-6">
               <ScrollAnimate delay={250}>
               <div className="sass-banner-img">
-                <img src={sassDashboardImg} alt="img" className="banner-img" />
-                <img src={bannerImgShape1} alt="img" className="shape1" />
-                <img src={bannerImgShape2} alt="img" className="shape2" />
+                <img height="448" width="590" src={sassDashboardImg} alt="img" className="banner-img" />
+                <img height="74" width="119" src={bannerImgShape1} alt="img" className="shape1" />
+                <img height="99" width="257" src={bannerImgShape2} alt="img" className="shape2" />
               </div>
               </ScrollAnimate>
             </div>
           </div>
           <div className="sass-landing-banner-shapes">
-            <img src={shape1} alt="shape" className="shape1" />
-            <img src={shape2} alt="shape" className="shape2" />
-            <img src={shape3} alt="shape" className="shape3" />
-            <img src={shape4} alt="shape" className="shape4" />
-            <img src={shape5} alt="shape" className="shape5" />
+            <img height="40" width="24" src={shape1} alt="shape" className="shape1" />
+            <img height="43" width="40" src={shape2} alt="shape" className="shape2" />
+            <img height="57" width="120" src={shape3} alt="shape" className="shape3" />
+            <img height="48" width="78" src={shape4} alt="shape" className="shape4" />
+            <img height="43" width="40" src={shape5} alt="shape" className="shape5" />
           </div>
         </div>
       </div>

@@ -2,18 +2,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
-import picture1 from "../../../assets/images/about-us/fume1.jpg";
-import picture2 from "../../../assets/images/about-us/fume2.jpg";
-import picture3 from "../../../assets/images/about-us/fume3.png";
-import picture4 from "../../../assets/images/about-us/fume4.jpg";
-import picture5 from "../../../assets/images/about-us/fume5.jpeg";
-import picture6 from "../../../assets/images/about-us/fume6.jpeg";
-import picture7 from "../../../assets/images/about-us/fume7.jpeg";
+import picture1 from "../../../assets/images/about-us/fume1.webp";
+import picture2 from "../../../assets/images/about-us/fume2.webp";
+import picture3 from "../../../assets/images/about-us/fume3.webp";
+import picture4 from "../../../assets/images/about-us/fume4.webp";
+import picture5 from "../../../assets/images/about-us/fume5.webp";
+import picture6 from "../../../assets/images/about-us/fume6.webp";
+import picture7 from "../../../assets/images/about-us/fume7.webp";
 import picture8 from "../../../assets/images/about-us/fume8.jpeg";
 import picture9 from "../../../assets/images/about-us/fume9.jpeg";
-import picture10 from "../../../assets/images/about-us/fume10.jpeg";
-import picture11 from "../../../assets/images/about-us/fume11.jpeg";
-import picture12 from "../../../assets/images/about-us/fume12.jpeg";
+import picture10 from "../../../assets/images/about-us/fume10.webp";
+import picture11 from "../../../assets/images/about-us/fume11.webp";
+import picture12 from "../../../assets/images/about-us/fume12.webp";
 import picture13 from "../../../assets/images/about-us/fume13.jpeg";
 import cataloguePdf from "../../../assets/images/about-us/Fume Hood Product Catalogue.pdf";
 
@@ -53,7 +53,7 @@ const ProductPage3 = () => {
 
     try {
       // First, send the email
-      const response = await fetch('https://api.cleanairindia.com/api/product-catalogue', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/product-catalogue`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const ProductPage3 = () => {
           {/* LEFT: Product Images + Features */}
           <div className="col-lg-6 col-md-12 product-images">
             <div className="main-image">
-              <img src={selectedImage} alt="Fume Exhaust Hood" />
+              <img src={selectedImage} alt="Fume Exhaust Hood" loading="lazy"/>
             </div>
 
             <div className="thumbnail-list">
@@ -121,8 +121,7 @@ const ProductPage3 = () => {
                   src={img}
                   alt={`Fume Hood ${index + 1}`}
                   className={selectedImage === img ? "active" : ""}
-                  onClick={() => setSelectedImage(img)}
-                />
+                  onClick={() => setSelectedImage(img)} loading="lazy"/>
               ))}
             </div>
 
@@ -265,6 +264,52 @@ const ProductPage3 = () => {
             </div>
           </div>
         </div>
+
+        {/* Detailed SEO & Overview Content */}
+        <DetailedContentRow>
+          <div className="col-12">
+            <hr className="section-divider" />
+            
+            <article className="detailed-info-section">
+              <h2 className="main-title">Laboratory Fume Hoods – Clean Air Systems</h2>
+              <p>
+                Clean Air Systems designs and manufactures high-performance Laboratory Fume Hoods for safe chemical handling and laboratory protection. Our Laboratory Fume Hoods are engineered to provide efficient fume extraction and maintain a safe working environment. As trusted Fume Exhaust Hoods Manufacturers in Chennai, we deliver reliable systems across Fume Exhaust Hoods Chennai and Fume Exhaust Hoods India. We also provide competitive Fume Exhaust Hoods Price options directly from leading Fume Exhaust Hoods Manufacturers in India, ensuring safety, quality, and affordability in every solution.
+              </p>
+
+              <h3>What are Laboratory Fume Hoods?</h3>
+              <p>
+                Laboratory Fume Hoods are ventilated enclosures designed to protect users from hazardous fumes, vapors, and chemical exposure. These Fume Exhaust Hoods ensure safe airflow by extracting contaminated air and filtering it effectively. At Clean Air Systems, our Laboratory Hoods are built with advanced airflow control systems for maximum safety. From Fume Exhaust Hoods Chennai to large-scale Fume Exhaust Hoods India installations, we provide reliable and efficient laboratory safety solutions. We also offer transparent Fume Exhaust Hoods Price structures to suit different industrial requirements.
+              </p>
+
+              <h3>Applications of Fume Exhaust Hoods</h3>
+              <p>
+                Fume Exhaust Hoods are widely used in pharmaceutical labs, chemical research centers, educational institutions, and industrial testing facilities. Laboratory Fume Hoods ensure safe handling of volatile chemicals and hazardous substances. Our Walk-In Fume Hoods and Distillation Fume Hoods are designed for specialized laboratory applications. Industries across Fume Exhaust Hoods Chennai and Fume Exhaust Hoods India rely on our systems for safety and compliance. We also support clients with cost-effective solutions from trusted Fume Exhaust Hoods Manufacturers in Chennai and Fume Exhaust Hoods Manufacturers in India.
+              </p>
+
+              <h3>Features & Technical Advantages</h3>
+              <ul className="advantages-list">
+                <li><FaCheckCircle className="tick-icon" /> High-efficiency exhaust system for safe fume removal</li>
+                <li><FaCheckCircle className="tick-icon" /> Advanced airflow design for maximum user protection</li>
+                <li><FaCheckCircle className="tick-icon" /> Chemical-resistant interior surface for durability</li>
+                <li><FaCheckCircle className="tick-icon" /> Transparent sash for safe visibility during operations</li>
+                <li><FaCheckCircle className="tick-icon" /> Low noise and energy-efficient performance</li>
+                <li><FaCheckCircle className="tick-icon" /> Adjustable airflow control for different applications</li>
+                <li><FaCheckCircle className="tick-icon" /> Built-in safety alarms and monitoring systems</li>
+                <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning design</li>
+                <li><FaCheckCircle className="tick-icon" /> Suitable for Walk-In Fume Hoods and Distillation Fume Hoods</li>
+                <li><FaCheckCircle className="tick-icon" /> Customizable models based on laboratory requirements</li>
+              </ul>
+
+              <h3>Why Choose Clean Air Systems?</h3>
+              <p>
+                Clean Air Systems is a trusted name in laboratory safety equipment and Fume Exhaust Hoods manufacturing. Our Laboratory Fume Hoods are designed for high performance, durability, and safety compliance. As leading Fume Exhaust Hoods Manufacturers in Chennai, we deliver quality solutions across Fume Exhaust Hoods Chennai and Fume Exhaust Hoods India. We offer competitive Fume Exhaust Hoods Price options while maintaining strict quality standards. Our systems are widely preferred among Fume Exhaust Hoods Manufacturers in India for their reliability and advanced engineering.
+              </p>
+              <p>
+                Our Laboratory Hoods are built for precision, safety, and long-term performance. With strong technical expertise and quality assurance, Clean Air Systems continues to provide advanced Fume Exhaust Hoods solutions for laboratories and industries across Fume Exhaust Hoods Chennai and Fume Exhaust Hoods India.
+              </p>
+            </article>
+          </div>
+        </DetailedContentRow>
       </div>
 
       {/* Modal Form */}
@@ -672,5 +717,86 @@ const Message = styled.div`
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+  }
+`;
+
+const DetailedContentRow = styled.div`
+  margin-top: 60px;
+  
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
+    margin-bottom: 50px;
+  }
+
+  .detailed-info-section {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h2.main-title {
+      font-size: 32px;
+      color: #0061a6;
+      margin-bottom: 25px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #007bff;
+        border-radius: 2px;
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .advantages-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 30px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.5;
+
+        .tick-icon {
+          color: #28a745;
+          margin-right: 10px;
+          margin-top: 3px;
+          flex-shrink: 0;
+          font-size: 16px;
+        }
+      }
+    }
   }
 `;

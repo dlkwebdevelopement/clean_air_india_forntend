@@ -54,12 +54,12 @@ const Signin = () => {
 
           <ScrollAnimate delay={450}>
             <button className="secondary-btn">
-              <img src={GoogleIcon} alt="icon" /> Log in with Google
+              <img height="19" width="18" src={GoogleIcon} alt="icon" loading="lazy"/> Log in with Google
             </button>
           </ScrollAnimate>
           <ScrollAnimate delay={500}>
             <button className="secondary-btn">
-              <img src={FacebookIcon} alt="icon" /> Log in with Facebook
+              <img height="18" width="18" src={FacebookIcon} alt="icon" loading="lazy"/> Log in with Facebook
             </button>
           </ScrollAnimate>
 

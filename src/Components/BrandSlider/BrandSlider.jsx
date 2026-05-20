@@ -38,7 +38,7 @@ const BrandSlider = ({ titleClass, sliderClass }) => {
                 <div className="brands-slider-container">
                   {brandImages.map((src, index) => (
                     <div key={index} className="slider-item">
-                      <img src={src} alt={`slider-img-${index}`} />
+                      <img src={src} alt={`slider-img-${index}`} loading="lazy"/>
                     </div>
                   ))}
                 </div>

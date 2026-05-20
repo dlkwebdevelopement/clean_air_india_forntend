@@ -53,7 +53,7 @@ const PortfolioBanner = () => {
       </div>
       <div className="v6hero-img">
         <ScrollAnimate delay={300}>
-          <img src={BannerImg} alt="banner-img" />
+          <img height="574" width="1450" src={BannerImg} alt="banner-img" />
         </ScrollAnimate>
       </div>
     </PortfolioBannerStyle>

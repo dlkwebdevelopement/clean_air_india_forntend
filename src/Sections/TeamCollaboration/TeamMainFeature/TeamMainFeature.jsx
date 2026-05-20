@@ -15,10 +15,10 @@ const TeamMainFeature = () => {
     <TeamMainFeatureStyle className="main-feature-section">
       <div className="bg-shape">
         <div className="shape-img img-1">
-          <img src={shape1} alt="shape-img" />
+          <img height="73" width="87" src={shape1} alt="shape-img" loading="lazy"/>
         </div>
         <div className="shape-img img-2">
-          <img src={shape2} alt="shape-img" />
+          <img height="37" width="115" src={shape2} alt="shape-img" loading="lazy"/>
         </div>
       </div>
       <div className="container">
@@ -27,10 +27,10 @@ const TeamMainFeature = () => {
             <ScrollAnimate delay={200}>
               <div className="main-feature-card card-1">
                 <div className="overlay">
-                  <img src={ellipse1} alt="ellipse" />
+                  <img height="55" width="61" src={ellipse1} alt="ellipse" loading="lazy"/>
                 </div>
                 <div className="main-feature-card-content">
-                  <img src={coffeeIcon} alt="feature-icon" />
+                  <img height="32" width="33" src={coffeeIcon} alt="feature-icon" loading="lazy"/>
                   <h2>One Click Meetings</h2>
                   <p>
                     There are many variations of passages of always available but
@@ -44,10 +44,10 @@ const TeamMainFeature = () => {
             <ScrollAnimate delay={225}>
             <div className="main-feature-card card-2">
               <div className="overlay">
-                <img src={ellipse2} alt="ellipse" />
+                <img height="55" width="55" src={ellipse2} alt="ellipse" loading="lazy"/>
               </div>
               <div className="main-feature-card-content">
-                <img src={fingerScanIcon} alt="feature-icon" />
+                <img height="32" width="32" src={fingerScanIcon} alt="feature-icon" loading="lazy"/>
                 <h2>Meet Safely</h2>
                 <p>
                   We use as filler text for layouts, non-readability is of great
@@ -61,10 +61,10 @@ const TeamMainFeature = () => {
             <ScrollAnimate delay={250}>
             <div className="main-feature-card card-3">
               <div className="overlay">
-                <img src={ellipse3} alt="ellipse" />
+                <img height="72" width="60" src={ellipse3} alt="ellipse" loading="lazy"/>
               </div>
               <div className="main-feature-card-content">
-                <img src={soundIcon} alt="feature-icon" />
+                <img height="32" width="33" src={soundIcon} alt="feature-icon" loading="lazy"/>
                 <h2>Share Your Screen</h2>
                 <p>
                   Human perception is tuned to recognize certain patterns and

@@ -3,7 +3,7 @@ import FooterStyleWrapper from "./Footer.style";
 import $ from "jquery";
 
 import FooterLogo from "../../assets/images/logo/crypto-token-logo.svg";
-import FooterShapeImg from "../../assets/images/crypto-token/footer-shape.png";
+import FooterShapeImg from "../../assets/images/crypto-token/footer-shape.webp";
 
 const menuData = [
   {
@@ -82,7 +82,7 @@ const CryptoTokenFooter = () => {
                 <div className="col-md-3 col-6">
                   <div className="footer-column footer-column1">
                     <a href="/" className="footer-logo">
-                      <img src={FooterLogo} alt="logo" />
+                      <img height="40" width="136" src={FooterLogo} alt="logo" />
                     </a>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ const CryptoTokenFooter = () => {
               </div>
             </div>
             <div className="footer-shape">
-              <img src={FooterShapeImg} alt="img" />
+              <img height="700" width="1278" src={FooterShapeImg} alt="img" loading="lazy"/>
             </div>
           </div>
         </div>

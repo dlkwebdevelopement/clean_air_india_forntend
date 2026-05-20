@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Button from '../../../components copy/ui/Button';
-import Input from '../../../components copy/ui/Input';
+import Button from '../../../shared/ui/Button';
+import Input from '../../../shared/ui/Input';
 import Swal from 'sweetalert2';
 import './RichTextEditor.css';
 
@@ -112,7 +112,7 @@ const RichTextEditor = ({ content, onContentChange, onWordCountChange, uploadedI
 
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://api.cleanairindia.com/api/blogs/upload-image', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/upload-image`, {
           method: 'POST',
           headers: { Authorization: `Bearer ${token}` },
           body: formData
@@ -299,7 +299,7 @@ const RichTextEditor = ({ content, onContentChange, onWordCountChange, uploadedI
           <div className="uploaded-images-preview">
             {uploadedImages.map((img, idx) => (
               <div key={idx} className="preview-img-wrapper">
-                <img src={img} alt={`upload-${idx}`} className="preview-img" />
+                <img src={img} alt={`upload-${idx}`} className="preview-img" loading="lazy"/>
                 <button
                   className="remove-img-btn"
                   onClick={() => removeImage(idx)}

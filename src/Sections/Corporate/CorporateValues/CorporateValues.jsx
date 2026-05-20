@@ -37,7 +37,7 @@ const CorporateValues = () => {
             <ScrollAnimate delay={200}>
               <div className="our-value-text text-right">
                 <div className="our-value-icon our-value-icon1">
-                  <img src={colorSwatchIcon} alt="icon" />
+                  <img height="20" width="20" src={colorSwatchIcon} alt="icon" loading="lazy"/>
                 </div>
                 <h5>Quality</h5>
                 <p>
@@ -49,7 +49,7 @@ const CorporateValues = () => {
             <ScrollAnimate delay={220}>
               <div className="our-value-text text-right">
                 <div className="our-value-icon our-value-icon2">
-                  <img src={bookmarkIcon} alt="icon" />
+                  <img height="20" width="20" src={bookmarkIcon} alt="icon" loading="lazy"/>
                 </div>
                 <h5>Compliance</h5>
                 <p>
@@ -62,7 +62,7 @@ const CorporateValues = () => {
             <ScrollAnimate delay={240}>
               <div className="our-value-text text-right">
                 <div className="our-value-icon our-value-icon5">
-                  <img src={codeIcon} alt="icon" />
+                  <img height="20" width="20" src={codeIcon} alt="icon" loading="lazy"/>
                 </div>
                 <h5>Innovation</h5>
                 <p>
@@ -77,13 +77,11 @@ const CorporateValues = () => {
             <ScrollAnimate delay={250}>
               <div className="our-values-img-section">
                 <div className="our-values-img-border">
-                  <img
-                    src={rotateCircleImage}
+                  <img height="470" width="470" src={rotateCircleImage}
                     alt="loader"
-                    className="loader-img"
-                  />
+                    className="loader-img" loading="lazy"/>
                   <div className="our-values-img">
-                    <img src={mainImage} alt="img" />
+                    <img height="250" width="250" src={mainImage} alt="img" loading="lazy"/>
                   </div>
                 </div>
               </div>
@@ -95,7 +93,7 @@ const CorporateValues = () => {
             <ScrollAnimate delay={270}>
               <div className="our-value-text text-left">
                 <div className="our-value-icon our-value-icon3">
-                  <img src={documentSketchIcon} alt="icon" />
+                  <img height="20" width="19" src={documentSketchIcon} alt="icon" loading="lazy"/>
                 </div>
                 <h5>Sustainability</h5>
                 <p>
@@ -107,7 +105,7 @@ const CorporateValues = () => {
             <ScrollAnimate delay={300}>
               <div className="our-value-text text-left">
                 <div className="our-value-icon our-value-icon4">
-                  <img src={codeIcon} alt="icon" />
+                  <img height="20" width="20" src={codeIcon} alt="icon" loading="lazy"/>
                 </div>
                 <h5>Customer Focus</h5>
                 <p>
@@ -120,7 +118,7 @@ const CorporateValues = () => {
             <ScrollAnimate delay={320}>
               <div className="our-value-text text-left">
                 <div className="our-value-icon our-value-icon6">
-                  <img src={codeIcon} alt="icon" />
+                  <img height="20" width="20" src={codeIcon} alt="icon" loading="lazy"/>
                 </div>
                 <h5>24/7 Support</h5>
                 <p>

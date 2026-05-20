@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa"; // ✅ Tick Icon
-import picture1 from "../../../assets/images/about-us/box1.jpg";
-import picture2 from "../../../assets/images/about-us/box2.jpg";
-import picture3 from "../../../assets/images/about-us/box3.jpeg";
-import picture4 from "../../../assets/images/about-us/box4.jpg";
-import picture5 from "../../../assets/images/about-us/box5.jpeg";
+import picture1 from "../../../assets/images/about-us/box1.webp";
+import picture2 from "../../../assets/images/about-us/box2.webp";
+import picture3 from "../../../assets/images/about-us/box3.webp";
+import picture4 from "../../../assets/images/about-us/box4.webp";
+import picture5 from "../../../assets/images/about-us/box5.webp";
 
-// import picture3 from "../../../assets/images/about-us/laminar8.jpg";
-// import picture4 from "../../../assets/images/about-us/laminar9.jpg";
+// import picture3 from "../../../assets/images/about-us/laminar8.webp";
+// import picture4 from "../../../assets/images/about-us/laminar9.webp";
 import { useNavigate } from "react-router-dom"; // ✅ for navigation
 
 const ProductPage6 = () => {
@@ -24,7 +24,7 @@ const ProductPage6 = () => {
           {/* LEFT: Product Images + Features */}
           <div className="col-lg-6 col-md-12 product-images">
             <div className="main-image">
-              <img src={selectedImage} alt="Pass Box" />
+              <img src={selectedImage} alt="Pass Box" loading="lazy"/>
             </div>
 
             <div className="thumbnail-list">
@@ -34,8 +34,7 @@ const ProductPage6 = () => {
                   src={img}
                   alt={`Pass Box ${index + 1}`}
                   className={selectedImage === img ? "active" : ""}
-                  onClick={() => setSelectedImage(img)}
-                />
+                  onClick={() => setSelectedImage(img)} loading="lazy"/>
               ))}
             </div>
 
@@ -137,6 +136,52 @@ const ProductPage6 = () => {
             </div>
           </div>
         </div>
+
+        {/* Detailed SEO & Overview Content */}
+        <DetailedContentRow>
+          <div className="col-12">
+            <hr className="section-divider" />
+            
+            <article className="detailed-info-section">
+              <h2 className="main-title">Cleanroom Pass Box – Clean Air Systems</h2>
+              <p>
+                Clean Air Systems designs and manufactures high-performance Cleanroom Pass Boxes for contamination-free material transfer. Our Pass Boxes act as airlock systems to prevent cross-contamination between different cleanliness zones. As leading Pass Boxes Manufacturers in Chennai, we offer premium Static Pass Boxes and Dynamic Pass Boxes across Pass Boxes Chennai and Pass Boxes India. We also provide competitive Pass Boxes Price options directly from trusted Pass Boxes Manufacturers in India, ensuring safety and compliance in every installation.
+              </p>
+
+              <h3>What is a Cleanroom Pass Box?</h3>
+              <p>
+                A Cleanroom Pass Box is a specialized containment enclosure installed on cleanroom walls to transfer materials safely between two areas. It acts as an airlock with interlocking doors that prevent both doors from opening simultaneously. Our Pass Boxes are available in Static Pass Box models for same-class areas and Dynamic Pass Box models for areas with different cleanliness levels. At Clean Air Systems, we build durable systems for Pass Boxes Chennai and Pass Boxes India projects. We offer reliable systems at competitive Pass Boxes Price from trusted Pass Boxes Manufacturers in Chennai.
+              </p>
+
+              <h3>Applications of Pass Boxes</h3>
+              <p>
+                Pass Boxes are widely used in pharmaceutical production units, laboratories, electronics manufacturing cleanrooms, and hospitals. Static Pass Boxes are suitable for transferring materials between environments of similar cleanliness. Dynamic Pass Boxes are used for material transfer between clean and non-clean areas, featuring HEPA filtration for continuous cleaning. Industries across Pass Boxes Chennai and Pass Boxes India rely on our systems to maintain ISO class standards. We provide customizable models from reputed Pass Boxes Manufacturers in Chennai and Pass Boxes Manufacturers in India.
+              </p>
+
+              <h3>Features & Technical Advantages</h3>
+              <ul className="advantages-list">
+                <li><FaCheckCircle className="tick-icon" /> Mechanical or electromagnetic door interlocking system</li>
+                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction (SS 304 or SS 316) for easy sanitization</li>
+                <li><FaCheckCircle className="tick-icon" /> Double-skin body design with a smooth internal finish</li>
+                <li><FaCheckCircle className="tick-icon" /> Dynamic models equipped with HEPA filters and blowers</li>
+                <li><FaCheckCircle className="tick-icon" /> Static models for simple, non-ventilated transfer</li>
+                <li><FaCheckCircle className="tick-icon" /> UV light integration for surface sterilization</li>
+                <li><FaCheckCircle className="tick-icon" /> LED indicators for door status signaling</li>
+                <li><FaCheckCircle className="tick-icon" /> Low noise operation in dynamic models</li>
+                <li><FaCheckCircle className="tick-icon" /> Acrylic or toughened glass view panels</li>
+                <li><FaCheckCircle className="tick-icon" /> Customizable dimensions for specific laboratory layouts</li>
+              </ul>
+
+              <h3>Why Choose Clean Air Systems?</h3>
+              <p>
+                Clean Air Systems is a trusted name among Pass Boxes Manufacturers in Chennai, offering high-performance containment systems for critical industries. Our Static Pass Boxes and Dynamic Pass Boxes are designed for durability, safety, and compliance. We provide cost-effective Pass Boxes Price options across Pass Boxes Chennai and Pass Boxes India. Our systems are widely preferred among leading Pass Boxes Manufacturers in India for their engineering standards and after-sales support.
+              </p>
+              <p>
+                Our Cleanroom Pass Boxes are built for precision, durability, and maximum safety. With advanced interlocking technology and quality construction, Clean Air Systems continues to deliver superior Pass Box solutions for laboratories and industries across India.
+              </p>
+            </article>
+          </div>
+        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -296,6 +341,87 @@ const ProductSection = styled.section`
 
     .thumbnail-list {
       justify-content: center;
+    }
+  }
+`;
+
+const DetailedContentRow = styled.div`
+  margin-top: 60px;
+  
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
+    margin-bottom: 50px;
+  }
+
+  .detailed-info-section {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h2.main-title {
+      font-size: 32px;
+      color: #0061a6;
+      margin-bottom: 25px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #007bff;
+        border-radius: 2px;
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .advantages-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 30px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.5;
+
+        .tick-icon {
+          color: #28a745;
+          margin-right: 10px;
+          margin-top: 3px;
+          flex-shrink: 0;
+          font-size: 16px;
+        }
+      }
     }
   }
 `;

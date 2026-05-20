@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Icon from '../../../components copy/AppIcon';
-import Button from '../../../components copy/ui/Button';
+import Icon from '../../../shared/AppIcon';
+import Button from '../../../shared/ui/Button';
 import ConfirmationModal from './ConfirmationModal';
 import './ActionButtons.css';
 

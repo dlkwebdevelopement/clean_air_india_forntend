@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../../components copy/ui/Button';
+import Button from '../../../shared/ui/Button';
 import './Pagination.css'; // Import the CSS file
 
 const Pagination = ({ 

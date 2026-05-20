@@ -3,7 +3,7 @@ import HomePricingStyleWrapper from "./HomePricing.style";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { FaArrowRight } from "react-icons/fa6";
 
-import PricingShape1Image from "../../../assets/images/shape/pricing-shape1.png";
+import PricingShape1Image from "../../../assets/images/shape/pricing-shape1.webp";
 import PricingShape2Image from "../../../assets/images/shape/pricing-shape2.png";
 import PricingShape3Image from "../../../assets/images/shape/pricing-shape3.png";
 import Ellipse1Image from "../../../assets/images/shape/ellipse1.png";
@@ -31,27 +31,27 @@ const HomePricing = () => {
       <div className="bg-shape">
         <div className="shape-img img-1">
           <ScrollAnimate delay={200}>
-            <img src={PricingShape1Image} alt="shpae1" />
+            <img height="501" width="240" src={PricingShape1Image} alt="shpae1" loading="lazy"/>
           </ScrollAnimate>
         </div>
         <div className="shape-img img-2">
           <ScrollAnimate delay={200}>
-            <img src={PricingShape2Image} alt="shpae2" />
+            <img height="181" width="465" src={PricingShape2Image} alt="shpae2" loading="lazy"/>
           </ScrollAnimate>
         </div>
         <div className="shape-img img-3">
           <ScrollAnimate delay={200}>
-            <img src={PricingShape3Image} alt="shpae3" />
+            <img height="500" width="1294" src={PricingShape3Image} alt="shpae3" loading="lazy"/>
           </ScrollAnimate>
         </div>
         <div className="shape-img img-4">
           <ScrollAnimate delay={200}>
-            <img src={Ellipse1Image} alt="ellips1" />
+            <img height="80" width="80" src={Ellipse1Image} alt="ellips1" loading="lazy"/>
           </ScrollAnimate>
         </div>
         <div className="shape-img img-5">
           <ScrollAnimate delay={200}>
-            <img src={Ellipse2Image} alt="ellips2" />
+            <img height="100" width="100" src={Ellipse2Image} alt="ellips2" loading="lazy"/>
           </ScrollAnimate>
         </div>
       </div>
@@ -112,8 +112,7 @@ const HomePricing = () => {
                             <img
                               src={plan.icon}
                               alt="pricing-icon"
-                              className="fadeIn s1"
-                            />
+                              className="fadeIn s1" loading="lazy"/>
                           </div>
                           <p>{plan.description}</p>
 

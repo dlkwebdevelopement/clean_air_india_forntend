@@ -28,7 +28,7 @@ const Integration = () => {
   return (
     <IntegrationStyleWrapper className="index2-integration-section">
       <span className="index2-integration-bg">
-        <img src={BgRactangle} alt="img" />
+        <img height="1088" width="1920" src={BgRactangle} alt="img" loading="lazy"/>
       </span>
       <ScrollAnimate delay={200}>
         <div className="container">
@@ -47,7 +47,7 @@ const Integration = () => {
                   <ul key={groupIndex} className="slid-content">
                     {imageGroup.map((image, index) => (
                       <li key={index} className="slid-inner">
-                        <img src={image} alt={`icon-${groupIndex}-${index}`} />
+                        <img src={image} alt={`icon-${groupIndex}-${index}`} loading="lazy"/>
                       </li>
                     ))}
                   </ul>
@@ -58,7 +58,7 @@ const Integration = () => {
                   <ul key={groupIndex} className="slid-content">
                     {imageGroup.map((image, index) => (
                       <li key={index} className="slid-inner">
-                        <img src={image} alt={`icon-${groupIndex}-${index}`} />
+                        <img src={image} alt={`icon-${groupIndex}-${index}`} loading="lazy"/>
                       </li>
                     ))}
                   </ul>

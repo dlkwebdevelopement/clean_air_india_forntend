@@ -59,7 +59,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               onClick={(e) => handlePageClick(currentPage - 1, e)}
               className={currentPage === 1 ? 'disabled-link' : ''}
             >
-              <img src={ArrowLeft} alt="Previous" />
+              <img height="14" width="8" src={ArrowLeft} alt="Previous" loading="lazy"/>
             </NavLink>
           </li>
 
@@ -122,7 +122,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               onClick={(e) => handlePageClick(currentPage + 1, e)}
               className={currentPage === totalPages ? 'disabled-link' : ''}
             >
-              <img src={ArrowRight} alt="Next" />
+              <img height="14" width="8" src={ArrowRight} alt="Next" loading="lazy"/>
             </NavLink>
           </li>
         </ul>

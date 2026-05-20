@@ -17,7 +17,7 @@ const ContactLocation = () => {
                         <li key={index}>
                           <div className="list-item">
                             <div className="list-icon">
-                              <img src={location.icon} alt="icon" />
+                              <img src={location.icon} alt="icon" loading="lazy"/>
                             </div>
                             <div className="list-text">
                               <h4>{location.title}</h4>

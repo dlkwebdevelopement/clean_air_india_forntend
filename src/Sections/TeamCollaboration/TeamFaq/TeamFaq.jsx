@@ -38,7 +38,7 @@ const TeamFaq = () => {
           </ScrollAnimate>
           <div className="faq-header-right">
             <ScrollAnimate delay={200}>
-              <img src={FaqIcon} alt="icon" />
+              <img height="120" width="104" src={FaqIcon} alt="icon" loading="lazy"/>
             </ScrollAnimate>
           </div>
         </div>

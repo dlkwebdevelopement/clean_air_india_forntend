@@ -1,7 +1,7 @@
 import React from 'react';
-import Icon from '../../../components copy/AppIcon';
-import Input from '../../../components copy/ui/Input';
-import Button from '../../../components copy/ui/Button';
+import Icon from '../../../shared/AppIcon';
+import Input from '../../../shared/ui/Input';
+import Button from '../../../shared/ui/Button';
 import './SearchAndFilters.css'; // Import the CSS file
 
 const SearchAndFilters = ({ 

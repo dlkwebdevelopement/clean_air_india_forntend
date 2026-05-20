@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import CorporateBannerStyle from "./CorporateBanner.style";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
-import BgVideo from "../../../assets/images/videos/10800.mp4"; // <-- your mp4 here
+import BgVideoMP4 from "../../../assets/images/videos/10800_optimized.mp4";
+import BgVideoWebM from "../../../assets/images/videos/10800_optimized.webm";
+import PosterImg from "../../../assets/images/corporate/corporate-banner-bg.webp";
 
 const CorporateBanner = () => {
   return (
@@ -13,9 +15,11 @@ const CorporateBanner = () => {
         loop
         muted
         playsInline
-        preload="auto"
+        preload="none"
+        poster={PosterImg}
       >
-        <source src={BgVideo} type="video/mp4" />
+        <source src={BgVideoWebM} type="video/webm" />
+        <source src={BgVideoMP4} type="video/mp4" />
       </video>
 
       <div className="overlay">

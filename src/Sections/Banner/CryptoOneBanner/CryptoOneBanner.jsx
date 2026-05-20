@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import CryptoOneBannerStyle from "./CryptoOneBanner.style";
 
 import BannerGraphicsImg from "../../../assets/images/crypto/banner-graphics.svg";
-import MeshGradImg from "../../../assets/images/crypto/mesh-grad.png";
+import MeshGradImg from "../../../assets/images/crypto/mesh-grad.webp";
 import ArrowRightIcon from "../../../assets/images/crypto/arrow-right.svg";
-import WalletScreenImg from "../../../assets/images/crypto/wallet_screen.png";
+import WalletScreenImg from "../../../assets/images/crypto/wallet_screen.webp";
 import PhoneScreenWebp from "../../../assets/images/crypto/phone_screen.webp";
 import { NavLink } from "react-router-dom";
 import ScrollAnimate from './../../../Components/ScrollAnimate';
@@ -60,9 +60,9 @@ const CryptoOneBanner = () => {
     <CryptoOneBannerStyle className="crypto-wallet-hero-section">
       <div className="hero-overlay">
         <ScrollAnimate delay={300}>
-          <img src={BannerGraphicsImg} alt="img" className="banner-vector" />
+          <img height="434" width="1920" src={BannerGraphicsImg} alt="img" className="banner-vector" />
         </ScrollAnimate>
-        <img src={MeshGradImg} alt="img" className="banner-grad" />
+        <img height="700" width="700" src={MeshGradImg} alt="img" className="banner-grad" />
       </div>
       <div className="container">
         <ScrollAnimate delay={200}>
@@ -71,7 +71,7 @@ const CryptoOneBanner = () => {
               <div className="new">New</div>
               <p>Polygon network NFTs added for mint</p>
               <span>
-                <img src={ArrowRightIcon} alt="icon" />
+                <img height="12" width="7" src={ArrowRightIcon} alt="icon" />
               </span>
             </div>
             <h1>
@@ -92,18 +92,18 @@ const CryptoOneBanner = () => {
         <ScrollAnimate delay={250}>
           <div className="crypto-hero-img">
             <div className="dhashboard-img">
-              <img src={WalletScreenImg} alt="img" />
+              <img height="589" width="968" src={WalletScreenImg} alt="img" />
             </div>
             <div className="mobile-img">
               <Slider {...settings} className="mobile-slider">
                 <div>
-                  <img src={PhoneScreenWebp} alt="img" />
+                  <img height="368" width="170" src={PhoneScreenWebp} alt="img" />
                 </div>
                 <div>
-                  <img src={PhoneScreenWebp} alt="img" />
+                  <img height="368" width="170" src={PhoneScreenWebp} alt="img" />
                 </div>
                 <div>
-                  <img src={PhoneScreenWebp} alt="img" />
+                  <img height="368" width="170" src={PhoneScreenWebp} alt="img" />
                 </div>
               </Slider>
             </div>

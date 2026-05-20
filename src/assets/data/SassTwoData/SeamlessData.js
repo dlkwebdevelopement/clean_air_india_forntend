@@ -2,8 +2,8 @@
 import seamlessShape from '../../../assets/images/sass2/seamless-shape.svg';
 import seamlessIcon1 from '../../../assets/images/sass2/seamless-icon1.svg';
 import seamlessIcon2 from '../../../assets/images/sass2/seamless-icon2.svg';
-import seamlessCardBg1 from '../../../assets/images/sass2/seamless-card-bg1.png';
-import seamlessCardBg2 from '../../../assets/images/sass2/seamless-card-bg2.png';
+import seamlessCardBg1 from '../../../assets/images/sass2/seamless-card-bg1.webp';
+import seamlessCardBg2 from '../../../assets/images/sass2/seamless-card-bg2.webp';
 import arrowRightWhite from '../../../assets/images/icons/arrow-right-white.svg';
 
 export const cardData = [

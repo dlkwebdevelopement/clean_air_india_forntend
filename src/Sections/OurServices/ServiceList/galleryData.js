@@ -1,35 +1,35 @@
 // galleryData.js
 
-import t1 from "../../../assets/images/gallery/laminar6n.jpg"
-import t11 from "../../../assets/images/gallery/laminar8.jpg"
-import t22 from "../../../assets/images/gallery/laminar9.jpg"
-import t33 from "../../../assets/images/gallery/laminar2.png"
-import t2 from "../../../assets/images/gallery/bio1.jpg"
-import t3 from "../../../assets/images/gallery/fume1.jpg"
-import t4 from "../../../assets/images/gallery/Air1.jpeg"
-import t5 from "../../../assets/images/gallery/Powder1.jpg"
-import b1 from "../../../assets/images/gallery/bio2.jpg"
-import b2 from "../../../assets/images/gallery/bio3.jpg"
-import b3 from "../../../assets/images/gallery/bio4.jpg"
-import b4 from "../../../assets/images/gallery/bio5.jpg"
-import b5 from  "../../../assets/images/gallery/bio6.jpg"
-import f1 from "../../../assets/images/gallery/fume2.jpg"
-import f2 from "../../../assets/images/gallery/fume3.png"
-import f3 from "../../../assets/images/gallery/fume4.jpg"
-import f4 from "../../../assets/images/gallery/fume5.jpg"
-import a1 from "../../../assets/images/gallery/Air1.jpeg"
-import a2 from "../../../assets/images/gallery/Air2.jpeg"
-import p1 from "../../../assets/images/gallery/Powder1.jpg"
-import p2 from "../../../assets/images/gallery/Powder2.jpg"
-import o11 from "../../../assets/images/gallery/box1.jpg"
-import o1 from "../../../assets/images/gallery/box1.jpg"
-import o2 from "../../../assets/images/gallery/box2.jpg"
-import s11 from "../../../assets/images/gallery/Ste1.jpg"
-import s2 from "../../../assets/images/gallery/Ste2.png"
-import s1 from "../../../assets/images/gallery/Ste1.jpg"
-import m11 from "../../../assets/images/gallery/modular-room1.jpg"
-import m1 from "../../../assets/images/gallery/modular-room1.jpg"
-import m2 from "../../../assets/images/gallery/modular-room2.jpg"
+import t1 from "../../../assets/images/gallery/laminar6n.webp"
+import t11 from "../../../assets/images/gallery/laminar8.webp"
+import t22 from "../../../assets/images/gallery/laminar9.webp"
+import t33 from "../../../assets/images/gallery/laminar2.webp"
+import t2 from "../../../assets/images/gallery/bio1.webp"
+import t3 from "../../../assets/images/gallery/fume1.webp"
+import t4 from "../../../assets/images/gallery/Air1.webp"
+import t5 from "../../../assets/images/gallery/Powder1.webp"
+import b1 from "../../../assets/images/gallery/bio2.webp"
+import b2 from "../../../assets/images/gallery/bio3.webp"
+import b3 from "../../../assets/images/gallery/bio4.webp"
+import b4 from "../../../assets/images/gallery/bio5.webp"
+import b5 from  "../../../assets/images/gallery/bio6.webp"
+import f1 from "../../../assets/images/gallery/fume2.webp"
+import f2 from "../../../assets/images/gallery/fume3.webp"
+import f3 from "../../../assets/images/gallery/fume4.webp"
+import f4 from "../../../assets/images/gallery/fume5.webp"
+import a1 from "../../../assets/images/gallery/Air1.webp"
+import a2 from "../../../assets/images/gallery/Air2.webp"
+import p1 from "../../../assets/images/gallery/Powder1.webp"
+import p2 from "../../../assets/images/gallery/Powder2.webp"
+import o11 from "../../../assets/images/gallery/box1.webp"
+import o1 from "../../../assets/images/gallery/box1.webp"
+import o2 from "../../../assets/images/gallery/box2.webp"
+import s11 from "../../../assets/images/gallery/Ste1.webp"
+import s2 from "../../../assets/images/gallery/Ste2.webp"
+import s1 from "../../../assets/images/gallery/Ste1.webp"
+import m11 from "../../../assets/images/gallery/modular-room1.webp"
+import m1 from "../../../assets/images/gallery/modular-room1.webp"
+import m2 from "../../../assets/images/gallery/modular-room2.webp"
 import { summary } from "framer-motion/client"
 
 export const galleryData = [
@@ -114,5 +114,54 @@ export const galleryData = [
       
     ],
   },
-  
+  {
+    name: "Reverse Flow Booth",
+    summary: "Clean Air Systems designs and manufactures high-performance Reverse Flow Booth systems for advanced powder containment and cleanroom applications. Our Reverse Flow Booth solutions are engineered to provide safe handling of hazardous powders by controlling airflow direction and preventing contamination spread.",
+    thumbnail: t5,
+    images: [
+      p1,
+      p2,
+      
+    ],
+  },
+  {
+    name: "Pharma Weighing Booths",
+    summary: "Clean Air Systems designs and manufactures high-performance Pharma Weighing Booths for safe and precise powder handling in pharmaceutical environments. Our Pharma Weighing Booths are engineered to provide controlled airflow, dust containment, and operator protection during weighing and dispensing processes.",
+    thumbnail: t5,
+    images: [
+      p1,
+      p2,
+      
+    ],
+  },
+  {
+    name: "Downflow Booth",
+    summary: "Clean Air Systems is a leading Downflow Booth Manufacturer delivering advanced containment solutions for powder handling and dust control applications. Our Downflow Booth systems are engineered to provide safe, clean, and controlled environments during weighing, sampling, and dispensing operations.",
+    thumbnail: t5,
+    images: [
+      p1,
+      p2,
+      
+    ],
+  },
+  {
+    name: "Fan Filter Units",
+    summary: "Clean Air Systems designs and manufactures high-performance Fan Filter Units for cleanroom air filtration and contamination control. Our Fan Filter Units are engineered to deliver HEPA-filtered airflow with consistent performance in controlled environments.",
+    thumbnail: t1,
+    images: [
+      t11,
+      t22,
+      
+    ],
+  },
+  {
+    name: "Powder Containment Booths",
+    summary: "Clean Air Systems designs and manufactures advanced Powder Containment Booths for critical industrial environments. Our Powder Containment Booths are built to provide safe powder handling operations with superior dust control and operator protection.",
+    thumbnail: t5,
+    images: [
+      p1,
+      p2,
+      
+    ],
+  },
 ];

@@ -18,9 +18,12 @@ const BestServiceStyleWrapper = styled.section`
   }
 
   .slick-prev {
-    left: -284px;
-    top: 315px;
-    background: transparent;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: ${({ theme }) => theme.colors.whiteColor};
     border: 2px solid ${({ theme }) => theme.colors.blackColor}1a;
     border-radius: 50%;
     overflow: hidden;
@@ -29,6 +32,7 @@ const BestServiceStyleWrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     &::before {
       content: url(${PrevImg});
       filter: brightness(0);
@@ -36,6 +40,7 @@ const BestServiceStyleWrapper = styled.section`
     }
     &:hover {
       border: 2px solid #5ecc62;
+      background: ${({ theme }) => theme.colors.whiteColor};
       &::before {
         filter: none;
         opacity: 100%;
@@ -43,9 +48,12 @@ const BestServiceStyleWrapper = styled.section`
     }
   }
   .slick-next {
-    left: -214px;
-    top: 315px;
-    background: transparent;
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: ${({ theme }) => theme.colors.whiteColor};
     border: 2px solid ${({ theme }) => theme.colors.blackColor}1a;
     border-radius: 50%;
     overflow: hidden;
@@ -54,6 +62,7 @@ const BestServiceStyleWrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     &::before {
       content: url(${NextImg});
       filter: brightness(0);
@@ -61,10 +70,27 @@ const BestServiceStyleWrapper = styled.section`
     }
     &:hover {
       border: 2px solid #5ecc62;
+      background: ${({ theme }) => theme.colors.whiteColor};
       &::before {
         filter: none;
         opacity: 100%;
       }
+    }
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+  .slick-slide {
+    height: auto !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: stretch;
+    
+    > div {
+      display: flex !important;
+      flex: 1;
+      width: 100%;
     }
   }
 
@@ -81,6 +107,10 @@ const BestServiceStyleWrapper = styled.section`
     overflow: hidden;
     position: relative;
     transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     &::before {
       content: url(${Icon1});
       position: absolute;
@@ -106,12 +136,20 @@ const BestServiceStyleWrapper = styled.section`
   .best-services-img {
     img {
       width: 100%;
+      height: 220px;
+      object-fit: cover;
     }
   }
   .best-services-text {
     padding: 24px 30px 30px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     h5 {
       margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.4;
     }
     p {
       margin-bottom: 0px;
@@ -124,13 +162,6 @@ const BestServiceStyleWrapper = styled.section`
   }
 
   @media screen and (max-width: 1199px) {
-    .slick-prev {
-      left: -225px;
-    }
-
-    .slick-next {
-      left: -145px;
-    }
     .best-services-text {
       padding: 25px 20px;
     }

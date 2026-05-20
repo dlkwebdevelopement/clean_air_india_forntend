@@ -18,7 +18,7 @@ const Badge = ({ parentClass }) => {
           <ul>
             {badgeData.map((badge, index) => (
               <li key={index}>
-                <img src={badge} alt={`badge_${index + 1}`} />
+                <img src={badge} alt={`badge_${index + 1}`} loading="lazy"/>
               </li>
             ))}
           </ul>

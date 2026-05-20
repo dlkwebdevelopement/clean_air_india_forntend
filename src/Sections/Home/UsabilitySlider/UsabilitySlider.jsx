@@ -71,10 +71,10 @@ const UsabilitySlider = () => {
             <div className="usability-card">
               <div className="bg-shape">
                 <div className="shape-img img-1">
-                  <img src={Shape1Img} alt="shape-img" />
+                  <img height="201" width="202" src={Shape1Img} alt="shape-img" loading="lazy"/>
                 </div>
                 <div className="shape-img img-2">
-                  <img src={Shape2Img} alt="shape-img" />
+                  <img height="202" width="200" src={Shape2Img} alt="shape-img" loading="lazy"/>
                 </div>
               </div>
 
@@ -99,7 +99,7 @@ const UsabilitySlider = () => {
                 >
                   {slides.map((slide, index) => (
                     <div className="slider-item" key={index}>
-                      <img src={slide.iconSrc} alt="icon" />
+                      <img src={slide.iconSrc} alt="icon" loading="lazy"/>
                       <span className="slider-item-text">{slide.title}</span>
                     </div>
                   ))}
@@ -115,7 +115,7 @@ const UsabilitySlider = () => {
                 >
                   {slides.map((slide, index) => (
                     <div className="slider-item" key={index}>
-                      <img src={slide.imgSrc} alt={slide.alt} />
+                      <img src={slide.imgSrc} alt={slide.alt} loading="lazy"/>
                     </div>
                   ))}
                 </Slider>

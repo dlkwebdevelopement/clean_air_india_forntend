@@ -69,7 +69,7 @@ const OurSkil = () => {
           <div className="col-lg-5">
             <div className="skills-img">
               <ScrollAnimate delay={200}>
-                <img src={skillsImg} alt="skills-img" />
+                <img height="440" width="461" src={skillsImg} alt="skills-img" loading="lazy"/>
               </ScrollAnimate>
             </div>
           </div>

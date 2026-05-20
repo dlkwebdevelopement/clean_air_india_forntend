@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import BgImg from "../../../assets/images/defi/defi-banner-bg.png";
-import GrainTextureImg from "../../../assets/images/crypto-token/grain-texture.png";
+import BgImg from "../../../assets/images/defi/defi-banner-bg.webp";
+import GrainTextureImg from "../../../assets/images/crypto-token/grain-texture.webp";
 
 const DefiBannerStyle = styled.section`
   background: url(${BgImg});

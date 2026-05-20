@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Icon from '../../../components copy/AppIcon';
-import Button from '../../../components copy/ui/Button';
+import Icon from '../../../shared/AppIcon';
+import Button from '../../../shared/ui/Button';
 import './PageHeader.css';
 
 const PageHeader = ({ totalBlogs, publishedCount, draftCount, onStatClick }) => {

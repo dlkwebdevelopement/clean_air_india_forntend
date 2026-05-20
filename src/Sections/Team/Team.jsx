@@ -24,7 +24,7 @@ const Team = () => {
               <ScrollAnimate delay={member.delay}>
               <div className="team-card">
                 <div className="team-card-img">
-                  <img src={member.avatar} alt={`team-img-${index}`} />
+                  <img src={member.avatar} alt={`team-img-${index}`} loading="lazy"/>
                 </div>
                 <div className="team-card-info">
                   <h5>{member.name}</h5>
@@ -34,7 +34,7 @@ const Team = () => {
                   {member.socialLinks?.map((item, i) => (
                     <li key={i}>
                       <a href={item.url}>
-                        <img src={item.icon} alt="social-icon" />
+                        <img src={item.icon} alt="social-icon" loading="lazy"/>
                       </a>
                     </li>
                   ))}

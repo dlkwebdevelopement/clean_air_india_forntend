@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Input from '../../../components copy/ui/Input';
-import Button from '../../../components copy/ui/Button';
-import { Checkbox } from '../../../components copy/ui/Checkbox';
-import Icon from '../../../components copy/AppIcon';
+import Input from '../../../shared/ui/Input';
+import Button from '../../../shared/ui/Button';
+import { Checkbox } from '../../../shared/ui/Checkbox';
+import Icon from '../../../shared/AppIcon';
 import './SignUpForm.css';
 
 const SignUpForm = ({ onToggleForm }) => {
@@ -100,7 +100,7 @@ const SignUpForm = ({ onToggleForm }) => {
 
     setLoading(true);
     try {
-      const response = await fetch('https://api.cleanairindia.com/api/signup', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData), // ✅ username is included
@@ -295,3 +295,4 @@ const SignUpForm = ({ onToggleForm }) => {
 };
 
 export default SignUpForm;
+

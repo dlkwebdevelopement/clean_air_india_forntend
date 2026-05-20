@@ -2,12 +2,12 @@ const TemplateStyles = {
   fonts: {
     body: "'Inter', sans-serif",
     dmSans: "'DM Sans', sans-serif",
-    montserratAlternates: "'Montserrat Alternates', sans-serif",
-    PlusJakartaSans: "'Plus Jakarta Sans', sans-serif;",
-    jost: "'Jost', sans-serif",
-    firaCode: "'Fira Code', sans-serif",
-    caveat: "'Caveat', sans-serif",
-    quantico: "'Quantico', sans-serif",
+    montserratAlternates: "'DM Sans', sans-serif",
+    PlusJakartaSans: "'Inter', sans-serif",
+    jost: "'Inter', sans-serif",
+    firaCode: "'Inter', sans-serif",
+    caveat: "'Inter', sans-serif",
+    quantico: "'DM Sans', sans-serif",
   },
 
   colors: {

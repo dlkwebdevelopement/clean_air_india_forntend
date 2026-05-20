@@ -1,15 +1,15 @@
 // Import images
-import image1 from "../images/portfolio/1.png";
-import image2 from "../images/portfolio/2.png";
+import image1 from "../images/portfolio/1.webp";
+import image2 from "../images/portfolio/2.webp";
 import image3 from "../images/portfolio/3.png";
 import image4 from "../images/portfolio/4.png";
-import image5 from "../images/portfolio/5.png";
+import image5 from "../images/portfolio/5.webp";
 import image6 from "../images/portfolio/6.png";
-import image7 from "../images/portfolio/7.png";
-import image8 from "../images/portfolio/8.png";
-import image9 from "../images/portfolio/9.png";
-import image10 from "../images/portfolio/10.png";
-import image11 from "../images/portfolio/11.png";
+import image7 from "../images/portfolio/7.webp";
+import image8 from "../images/portfolio/8.webp";
+import image9 from "../images/portfolio/9.webp";
+import image10 from "../images/portfolio/10.webp";
+import image11 from "../images/portfolio/11.webp";
 import image12 from "../images/portfolio/12.png";
 
 const Data = [

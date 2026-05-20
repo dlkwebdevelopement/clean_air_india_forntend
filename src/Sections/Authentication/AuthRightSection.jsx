@@ -18,7 +18,7 @@ const AuthRightSection = () => {
               <ul>
                 {Data?.map((item, i) => (
                   <li key={i}>
-                    <img src={item.icon} alt={`brand-${i + 1}`} />
+                    <img src={item.icon} alt={`brand-${i + 1}`} loading="lazy"/>
                   </li>
                 ))}
               </ul>

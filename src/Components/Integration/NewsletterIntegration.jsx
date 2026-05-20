@@ -32,54 +32,54 @@ const NewsletterIntegration = () => {
               <div className="index2-integration-auto-slider-list scroller">
                 <ul className="slid-content">
                   <li className="slid-inner">
-                    <img src={driveIcon} alt="icon" />
+                    <img height="100" width="100" src={driveIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={slackIcon} alt="icon" />
+                    <img height="100" width="100" src={slackIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={xeroIcon} alt="icon" />
+                    <img height="100" width="100" src={xeroIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zapierIcon} alt="icon" />
+                    <img height="100" width="100" src={zapierIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={hubspotIcon} alt="icon" />
+                    <img height="100" width="100" src={hubspotIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={chatIcon} alt="icon" />
+                    <img height="100" width="100" src={chatIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={driveIcon} alt="icon" />
+                    <img height="100" width="100" src={driveIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zapierIcon} alt="icon" />
+                    <img height="100" width="100" src={zapierIcon} alt="icon" loading="lazy"/>
                   </li>
                 </ul>
                 <ul className="slid-content">
                   <li className="slid-inner">
-                    <img src={chatIcon} alt="icon" />
+                    <img height="100" width="100" src={chatIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={driveIcon} alt="icon" />
+                    <img height="100" width="100" src={driveIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={slackIcon} alt="icon" />
+                    <img height="100" width="100" src={slackIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={xeroIcon} alt="icon" />
+                    <img height="100" width="100" src={xeroIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zapierIcon} alt="icon" />
+                    <img height="100" width="100" src={zapierIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={hubspotIcon} alt="icon" />
+                    <img height="100" width="100" src={hubspotIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={chatIcon} alt="icon" />
+                    <img height="100" width="100" src={chatIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zapierIcon} alt="icon" />
+                    <img height="100" width="100" src={zapierIcon} alt="icon" loading="lazy"/>
                   </li>
                 </ul>
               </div>
@@ -87,54 +87,54 @@ const NewsletterIntegration = () => {
                 <ul className="slid-content">
                   <li className="slid-inner empty" />
                   <li className="slid-inner">
-                    <img src={telegramIcon} alt="icon" />
+                    <img height="100" width="100" src={telegramIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={whatsappIcon} alt="icon" />
+                    <img height="100" width="100" src={whatsappIcon} alt="icon" />
                   </li>
                   <li className="slid-inner">
-                    <img src={boxIcon} alt="icon" />
+                    <img height="100" width="100" src={boxIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={monkeyIcon} alt="icon" />
+                    <img height="100" width="100" src={monkeyIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={snapIcon} alt="icon" />
+                    <img height="100" width="100" src={snapIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={telegramIcon} alt="icon" />
+                    <img height="100" width="100" src={telegramIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zoomIcon} alt="icon" />
+                    <img height="100" width="100" src={zoomIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zapierIcon} alt="icon" />
+                    <img height="100" width="100" src={zapierIcon} alt="icon" loading="lazy"/>
                   </li>
                 </ul>
                 <ul className="slid-content">
                   <li className="slid-inner">
-                    <img src={whatsappIcon} alt="icon" />
+                    <img height="100" width="100" src={whatsappIcon} alt="icon" />
                   </li>
                   <li className="slid-inner">
-                    <img src={boxIcon} alt="icon" />
+                    <img height="100" width="100" src={boxIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={monkeyIcon} alt="icon" />
+                    <img height="100" width="100" src={monkeyIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={snapIcon} alt="icon" />
+                    <img height="100" width="100" src={snapIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={telegramIcon} alt="icon" />
+                    <img height="100" width="100" src={telegramIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zoomIcon} alt="icon" />
+                    <img height="100" width="100" src={zoomIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={zapierIcon} alt="icon" />
+                    <img height="100" width="100" src={zapierIcon} alt="icon" loading="lazy"/>
                   </li>
                   <li className="slid-inner">
-                    <img src={hubspotIcon} alt="icon" />
+                    <img height="100" width="100" src={hubspotIcon} alt="icon" loading="lazy"/>
                   </li>
                 </ul>
               </div>

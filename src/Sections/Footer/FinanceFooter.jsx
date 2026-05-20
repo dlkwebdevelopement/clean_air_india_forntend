@@ -42,7 +42,7 @@ const FinanceFooter = () => {
                 <div className="footer-card">
                   <div className="footer-info">
                     <a href="/" className="footer-logo">
-                      <img src={FooterLogo} alt="footer-logo" />
+                      <img height="50" width="150" src={FooterLogo} alt="footer-logo" />
                     </a>
                     <p>
                       Staco is the dedicated platform for performance management
@@ -53,10 +53,10 @@ const FinanceFooter = () => {
                     <ul className="social-link dark footer-one-social-link">
                       {FooterSocialLinks?.map((item, i) => (
                         <li key={i}>
-                          <a href={item.url} target="_blank">
+                          <a href={item.url} target="_blank" rel="noopener noreferrer">
                             <span className="social-icon">
-                              <img src={item.img} alt={item.title} />
-                              <img src={item.img} alt={item.title} />
+                              <img src={item.img} alt={item.title} loading="lazy"/>
+                              <img src={item.img} alt={item.title} loading="lazy"/>
                             </span>
                           </a>
                         </li>

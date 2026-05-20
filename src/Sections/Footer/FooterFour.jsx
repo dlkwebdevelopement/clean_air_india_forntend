@@ -27,40 +27,35 @@ const FooterFour = () => {
                         <a href="#">
                           <img
                             src="../images/icons/facebook.svg"
-                            alt="social-icon"
-                          />
+                            alt="social-icon" loading="lazy"/>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <img
                             src="../images/icons/twitter.svg"
-                            alt="social-icon"
-                          />
+                            alt="social-icon" loading="lazy"/>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <img
                             src="../images/icons/pinterest.svg"
-                            alt="social-icon"
-                          />
+                            alt="social-icon" loading="lazy"/>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <img
                             src="../images/icons/instagram.svg"
-                            alt="social-icon"
-                          />
+                            alt="social-icon" loading="lazy"/>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <img
                             src="../images/icons/dribbble.svg"
-                            alt="social-icon"
-                          />
+                            alt="social-icon" loading="lazy"/>
                         </a>
                       </li>
                     </ul>

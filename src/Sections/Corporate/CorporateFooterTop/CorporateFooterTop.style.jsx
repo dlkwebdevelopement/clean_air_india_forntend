@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import BgImg1 from "../../../assets/images/corporate/footer-top-bg1.png";
-import BgImg2 from "../../../assets/images/corporate/footer-top-bg2.png";
-import BgImg3 from "../../../assets/images/corporate/footer-top-bg3.png";
+import BgImg1 from "../../../assets/images/corporate/footer-top-bg1.webp";
+import BgImg2 from "../../../assets/images/corporate/footer-top-bg2.webp";
+import BgImg3 from "../../../assets/images/corporate/footer-top-bg3.webp";
 
 const CorporateFooterTopStyle = styled.section`
   .row {

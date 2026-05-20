@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import BgImg from "../../../assets/images/corporate/testimonial-bg.jpg";
+import BgImg from "../../../assets/images/corporate/testimonial-bg.webp";
 import PrevImg from "../../../assets/images/corporate/icon-prev.svg";
 import NextImg from "../../../assets/images/corporate/icon-next.svg";
 import QuoteImg from "../../../assets/images/corporate/quotes-bg.png";

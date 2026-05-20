@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AppBannerStyleWrapper from "./AppBanner.style";
 
-import BannerImg from "../../../assets/images/app/banner-mockup.png";
+import BannerImg from "../../../assets/images/app/banner-mockup.webp";
 import BannerShape1 from "../../../assets/images/app/app-banner-shape1.svg";
 import BannerShape2 from "../../../assets/images/app/app-banner-shape2.svg";
 import RightIcon from "../../../assets/images/icons/icon-right.svg";
@@ -65,7 +65,7 @@ const AppLandingBanner = () => {
                                 : "is-hidden"
                             }
                           >
-                            {headline} <img src={RightIcon} alt=">" />
+                            {headline} <img height="12" width="7" src={RightIcon} alt=">" />
                           </b>
                         ))}
                       </span>
@@ -94,8 +94,7 @@ const AppLandingBanner = () => {
           <div className="col-lg-6">
            <ScrollAnimate delay={300}>
            <div className="app-landing-banner-img">
-              <img
-                src={BannerImg}
+              <img height="700" width="599" src={BannerImg}
                 alt="img"
                 style={{ transform: `translateY(${animationValue}px)` }}
               />
@@ -105,10 +104,10 @@ const AppLandingBanner = () => {
         </div>
       </div>
       <div className="app-banner-shape1">
-        <img src={BannerShape1} alt="img" />
+        <img height="540" width="800" src={BannerShape1} alt="img" />
       </div>
       <div className="app-banner-shape2">
-        <img src={BannerShape2} alt="img" />
+        <img height="354" width="354" src={BannerShape2} alt="img" />
       </div>
     </AppBannerStyleWrapper>
   );

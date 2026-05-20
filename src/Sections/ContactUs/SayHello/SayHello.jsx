@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import SayHelloStyle from "./SayHello.style";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 
-import ContactImg from "../../../assets/images/contact/contact-img.png";
+import ContactImg from "../../../assets/images/contact/contact-img.webp";
 import ShapeImg1 from "../../../assets/images/contact/shape-1.svg";
 import ShapeImg2 from "../../../assets/images/contact/shape-2.svg";
 import SmsTrackingImg from "../../../assets/images/icons/sms-tracking-2.svg";
@@ -65,7 +65,7 @@ const SayHello = () => {
     }
 
     try {
-      const response = await fetch('https://api.cleanairindia.com/api/contact', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,17 +111,17 @@ const SayHello = () => {
           <div className="col-lg-6">
             <ScrollAnimate delay={200}>
               <div className="contact-img">
-                <img src={ContactImg} alt="contact-img" />
+                <img height="520" width="520" src={ContactImg} alt="contact-img" loading="lazy"/>
                 <div className="overlay-item shape-1">
-                  <img src={ShapeImg1} alt="shape-img" />
+                  <img height="170" width="170" src={ShapeImg1} alt="shape-img" loading="lazy"/>
                   <div className="icon">
-                    <img src={SmsTrackingImg} alt="icon" />
+                    <img height="38" width="44" src={SmsTrackingImg} alt="icon" loading="lazy"/>
                   </div>
                 </div>
                 <div className="overlay-item shape-2">
-                  <img src={ShapeImg2} alt="shape-img" />
+                  <img height="83" width="83" src={ShapeImg2} alt="shape-img" loading="lazy"/>
                   <div className="icon">
-                    <img src={CallOutgoingImg} alt="icon" />
+                    <img height="22" width="22" src={CallOutgoingImg} alt="icon" loading="lazy"/>
                   </div>
                 </div>
               </div>

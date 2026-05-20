@@ -65,14 +65,12 @@ const CoreFeature = () => {
                     />
                   </a>
                   <a href="#" className="rotate-icon-btn">
-                    <img
-                      className="rotate-icon"
+                    <img height="60" width="60" className="rotate-icon"
                       src={shapeLayoutIcon}
                       alt="layout-icon"
-                      ref={rotateIconRef}
-                    />
+                      ref={rotateIconRef} loading="lazy"/>
                     <span className="icon">
-                      <img src={layoutIcon} alt="shape-layout-icon" />
+                      <img height="20" width="20" src={layoutIcon} alt="shape-layout-icon" loading="lazy"/>
                     </span>
                   </a>
                 </div>
@@ -86,7 +84,7 @@ const CoreFeature = () => {
                   <ScrollAnimate delay={feature.delay}>
                     <div className="core-feature-item">
                       <div className="core-feature-item-icon">
-                        <img src={feature.iconSrc} alt="core-feature-icon" />
+                        <img src={feature.iconSrc} alt="core-feature-icon" loading="lazy"/>
                       </div>
                       <div className="core-feature-item-text">
                         <h5>{feature.title}</h5>

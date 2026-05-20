@@ -12,7 +12,7 @@ const MeetVirtually = () => {
           <div className="col-lg-5">
             <ScrollAnimate delay={200}>
               <div className="virtually-img">
-                <img src={graphBoxImage} alt="virtually-img" />
+                <img height="482" width="473" src={graphBoxImage} alt="virtually-img" loading="lazy"/>
               </div>
             </ScrollAnimate>
           </div>

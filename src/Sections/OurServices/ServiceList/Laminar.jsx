@@ -2,16 +2,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
-import picture1 from "../../../assets/images/about-us/laminar11.jpeg";
-import picture2 from "../../../assets/images/about-us/laminar6n.jpg";
-import picture3 from "../../../assets/images/about-us/laminar8.jpg";
-import picture4 from "../../../assets/images/about-us/laminar9.jpg";
-import picture5 from "../../../assets/images/about-us/laminar12.jpeg";
-import picture6 from "../../../assets/images/about-us/laminar13.jpeg";
-import picture7 from "../../../assets/images/about-us/laminar14.jpeg";
-import picture8 from "../../../assets/images/about-us/laminar15.jpg";
-import picture9 from "../../../assets/images/about-us/laminar16.jpeg";
-import picture10 from "../../../assets/images/about-us/laminar17.jpeg";
+import picture1 from "../../../assets/images/about-us/laminar11.webp";
+import picture2 from "../../../assets/images/about-us/laminar6n.webp";
+import picture3 from "../../../assets/images/about-us/laminar8.webp";
+import picture4 from "../../../assets/images/about-us/laminar9.webp";
+import picture5 from "../../../assets/images/about-us/laminar12.webp";
+import picture6 from "../../../assets/images/about-us/laminar13.webp";
+import picture7 from "../../../assets/images/about-us/laminar14.webp";
+import picture8 from "../../../assets/images/about-us/laminar15.webp";
+import picture9 from "../../../assets/images/about-us/laminar16.webp";
+import picture10 from "../../../assets/images/about-us/laminar17.webp";
 import cataloguePdf from "../../../assets/images/about-us/Horizontal Laminar Airflow Product Catalogue.pdf";
 import cataloguePdf2 from "../../../assets/images/about-us/Vertical Laminar Airflow Product Catalogue.pdf";
 
@@ -51,7 +51,7 @@ const ProductPage1 = () => {
 
     try {
       // First, send the email
-      const response = await fetch('https://api.cleanairindia.com/api/product-catalogue', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/product-catalogue`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const ProductPage1 = () => {
           {/* LEFT: Product Images + Features */}
           <div className="col-lg-6 col-md-12 product-images">
             <div className="main-image">
-              <img src={selectedImage} alt="Laminar Airflow" />
+              <img src={selectedImage} alt="Laminar Airflow" loading="lazy"/>
             </div>
 
             <div className="thumbnail-list">
@@ -121,8 +121,7 @@ const ProductPage1 = () => {
                   src={img}
                   alt={`Laminar ${index + 1}`}
                   className={selectedImage === img ? "active" : ""}
-                  onClick={() => setSelectedImage(img)}
-                />
+                  onClick={() => setSelectedImage(img)} loading="lazy"/>
               ))}
             </div>
 
@@ -255,6 +254,52 @@ const ProductPage1 = () => {
             </div>
           </div>
         </div>
+
+        {/* Detailed SEO & Overview Content */}
+        <DetailedContentRow>
+          <div className="col-12">
+            <hr className="section-divider" />
+            
+            <article className="detailed-info-section">
+              <h2 className="main-title">Laminar Airflow – Clean Air Systems</h2>
+              <p>
+                Clean Air Systems designs and manufactures high-performance Laminar Airflow systems for controlled environments. Our Laminar Airflow units are engineered to maintain sterile and contamination-free working conditions in laboratories and industries. As trusted Laminar Airflow Manufacturers in Chennai, we deliver advanced cleanroom solutions across Laminar Airflow Chennai and Laminar Airflow India. We also provide competitive Laminar Airflow Price options directly from leading Laminar Airflow Manufacturers in India, ensuring quality, safety, and affordability.
+              </p>
+
+              <h3>What is Laminar Airflow?</h3>
+              <p>
+                Laminar Airflow is a controlled airflow system that delivers uniform, unidirectional air through HEPA filtration to maintain a sterile environment. Laminar Airflow Clean Benches are widely used to prevent contamination in sensitive operations. At Clean Air Systems, our Laminar Airflow Work Stations are designed for precision handling in laboratory and industrial applications. From Laminar Airflow Chennai to large-scale Laminar Airflow India projects, we provide reliable cleanroom airflow solutions with strict quality standards. We also ensure transparent Laminar Airflow Price structures for different industrial needs.
+              </p>
+
+              <h3>Applications of Laminar Airflow</h3>
+              <p>
+                Laminar Airflow systems are widely used in pharmaceutical industries, biotechnology labs, medical research centers, and electronics manufacturing. Laminar Airflow Clean Benches are essential for sterile sample handling and testing procedures. Our Laminar Airflow Work Stations support high-precision operations in controlled environments. Industries across Laminar Airflow Chennai and Laminar Airflow India rely on our systems for contamination-free workflows. We also supply solutions through trusted Laminar Airflow Manufacturers in Chennai and Laminar Airflow Manufacturers in India.
+              </p>
+
+              <h3>Features & Technical Advantages</h3>
+              <ul className="advantages-list">
+                <li><FaCheckCircle className="tick-icon" /> HEPA-filtered unidirectional airflow for maximum cleanliness</li>
+                <li><FaCheckCircle className="tick-icon" /> High-efficiency contamination control system</li>
+                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
+                <li><FaCheckCircle className="tick-icon" /> Low noise operation for comfortable working conditions</li>
+                <li><FaCheckCircle className="tick-icon" /> Energy-efficient airflow design</li>
+                <li><FaCheckCircle className="tick-icon" /> Uniform air distribution across work surface</li>
+                <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning system</li>
+                <li><FaCheckCircle className="tick-icon" /> Ergonomic design for operator convenience</li>
+                <li><FaCheckCircle className="tick-icon" /> Suitable for Laminar Airflow Clean Benches and Work Stations</li>
+                <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
+              </ul>
+
+              <h3>Why Choose Clean Air Systems?</h3>
+              <p>
+                Clean Air Systems is a trusted name among Laminar Airflow Manufacturers in Chennai, delivering advanced cleanroom solutions for various industries. Our Laminar Airflow systems are designed for reliability, safety, and long-term performance. We serve clients across Laminar Airflow Chennai and Laminar Airflow India with high-quality engineering and technical expertise. Our Laminar Airflow Price options are competitive and transparent, making us a preferred choice among Laminar Airflow Manufacturers in India.
+              </p>
+              <p>
+                Our Laminar Airflow Clean Benches and Work Stations are built for precision and contamination-free performance. With strong quality control and advanced manufacturing standards, Clean Air Systems continues to deliver reliable Laminar Airflow solutions for laboratories and industries across Laminar Airflow Chennai and Laminar Airflow India.
+              </p>
+            </article>
+          </div>
+        </DetailedContentRow>
       </div>
 
       {/* Modal Form */}
@@ -662,5 +707,86 @@ const Message = styled.div`
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+  }
+`;
+
+const DetailedContentRow = styled.div`
+  margin-top: 60px;
+  
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
+    margin-bottom: 50px;
+  }
+
+  .detailed-info-section {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h2.main-title {
+      font-size: 32px;
+      color: #0061a6;
+      margin-bottom: 25px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #007bff;
+        border-radius: 2px;
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .advantages-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 30px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.5;
+
+        .tick-icon {
+          color: #28a745;
+          margin-right: 10px;
+          margin-top: 3px;
+          flex-shrink: 0;
+          font-size: 16px;
+        }
+      }
+    }
   }
 `;

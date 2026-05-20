@@ -2,16 +2,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa";
-import picture1 from "../../../assets/images/about-us/bio1.jpg";
-import picture2 from "../../../assets/images/about-us/bio2.jpg";
-import picture3 from "../../../assets/images/about-us/bio3.jpg";
-import picture4 from "../../../assets/images/about-us/bio4.jpg";
-import picture5 from "../../../assets/images/about-us/bio5.jpg";
-import picture6 from "../../../assets/images/about-us/bio6.jpg";
-import picture7 from "../../../assets/images/about-us/bio7.jpeg";
-import picture8 from "../../../assets/images/about-us/bio8.jpeg";
-import picture9 from "../../../assets/images/about-us/bio9.jpeg";
-import picture10 from "../../../assets/images/about-us/bio10.jpg";
+import picture1 from "../../../assets/images/about-us/bio1.webp";
+import picture2 from "../../../assets/images/about-us/bio2.webp";
+import picture3 from "../../../assets/images/about-us/bio3.webp";
+import picture4 from "../../../assets/images/about-us/bio4.webp";
+import picture5 from "../../../assets/images/about-us/bio5.webp";
+import picture6 from "../../../assets/images/about-us/bio6.webp";
+import picture7 from "../../../assets/images/about-us/bio7.webp";
+import picture8 from "../../../assets/images/about-us/bio8.webp";
+import picture9 from "../../../assets/images/about-us/bio9.webp";
+import picture10 from "../../../assets/images/about-us/bio10.webp";
 import cataloguePdf from "../../../assets/images/about-us/Bio-Safety Cabinet Product Catalogue.pdf";
 
 const ProductPage2 = () => {
@@ -50,7 +50,7 @@ const ProductPage2 = () => {
 
     try {
       // First, send the email
-      const response = await fetch('https://api.cleanairindia.com/api/product-catalogue', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/product-catalogue`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ const ProductPage2 = () => {
           {/* LEFT: Product Images + Features */}
           <div className="col-lg-6 col-md-12 product-images">
             <div className="main-image">
-              <img src={selectedImage} alt="Biosafety Cabinet" />
+              <img src={selectedImage} alt="Biosafety Cabinet" loading="lazy"/>
             </div>
 
             <div className="thumbnail-list">
@@ -118,8 +118,7 @@ const ProductPage2 = () => {
                   src={img}
                   alt={`Biosafety Cabinet ${index + 1}`}
                   className={selectedImage === img ? "active" : ""}
-                  onClick={() => setSelectedImage(img)}
-                />
+                  onClick={() => setSelectedImage(img)} loading="lazy"/>
               ))}
             </div>
 
@@ -237,6 +236,57 @@ const ProductPage2 = () => {
             </div>
           </div>
         </div>
+
+        {/* Detailed SEO & Overview Content */}
+        <DetailedContentRow>
+          <div className="col-12">
+            <hr className="section-divider" />
+            
+            <article className="detailed-info-section">
+              <h2 className="main-title">Biosafety Cabinets</h2>
+              <p>
+                Clean Air Systems is a leading manufacturer of high-quality Biosafety Cabinets designed for laboratory safety and contamination control. Our Biosafety Cabinets Class II provide superior protection for personnel, product, and environment. We offer advanced Biosafety Cabinets Class III for high-risk applications and Biosafety Cabinets A2 and Biosafety Cabinets B2 for specialized laboratory requirements. Based in Biosafety Cabinets Chennai, we serve across Biosafety Cabinets India with reliable solutions. We also provide competitive Biosafety Cabinets Price options directly from trusted Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
+              </p>
+
+              <h3>What is a Biosafety Cabinet?</h3>
+              <p>
+                A Biosafety Cabinet is a ventilated enclosure designed to provide safe handling of biological materials. Biosafety Cabinets Class II are widely used in laboratories for routine research and testing. Advanced Biosafety Cabinets Class III are designed for maximum containment in high-risk environments. Biosafety Cabinets A2 are commonly used for general microbiological work, while Biosafety Cabinets B2 provide full exhaust safety for hazardous applications. From Biosafety Cabinets Chennai to nationwide Biosafety Cabinets India projects, we deliver reliable systems. We ensure competitive Biosafety Cabinets Price from top Biosafety Cabinets Manufacturers in Chennai and leading Biosafety Cabinets Manufacturers in India.
+              </p>
+
+              <h3>Applications of Biosafety Cabinets</h3>
+              <p>
+                Biosafety Cabinets are widely used in pharmaceutical industries, microbiology labs, and research centers. Biosafety Cabinets Class II are ideal for routine testing and clinical applications. Biosafety Cabinets Class III are used for highly infectious materials requiring maximum safety. Biosafety Cabinets A2 are suitable for general lab environments, while Biosafety Cabinets B2 are used for toxic and chemical handling. In Biosafety Cabinets Chennai industries, demand is growing rapidly, while across Biosafety Cabinets India laboratories, usage is increasing. We also provide competitive Biosafety Cabinets Price from leading Biosafety Cabinets Manufacturers in Chennai and trusted Biosafety Cabinets Manufacturers in India.
+              </p>
+
+              <h3>Types of Biosafety Cabinets</h3>
+              <p>
+                We manufacture different models based on application requirements. Biosafety Cabinets Class II are the most commonly used laboratory systems. Biosafety Cabinets Class III are fully sealed glove-box systems for maximum protection. Biosafety Cabinets A2 offer balanced airflow with partial recirculation, while Biosafety Cabinets B2 provide 100% exhaust systems. From Biosafety Cabinets Chennai to Biosafety Cabinets India installations, we ensure high-quality engineering. Our Biosafety Cabinets Price remains affordable from top Biosafety Cabinets Manufacturers in Chennai and experienced Biosafety Cabinets Manufacturers in India.
+              </p>
+
+              <h3>Key Features of Biosafety Cabinets</h3>
+              <ul className="advantages-list">
+                <li><FaCheckCircle className="tick-icon" /> HEPA/ULPA filtration system for high-efficiency air purification</li>
+                <li><FaCheckCircle className="tick-icon" /> Vertical laminar airflow for contamination-free environment</li>
+                <li><FaCheckCircle className="tick-icon" /> Negative pressure containment system for safety</li>
+                <li><FaCheckCircle className="tick-icon" /> Stainless steel interior work surface for durability</li>
+                <li><FaCheckCircle className="tick-icon" /> UV sterilization lamp for decontamination</li>
+                <li><FaCheckCircle className="tick-icon" /> Low noise operation for laboratory comfort</li>
+                <li><FaCheckCircle className="tick-icon" /> Digital airflow monitoring and alarm system</li>
+                <li><FaCheckCircle className="tick-icon" /> Ergonomic design for easy operation</li>
+                <li><FaCheckCircle className="tick-icon" /> Energy-efficient motor system</li>
+                <li><FaCheckCircle className="tick-icon" /> Compliance with international safety standards (NSF / EN / ISO)</li>
+              </ul>
+
+              <h3>Why Choose Clean Air Systems?</h3>
+              <p>
+                Clean Air Systems is trusted for delivering high-performance laboratory safety equipment. Our Biosafety Cabinets Class II and Biosafety Cabinets Class III ensure maximum protection and reliability. Biosafety Cabinets A2 and Biosafety Cabinets B2 are designed for precision applications. From Biosafety Cabinets Chennai to large-scale Biosafety Cabinets India projects, we ensure quality manufacturing. We offer the best Biosafety Cabinets Price with support from leading Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
+              </p>
+              <p>
+                Our Biosafety Cabinets are engineered for safety, precision, and long-term performance. With advanced filtration technology and strict quality standards, we ensure contamination-free environments for laboratories, pharmaceutical industries, and research institutions across India.
+              </p>
+            </article>
+          </div>
+        </DetailedContentRow>
       </div>
 
       {/* Modal Form */}
@@ -645,5 +695,86 @@ const Message = styled.div`
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+  }
+`;
+
+const DetailedContentRow = styled.div`
+  margin-top: 60px;
+  
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
+    margin-bottom: 50px;
+  }
+
+  .detailed-info-section {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h2.main-title {
+      font-size: 32px;
+      color: #0061a6;
+      margin-bottom: 25px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #007bff;
+        border-radius: 2px;
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .advantages-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 30px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.5;
+
+        .tick-icon {
+          color: #28a745;
+          margin-right: 10px;
+          margin-top: 3px;
+          flex-shrink: 0;
+          font-size: 16px;
+        }
+      }
+    }
   }
 `;

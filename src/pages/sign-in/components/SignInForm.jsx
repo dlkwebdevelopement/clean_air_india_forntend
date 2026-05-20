@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../../components copy/ui/Button';
-import Input from '../../../components copy/ui/Input';
-import { Checkbox } from '../../../components copy/ui/Checkbox';
-import Icon from '../../../components copy/AppIcon';
+import Button from '../../../shared/ui/Button';
+import Input from '../../../shared/ui/Input';
+import { Checkbox } from '../../../shared/ui/Checkbox';
+import Icon from '../../../shared/AppIcon';
 import './SignInForm.css';
 
 const SignInForm = () => {
@@ -62,7 +62,7 @@ const SignInForm = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://api.cleanairindia.com/api/signin', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/signin`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

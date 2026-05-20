@@ -101,6 +101,26 @@ const Data = [
         title: "Softwall Cleanrooms",
         url: "/softwall-cleanrooms",
       },
+      {
+        title: "Reverse Flow Booth",
+        url: "/reverse-flow-booth",
+      },
+      {
+        title: "Pharma Weighing Booths",
+        url: "/pharma-weighing-booths",
+      },
+      {
+        title: "Downflow Booth",
+        url: "/downflow-booth",
+      },
+      {
+        title: "Fan Filter Units",
+        url: "/fan-filter-units",
+      },
+      {
+        title: "Powder Containment Booths",
+        url: "/powder-containment-booths",
+      },
     ],
   },
   {

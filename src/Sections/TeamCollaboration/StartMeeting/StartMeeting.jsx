@@ -15,7 +15,7 @@ const StartMeeting = () => {
               <div className="meeting-anytime-card">
                 <div className="overlay">
                   <ScrollAnimate delay={250}>
-                    <img src={appScreenImage} alt="meeting-img" />
+                    <img height="500" width="362" src={appScreenImage} alt="meeting-img" loading="lazy"/>
                   </ScrollAnimate>
                 </div>
                 <div className="meeting-anytime-card-content">
@@ -27,10 +27,10 @@ const StartMeeting = () => {
                     </div>
                     <div className="meeting-anytime-card-buttons">
                       <a href="#">
-                        <img src={appStoreIcon} alt="App Store icon" />
+                        <img height="50" width="160" src={appStoreIcon} alt="App Store icon" loading="lazy"/>
                       </a>
                       <a href="#">
-                        <img src={playStoreIcon} alt="Play Store icon" />
+                        <img height="50" width="160" src={playStoreIcon} alt="Play Store icon" loading="lazy"/>
                       </a>
                     </div>
                   </ScrollAnimate>

@@ -18,7 +18,7 @@ const TermsAndPrivacy = ({ title, data, children }) => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <ScrollAnimate delay={200}>
                   <h6 className="content-table-title dm-sans">
-                    <img src={AlignIcon} alt="icon" /> TABLE OF CONTENTS
+                    <img height="17" width="20" src={AlignIcon} alt="icon" loading="lazy"/> TABLE OF CONTENTS
                   </h6>
                   <ol className="terms-list">
                     {data?.map((item, i) => (

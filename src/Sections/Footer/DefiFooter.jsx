@@ -92,7 +92,7 @@ const DefiFooter = () => {
           </div>
         </div>
       </div>
-      <img src={FooterBlurImg} alt="img" className="defi-footer-blur" />
+      <img height="600" width="1195" src={FooterBlurImg} alt="img" className="defi-footer-blur" loading="lazy"/>
     </FooterStyleWrapper>
   );
 };

@@ -100,7 +100,7 @@ const CryptoWalletOneFooter = () => {
           <div className="row">
             <div className="col-lg-8 col-md-6">
               <a className="chatbot-footer-logo" href="/">
-                <img src={FooterLogo} alt="footer-logo" />
+                <img height="40" width="136" src={FooterLogo} alt="footer-logo" />
               </a>
               <div className="chatbot-footer-bottom-left pt-5">
                 <ul>
@@ -137,10 +137,10 @@ const CryptoWalletOneFooter = () => {
                   <p>Follow us :</p>
                   <div className="crypto-footer-social-list">
                     {FooterSocialLinks?.map((item, i) => (
-                      <a key={i} href={item.url} target="_blank">
+                      <a key={i} href={item.url} target="_blank" rel="noopener noreferrer">
                         <span className='social-icon'>
-                          <img src={item.img} alt={item.title} />
-                          <img src={item.img} alt={item.title} />
+                          <img src={item.img} alt={item.title} loading="lazy"/>
+                          <img src={item.img} alt={item.title} loading="lazy"/>
                         </span>
                       </a>
                     ))}

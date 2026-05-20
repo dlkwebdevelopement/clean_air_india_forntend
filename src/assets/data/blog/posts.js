@@ -1,4 +1,4 @@
-import PostImg1 from "../../images/blog/blog.png";
+import PostImg1 from "../../images/blog/blog.webp";
 import PostImg2 from "../../images/blog/blog2.png";
 import PostImg3 from "../../images/blog/blog3.png";
 import PostImg4 from "../../images/blog/blog4.png";

@@ -15,7 +15,7 @@ const GalleryPage = () => {
         <Grid>
           {galleryData.map((item, idx) => (
             <Card key={idx} onClick={() => setSelected(item)}>
-              <img src={item.thumbnail} alt={item.name} />
+              <img src={item.thumbnail} alt={item.name} loading="lazy"/>
               <h3>{item.name}</h3>
             </Card>
           ))}
@@ -29,7 +29,7 @@ const GalleryPage = () => {
               <h2>{selected.name}</h2>
               <ImageGrid>
                 {selected.images.map((img, i) => (
-                  <img key={i} src={img} alt={`${selected.name}-${i}`} />
+                  <img key={i} src={img} alt={`${selected.name}-${i}`} loading="lazy"/>
                 ))}
               </ImageGrid>
               <button onClick={() => setSelected(null)}>Close</button>

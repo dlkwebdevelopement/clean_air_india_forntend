@@ -23,7 +23,7 @@ const Consultation = () => {
                 </ScrollAnimate>
                 <div className="consultation-img">
                   <ScrollAnimate delay={230}>
-                  <img src={outgoingCallImage} alt="Outgoing Call" />
+                  <img height="126" width="126" src={outgoingCallImage} alt="Outgoing Call" loading="lazy"/>
                   </ScrollAnimate>
                 </div>
                 <ScrollAnimate delay={250}>

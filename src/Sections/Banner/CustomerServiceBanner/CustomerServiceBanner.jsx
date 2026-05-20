@@ -4,7 +4,7 @@ import heroImgMen1 from "../../../assets/images/customer-service/hero-img-men-1.
 import heroImgMen2 from "../../../assets/images/customer-service/hero-img-men-2.png";
 import likeIcon from "../../../assets/images/customer-service/like.png";
 import checkCoinIcon from "../../../assets/images/customer-service/check-coin.png";
-import index2HeroImg from "../../../assets/images/customer-service/index2-hero-img.png";
+import index2HeroImg from "../../../assets/images/customer-service/index2-hero-img.webp";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
 
 const CustomerServiceBanner = () => {
@@ -50,18 +50,18 @@ const CustomerServiceBanner = () => {
             <ScrollAnimate delay={200}>
               <div className="hero2-img">
                 <div className="hero2-image1">
-                  <img src={heroImgMen1} alt="img" />
+                  <img height="136" width="136" src={heroImgMen1} alt="img" />
                 </div>
                 <div className="hero2-image2">
-                  <img src={heroImgMen2} alt="img" />
+                  <img height="66" width="66" src={heroImgMen2} alt="img" />
                 </div>
                 <div className="hero2-image3">
-                  <img src={likeIcon} alt="img" />
+                  <img height="80" width="62" src={likeIcon} alt="img" />
                 </div>
                 <div className="hero2-image4">
-                  <img src={checkCoinIcon} alt="img" />
+                  <img height="63" width="67" src={checkCoinIcon} alt="img" />
                 </div>
-                <img src={index2HeroImg} alt="hero-img" />
+                <img height="450" width="450" src={index2HeroImg} alt="hero-img" />
               </div>
             </ScrollAnimate>
           </div>

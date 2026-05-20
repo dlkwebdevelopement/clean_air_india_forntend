@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../components copy/AppIcon';
+import Icon from '../../shared/AppIcon';
 import ActionButtons from '../blog-list/components/ActionButtons';
 import './AdminTable.css';
 

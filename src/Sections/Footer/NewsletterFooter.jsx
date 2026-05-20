@@ -28,7 +28,7 @@ const NewsletterFooter = () => {
               </div>
               <div className="col-md-6">
                 <div className="newsletter-box">
-                  <img src={LetterBoxImg} alt="img" />
+                  <img height="220" width="140" src={LetterBoxImg} alt="img" loading="lazy"/>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@ const NewsletterFooter = () => {
       <div className="container">
         <div className="chatbot-footer-bottom">
           <a className="chatbot-footer-logo" href="/">
-            <img src={FooterLogo} alt="footer-logo" />
+            <img height="40" width="136" src={FooterLogo} alt="footer-logo" />
           </a>
           <div className="row pt-5">
             <div className="col-lg-8 col-md-6">
@@ -172,10 +172,10 @@ const NewsletterFooter = () => {
                   <ul className="social-link dark">
                     {FooterSocialLinks?.map((item, i) => (
                       <li key={i}>
-                        <a href={item.url} target="_blank">
+                        <a href={item.url} target="_blank" rel="noopener noreferrer">
                           <span className="social-icon">
-                            <img src={item.img} alt={item.title} />
-                            <img src={item.img} alt={item.title} />
+                            <img src={item.img} alt={item.title} loading="lazy"/>
+                            <img src={item.img} alt={item.title} loading="lazy"/>
                           </span>
                         </a>
                       </li>
@@ -189,13 +189,13 @@ const NewsletterFooter = () => {
             <div className="col-lg-4 col-md-6">
               <ul className="copyright-list">
                 <li>
-                  <img src={Copyright1Img} alt="img" />
+                  <img height="48" width="49" src={Copyright1Img} alt="img" loading="lazy"/>
                 </li>
                 <li>
-                  <img src={Copyright2Img} alt="img" />
+                  <img height="48" width="49" src={Copyright2Img} alt="img" loading="lazy"/>
                 </li>
                 <li>
-                  <img src={Copyright3Img} alt="img" />
+                  <img height="48" width="49" src={Copyright3Img} alt="img" loading="lazy"/>
                 </li>
               </ul>
             </div>

@@ -5,6 +5,7 @@ import StickyBox from "react-sticky-box";
 import BlogItem from "../BlogItem/BlogItem";
 import Pagination from "../../../Components/Pagination/Pagination";
 import Sidebar from "../Sidebar/Sidebar";
+import { getBlogImageUrl } from "../../../utils/image";
 
 const BlogList = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const BlogList = () => {
     const fetchCategories = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://api.cleanairindia.com/api/categories', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/categories`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -55,7 +56,7 @@ const BlogList = () => {
   const fetchTags = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/tags', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/tags`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -126,7 +127,7 @@ useEffect(() => {
       if (filters.tag) queryParams.append('tag', filters.tag);
       if (filters.search) queryParams.append('search', filters.search);
 
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs?${queryParams.toString()}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs?${queryParams.toString()}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -156,7 +157,7 @@ useEffect(() => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs?search=${encodeURIComponent(searchTerm)}&limit=5`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs?search=${encodeURIComponent(searchTerm)}&limit=5`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -234,7 +235,7 @@ useEffect(() => {
               <input
                 type="search"
                 name="blog-search"
-                placeholder="Search category..."
+                placeholder="Search blogs & articles..."
                 defaultValue={filters.search}
                 onChange={handleSearchChange}
                 onFocus={() => filters.search && fetchSearchSuggestions(filters.search)}
@@ -347,7 +348,7 @@ useEffect(() => {
                     <div key={blog._id} className="col-md-6">
                       <BlogItem 
                         id={blog._id}
-                        thumbnail={blog.featuredImage || "/default-blog-image.jpg"} 
+                        thumbnail={getBlogImageUrl(blog.featuredImage)} 
                         category={blog.category?.name || "Uncategorized"} 
                         date={new Date(blog.createdAt).toLocaleDateString()} 
                         title={blog.title}

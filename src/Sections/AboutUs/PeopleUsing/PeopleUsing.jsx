@@ -13,7 +13,7 @@ const PeopleUsing = () => {
         <div className="row align-items-center">
           <div className="col-lg-5">
             <div className="customer-img">
-              <ScrollAnimate delay={200}><img src={CustomerImg} alt="customer-img" /></ScrollAnimate>
+              <ScrollAnimate delay={200}><img height="450" width="450" src={CustomerImg} alt="customer-img" loading="lazy"/></ScrollAnimate>
             </div>
           </div>
           <div className="col-lg-7">
@@ -23,13 +23,13 @@ const PeopleUsing = () => {
                   {avatarImages.map((avatar, index) => (
                     <li key={index}>
                       <a href="#">
-                        <img src={avatar} alt={`user-img-${index}`} />
+                        <img src={avatar} alt={`user-img-${index}`} loading="lazy"/>
                       </a>
                     </li>
                   ))}
                   <li>
                     <button>
-                      <img src={PlusIcon} alt="add-user" />
+                      <img height="12" width="12" src={PlusIcon} alt="add-user" loading="lazy"/>
                     </button>
                   </li>
                 </ul> */}

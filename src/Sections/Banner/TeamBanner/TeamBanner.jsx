@@ -3,11 +3,11 @@ import TeamBannerStyleWrapper from "./TeamBanner.style";
 
 import iconVideo from "../../../assets/images/icons/icon-video.svg";
 import iconCall from "../../../assets/images/icons/icon-call.svg";
-import team1 from "../../../assets/images/team-collaboration/team1.png";
-import team2 from "../../../assets/images/team-collaboration/team2.png";
+import team1 from "../../../assets/images/team-collaboration/team1.webp";
+import team2 from "../../../assets/images/team-collaboration/team2.webp";
 import team3 from "../../../assets/images/team-collaboration/team3.png";
-import team4 from "../../../assets/images/team-collaboration/team4.png";
-import team5 from "../../../assets/images/team-collaboration/team5.png";
+import team4 from "../../../assets/images/team-collaboration/team4.webp";
+import team5 from "../../../assets/images/team-collaboration/team5.webp";
 import ScrollAnimate from './../../../Components/ScrollAnimate';
 
 const TeamBanner = () => {
@@ -42,10 +42,10 @@ const TeamBanner = () => {
             <div className="hero-section-3-header">
               <div className="bg-shape">
                 <div className="shape-img img-1 fadeIn">
-                  <img src={iconVideo} alt="shape-img" />
+                  <img height="135" width="134" src={iconVideo} alt="shape-img" />
                 </div>
                 <div className="shape-img img-2 fadeIn">
-                  <img src={iconCall} alt="shape-img" />
+                  <img height="180" width="180" src={iconCall} alt="shape-img" />
                 </div>
               </div>
               <span className="sub-title">Business Plan 25% Off Now</span>
@@ -67,19 +67,19 @@ const TeamBanner = () => {
             </div>
             <div className="hero-section-3-content">
               <div className="item">
-                <ScrollAnimate delay={200}><img src={team1} alt="team1" /></ScrollAnimate>
+                <ScrollAnimate delay={200}><img height="270" width="211" src={team1} alt="team1" /></ScrollAnimate>
               </div>
               <div className="item">
-                <ScrollAnimate delay={225}><img src={team2} alt="team2" /></ScrollAnimate>
+                <ScrollAnimate delay={225}><img height="240" width="212" src={team2} alt="team2" /></ScrollAnimate>
               </div>
               <div className="item">
-                <ScrollAnimate dekay={250}><img src={team3} alt="team3" /></ScrollAnimate>
+                <ScrollAnimate dekay={250}><img height="220" width="212" src={team3} alt="team3" /></ScrollAnimate>
               </div>
               <div className="item">
-                <ScrollAnimate delay={275}><img src={team4} alt="team4" /></ScrollAnimate>
+                <ScrollAnimate delay={275}><img height="240" width="212" src={team4} alt="team4" /></ScrollAnimate>
               </div>
               <div className="item">
-                <ScrollAnimate delay={300}><img src={team5} alt="team5" /></ScrollAnimate>
+                <ScrollAnimate delay={300}><img height="270" width="211" src={team5} alt="team5" /></ScrollAnimate>
               </div>
             </div>
           </div>

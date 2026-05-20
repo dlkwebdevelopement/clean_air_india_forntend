@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa"; // ✅ Tick Icon
-import picture1 from "../../../assets/images/about-us/so1.jpeg";
-import picture2 from "../../../assets/images/about-us/so2.jpeg";
-import picture3 from "../../../assets/images/about-us/so3.jpeg";
-import picture4 from "../../../assets/images/about-us/so4.jpeg";
+import picture1 from "../../../assets/images/about-us/so1.webp";
+import picture2 from "../../../assets/images/about-us/so2.webp";
+import picture3 from "../../../assets/images/about-us/so3.webp";
+import picture4 from "../../../assets/images/about-us/so4.webp";
 import { useNavigate } from "react-router-dom"; // ✅ for navigation
 
 
@@ -22,7 +22,7 @@ const ProductPage9 = () => {
           {/* LEFT: Product Images + Features */}
           <div className="col-lg-6 col-md-12 product-images">
             <div className="main-image">
-              <img src={selectedImage} alt="Softwall Cleanroom" />
+              <img src={selectedImage} alt="Softwall Cleanroom" loading="lazy"/>
             </div>
 
             <div className="thumbnail-list">
@@ -32,8 +32,7 @@ const ProductPage9 = () => {
                   src={img}
                   alt={`Cleanroom ${index + 1}`}
                   className={selectedImage === img ? "active" : ""}
-                  onClick={() => setSelectedImage(img)}
-                />
+                  onClick={() => setSelectedImage(img)} loading="lazy"/>
               ))}
             </div>
 
@@ -110,6 +109,52 @@ const ProductPage9 = () => {
             </div>
           </div>
         </div>
+
+        {/* Detailed SEO & Overview Content */}
+        <DetailedContentRow>
+          <div className="col-12">
+            <hr className="section-divider" />
+            
+            <article className="detailed-info-section">
+              <h2 className="main-title">Softwall Cleanrooms – Clean Air Systems</h2>
+              <p>
+                Clean Air Systems designs and manufactures high-performance Softwall Cleanrooms and Clean Air Tents. Our Softwall Cleanrooms are engineered to provide flexible and cost-effective contamination control. As trusted Softwall Cleanrooms Manufacturers in Chennai, we deliver versatile systems across Softwall Cleanrooms Chennai and Softwall Cleanrooms India. We also offer competitive Softwall Cleanrooms Price options directly from experienced Softwall Cleanrooms Manufacturers in India, ensuring quality, adaptability, and affordable cleanroom tents for various applications.
+              </p>
+
+              <h3>What are Softwall Cleanrooms?</h3>
+              <p>
+                Softwall Cleanrooms are flexible enclosures designed to establish localized clean environments. They feature transparent PVC or antistatic strip curtains suspended from a rigid, heavy-duty frame. At Clean Air Systems, our Clean Air Tents are equipped with high-efficiency Fan Filter Units (FFUs) containing HEPA filters. From Softwall Cleanrooms Chennai projects to setups across Softwall Cleanrooms India, we provide rapid-deployment solutions. We also offer affordable Softwall Cleanrooms Price options from leading Softwall Cleanrooms Manufacturers in Chennai.
+              </p>
+
+              <h3>Applications of Softwall Cleanrooms</h3>
+              <p>
+                Softwall Cleanrooms are widely used in medical device assembly, pharmaceutical research, electronics manufacturing, biotechnology laboratories, and temporary work zones. They are ideal for creating Class 100 to Class 100,000 controlled environments inside non-classified areas. Our Clean Air Tents provide modular and scalable options for growing industries. Clients across Softwall Cleanrooms Chennai and Softwall Cleanrooms India trust our systems for process protection. We support clients with custom designs from reputed Softwall Cleanrooms Manufacturers in Chennai and Softwall Cleanrooms Manufacturers in India.
+              </p>
+
+              <h3>Features & Technical Advantages</h3>
+              <ul className="advantages-list">
+                <li><FaCheckCircle className="tick-icon" /> Rigid frame construction in stainless steel or powder-coated GI</li>
+                <li><FaCheckCircle className="tick-icon" /> Transparent, antistatic, or fire-retardant PVC strip curtains</li>
+                <li><FaCheckCircle className="tick-icon" /> Integrated Fan Filter Units (FFU) with HEPA filtration (99.97% efficiency)</li>
+                <li><FaCheckCircle className="tick-icon" /> Flexible and expandable modular structure design</li>
+                <li><FaCheckCircle className="tick-icon" /> Castor wheels for easy mobility and relocation (optional)</li>
+                <li><FaCheckCircle className="tick-icon" /> Low noise and energy-efficient blower system</li>
+                <li><FaCheckCircle className="tick-icon" /> LED cleanroom lighting fixtures for high visibility</li>
+                <li><FaCheckCircle className="tick-icon" /> Rapid installation with minimal site preparation</li>
+                <li><FaCheckCircle className="tick-icon" /> Cost-effective alternative to hardwall modular cleanrooms</li>
+                <li><FaCheckCircle className="tick-icon" /> Compliance with ISO 14644-1 cleanroom standards (Class 6 to 8)</li>
+              </ul>
+
+              <h3>Why Choose Clean Air Systems?</h3>
+              <p>
+                Clean Air Systems is a trusted brand among Softwall Cleanrooms Manufacturers in Chennai, offering high-quality turn-key solutions. Our Softwall Cleanrooms and Clean Air Tents are designed for reliability, scalability, and performance. We provide competitive Softwall Cleanrooms Price options across Softwall Cleanrooms Chennai and Softwall Cleanrooms India. Our products are highly preferred among experienced Softwall Cleanrooms Manufacturers in India for their robust engineering and ease of installation.
+              </p>
+              <p>
+                Our Softwall Cleanrooms are built for precision, versatility, and long-term performance. Clean Air Systems continues to deliver superior containment and cleanroom solutions for pharmaceutical and scientific applications across India.
+              </p>
+            </article>
+          </div>
+        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -268,6 +313,87 @@ const ProductSection = styled.section`
 
     .thumbnail-list {
       justify-content: center;
+    }
+  }
+`;
+
+const DetailedContentRow = styled.div`
+  margin-top: 60px;
+  
+  .section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
+    margin-bottom: 50px;
+  }
+
+  .detailed-info-section {
+    max-width: 900px;
+    margin: 0 auto;
+    
+    h2.main-title {
+      font-size: 32px;
+      color: #0061a6;
+      margin-bottom: 25px;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 10px;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #007bff;
+        border-radius: 2px;
+      }
+    }
+
+    h3 {
+      font-size: 22px;
+      color: #333;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .advantages-list {
+      list-style: none;
+      padding: 0;
+      margin: 25px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 30px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 15px;
+        color: #555;
+        line-height: 1.5;
+
+        .tick-icon {
+          color: #28a745;
+          margin-right: 10px;
+          margin-top: 3px;
+          flex-shrink: 0;
+          font-size: 16px;
+        }
+      }
     }
   }
 `;

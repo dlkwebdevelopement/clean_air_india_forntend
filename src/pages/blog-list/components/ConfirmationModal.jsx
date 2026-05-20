@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '../../../components copy/AppIcon';
-import Button from '../../../components copy/ui/Button';
+import Icon from '../../../shared/AppIcon';
+import Button from '../../../shared/ui/Button';
 import './ConfirmationModal.css';
 
 const ConfirmationModal = ({ 

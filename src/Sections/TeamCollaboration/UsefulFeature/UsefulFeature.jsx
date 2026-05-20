@@ -7,9 +7,9 @@ import usefulFeatureIcon from "../../../assets/images/icons/useful-feature-icon.
 import monitorIcon from "../../../assets/images/team-collaboration/monitor.svg";
 import messageIcon from "../../../assets/images/team-collaboration/message.svg";
 import documentIcon from "../../../assets/images/team-collaboration/document.svg";
-import callApp1Image from "../../../assets/images/team-collaboration/call_app_1.png";
-import callApp2Image from "../../../assets/images/team-collaboration/call_app_2.png";
-import callApp3Image from "../../../assets/images/team-collaboration/call_app_3.png";
+import callApp1Image from "../../../assets/images/team-collaboration/call_app_1.webp";
+import callApp2Image from "../../../assets/images/team-collaboration/call_app_2.webp";
+import callApp3Image from "../../../assets/images/team-collaboration/call_app_3.webp";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
 
 const UsefulFeature = () => {
@@ -72,7 +72,7 @@ const UsefulFeature = () => {
               </ScrollAnimate>
               <div className="useful-feature-header-right">
                 <ScrollAnimate delay={220}>
-                  <img src={usefulFeatureIcon} alt="icon" />
+                  <img height="120" width="120" src={usefulFeatureIcon} alt="icon" loading="lazy"/>
                 </ScrollAnimate>
               </div>
             </div>
@@ -119,26 +119,26 @@ const UsefulFeature = () => {
                     <ul className="list">
                       <li className="wt-700">
                         <div className="list-item">
-                          <img src={monitorIcon} alt="icon" />
+                          <img height="22" width="22" src={monitorIcon} alt="icon" loading="lazy"/>
                           <p>Teamwork Webinar</p>
                         </div>
                       </li>
                       <li className="wt-700">
                         <div className="list-item">
-                          <img src={messageIcon} alt="icon" />
+                          <img height="22" width="22" src={messageIcon} alt="icon" loading="lazy"/>
                           <p>Chat &amp; Channel</p>
                         </div>
                       </li>
                       <li className="wt-700">
                         <div className="list-item">
-                          <img src={documentIcon} alt="icon" />
+                          <img height="22" width="22" src={documentIcon} alt="icon" loading="lazy"/>
                           <p>Whiteboards</p>
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div className="slider-item-img">
-                    <img src={callApp1Image} alt="useful-feature-img" />
+                    <img height="327" width="550" src={callApp1Image} alt="useful-feature-img" loading="lazy"/>
                   </div>
                 </div>
                 <div className="slider-item">
@@ -165,7 +165,7 @@ const UsefulFeature = () => {
                     </div>
                   </div>
                   <div className="slider-item-img">
-                    <img src={callApp2Image} alt="useful-feature-img" />
+                    <img height="327" width="550" src={callApp2Image} alt="useful-feature-img" loading="lazy"/>
                   </div>
                 </div>
                 <div className="slider-item">
@@ -185,7 +185,7 @@ const UsefulFeature = () => {
                     </div>
                   </div>
                   <div className="slider-item-img">
-                    <img src={callApp3Image} alt="useful-feature-img" />
+                    <img height="327" width="550" src={callApp3Image} alt="useful-feature-img" loading="lazy"/>
                   </div>
                 </div>
                 <div className="slider-item">
@@ -203,7 +203,7 @@ const UsefulFeature = () => {
                     </div>
                   </div>
                   <div className="slider-item-img">
-                    <img src={callApp2Image} alt="useful-feature-img" />
+                    <img height="327" width="550" src={callApp2Image} alt="useful-feature-img" loading="lazy"/>
                   </div>
                 </div>
               </Slider>

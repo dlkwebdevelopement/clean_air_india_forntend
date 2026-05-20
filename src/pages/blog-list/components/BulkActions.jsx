@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../../components copy/ui/Button';
+import Button from '../../../shared/ui/Button';
 import './BulkActions.css';
 
 const BulkActions = ({ selectedCount, onBulkAction, onClearSelection }) => {

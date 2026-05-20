@@ -9,13 +9,13 @@ const Integration = () => {
   return (
     <IntegrationStyle className="integration-element-section chatbot z-index-3">
       <div className="bg-shape">
-        <img src={IntegrationBg} alt="img" className="bg-line" />
+        <img height="562" width="1921" src={IntegrationBg} alt="img" className="bg-line" loading="lazy"/>
       </div>
       <div className="integrate-element-list">
         <ScrollAnimate delay={200}>
           {integrationData.map((integration, index) => (
             <div className="list-item" key={index}>
-              <img src={integration.icon} alt={integration.alt} />
+              <img src={integration.icon} alt={integration.alt} loading="lazy"/>
             </div>
           ))}
         </ScrollAnimate>
@@ -35,7 +35,7 @@ const Integration = () => {
                 <div className="integration-element-button">
                   <a href="#" className="explore-btn">
                     <span>Explore all Integrations</span>
-                    <img src={ArrowRightWhiteIcon} alt="icon" />
+                    <img height="16" width="19" src={ArrowRightWhiteIcon} alt="icon" loading="lazy"/>
                   </a>
                 </div>
               </ScrollAnimate>

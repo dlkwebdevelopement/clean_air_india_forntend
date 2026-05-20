@@ -9,7 +9,7 @@ const AuthFormWrapper = ({ children }) => {
       <div className="auth-page-header">
         <NavLink to="/" className="logo">
           <ScrollAnimate delay={200}>
-            <img src={LogoDark} alt="logo" />
+            <img height="40" width="136" src={LogoDark} alt="logo" />
           </ScrollAnimate>
         </NavLink>
         <NavLink to="/" className="back-link">

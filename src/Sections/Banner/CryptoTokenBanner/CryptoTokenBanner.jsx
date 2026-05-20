@@ -5,8 +5,8 @@ import Splitting from "splitting";
 import ScrollOut from "scroll-out";
 import Countup from "react-countup-animate";
 
-import BannerBallImg from "../../../assets/images/crypto-token/banner-ball.png";
-import MeshGradImg from "../../../assets/images/crypto-token/mesh-grad.png";
+import BannerBallImg from "../../../assets/images/crypto-token/banner-ball.webp";
+import MeshGradImg from "../../../assets/images/crypto-token/mesh-grad.webp";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
 
 const CryptoTokenBanner = () => {
@@ -62,10 +62,10 @@ const CryptoTokenBanner = () => {
             </div>
             </ScrollAnimate>
             <div className="crypto-token-banner-ball">
-              <img src={BannerBallImg} alt="Banner Ball" loading="lazy" />
+              <img height="550" width="550" src={BannerBallImg} alt="Banner Ball" loading="lazy" />
             </div>
             <div className="masd-grad">
-              <img src={MeshGradImg} alt="Mesh Gradient" loading="lazy" />
+              <img height="918" width="1548" src={MeshGradImg} alt="Mesh Gradient" loading="lazy" />
             </div>
             <div className="crypto-token-banner-card-section">
               <div className="row">

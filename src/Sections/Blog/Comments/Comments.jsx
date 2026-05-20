@@ -14,7 +14,7 @@ const Comments = () => {
               <div className="blog-comment-block">
                 <div className="comment-people-section">
                   <div className="comment-people-img">
-                    <img src={comment.avatar} alt="avatar" />
+                    <img src={comment.avatar} alt="avatar" loading="lazy"/>
                   </div>
                   <div className="comment-people-text">
                     <span className="author-name">{comment.author}</span>
@@ -24,7 +24,7 @@ const Comments = () => {
                 <div className="comment-content">
                   <p>{comment.text}</p>
                   <button>
-                    <img src={ReplyIcon} alt="Reply" />
+                    <img height="18" width="18" src={ReplyIcon} alt="Reply" loading="lazy"/>
                     Reply
                   </button>
                 </div>
@@ -35,7 +35,7 @@ const Comments = () => {
                   <div className="blog-comment-block">
                     <div className="comment-people-section">
                       <div className="comment-people-img">
-                        <img src={replyItem.avatar} alt="avatar" />
+                        <img src={replyItem.avatar} alt="avatar" loading="lazy"/>
                       </div>
                       <div className="comment-people-text">
                         <span className="author-name">{replyItem.author}</span>
@@ -45,7 +45,7 @@ const Comments = () => {
                     <div className="comment-content">
                       <p>{replyItem.text}</p>
                       <button>
-                        <img src={ReplyIcon} alt="Reply" />
+                        <img height="18" width="18" src={ReplyIcon} alt="Reply" loading="lazy"/>
                         Reply
                       </button>
                     </div>

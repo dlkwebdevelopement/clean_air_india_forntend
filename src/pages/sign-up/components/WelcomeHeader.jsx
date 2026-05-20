@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../../components copy/AppIcon';
+import Icon from '../../../shared/AppIcon';
 import './WelcomeHeader.css';
 import logo from '../../../assets/images/logo/Logos.svg'; // adjust path to your SVG/PNG
 
@@ -9,8 +9,7 @@ const WelcomeHeader = () => {
       {/* Logo */}
       <div className="welcome-logo-container">
        <div className="welcome-logo">
-  <img 
-    src={logo} 
+  <img height="75" width="136" src={logo} 
     alt="Logo" 
     className="welcome-logo-img"
   />

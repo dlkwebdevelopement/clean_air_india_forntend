@@ -5,7 +5,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Data from "../../../assets/data/about-us/aboutUs";
 
-import AboutFeatureImg from "../../../assets/images/about-us/feature.png";
+import AboutFeatureImg from "../../../assets/images/about-us/feature.webp";
 import ItemShape from "../../../assets/images/shape/item-shape.svg";
 import Star4 from "../../../assets/images/shape/star-4.svg";
 import Wave from "../../../assets/images/about-us/wave-shape.svg";
@@ -53,7 +53,7 @@ const AboutUsContent = () => {
                         {item.featerList?.map((feature, index) => (
                           <li key={index}>
                             <div className="list-item">
-                              <img src={feature.icon} alt="icon" />
+                              <img src={feature.icon} alt="icon" loading="lazy"/>
                               <p>{feature.title}</p>
                             </div>
                           </li>
@@ -68,7 +68,7 @@ const AboutUsContent = () => {
           <div className="col-lg-5">
             <ScrollAnimate>
               <div className="about-feature-img">
-                <img src={AboutFeatureImg} alt="about-feature-img" />
+                <img height="1024" width="1024" src={AboutFeatureImg} alt="about-feature-img" loading="lazy"/>
                 <div className="overlay">
                   <div className="overlay">
                     <div className="overlay-item reduction-time">
@@ -79,12 +79,12 @@ const AboutUsContent = () => {
                           </span>
                           %
                         </h3>
-                        <img src={Star4} alt="star" />
+                        <img height="26" width="25" src={Star4} alt="star" loading="lazy"/>
                       </div>
                       <p>Reduction in time</p>
                     </div>
                     <div className="overlay-item success-rate">
-                      <img className="rotate-icon" src={ItemShape} alt="icon" />
+                      <img height="170" width="170" className="rotate-icon" src={ItemShape} alt="icon" loading="lazy"/>
                       <div className="success-rate-content">
                         <div className="progress pie_progress">
                           <CustomPieProgress
@@ -100,7 +100,7 @@ const AboutUsContent = () => {
                       </div>
                     </div>
                     <div className="overlay-item wave-shape">
-                      <img src={Wave} alt="shape" />
+                      <img height="37" width="96" src={Wave} alt="shape" loading="lazy"/>
                     </div>
                   </div>
                 </div>

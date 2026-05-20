@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import SidebarNavigation from '../../components copy/ui/SidebarNavigation';
-import Header from '../../components copy/ui/Header';
+import SidebarNavigation from '../../shared/ui/SidebarNavigation';
+import Header from '../../shared/ui/Header';
 import BlogTitleSection from './components/BlogTitleSection';
 import RichTextEditor from './components/RichTextEditor';
 import BlogMetaSection from './components/BlogMetaSection';
@@ -68,7 +68,7 @@ const CreateNewBlog = () => {
   const fetchCategories = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/categories', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/categories`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -85,7 +85,7 @@ const CreateNewBlog = () => {
   const fetchTags = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/tags', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/tags`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -102,7 +102,7 @@ const CreateNewBlog = () => {
   const fetchBlogData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${editBlogId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/${editBlogId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -189,8 +189,8 @@ const CreateNewBlog = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode
-        ? `https://api.cleanairindia.com/api/blogs/${editBlogId}`
-        : 'https://api.cleanairindia.com/api/blogs';
+        ? `${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/${editBlogId}`
+        : `${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs`;
 
       const formDataToSend = new FormData();
       formDataToSend.append('title', formData.title);
@@ -234,8 +234,8 @@ const CreateNewBlog = () => {
     try {
       const token = localStorage.getItem('token');
       const url = isEditMode
-        ? `https://api.cleanairindia.com/api/blogs/${editBlogId}`
-        : 'https://api.cleanairindia.com/api/blogs';
+        ? `${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/${editBlogId}`
+        : `${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs`;
 
       const formDataToSend = new FormData();
       formDataToSend.append('title', formData.title);

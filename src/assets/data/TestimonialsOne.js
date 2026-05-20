@@ -1,4 +1,4 @@
-import Img1 from "../images/avater/testimonial1.png";
+import Img1 from "../images/avater/testimonial1.webp";
 import Img2 from "../images/avater/testimonial2.png";
 import Img3 from "../images/avater/testimonial3.png";
 import Img4 from "../images/avater/testimonial4.png";

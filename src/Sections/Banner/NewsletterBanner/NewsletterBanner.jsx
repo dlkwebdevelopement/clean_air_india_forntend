@@ -56,7 +56,7 @@ const NewsletterBanner = () => {
           <div className="col-lg-6">
             <ScrollAnimate delay={200}>
             <div className="hero2-img">
-              <img src={BannerImg} alt="img" />
+              <img height="450" width="525" src={BannerImg} alt="img" />
             </div>
             </ScrollAnimate>
           </div>

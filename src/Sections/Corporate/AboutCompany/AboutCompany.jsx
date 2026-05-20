@@ -2,18 +2,18 @@ import { useEffect } from "react";
 import AboutCompanyStyleWrapper from "./AboutCompany.style";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import Venobox from "venobox/dist/venobox";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-// import aboutCompanyImg from "../../../assets/images/corporate/about_img.png";
-import aboutCompanyImg2 from "../../../assets/images/corporate/laminar2.png";
-import aboutCompanyImg3 from "../../../assets/images/corporate/modular-room2.jpg";
-import aboutCompanyImg4 from "../../../assets/images/corporate/laminar9.jpg";
-import aboutCompanyImg5 from "../../../assets/images/corporate/fume3.png";
-import aboutCompanyImg6 from "../../../assets/images/corporate/Ste2.png";
+const SlickSlider = Slider.default || Slider;
 
-import aboutCompanyImg from "../../../assets/images/corporate/about_img.png";
+// import aboutCompanyImg from "../../../assets/images/corporate/about_img.webp";
+import aboutCompanyImg2 from "../../../assets/images/corporate/laminar2.webp";
+import aboutCompanyImg3 from "../../../assets/images/corporate/modular-room2.webp";
+import aboutCompanyImg4 from "../../../assets/images/corporate/laminar9.webp";
+import aboutCompanyImg5 from "../../../assets/images/corporate/fume3.webp";
+import aboutCompanyImg6 from "../../../assets/images/corporate/Ste2.webp";
+
+import aboutCompanyImg from "../../../assets/images/corporate/about_img.webp";
 import playIcon from "../../../assets/images/corporate/play-icon.svg";
 import fastIcon from "../../../assets/images/corporate/fast.svg";
 import safeIcon from "../../../assets/images/corporate/safe.svg";
@@ -58,13 +58,13 @@ const AboutCompany = () => {
             <ScrollAnimate delay={250}>
               <div className="about-company-left">
                 <div className="about-company-inner">
-                  <Slider {...settings}>
+                  <SlickSlider {...settings}>
                     {companyImages.map((img, index) => (
                       <div key={index} className="about-company-img">
-                        <img src={img} alt={`about-company-${index}`} />
+                        <img src={img} alt={`about-company-${index}`} loading="lazy"/>
                       </div>
                     ))}
-                  </Slider>
+                  </SlickSlider>
                 </div>
               </div>
             </ScrollAnimate>
@@ -89,19 +89,19 @@ const AboutCompany = () => {
               <ScrollAnimate delay={300}>
                 <ul>
                   <li>
-                    <img src={fastIcon} alt="icon" />
+                    <img height="20" width="37" src={fastIcon} alt="icon" loading="lazy"/>
                     <span>Fast</span>
                   </li>
                   <li>
-                    <img src={safeIcon} alt="icon" />
+                    <img height="20" width="18" src={safeIcon} alt="icon" loading="lazy"/>
                     <span>Secure</span>
                   </li>
                   <li>
-                    <img src={anytimeIcon} alt="icon" />
+                    <img height="20" width="19" src={anytimeIcon} alt="icon" loading="lazy"/>
                     <span>Anytime</span>
                   </li>
                   <li>
-                    <img src={anywhereIcon} alt="icon" />
+                    <img height="20" width="15" src={anywhereIcon} alt="icon" loading="lazy"/>
                     <span>Anywhere</span>
                   </li>
                 </ul>

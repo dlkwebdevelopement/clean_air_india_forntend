@@ -15,7 +15,7 @@ import campaignImg from "../../../assets/images/sass1/campaign.svg";
 import saasImg from "../../../assets/images/sass1/saas.svg";
 import chatInventoryImg from "../../../assets/images/sass1/chat-inventory.svg";
 import inventoryImg from "../../../assets/images/sass1/inventory.svg";
-import index5BannerImg from "../../../assets/images/sass1/index5-banner-img.png";
+import index5BannerImg from "../../../assets/images/sass1/index5-banner-img.webp";
 import handsIcon from "../../../assets/images/icons/hands.png";
 
 const SassOneBanner = () => {
@@ -86,7 +86,7 @@ const SassOneBanner = () => {
         <div className="index5-hero-content">
           <ScrollAnimate delay={200}>
           <div className="v5welocme-section">
-            <img src={handsIcon} alt="icons" /> Welcome to Staco
+            <img height="17" width="16" src={handsIcon} alt="icons" /> Welcome to Staco
           </div>
           <div className="v5banner-text">
             <h1 className="cd-headline clip is-full-width banner-title text-center">
@@ -114,7 +114,7 @@ const SassOneBanner = () => {
           </ScrollAnimate>
         </div>
         <div className="index5-hero-img">
-          <img src={index5BannerImg} alt="img" />
+          <img height="732" width="1170" src={index5BannerImg} alt="img" />
         </div>
       </div>
       <div className="index5-scroll-carousel-section">
@@ -122,43 +122,43 @@ const SassOneBanner = () => {
         <ul className="slide-left">
           <li>
             <span>
-              <img src={teamManagementImg} alt="img" />
+              <img height="50" width="50" src={teamManagementImg} alt="img" />
             </span>
             <strong>Team Management</strong>
           </li>
           <li>
             <span>
-              <img src={invoiceImg} alt="img" />
+              <img height="50" width="50" src={invoiceImg} alt="img" />
             </span>
             <strong>Invoice System</strong>
           </li>
           <li>
             <span>
-              <img src={meetingImg} alt="img" />
+              <img height="70" width="152" src={meetingImg} alt="img" />
             </span>
             <strong>Digital Marketing</strong>
           </li>
           <li>
             <span>
-              <img src={chatbotImg} alt="img" />
+              <img height="50" width="50" src={chatbotImg} alt="img" />
             </span>
             <strong>Chatbot</strong>
           </li>
           <li>
             <span>
-              <img src={seoImg} alt="img" />
+              <img height="70" width="84" src={seoImg} alt="img" />
             </span>
             <strong>SEO</strong>
           </li>
           <li>
             <span>
-              <img src={telehealthImg} alt="img" />
+              <img height="50" width="50" src={telehealthImg} alt="img" />
             </span>
             <strong>HR Management</strong>
           </li>
           <li>
             <span>
-              <img src={invoiceImg} alt="img" />
+              <img height="50" width="50" src={invoiceImg} alt="img" />
             </span>
             <strong>Invoice System</strong>
           </li>
@@ -168,49 +168,49 @@ const SassOneBanner = () => {
         <ul className="slide-right">
           <li>
             <span>
-              <img src={teamManagementImg} alt="img" />
+              <img height="50" width="50" src={teamManagementImg} alt="img" />
             </span>
             <strong>Newsletter</strong>
           </li>
           <li>
             <span>
-              <img src={chatInventoryImg} alt="img" />
+              <img height="70" width="102" src={chatInventoryImg} alt="img" />
             </span>
             <strong>Chat Inventory</strong>
           </li>
           <li>
             <span>
-              <img src={inventoryImg} alt="img" />
+              <img height="50" width="50" src={inventoryImg} alt="img" />
             </span>
             <strong>Inventory</strong>
           </li>
           <li>
             <span>
-              <img src={emailAutomotionImg} alt="img" />
+              <img height="50" width="50" src={emailAutomotionImg} alt="img" />
             </span>
             <strong>Email Automotion</strong>
           </li>
           <li>
             <span>
-              <img src={helpDeskImg} alt="img" />
+              <img height="70" width="175" src={helpDeskImg} alt="img" />
             </span>
             <strong>Help Desk</strong>
           </li>
           <li>
             <span>
-              <img src={campaignImg} alt="img" />
+              <img height="50" width="50" src={campaignImg} alt="img" />
             </span>
             <strong>Campaign</strong>
           </li>
           <li>
             <span>
-              <img src={saasImg} alt="img" />
+              <img height="50" width="50" src={saasImg} alt="img" />
             </span>
             <strong>SaaS</strong>
           </li>
           <li>
             <span>
-              <img src={chatInventoryImg} alt="img" />
+              <img height="70" width="102" src={chatInventoryImg} alt="img" />
             </span>
             <strong>Chat Inventory</strong>
           </li>

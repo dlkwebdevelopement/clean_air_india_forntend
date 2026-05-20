@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FaCheckCircle } from "react-icons/fa"; // ✅ Tick Icon
-import picture1 from "../../../assets/images/about-us/laminar2.png";
-import picture2 from "../../../assets/images/about-us/laminar6n.jpg"
-import picture3 from "../../../assets/images/about-us/laminar8.jpg"
-import picture4 from "../../../assets/images/about-us/laminar9.jpg"
+import picture1 from "../../../assets/images/about-us/laminar2.webp";
+import picture2 from "../../../assets/images/about-us/laminar6n.webp"
+import picture3 from "../../../assets/images/about-us/laminar8.webp"
+import picture4 from "../../../assets/images/about-us/laminar9.webp"
 
 const ProductPage = () => {
   const images = [picture4, picture2, picture3, picture1];
@@ -18,7 +18,7 @@ const ProductPage = () => {
           {/* LEFT: Product Images + Features */}
           <div className="col-lg-6 col-md-12 product-images">
             <div className="main-image">
-              <img src={selectedImage} alt="Laminar Airflow" />
+              <img src={selectedImage} alt="Laminar Airflow" loading="lazy"/>
             </div>
 
             <div className="thumbnail-list">
@@ -28,8 +28,7 @@ const ProductPage = () => {
                   src={img}
                   alt={`Laminar ${index + 1}`}
                   className={selectedImage === img ? "active" : ""}
-                  onClick={() => setSelectedImage(img)}
-                />
+                  onClick={() => setSelectedImage(img)} loading="lazy"/>
               ))}
             </div>
 

@@ -86,14 +86,12 @@ const FaqHome = () => {
                   </a>
                 </div>
                 <a href="#" className="msg-btn rotate-icon-btn">
-                  <img
-                    className="rotate-icon"
+                  <img height="60" width="60" className="rotate-icon"
                     src={ShapeMsgImage}
                     alt="mail-us"
-                    ref={rotateIconRef}
-                  />
+                    ref={rotateIconRef} loading="lazy"/>
                   <span className="icon">
-                    <img src={SmsTrackingImage} alt="msg" />
+                    <img height="18" width="20" src={SmsTrackingImage} alt="msg" loading="lazy"/>
                   </span>
                 </a>
               </div>
@@ -143,14 +141,12 @@ const FaqHome = () => {
               </a>
             </div>
             <a href="#" className="msg-btn rotate-icon-btn">
-              <img
-                className="rotate-icon"
+              <img height="60" width="60" className="rotate-icon"
                 src={ShapeMsgImage}
                 alt="mail-us"
-                ref={rotateIconRef2}
-              />
+                ref={rotateIconRef2} loading="lazy"/>
               <span className="icon">
-                <img src={SmsTrackingImage} alt="msg" />
+                <img height="18" width="20" src={SmsTrackingImage} alt="msg" loading="lazy"/>
               </span>
             </a>
           </div>

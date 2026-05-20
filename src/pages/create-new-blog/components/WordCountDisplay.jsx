@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../../components copy/AppIcon';
+import Icon from '../../../shared/AppIcon';
 import './WordCountDisplay.css';
 
 const WordCountDisplay = ({ wordCount }) => {

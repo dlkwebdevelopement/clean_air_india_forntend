@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'; 
 import { useNavigate } from 'react-router-dom';
-import SidebarNavigation from '../../components copy/ui/SidebarNavigation';
-import Header from '../../components copy/ui/Header';
+import SidebarNavigation from '../../shared/ui/SidebarNavigation';
+import Header from '../../shared/ui/Header';
 import MetricCard from './components/MetricCard';
 import ActivityFeed from './components/ActivityFeed';
 import QuickActions from './components/QuickActions';
@@ -33,7 +33,7 @@ const Dashboard = () => {
       const token = localStorage.getItem('token');
       
       // Fetch blog counts
-      const blogsResponse = await fetch('https://api.cleanairindia.com/api/blogs', {
+      const blogsResponse = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -44,7 +44,7 @@ const Dashboard = () => {
         const totalBlogs = blogsData.pagination?.total || 0;
         
         // Fetch published blogs count
-        const publishedResponse = await fetch('https://api.cleanairindia.com/api/blogs?status=published', {
+        const publishedResponse = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs?status=published`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -54,7 +54,7 @@ const Dashboard = () => {
         const publishedCount = publishedData.pagination?.total || 0;
         
         // Fetch draft blogs count
-        const draftsResponse = await fetch('https://api.cleanairindia.com/api/blogs?status=draft', {
+        const draftsResponse = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs?status=draft`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

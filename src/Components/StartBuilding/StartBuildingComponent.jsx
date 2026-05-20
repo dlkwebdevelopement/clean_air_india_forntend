@@ -30,7 +30,7 @@ const StartBuildingComponent = () => {
           <div className="col-lg-5 col-md-4">
             <ScrollAnimate delay={200}>
             <div className="building-img">
-              <img src={BuildingImg} alt="building-img" />
+              <img height="202" width="275" src={BuildingImg} alt="building-img" loading="lazy"/>
             </div>
             </ScrollAnimate>
           </div>

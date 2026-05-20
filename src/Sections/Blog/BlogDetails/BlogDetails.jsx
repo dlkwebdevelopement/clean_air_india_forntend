@@ -11,12 +11,13 @@ import ShareIcon from "../../../assets/images/icons/share-icon.svg";
 import PrevImg from "../../../assets/images/blog/blog-prev-img.png";
 import NextImg from "../../../assets/images/blog/blog-next-img.png";
 
-import BlogDetailsImg from "../../../assets/images/blog/blog.png";
+import BlogDetailsImg from "../../../assets/images/blog/blog.webp";
 import ProfileImg from "../../../assets/images/icons/icon_profile.svg";
 import CategoryImg from "../../../assets/images/icons/icon_category.svg";
 import CalendarImg from "../../../assets/images/icons/icon_calendar.svg";
 import QuotationImg from "../../../assets/images/icons/quotation.svg";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
+import { getBlogImageUrl } from "../../../utils/image";
 
 const BlogDetails = () => {
   const { blogId } = useParams();
@@ -31,7 +32,7 @@ const BlogDetails = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`https://api.cleanairindia.com/api/blogs/${blogId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/${blogId}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -48,7 +49,7 @@ const BlogDetails = () => {
       // Fetch related blogs (same category, exclude current blog)
       if (data.category) {
         const relatedResponse = await fetch(
-          `https://api.cleanairindia.com/api/blogs?page=1&limit=3&category=${data.category._id}&status=published`,
+          `${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs?page=1&limit=3&category=${data.category._id}&status=published`,
           {
             // headers: {
             //   'Authorization': `Bearer ${token}`
@@ -117,10 +118,10 @@ const BlogDetails = () => {
       <section className="breadcrumb-section blog-details-breadcrumb-section">
         <div className="bg-shape">
           <div className="shape-img img-1">
-            <ScrollAnimate><img src={ShapeIcon1} alt="shape" /></ScrollAnimate>
+            <ScrollAnimate><img height="160" width="197" src={ShapeIcon1} alt="shape" loading="lazy"/></ScrollAnimate>
           </div>
           <div className="shape-img img-2">
-            <ScrollAnimate><img src={ShapeIcon2} alt="shape" /></ScrollAnimate>
+            <ScrollAnimate><img height="110" width="136" src={ShapeIcon2} alt="shape" loading="lazy"/></ScrollAnimate>
           </div>
         </div>
         <div className="container">
@@ -160,7 +161,7 @@ const BlogDetails = () => {
               <div className="blog-details-content">
                 {/* <ScrollAnimate>
                   <div className="blog-details-img">
-                    <img src={blog.featuredImage || BlogDetailsImg} alt={blog.title} />
+                    <img src={blog.featuredImage || BlogDetailsImg} alt={blog.title} loading="lazy"/>
                   </div>
                 </ScrollAnimate> */}
                 <div className="blog-details-inner">
@@ -169,13 +170,13 @@ const BlogDetails = () => {
                       <ul>
                         <li>
                           <span>
-                            <img src={ProfileImg} alt="icon" />
+                            <img height="22" width="20" src={ProfileImg} alt="icon" loading="lazy"/>
                           </span>
                           By - <span className="author-name">{blog.author}</span>
                         </li>
                         <li>
                           <span>
-                            <img src={CategoryImg} alt="icon" />
+                            <img height="22" width="22" src={CategoryImg} alt="icon" loading="lazy"/>
                           </span>
                           <NavLink 
                             to="#" 
@@ -190,7 +191,7 @@ const BlogDetails = () => {
                         </li>
                         <li>
                           <span>
-                            <img src={CalendarImg} alt="icon" />
+                            <img height="22" width="20" src={CalendarImg} alt="icon" loading="lazy"/>
                           </span>
                           {new Date(blog.createdAt).toLocaleDateString()}
                         </li>
@@ -226,7 +227,7 @@ const BlogDetails = () => {
 
                       {/* share button */}
                       {/* <button className="share-btn">
-                        <img src={ShareIcon} alt="icon" />
+                        <img height="18" width="16" src={ShareIcon} alt="icon" loading="lazy"/>
                         Share
                       </button> */}
                     </div>
@@ -244,7 +245,7 @@ const BlogDetails = () => {
                         <ScrollAnimate>
                           <div className="blog-card">
                             <NavLink to={`/blog/${relatedBlogs[0]._id}`} className="blog-card-img">
-                              <img src={relatedBlogs[0].featuredImage || PrevImg} alt={relatedBlogs[0].title} />
+                              <img src={getBlogImageUrl(relatedBlogs[0].featuredImage, PrevImg)} alt={relatedBlogs[0].title} loading="lazy"/>
                             </NavLink>
                             <div className="blog-card-text">
                               <NavLink to={`/blog/${relatedBlogs[0]._id}`}>Previous</NavLink>
@@ -265,7 +266,7 @@ const BlogDetails = () => {
                         <ScrollAnimate>
                           <div className="blog-card justify-right">
                             <NavLink to={`/blog/${relatedBlogs[1]._id}`} className="blog-card-img">
-                              <img src={relatedBlogs[1].featuredImage || NextImg} alt={relatedBlogs[1].title} />
+                              <img src={getBlogImageUrl(relatedBlogs[1].featuredImage, NextImg)} alt={relatedBlogs[1].title} loading="lazy"/>
                             </NavLink>
                             <div className="blog-card-text">
                               <NavLink to={`/blog/${relatedBlogs[1]._id}`}>Next</NavLink>

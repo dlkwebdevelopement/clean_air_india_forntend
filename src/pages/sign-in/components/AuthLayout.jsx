@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../../components copy/AppIcon';
+import Icon from '../../../shared/AppIcon';
 import './AuthLayout.css';
 import logo from "../../../assets/images/logo/Logos.svg"
 
@@ -12,8 +12,7 @@ const AuthLayout = ({ children }) => {
       <header className="auth-header">
         <div className="auth-header-container">
          <div className="auth-logo">
-  <img 
-    src={logo} 
+  <img height="75" width="136" src={logo} 
     alt="Logo" 
     className="auth-logo-img"
   />

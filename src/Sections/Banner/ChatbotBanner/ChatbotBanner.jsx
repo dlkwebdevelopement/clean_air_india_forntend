@@ -16,7 +16,7 @@ const ChatbotBanner = () => {
                 Grow customer with advanced <br />
                 <span>
                   AI chatbot
-                  <img src={HoggleIcon} alt="icon" />
+                  <img height="36" width="34" src={HoggleIcon} alt="icon" />
                 </span>
               </h1>
             </div>

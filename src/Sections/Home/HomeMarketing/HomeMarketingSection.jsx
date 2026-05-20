@@ -10,13 +10,13 @@ import EmojiIconsImage from "../../../assets/images/shape/emoji.svg";
 import Star1Image from "../../../assets/images/shape/star1.svg";
 import Star2Image from "../../../assets/images/shape/star2.svg";
 import Star3Image from "../../../assets/images/shape/star3.svg";
-import M1Image from "../../../assets/images/main-demo/m1.png";
+import M1Image from "../../../assets/images/main-demo/m1.webp";
 import Ellipse1Image from "../../../assets/images/main-demo/ellipse1.png";
 import Ellipse2Image from "../../../assets/images/main-demo/ellipse2.png";
 import Ellipse3Image from "../../../assets/images/main-demo/ellipse3.png";
 import Ellipse4Image from "../../../assets/images/main-demo/ellipse4.png";
 import ManImage from "../../../assets/images/main-demo/man.png";
-import M2Image from "../../../assets/images/main-demo/m2.png";
+import M2Image from "../../../assets/images/main-demo/m2.webp";
 import Star4Image from "../../../assets/images/shape/star-4.svg";
 import ItemShapeImage from "../../../assets/images/shape/item-shape.svg";
 import WaveShapeImage from "../../../assets/images/shape/wave-shape.svg";
@@ -80,22 +80,22 @@ const HomeOneMarketingSection = () => {
                 <div className="marketing-img">
                   <div className="overlay">
                     <div className="overlay-item chart">
-                      <img src={ChartImage} alt="chart-img" />
+                      <img height="53" width="158" src={ChartImage} alt="chart-img" loading="lazy"/>
                     </div>
                     <div className="overlay-item emoji-icons">
-                      <img src={EmojiIconsImage} alt="emoji-icons" />
+                      <img height="31" width="163" src={EmojiIconsImage} alt="emoji-icons" loading="lazy"/>
                     </div>
                     <div className="overlay-item star-1">
-                      <img src={Star1Image} alt="star" />
+                      <img height="38" width="36" src={Star1Image} alt="star" loading="lazy"/>
                     </div>
                     <div className="overlay-item star-2">
-                      <img src={Star2Image} alt="star" />
+                      <img height="36" width="35" src={Star2Image} alt="star" loading="lazy"/>
                     </div>
                     <div className="overlay-item star-3">
-                      <img src={Star3Image} alt="star" />
+                      <img height="26" width="25" src={Star3Image} alt="star" loading="lazy"/>
                     </div>
                   </div>
-                  <img src={M1Image} alt="marketing-img" />
+                  <img height="380" width="400" src={M1Image} alt="marketing-img" loading="lazy"/>
                 </div>
               </ScrollAnimate>
             </div>
@@ -190,7 +190,7 @@ const HomeOneMarketingSection = () => {
             </div>
             <div className="col-xl-5 col-lg-6 order-lg-2 order-1">
               <div className="marketing-img v2">
-                <img src={M2Image} alt="marketing-img" />
+                <img height="380" width="400" src={M2Image} alt="marketing-img" loading="lazy"/>
                 <div className="overlay">
                   <div className="overlay-item reduction-time">
                     <div className="reduction-time-top">
@@ -200,16 +200,14 @@ const HomeOneMarketingSection = () => {
                         </span>
                         %
                       </h2>
-                      <img src={Star4Image} alt="star" />
+                      <img height="26" width="25" src={Star4Image} alt="star" loading="lazy"/>
                     </div>
                     <p>Reduction in time</p>
                   </div>
                   <div className="overlay-item success-rate">
-                    <img
-                      className="rotate-icon"
+                    <img height="170" width="170" className="rotate-icon"
                       src={ItemShapeImage}
-                      alt="icon"
-                    />
+                      alt="icon" loading="lazy"/>
                     <div className="success-rate-content">
                       <div className="progress pie_progress">
                         <CustomPieProgress
@@ -225,7 +223,7 @@ const HomeOneMarketingSection = () => {
                     </div>
                   </div>
                   <div className="overlay-item wave-shape">
-                    <img src={WaveShapeImage} alt="shape" />
+                    <img height="37" width="96" src={WaveShapeImage} alt="shape" loading="lazy"/>
                   </div>
                 </div>
               </div>

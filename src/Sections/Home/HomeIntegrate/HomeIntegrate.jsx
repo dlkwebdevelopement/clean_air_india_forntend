@@ -36,28 +36,28 @@ const HomeIntegrate = () => {
                 <div className="integrate-slider">
                   <div className="integrate-slider-container">
                     <div className="slider-item">
-                      <img src={SlackImage} alt="slider-img" />
+                      <img height="37" width="37" src={SlackImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={ZapierImage} alt="slider-img" />
+                      <img height="37" width="37" src={ZapierImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={XeroImage} alt="slider-img" />
+                      <img height="45" width="45" src={XeroImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={HubspotImage} alt="slider-img" />
+                      <img height="45" width="44" src={HubspotImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={SlackImage} alt="slider-img" />
+                      <img height="37" width="37" src={SlackImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={ZapierImage} alt="slider-img" />
+                      <img height="37" width="37" src={ZapierImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={XeroImage} alt="slider-img" />
+                      <img height="45" width="45" src={XeroImage} alt="slider-img" loading="lazy"/>
                     </div>
                     <div className="slider-item">
-                      <img src={HubspotImage} alt="slider-img" />
+                      <img height="45" width="44" src={HubspotImage} alt="slider-img" loading="lazy"/>
                     </div>
                   </div>
                 </div>
@@ -70,24 +70,22 @@ const HomeIntegrate = () => {
               <div className="integrate-card v2">
                 <div className="bg-shape">
                   <div className="shape-img img-1">
-                    <img src={Ellipse1Image} alt="shape-img" />
+                    <img height="138" width="411" src={Ellipse1Image} alt="shape-img" loading="lazy"/>
                   </div>
                   <div className="shape-img img-2">
-                    <img src={Ellipse2Image} alt="shape-img" />
+                    <img height="60" width="60" src={Ellipse2Image} alt="shape-img" loading="lazy"/>
                   </div>
                   <div className="shape-img img-3">
-                    <img src={Ellipse3Image} alt="shape-img" />
+                    <img height="60" width="60" src={Ellipse3Image} alt="shape-img" loading="lazy"/>
                   </div>
                   <div className="shape-img img-4">
-                    <img
-                      className="rotate-icon"
+                    <img height="74" width="74" className="rotate-icon"
                       src={Ellipse4Image}
-                      alt="shape-img"
-                    />
+                      alt="shape-img" loading="lazy"/>
                   </div>
                   <div className="shape-img img-5">
                     <ScrollAnimate delay={280}>
-                      <img src={ManImage} alt="shape-img" />
+                      <img height="172" width="170" src={ManImage} alt="shape-img" loading="lazy"/>
                     </ScrollAnimate>
                   </div>
                 </div>

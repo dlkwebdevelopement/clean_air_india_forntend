@@ -1,6 +1,6 @@
 import BusinessBannerStyle from "./BusinessBanner.style";
 
-import HeroImg from "../../../assets/images/business/hero-img-4.png";
+import HeroImg from "../../../assets/images/business/hero-img-4.webp";
 import CurveLineImg from "../../../assets/images/business/curve-line.png";
 import StarsImg from "../../../assets/images/business/stars.svg";
 import WaveShapeImg from "../../../assets/images/business/wave-shape.svg";
@@ -56,22 +56,22 @@ const BusinessBanner = () => {
           <div className="col-lg-5">
             <ScrollAnimate delay={300}>
               <div className="hero-section-4-img">
-                <img src={HeroImg} alt="hero-img" />
+                <img height="550" width="470" src={HeroImg} alt="hero-img" />
                 <div className="overlay">
                   <div className="overlay-item item-1">
-                    <img src={CurveLineImg} alt="img" />
+                    <img height="81" width="98" src={CurveLineImg} alt="img" />
                   </div>
                   <div className="overlay-item item-2">
-                    <img src={StarsImg} alt="img" />
+                    <img height="77" width="67" src={StarsImg} alt="img" />
                   </div>
                   <div className="overlay-item item-3">
-                    <img src={WaveShapeImg} alt="img" />
+                    <img height="57" width="145" src={WaveShapeImg} alt="img" />
                   </div>
                   <div className="overlay-item chart">
-                    <img src={ChartImg} alt="chart" />
+                    <img height="28" width="68" src={ChartImg} alt="chart" />
                   </div>
                   <div className="overlay-item status">
-                    <img src={StatusShapeImg} alt="bg-shape" />
+                    <img height="170" width="170" src={StatusShapeImg} alt="bg-shape" />
                     <div className="progress pie_progress">
                       <CustomPieProgress
                         Text="Success rate"

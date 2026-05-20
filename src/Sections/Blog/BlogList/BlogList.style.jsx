@@ -5,15 +5,32 @@ const BlogListStyleWrapper = styled.section`
 
   .latest-blog-content {
     padding-right: 20px;
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .col-md-6 {
+      display: flex;
+      flex-direction: column;
+
+      /* Target the AnimatedWrapper rendered by ScrollAnimate */
+      > div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 
   /* Search Section */
   .blog-search-section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .search-form {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
   }
 
@@ -23,37 +40,50 @@ const BlogListStyleWrapper = styled.section`
 
   .search-input-wrapper input {
     width: 100%;
-    padding: 15px 50px 15px 20px;
-    border: 2px solid #e9ecef;
+    padding: 16px 60px 16px 28px;
+    border: 2px solid #e2e8f0;
     border-radius: 50px;
     font-size: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    color: #334155;
+    font-family: inherit;
+
+    &::placeholder {
+      color: #94a3b8;
+    }
   }
 
   .search-input-wrapper input:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    border-color: ${({ theme }) => theme.colors.primary || '#0061a6'};
+    box-shadow: 0 10px 25px rgba(0, 97, 166, 0.1);
   }
 
   .search-btn {
     position: absolute;
-    right: 10px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
+    background: ${({ theme }) => theme.colors.primary || '#0061a6'};
     border: none;
-    color: #6c757d;
+    color: #fff;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     border-radius: 50%;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 97, 166, 0.2);
   }
 
   .search-btn:hover {
-    color: #007bff;
-    background: #f8f9fa;
+    background: ${({ theme }) => theme.colors.title || '#0e1118'};
+    color: #fff;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
   }
 
   /* Search Suggestions */

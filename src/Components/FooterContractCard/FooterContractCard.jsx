@@ -7,8 +7,8 @@ const FooterContractCard = () => {
   return (
     <FooterContractStyle className="footer-contract-card">
       <ul>
-        <li><img src={MailIcon} alt="mail" /><a href="mailto:support@domain.com">support@domain.com</a></li>
-        <li><img src={CallIcon} alt="call" /><a href="tel:+1 014 256 1447">+1 014 256 1447</a></li>
+        <li><img height="18" width="20" src={MailIcon} alt="mail" loading="lazy"/><a href="mailto:support@domain.com">support@domain.com</a></li>
+        <li><img height="20" width="20" src={CallIcon} alt="call" loading="lazy"/><a href="tel:+1 014 256 1447">+1 014 256 1447</a></li>
       </ul>
     </FooterContractStyle>
   );

@@ -55,10 +55,10 @@ const FinanceBanner = () => {
       <span />
       <div className="container">
         <span className="banner-vector-line1">
-          <img src={vectorLine1} alt="img" />
+          <img height="353" width="299" src={vectorLine1} alt="img" />
         </span>
         <span className="banner-vector-line2">
-          <img src={vectorLine2} alt="img" />
+          <img height="605" width="275" src={vectorLine2} alt="img" />
         </span>
         <div className="row">
           <div className="col-md-6">

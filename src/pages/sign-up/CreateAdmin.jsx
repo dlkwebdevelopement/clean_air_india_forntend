@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Input from '../../components copy/ui/Input'; // Adjust path as needed
-import Button from '../../components copy/ui/Button'; // Adjust path as needed
-import Icon from '../../components copy/AppIcon'; // Adjust path as needed
-import SidebarNavigation from '../../components copy/ui/SidebarNavigation'; // Adjust path as needed
-import Header from '../../components copy/ui/Header'; // Adjust path as needed
+import Input from '../../shared/ui/Input'; // Adjust path as needed
+import Button from '../../shared/ui/Button'; // Adjust path as needed
+import Icon from '../../shared/AppIcon'; // Adjust path as needed
+import SidebarNavigation from '../../shared/ui/SidebarNavigation'; // Adjust path as needed
+import Header from '../../shared/ui/Header'; // Adjust path as needed
 import './CreateChildAdmin.css'; // New CSS file
 
 const CreateChildAdmin = () => {
@@ -97,7 +97,7 @@ const CreateChildAdmin = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://api.cleanairindia.com/api/users', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/users`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -125,10 +125,10 @@ const AccFooter = () => {
               <ul className="social-link social-link-right">
                 {FooterSocialLinks?.map((item, i) => (
                   <li key={i}>
-                    <a href={item.url} target="_blank">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                       <span className='social-icon'>
-                        <img src={item.imgV2} alt={item.title} />
-                        <img src={item.imgV2} alt={item.title} />
+                        <img src={item.imgV2} alt={item.title} loading="lazy"/>
+                        <img src={item.imgV2} alt={item.title} loading="lazy"/>
                       </span>
                     </a>
                   </li>

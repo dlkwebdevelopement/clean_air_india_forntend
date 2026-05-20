@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Icon from '../../../components copy/AppIcon';
+import Icon from '../../../shared/AppIcon';
 import './ActivityFeed.css';
 
 const ActivityFeed = ({ activities = [], loading = false }) => {

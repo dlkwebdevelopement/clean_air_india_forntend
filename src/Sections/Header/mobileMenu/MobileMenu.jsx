@@ -27,7 +27,7 @@ const MobileMenu = () => {
     >
       <div className="offcanvas-header">
         <a className="navbar-brand header-logo" href="/">
-          <img src={LogoImg2} alt="logo" />
+          <img height="75" width="136" src={LogoImg2} alt="logo" />
         </a>
         <button
           type="button"

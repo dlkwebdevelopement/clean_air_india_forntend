@@ -9,10 +9,10 @@ const PricingPlanBreadcumbs = () => {
     <BreadcumbsStyle className="breadcrumb-section pricing-plan-breadcrumb-section">
       <div className="bg-shape">
         <div className="shape-img img-1">
-          <img src={ShapeImg1} alt="shape" />
+          <img height="160" width="197" src={ShapeImg1} alt="shape" loading="lazy"/>
         </div>
         <div className="shape-img img-2">
-          <img src={ShapeImg2} alt="shape" />
+          <img height="110" width="136" src={ShapeImg2} alt="shape" loading="lazy"/>
         </div>
       </div>
       <div className="container">

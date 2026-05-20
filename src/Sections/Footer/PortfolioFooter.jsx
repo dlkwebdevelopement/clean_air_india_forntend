@@ -10,10 +10,9 @@ const PortfolioFooter = () => {
                         <img
                             src="../images/portfolio/mesh-grad.png"
                             alt="img"
-                            className="footer-section-mash-gard"
-                        />
+                            className="footer-section-mash-gard" loading="lazy"/>
                         <div className="footer-section-grain-texture">
-                            <img src="../images/portfolio/grain-texture.png" alt="img" />
+                            <img src="../images/portfolio/grain-texture.png" alt="img" loading="lazy"/>
                         </div>
                         <div className="container">
                             <div className="footer-v7-content">
@@ -45,40 +44,35 @@ const PortfolioFooter = () => {
                                                 <a href="#">
                                                     <img
                                                         src="../images/icons/facebook.svg"
-                                                        alt="social-icon"
-                                                    />
+                                                        alt="social-icon" loading="lazy"/>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img
                                                         src="../images/icons/twitter.svg"
-                                                        alt="social-icon"
-                                                    />
+                                                        alt="social-icon" loading="lazy"/>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img
                                                         src="../images/icons/pinterest.svg"
-                                                        alt="social-icon"
-                                                    />
+                                                        alt="social-icon" loading="lazy"/>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img
                                                         src="../images/icons/instagram.svg"
-                                                        alt="social-icon"
-                                                    />
+                                                        alt="social-icon" loading="lazy"/>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#">
                                                     <img
                                                         src="../images/icons/dribbble.svg"
-                                                        alt="social-icon"
-                                                    />
+                                                        alt="social-icon" loading="lazy"/>
                                                 </a>
                                             </li>
                                         </ul>

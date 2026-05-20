@@ -5,21 +5,46 @@ const BlogItemStyleWrapper = styled.article`
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  }
 
   .letest-blog-img {
-    min-height: 220px;
+    height: 240px;
     width: 100%;
+    display: block;
+    overflow: hidden;
 
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
     }
   }
 
   .letest-blog-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
     .letest-blog-info-inner {
-      padding: 21px 29px;
+      padding: 25px 30px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      flex-grow: 1;
 
       h5 {
         font-family: ${({ theme }) => theme.fonts.dmSans};
@@ -29,7 +54,7 @@ const BlogItemStyleWrapper = styled.article`
         line-height: 30px;
         color: ${({ theme }) => theme.colors.textColor};
         letter-spacing: 0.1em;
-        margin-bottom: 7px;
+        margin-bottom: 10px;
 
         span {
           color: ${({ theme }) => theme.colors.primary};
@@ -37,7 +62,7 @@ const BlogItemStyleWrapper = styled.article`
       }
 
       h4 {
-        margin-bottom: 11px;
+        margin-bottom: 12px;
         a {
           font-family: ${({ theme }) => theme.fonts.PlusJakartaSans};
           font-size: 18px;
@@ -57,20 +82,36 @@ const BlogItemStyleWrapper = styled.article`
       }
 
       p {
-        margin-bottom: 11px;
+        margin-bottom: 20px;
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        text-align:justify;
+        text-align: justify;
+        color: ${({ theme }) => theme.colors.textColor};
+        font-size: 15px;
+        line-height: 26px;
+        flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
       }
 
-      a {
+      .text-link {
         color: ${({ theme }) => theme.colors.primary};
         transition: 0.3s;
-        img {
-          margin-left: 11px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        margin-top: auto; /* Aligns to bottom */
+
+        svg {
+          font-size: 18px;
+          transition: transform 0.3s ease;
+        }
+
+        &:hover svg {
+          transform: translateX(5px);
         }
       }
     }

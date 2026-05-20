@@ -9,12 +9,12 @@ import logoUdyam from "../../../assets/images/certificates/c2.png";
 import logoCE from "../../../assets/images/certificates/c3.jpg";
 import logoISO13485 from "../../../assets/images/certificates/c4.png";
 import logoISO9001 from "../../../assets/images/certificates/c4.png";
-import Laminarflow from "../../../assets/images/certificates/laminar-air-flow.png"
-import EN from "../../../assets/images/certificates/EN.jpg"
-import ud from "../../../assets/images/certificates/udyam.jpg"
-import CE from "../../../assets/images/certificates/CE.jpg"
-import ISO1 from "../../../assets/images/certificates/ISO1.jpg"
-import ISO2 from "../../../assets/images/certificates/ISO2.jpg"
+import Laminarflow from "../../../assets/images/certificates/laminar-air-flow.webp"
+import EN from "../../../assets/images/certificates/EN.webp"
+import ud from "../../../assets/images/certificates/udyam.webp"
+import CE from "../../../assets/images/certificates/CE.webp"
+import ISO1 from "../../../assets/images/certificates/ISO1.webp"
+import ISO2 from "../../../assets/images/certificates/ISO2.webp"
 
 
 const certificates = [
@@ -116,8 +116,7 @@ const CertificatesPage = () => {
             <img 
               src={selected.image} 
               alt={selected.name}
-              onClick={() => setIsFullscreen(true)}
-            />
+              onClick={() => setIsFullscreen(true)} loading="lazy"/>
             <h4>{selected.name}</h4>
           </div>
         </div>
@@ -126,7 +125,7 @@ const CertificatesPage = () => {
       {isFullscreen && (
         <FullscreenModal onClick={() => setIsFullscreen(false)}>
           <ModalContent>
-            <img src={selected.image} alt={selected.name} />
+            <img src={selected.image} alt={selected.name} loading="lazy"/>
             <h3>{selected.name}</h3>
             <button onClick={() => setIsFullscreen(false)}>Close</button>
           </ModalContent>

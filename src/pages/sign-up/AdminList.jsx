@@ -4,8 +4,8 @@ import PageHeader from '../blog-list/components/PageHeader';
 import Pagination from '../blog-list/components/Pagination';
 import ConfirmationModal from '../blog-list/components/ConfirmationModal';
 import AdminTable from './AdminTable';
-import Header from '../../components copy/ui/Header';
-import SidebarNavigation from '../../components copy/ui/SidebarNavigation';
+import Header from '../../shared/ui/Header';
+import SidebarNavigation from '../../shared/ui/SidebarNavigation';
 
 const AdminList = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const AdminList = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/users`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/users`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
 
@@ -58,7 +58,7 @@ const AdminList = () => {
   const handleDelete = async (adminId) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://api.cleanairindia.com/api/users/${adminId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/users/${adminId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -86,7 +86,7 @@ const AdminList = () => {
       
       // Delete users one by one
       for (const adminId of adminIds) {
-        const response = await fetch(`https://api.cleanairindia.com/api/users/${adminId}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/users/${adminId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`

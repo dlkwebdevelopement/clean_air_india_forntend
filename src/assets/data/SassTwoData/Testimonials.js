@@ -1,5 +1,5 @@
 // Import images
-import testimonial1Img from '../../../assets/images/avater/testimonial1.png';
+import testimonial1Img from '../../../assets/images/avater/testimonial1.webp';
 import testimonial2Img from '../../../assets/images/avater/testimonial2.png';
 import testimonial3Img from '../../../assets/images/avater/testimonial3.png';
 import testimonial4Img from '../../../assets/images/avater/testimonial4.png';

@@ -34,8 +34,7 @@ const CorporateTestimonials = () => {
                     <div className="clint-img-inner">
                       <img
                         src={testimonial.imgSrc}
-                        alt={`testimonial-img-${index}`}
-                      />
+                        alt={`testimonial-img-${index}`} loading="lazy"/>
                     </div>
                   </div>
                   <p>{testimonial.text}</p>

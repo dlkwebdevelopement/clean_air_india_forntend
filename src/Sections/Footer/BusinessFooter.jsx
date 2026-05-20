@@ -23,7 +23,7 @@ const BusinessFooter = () => {
               <div className="footer-card">
                 <div className="footer-info">
                   <a href="/" className="footer-logo">
-                    <img src={FooterLogo} alt="footer-logo" />
+                    <img height="40" width="136" src={FooterLogo} alt="footer-logo" />
                   </a>
                   <div className="mb-30">
                     <h4>We Provide</h4>
@@ -40,10 +40,10 @@ const BusinessFooter = () => {
                   <ul className="social-link dark">
                     {FooterSocialLinks?.map((item, i) => (
                       <li key={i}>
-                        <a href={item.url} target="_blank">
+                        <a href={item.url} target="_blank" rel="noopener noreferrer">
                           <span className="social-icon small">
-                            <img src={item.img} alt={item.title} />
-                            <img src={item.img} alt={item.title} />
+                            <img src={item.img} alt={item.title} loading="lazy"/>
+                            <img src={item.img} alt={item.title} loading="lazy"/>
                           </span>
                         </a>
                       </li>
@@ -98,7 +98,7 @@ const BusinessFooter = () => {
                 <li>
                   <div className="list-item">
                     <div className="icon">
-                      <img src={Rating1Img} alt="icon" />
+                      <img height="40" width="40" src={Rating1Img} alt="icon" loading="lazy"/>
                     </div>
                     <div className="text">
                       <span
@@ -112,7 +112,7 @@ const BusinessFooter = () => {
                 <li>
                   <div className="list-item">
                     <div className="icon">
-                      <img src={Rating2Img} alt="icon" />
+                      <img height="40" width="40" src={Rating2Img} alt="icon" loading="lazy"/>
                     </div>
                     <div className="text">
                       <span

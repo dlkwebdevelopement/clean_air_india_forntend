@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../../components copy/ui/Input';
+import Input from '../../../shared/ui/Input';
 import './BlogTitleSection.css';
 
 const BlogTitleSection = ({ title, author, onTitleChange, onAuthorChange, errors }) => {

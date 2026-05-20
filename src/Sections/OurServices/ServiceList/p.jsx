@@ -63,7 +63,12 @@ const PPage = () => {
     "Pass Boxes": "/pass-box",
     "Sterile Storage Cabinet": "/sterile-garment-storage-cabinet",
     "Modular Cleanroom": "/modular-cleanroom",
-    "Softwall Cleanrooms": "/softwall-cleanrooms"
+    "Softwall Cleanrooms": "/softwall-cleanrooms",
+    "Reverse Flow Booth": "/reverse-flow-booth",
+    "Pharma Weighing Booths": "/pharma-weighing-booths",
+    "Downflow Booth": "/downflow-booth",
+    "Fan Filter Units": "/fan-filter-units",
+    "Powder Containment Booths": "/powder-containment-booths"
   };
 
   const handleItemClick = (item) => {
@@ -112,8 +117,7 @@ const PPage = () => {
       >
         <img
           src={selectedItem.thumbnail}
-          alt={selectedItem.name}
-        />
+          alt={selectedItem.name} loading="lazy"/>
       </ImageWrapper>
       <TextContent>
         <h1
@@ -140,8 +144,7 @@ const PPage = () => {
               <img
                 style={{objectFit:"contain"}}
                 src={gif}
-                alt="Quick Help"
-              />
+                alt="Quick Help" loading="lazy"/>
               <div className="content">
                 <h3>Quick Help</h3>
                 <p>(+91) 98410 74504</p>

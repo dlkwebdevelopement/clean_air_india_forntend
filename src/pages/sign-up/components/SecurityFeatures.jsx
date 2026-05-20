@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../../../components copy/AppIcon';
+import Icon from '../../../shared/AppIcon';
 import './SecurityFeatures.css'; // Import the CSS file
 
 const SecurityFeatures = () => {

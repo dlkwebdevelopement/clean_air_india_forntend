@@ -13,7 +13,7 @@ const FooterSeven = () => {
             <div className="col-lg-3 col-6 mb-4">
               <div className="footer-col v8">
                 <a href="#" className="footer6-logo">
-                  <img src={FooterLogo} alt="logo" />
+                  <img height="40" width="136" src={FooterLogo} alt="logo" />
                 </a>
                 <h6 className="text-white">
                   We Provide <br />
@@ -100,10 +100,10 @@ const FooterSeven = () => {
               <ul className="social-link dark social-link-right corporate-footer-social-link">
                 {FooterSocialLinks?.map((item, i) => (
                   <li key={i}>
-                    <a href={item.url} target="_blank">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                       <span className='social-icon'>
-                        <img src={item.img} alt={item.title} />
-                        <img src={item.img} alt={item.title} />
+                        <img src={item.img} alt={item.title} loading="lazy"/>
+                        <img src={item.img} alt={item.title} loading="lazy"/>
                       </span>
                     </a>
                   </li>

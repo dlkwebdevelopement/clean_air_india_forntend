@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import FooterOneBg from "../../assets/images/footer/main-footer-bg.png";
-import ChatbotBgImg from "../../assets/images/chatbot/chatbot-footer-bg.png";
-import CryptoTokenBgImg from "../../assets/images/crypto-token/bg_footer.png";
-import CryptoTokenTextureImg from "../../assets/images/crypto-token/grain-texture.png";
-import NewsletterFooterBgImg from "../../assets/images/newslater/newsletter-footer-bg.png";
-import SassFooterBgImg from "../../assets/images/sass2/sass-footer-demo-bg.png";
+import FooterOneBg from "../../assets/images/footer/main-footer-bg.webp";
+import ChatbotBgImg from "../../assets/images/chatbot/chatbot-footer-bg.webp";
+import CryptoTokenBgImg from "../../assets/images/crypto-token/bg_footer.webp";
+import CryptoTokenTextureImg from "../../assets/images/crypto-token/grain-texture.webp";
+import NewsletterFooterBgImg from "../../assets/images/newslater/newsletter-footer-bg.webp";
+import SassFooterBgImg from "../../assets/images/sass2/sass-footer-demo-bg.webp";
 
 const FooterStyleWrapper = styled.footer`
   background-color: ${({ theme }) => theme.colors.bgFooter};

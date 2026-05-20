@@ -1,5 +1,5 @@
 // Import your images here
-import MailImg1 from '../../../assets/images/newslater/mail_img_1.png';
+import MailImg1 from '../../../assets/images/newslater/mail_img_1.webp';
 import MailImg2 from '../../../assets/images/newslater/mail_img_2.png';
 import MailImg3 from '../../../assets/images/newslater/mail_img_3.png';
 import MailImg4 from '../../../assets/images/newslater/mail_img_4.png';

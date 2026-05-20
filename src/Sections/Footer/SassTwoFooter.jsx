@@ -80,9 +80,9 @@ const SassTwoFooter = () => {
       className="chatbot-footer-section newsletter-footer sass-footer z-index-3"
       ref={sectionRef}
     >
-      <img src={BgImg} alt="img" className="footer-bg" />
-      <img src={Shape1Img} alt="img" className="shape-img1" />
-      <img src={Shape2Img} alt="img" className="shape-img2" />
+      <img height="1286" width="1920" src={BgImg} alt="img" className="footer-bg" loading="lazy"/>
+      <img height="99" width="257" src={Shape1Img} alt="img" className="shape-img1" loading="lazy"/>
+      <img height="74" width="119" src={Shape2Img} alt="img" className="shape-img2" loading="lazy"/>
       <div className="container pos-relt">
         <div className="newsletter-get-demo-section sass">
           <div className="newsletter-get-demo-section-inner sass">
@@ -101,15 +101,13 @@ const SassTwoFooter = () => {
               </div>
               <div className="col-md-5">
                 <div className="sass-demo-shapes">
-                  <img src={DemoShape1Img} alt="shape" className="shape1" />
-                  <img src={DemoShape2Img} alt="shape" className="shape2" />
-                  <img src={DemoShape3Img} alt="shape" className="shape3" />
-                  <img
-                    src={DemoShape4Img}
+                  <img height="60" width="44" src={DemoShape1Img} alt="shape" className="shape1" loading="lazy"/>
+                  <img height="67" width="80" src={DemoShape2Img} alt="shape" className="shape2" loading="lazy"/>
+                  <img height="74" width="119" src={DemoShape3Img} alt="shape" className="shape3" loading="lazy"/>
+                  <img height="67" width="80" src={DemoShape4Img}
                     alt="shape"
                     className="shape4"
-                    ref={imgRef}
-                  />
+                    ref={imgRef} loading="lazy"/>
                 </div>
               </div>
             </div>
@@ -165,7 +163,7 @@ const SassTwoFooter = () => {
       <div className="container pos-relt">
         <div className="chatbot-footer-bottom">
           <a className="chatbot-footer-logo" href="/">
-            <img src={FooterLogo} alt="footer-logo" />
+            <img height="37" width="136" src={FooterLogo} alt="footer-logo" />
           </a>
           <div className="row pt-5">
             <div className="col-lg-8 col-md-6">
@@ -204,10 +202,10 @@ const SassTwoFooter = () => {
                   <ul className="social-link">
                     {FooterSocialLinks?.map((item, i) => (
                       <li key={i}>
-                        <a href={item.url} target="_blank">
+                        <a href={item.url} target="_blank" rel="noopener noreferrer">
                           <span className="social-icon">
-                            <img src={item.imgV2} alt={item.title} />
-                            <img src={item.imgV2} alt={item.title} />
+                            <img src={item.imgV2} alt={item.title} loading="lazy"/>
+                            <img src={item.imgV2} alt={item.title} loading="lazy"/>
                           </span>
                         </a>
                       </li>
@@ -221,13 +219,13 @@ const SassTwoFooter = () => {
             <div className="col-lg-4 col-md-6">
               <ul className="copyright-list">
                 <li>
-                  <img src={Copyright1Img} alt="img" />
+                  <img height="48" width="49" src={Copyright1Img} alt="img" loading="lazy"/>
                 </li>
                 <li>
-                  <img src={Copyright2Img} alt="img" />
+                  <img height="48" width="49" src={Copyright2Img} alt="img" loading="lazy"/>
                 </li>
                 <li>
-                  <img src={Copyright3Img} alt="img" />
+                  <img height="48" width="49" src={Copyright3Img} alt="img" loading="lazy"/>
                 </li>
               </ul>
             </div>

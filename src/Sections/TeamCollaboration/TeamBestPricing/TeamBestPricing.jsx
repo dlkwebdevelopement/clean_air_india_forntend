@@ -81,7 +81,7 @@ const TeamBestPricing = () => {
                         <div className="best-pricing-card-header">
                           <div className="best-pricing-card-title">
                             <h2>{plan.title}</h2>
-                            <img src={plan.icon} alt="pricing-icon" />
+                            <img src={plan.icon} alt="pricing-icon" loading="lazy"/>
                           </div>
 
                           <p>{plan.description}</p>
@@ -89,22 +89,22 @@ const TeamBestPricing = () => {
                           <ul className="users-list">
                             <li>
                               <a href="#">
-                                <img src={user1Image} alt="user-img" />
+                                <img height="36" width="36" src={user1Image} alt="user-img" loading="lazy"/>
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src={user2Image} alt="user-img" />
+                                <img height="36" width="36" src={user2Image} alt="user-img" loading="lazy"/>
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <img src={user3Image} alt="user-img" />
+                                <img height="36" width="36" src={user3Image} alt="user-img" loading="lazy"/>
                               </a>
                             </li>
                             <li>
                               <button>
-                                <img src={plusBlueIcon} alt="add-user" />
+                                <img height="12" width="12" src={plusBlueIcon} alt="add-user" loading="lazy"/>
                               </button>
                             </li>
                           </ul>
@@ -145,14 +145,14 @@ const TeamBestPricing = () => {
                         {plan.id === "meeting" && (
                           <div className="overlay">
                             <p className="mb-0">Most Popular</p>
-                            <img src={mostPopularIcon} alt="icon" />
+                            <img height="14" width="14" src={mostPopularIcon} alt="icon" loading="lazy"/>
                           </div>
                         )}
 
                         <div className="best-pricing-card-header">
                           <div className="best-pricing-card-title">
                             <h2>{plan.title}</h2>
-                            <img src={plan.icon} alt="pricing-icon" />
+                            <img src={plan.icon} alt="pricing-icon" loading="lazy"/>
                           </div>
 
                           <p>{plan.description}</p>

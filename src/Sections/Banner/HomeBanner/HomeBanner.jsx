@@ -6,7 +6,7 @@ import bannerShape2 from "../../../assets/images/main-demo/banner-shape2.png";
 import bannerShape3 from "../../../assets/images/main-demo/banner-shape3.png";
 import getDemoSvg from "../../../assets/images/main-demo/get-demo.svg";
 import arrowRightSvg from "../../../assets/images/icons/arrow-right.svg";
-import heroImg from "../../../assets/images/main-demo/hero-img.png";
+import heroImg from "../../../assets/images/main-demo/hero-img.webp";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
 
 const HomeBanner = () => {
@@ -14,13 +14,13 @@ const HomeBanner = () => {
     <HomeBannerStyle className="hero-section">
       <div className="bg-shape">
         <div className="shape-img img-1">
-          <ScrollAnimate delay={250}><img src={bannerShape1} alt="shpae1" /></ScrollAnimate>
+          <ScrollAnimate delay={250}><img height="200" width="248" src={bannerShape1} alt="shpae1" /></ScrollAnimate>
         </div>
         <div className="shape-img img-2">
-          <ScrollAnimate delay={220}><img src={bannerShape2} alt="shape2" /></ScrollAnimate>
+          <ScrollAnimate delay={220}><img height="155" width="291" src={bannerShape2} alt="shape2" /></ScrollAnimate>
         </div>
         <div className="shape-img img-3">
-          <ScrollAnimate delay={240}><img src={bannerShape3} alt="shape3" /></ScrollAnimate>
+          <ScrollAnimate delay={240}><img height="480" width="234" src={bannerShape3} alt="shape3" /></ScrollAnimate>
         </div>
       </div>
       <div className="container">
@@ -78,13 +78,13 @@ const HomeBanner = () => {
               <div className="hero-img">
                 <div className="overlay">
                   <a href="#" className="get-demo-btn">
-                    <img src={getDemoSvg} alt="get-demo" />
+                    <img height="120" width="120" src={getDemoSvg} alt="get-demo" />
                     <span className="icon">
-                      <img src={arrowRightSvg} alt="icon" />
+                      <img height="29" width="29" src={arrowRightSvg} alt="icon" />
                     </span>
                   </a>
                 </div>
-                <img src={heroImg} alt="hero-img" />
+                <img height="500" width="400" src={heroImg} alt="hero-img" />
               </div>
             </ScrollAnimate>
           </div>

@@ -1,16 +1,16 @@
 import FooterStyleWrapper from "./Footer.style";
 import FooterSocialLinks from "../../assets/data/footer/footerSocialLinks";
 
-import MeshGradImg from "../../assets/images/portfolio/mesh-grad.png";
+import MeshGradImg from "../../assets/images/portfolio/mesh-grad.webp";
 import GrainTextureImg from "../../assets/images/portfolio/grain-texture.png";
 
 const FooterSix = () => {
   return (
     <FooterStyleWrapper className="v7-footer-area">
       <div className="footer-section-v7">
-        <img src={MeshGradImg} alt="img" className="footer-section-mash-gard" />
+        <img height="849" width="1241" src={MeshGradImg} alt="img" className="footer-section-mash-gard" loading="lazy"/>
         <div className="footer-section-grain-texture">
-          <img src={GrainTextureImg} alt="img" />
+          <img height="650" width="1920" src={GrainTextureImg} alt="img" loading="lazy"/>
         </div>
         <div className="container">
           <div className="footer-v7-content">
@@ -51,10 +51,10 @@ const FooterSix = () => {
                 <ul className="social-link dark">
                   {FooterSocialLinks?.map((item, i) => (
                     <li key={i}>
-                      <a href={item.url} target="_blank">
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">
                         <span className='social-icon'>
-                          <img src={item.img} alt={item.title} />
-                          <img src={item.img} alt={item.title} />
+                          <img src={item.img} alt={item.title} loading="lazy"/>
+                          <img src={item.img} alt={item.title} loading="lazy"/>
                         </span>
                       </a>
                     </li>

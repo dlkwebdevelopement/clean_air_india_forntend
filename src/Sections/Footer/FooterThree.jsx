@@ -14,7 +14,7 @@ const FooterThree = () => {
           <div className="row justify-content-between">
             <div className="col-lg-3 col-md-6">
               <div className="footer-img">
-                <img src={FooterImg} alt="footer-img" />
+                <img height="242" width="242" src={FooterImg} alt="footer-img" loading="lazy"/>
               </div>
             </div>
             <div className="col-lg-8">
@@ -54,17 +54,17 @@ const FooterThree = () => {
           <div className="row align-items-center">
             <div className="col-lg-4 col-md-3 col-sm-6">
               <a href="/" className="footer-logo">
-                <img src={FooterLogo} alt="footer-logo" />
+                <img height="40" width="136" src={FooterLogo} alt="footer-logo" />
               </a>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-6">
               <ul className="social-link">
                 {FooterSocialLinks?.map((item, i) => (
                   <li key={i}>
-                    <a href={item.url} target="_blank">
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
                       <span className='social-icon'>
-                        <img src={item.imgV2} alt={item.title} />
-                        <img src={item.imgV2} alt={item.title} />
+                        <img src={item.imgV2} alt={item.title} loading="lazy"/>
+                        <img src={item.imgV2} alt={item.title} loading="lazy"/>
                       </span>
                     </a>
                   </li>

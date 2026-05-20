@@ -10,10 +10,10 @@ const Breadcumbs = ({ title }) => {
     <BreadcumbsStyle>
       <div className="bg-shape">
         <div className="shape-img img-1">
-          <ScrollAnimate delay={300}><img src={ShapeImg1} alt="shape" /></ScrollAnimate>
+          <ScrollAnimate delay={300}><img height="160" width="197" src={ShapeImg1} alt="shape" loading="lazy"/></ScrollAnimate>
         </div>
         <div className="shape-img img-2">
-          <ScrollAnimate delay={350}><img src={ShapeImg2} alt="shape" /></ScrollAnimate>
+          <ScrollAnimate delay={350}><img height="110" width="136" src={ShapeImg2} alt="shape" loading="lazy"/></ScrollAnimate>
         </div>
       </div>
       <div className="container">
@@ -40,7 +40,7 @@ const Breadcumbs = ({ title }) => {
           <div className="col-md-6">
             <div className="breadcrumb-img">
               <ScrollAnimate delay={250}>
-                <img src={BreadcrumbImg} alt="breadcrumb-img" />
+                <img height="200" width="396" src={BreadcrumbImg} alt="breadcrumb-img" loading="lazy"/>
               </ScrollAnimate>
             </div>
           </div>

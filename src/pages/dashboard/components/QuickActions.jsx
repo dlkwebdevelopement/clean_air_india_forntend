@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../../components copy/ui/Button';
+import Button from '../../../shared/ui/Button';
 import './QuickActions.css';
 
 const QuickActions = () => {

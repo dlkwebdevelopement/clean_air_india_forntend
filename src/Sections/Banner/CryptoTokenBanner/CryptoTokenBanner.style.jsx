@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-import CryptoTokenBgImg from "../../../assets/images/crypto-token/crypto-token-bg.png";
-import GrainTextureImg from "../../../assets/images//crypto-token/grain-texture.png";
+import CryptoTokenBgImg from "../../../assets/images/crypto-token/crypto-token-bg.webp";
+import GrainTextureImg from "../../../assets/images//crypto-token/grain-texture.webp";
 
 const CryptoTokenBannerStyle = styled.section`
   .crypto-token-banner-shape {

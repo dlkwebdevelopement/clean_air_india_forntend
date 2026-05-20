@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import BgImg from "../../../assets/images/bg/wave-line.png";
+import BgImg from "../../../assets/images/bg/wave-line.webp";
 import CurveLineImg from "../../../assets/images/shape/curve-line.png";
 import HoggleImg from "../../../assets/images/icons/hoogle-icon.svg";
 

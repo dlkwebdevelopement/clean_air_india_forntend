@@ -18,12 +18,12 @@ const Signup = () => {
         <form action="#" id="commentForm">
           <ScrollAnimate delay={250}>
           <button className="secondary-btn">
-            <img src={GoogleIcon} alt="icon" /> Sign up with Google
+            <img height="19" width="18" src={GoogleIcon} alt="icon" loading="lazy"/> Sign up with Google
           </button>
           </ScrollAnimate>
           <ScrollAnimate delay={300}>
           <button className="secondary-btn">
-            <img src={FacebookIcon} alt="icon" /> Sign up with Facebook
+            <img height="18" width="18" src={FacebookIcon} alt="icon" loading="lazy"/> Sign up with Facebook
           </button>
           </ScrollAnimate>
 

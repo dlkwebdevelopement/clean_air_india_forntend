@@ -1,73 +1,71 @@
-import { BrowserRouter, Route, Routes, Router } from "react-router-dom";
-import Home from "./pages/Home";
-import CustomerService from "./pages/customer-service";
-import TeamCollaboration from "./pages/team-collaboration";
-import SassLanding from "./pages/sass-landing";
-import Corporate from "./pages/corporate";
-import AppLanding from "./pages/app-landing";
-import CryptoWalletOne from "./pages/crypto-wallet-one";
-import CryptoWalletTwo from "./pages/crypto-wallet-two";
-import CryptoToken from "./pages/crypto-token";
-import Newsletter from "./pages/newsletter";
-import SassLandingTwo from "./pages/sass-landing-two";
-import DefiLanding from "./pages/defi-landing";
-import Chatbot from "./pages/chatbot";
-import Business from "./pages/business";
-import Finance from "./pages/finance";
-import Accounting from "./pages/accounting";
-import Portfolio from "./pages/portfolio";
-import SignIn from "./pages/sign-in";
-import SignUp from "./pages/sign-up";
-import ForgotPassword from "./pages/forgot-password";
-import Terms from "./pages/terms";
-import PrivacyPolicy from "./pages/privacy-policy";
-import Blog from "./pages/blog";
-import BlogDetails from "./pages/blog-details";
-import AboutUs from "./pages/about-us";
-import OurServices from "./pages/our-services";
-import ContactUs from "./pages/ContactUs";
-import PricingPlan from "./pages/pricing-plan";
-import Error from "./pages/Error";
+import React, { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
-import ProductPage2 from "./Sections/OurServices/ServiceList/Biosafety";
-import OurProduct2 from "./pages/OurProduct2";
-import Ourproduct1 from "./pages/Ourproduct1";
-import OurProduct3 from "./pages/Ourproduct3";
-import Ourrp1 from "./pages/ourrp1";
-import Ourrp2 from "./pages/ourrp2";
-import OurProduct4 from "./pages/Ourproduct4";
-import OurProduct5 from "./pages/Ourproduct5";
-import OurProduct6 from "./pages/Ourproduct6";
-import OurProduct7 from "./pages/Ourproject7";
-import OurProduct8 from "./pages/Ourproduct8";
-import OurProduct9 from "./pages/Ourproduct9";
-import Ourrp3 from "./pages/Ourrp3";
-import Cer from "./pages/cer";
-import Gar from "./pages/gar";
-import Pro from "./pages/p";
-import SignUpPage from "./pages/sign-up";
-import SignInPage from "./pages/sign-in";
-import Dashboard from "./pages/dashboard";
-import CreateNewBlog from "./pages/create-new-blog";
-import BlogList from "./pages/blog-list";
-import CreateAdmin from "./pages/sign-up/CreateAdmin";
-import CreateChildAdmin from "./pages/sign-up/CreateAdmin";
-import AdminList from "./pages/sign-up/AdminList";
-import WhatsAppButton from "../src/components copy/WhatsAppButton";
-import CallButton from "../src/components copy/CallButton";
-import MailButton from "./components copy/MailButton";
+import WhatsAppButton from "./shared/WhatsAppButton";
+import CallButton from "./shared/CallButton";
+
+// Lazy loaded page components
+const Corporate = lazy(() => import("./pages/corporate"));
+const AboutUs = lazy(() => import("./pages/about-us"));
+const OurServices = lazy(() => import("./pages/our-services"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const Error = lazy(() => import("./pages/Error"));
+const ProductPage2 = lazy(() => import("./Sections/OurServices/ServiceList/Biosafety"));
+const OurProduct2 = lazy(() => import("./pages/OurProduct2"));
+const Ourproduct1 = lazy(() => import("./pages/Ourproduct1"));
+const OurProduct3 = lazy(() => import("./pages/Ourproduct3"));
+const Ourrp1 = lazy(() => import("./pages/ourrp1"));
+const Ourrp2 = lazy(() => import("./pages/ourrp2"));
+const OurProduct4 = lazy(() => import("./pages/Ourproduct4"));
+const OurProduct5 = lazy(() => import("./pages/Ourproduct5"));
+const OurProduct6 = lazy(() => import("./pages/Ourproduct6"));
+const OurProduct7 = lazy(() => import("./pages/Ourproject7"));
+const OurProduct8 = lazy(() => import("./pages/Ourproduct8"));
+const OurProduct9 = lazy(() => import("./pages/Ourproduct9"));
+const Ourproduct10 = lazy(() => import("./pages/Ourproduct10"));
+const Ourproduct11 = lazy(() => import("./pages/Ourproduct11"));
+const Ourproduct12 = lazy(() => import("./pages/Ourproduct12"));
+const Ourproduct13 = lazy(() => import("./pages/Ourproduct13"));
+const Ourproduct14 = lazy(() => import("./pages/Ourproduct14"));
+const Ourrp3 = lazy(() => import("./pages/Ourrp3"));
+const Cer = lazy(() => import("./pages/cer"));
+const Gar = lazy(() => import("./pages/gar"));
+const Pro = lazy(() => import("./pages/p"));
+const SignUpPage = lazy(() => import("./pages/sign-up"));
+const SignInPage = lazy(() => import("./pages/sign-in"));
+const Dashboard = lazy(() => import("./pages/dashboard"));
+const CreateNewBlog = lazy(() => import("./pages/create-new-blog"));
+const BlogList = lazy(() => import("./pages/blog-list"));
+const CreateChildAdmin = lazy(() => import("./pages/sign-up/CreateAdmin"));
+const AdminList = lazy(() => import("./pages/sign-up/AdminList"));
+const Blog = lazy(() => import("./pages/blog"));
+const BlogDetails = lazy(() => import("./pages/blog-details"));
+
+const PageLoader = () => (
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', background: '#0e1118' }}>
+    <div className="spinner"></div>
+    <style>{`
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        border-top-color: #0095ff;
+        animation: spin 1s ease-in-out infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    `}</style>
+  </div>
+);
 
 const App = () => {
   return (
-    <>
-    
+    <Suspense fallback={<PageLoader />}>
       <ScrollToTop />
-       
       <Routes>
         <Route path="/" element={<Corporate />} />
-        {/* <Route path="/customer-service" element={<CustomerService />} />
-        <Route path="/team-collaboration" element={<TeamCollaboration />} />
-        <Route path="/sass-landing" element={<SassLanding />} /> */}
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/admin" element={<SignInPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
@@ -85,45 +83,28 @@ const App = () => {
         <Route path="/sterile-garment-storage-cabinet" element={<OurProduct7 />} />
         <Route path="/softwall-cleanrooms" element={<OurProduct9 />} />
         <Route path="/modular-cleanroom" element={<OurProduct8 />} />
-        {/* <Route path="/sass-landing-two" element={<SassLandingTwo />} /> */}
-        {/* <Route path="/app-landing" element={<AppLanding />} /> */}
+        <Route path="/reverse-flow-booth" element={<Ourproduct10 />} />
+        <Route path="/pharma-weighing-booths" element={<Ourproduct11 />} />
+        <Route path="/downflow-booth" element={<Ourproduct12 />} />
+        <Route path="/fan-filter-units" element={<Ourproduct13 />} />
+        <Route path="/powder-containment-booths" element={<Ourproduct14 />} />
         <Route path="/home" element={<Corporate />} />
-        {/* <Route path="/crypto-wallet-one" element={<CryptoWalletOne />} />
-        <Route path="/crypto-wallet-two" element={<CryptoWalletTwo />} />
-        <Route path="/crypto-token" element={<CryptoToken />} /> */}
-        {/* <Route path="/defi-landing" element={<DefiLanding />} />
-        <Route path="/newsletter" element={<Newsletter />} />
-        <Route path="/chatbot" element={<Chatbot />} /> */}
         <Route path="/recommended-practices-for-clean-rooms" element={<Ourrp1 />} />
         <Route path="/recommended-practices-for-fume-exhaust-hoods" element={<Ourrp2 />} />
         <Route path="/recommended-practices-for-biosafety-cabinets" element={<Ourrp3 />} />
         <Route path="/accreditation" element={<Cer />} />
         <Route path="/gallery" element={<Gar />} />
         <Route path="/products" element={<Pro />} />
-        {/* <Route path="/business" element={<Business />} />
-        <Route path="/finance" element={<Finance />} />
-        <Route path="/accounting" element={<Accounting />} />
-        <Route path="/portfolio" element={<Portfolio />} /> */}
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/our-services" element={<OurServices />} />
-        {/* <Route path="/pricing-plan" element={<PricingPlan />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:blogId" element={<BlogDetails />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="*" element={<Error />} />
       </Routes>
-
-      <WhatsAppButton/>
-      <CallButton/>
-      {/* <MailButton/> */}
-
-     
-    </>
+      <WhatsAppButton />
+      <CallButton />
+    </Suspense>
   );
 };
 
