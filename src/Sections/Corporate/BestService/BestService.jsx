@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import BestServiceStyleWrapper from "./BestService.style";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { serviceData } from "../../../assets/data/CorporateData/ServiceData";
+import LazySlider from "../../../Components/LazySlider/LazySlider";
 
 const SlickSlider = Slider.default || Slider;
 
@@ -16,6 +17,7 @@ const BestService = () => {
     dots: false,
     autoplay: true,
     autoplaySpeed: 3000,
+    lazyLoad: "ondemand",
     responsive: [
       {
         breakpoint: 991,
@@ -63,26 +65,28 @@ const BestService = () => {
             </div>
             <div className="col-lg-9">
               <div className="row corporate-services-slider">
-                <SlickSlider {...sliderSettings}>
-                  {serviceData.map((service) => (
-                    <div key={service.id} className="col-md-12">
-                      <div className="best-services-card">
-                        <div className="best-services-img">
-                          <img
-                            src={service.imgSrc}
-                            alt={`service-img-${service.id}`} loading="lazy"/>
-                        </div>
-                        <div className="best-services-text">
-                          <h5 className="wt-700">
-                            {service.title}
-                          </h5>
+                <LazySlider fallbackHeight="350px" rootMargin="400px">
+                  <SlickSlider {...sliderSettings}>
+                    {serviceData.map((service) => (
+                      <div key={service.id} className="col-md-12">
+                        <div className="best-services-card">
+                          <div className="best-services-img">
+                            <img
+                              src={service.imgSrc}
+                              alt={`service-img-${service.id}`} loading="lazy"/>
+                          </div>
+                          <div className="best-services-text">
+                            <h5 className="wt-700">
+                              {service.title}
+                            </h5>
 
-                          {/* <p>{service.description}</p> */}
+                            {/* <p>{service.description}</p> */}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </SlickSlider>
+                    ))}
+                  </SlickSlider>
+                </LazySlider>
               </div>
             </div>
           </div>

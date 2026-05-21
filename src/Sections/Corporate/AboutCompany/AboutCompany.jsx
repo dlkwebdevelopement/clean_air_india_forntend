@@ -3,6 +3,7 @@ import AboutCompanyStyleWrapper from "./AboutCompany.style";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import Venobox from "venobox/dist/venobox";
 import Slider from "react-slick";
+import LazySlider from "../../../Components/LazySlider/LazySlider";
 
 const SlickSlider = Slider.default || Slider;
 
@@ -48,6 +49,7 @@ const AboutCompany = () => {
     autoplay: true,
     autoplaySpeed: 2500,
     arrows: true,
+    lazyLoad: "ondemand",
   };
 
   return (
@@ -58,13 +60,15 @@ const AboutCompany = () => {
             <ScrollAnimate delay={250}>
               <div className="about-company-left">
                 <div className="about-company-inner">
-                  <SlickSlider {...settings}>
-                    {companyImages.map((img, index) => (
-                      <div key={index} className="about-company-img">
-                        <img src={img} alt={`about-company-${index}`} loading="lazy"/>
-                      </div>
-                    ))}
-                  </SlickSlider>
+                  <LazySlider fallbackHeight="400px" rootMargin="400px">
+                    <SlickSlider {...settings}>
+                      {companyImages.map((img, index) => (
+                        <div key={index} className="about-company-img">
+                          <img src={img} alt={`about-company-${index}`} loading="lazy"/>
+                        </div>
+                      ))}
+                    </SlickSlider>
+                  </LazySlider>
                 </div>
               </div>
             </ScrollAnimate>
