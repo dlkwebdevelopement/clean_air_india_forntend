@@ -34,46 +34,16 @@
     <meta name="twitter:description" content="Premier manufacturer and supplier of Cleanroom Systems, Laminar Air Flow Cabinets, Biosafety Cabinets, Fume Hoods, and Pass Boxes with 30+ years of expertise." />
     <meta name="twitter:image" content="https://www.cleanairindia.co/logo-blue-svg.svg" />
 
-    <!-- ✅ Google Tag Manager -->
-    <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-WKP5C7MR');
-    </script>
-    <!-- ✅ End Google Tag Manager -->
-
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- bootstrap css (preloaded to prevent rendering block) -->
+    <link rel="preload" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/css/bootstrap.min.css" /></noscript>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
   <body>
-    <!-- ✅ Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WKP5C7MR"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- ✅ End Google Tag Manager (noscript) -->
-
 
     <div id="root"></div>
 
     <script type="module" src="/src/main.jsx"></script>
-
-    <!-- iconify js -->
-    <script src="/js/iconify.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

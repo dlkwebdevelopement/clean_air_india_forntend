@@ -30,7 +30,12 @@ export default defineConfig({
             if (id.includes('styled-components')) {
               return 'vendor-styled';
             }
-            return 'vendor';
+            if (id.includes('recharts')) {
+              return 'vendor-recharts';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-motion';
+            }
           }
         }
       }
