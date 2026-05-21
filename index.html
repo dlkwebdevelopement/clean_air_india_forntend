@@ -16,6 +16,9 @@
 
     <title>Clean Air Systems India | Cleanroom Solutions & Equipment</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.cleanairindia.co/" />
 
@@ -34,10 +37,12 @@
     <meta name="twitter:description" content="Premier manufacturer and supplier of Cleanroom Systems, Laminar Air Flow Cabinets, Biosafety Cabinets, Fume Hoods, and Pass Boxes with 30+ years of expertise." />
     <meta name="twitter:image" content="https://www.cleanairindia.co/logo-blue-svg.svg" />
 
-    <!-- bootstrap css (preloaded to prevent rendering block) -->
-    <link rel="preload" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="/css/bootstrap.min.css" /></noscript>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- Google Fonts Preconnect (prevents render-blocking font requests) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- NOTE: Bootstrap CSS removed — project uses Tailwind CSS (saves 232KB / ~620ms) -->
+    <!-- NOTE: reCAPTCHA script removed from global head — it is lazily loaded only on the Contact page via SayHello component -->
   </head>
 
   <body>
