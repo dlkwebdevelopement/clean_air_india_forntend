@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import WhatsAppButton from "./shared/WhatsAppButton";
 import CallButton from "./shared/CallButton";
+import Corporate from "./pages/corporate";
 
 // Lazy loaded page components
-const Corporate = lazy(() => import("./pages/corporate"));
 const AboutUs = lazy(() => import("./pages/about-us"));
 const OurServices = lazy(() => import("./pages/our-services"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));

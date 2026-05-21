@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import viteCompression from 'vite-plugin-compression';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -42,7 +43,19 @@ function remoteImagesPlugin(env) {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
-    plugins: [react(), tailwindcss(), remoteImagesPlugin(env)],
+    plugins: [
+      react(), 
+      tailwindcss(), 
+      remoteImagesPlugin(env),
+      viteCompression({
+        algorithm: 'gzip',
+        ext: '.gz',
+      }),
+      viteCompression({
+        algorithm: 'brotliCompress',
+        ext: '.br',
+      })
+    ],
     base: "./",
     server: { port: 3000 },
     optimizeDeps: {
