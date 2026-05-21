@@ -127,7 +127,10 @@ useEffect(() => {
       if (filters.tag) queryParams.append('tag', filters.tag);
       if (filters.search) queryParams.append('search', filters.search);
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs?${queryParams.toString()}`, {
+      const apiUrl = import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api';
+      console.log('Fetching from:', apiUrl);
+      
+      const response = await fetch(`${apiUrl}/blogs?${queryParams.toString()}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -138,6 +141,8 @@ useEffect(() => {
       }
       
       const data = await response.json();
+      console.log('Fetched blogs data:', data);
+      
       setBlogs(data.blogs || []);
       setTotalPages(data.pagination?.pages || 1);
       setTotalItems(data.pagination?.total || 0);
