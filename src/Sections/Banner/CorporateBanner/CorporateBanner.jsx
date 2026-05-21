@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import CorporateBannerStyle from "./CorporateBanner.style";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
 import BgVideoMP4 from "../../../assets/images/videos/10800_optimized.mp4";
@@ -8,6 +9,9 @@ import PosterImg from "../../../assets/images/corporate/corporate-banner-bg.webp
 const CorporateBanner = () => {
   return (
     <CorporateBannerStyle className="coroprate-banner-section">
+      <Helmet>
+        <link rel="preload" as="image" href={PosterImg} fetchpriority="high" />
+      </Helmet>
       {/* video background */}
       <video
         className="video-bg"

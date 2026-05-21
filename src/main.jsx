@@ -17,7 +17,10 @@ import "./assets/styles/buttons-style.css";
 const tagManagerArgs = {
   gtmId: "GTM-WKP5C7MR", // ⬅️ Replace with your GTM ID
 };
-TagManager.initialize(tagManagerArgs);
+// Defer GTM init by 3s to prevent main-thread blocking during initial paint
+setTimeout(() => {
+  TagManager.initialize(tagManagerArgs);
+}, 3000);
 
 // Track route changes
 function GTMRouteTracker() {

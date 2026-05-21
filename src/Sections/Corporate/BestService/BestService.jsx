@@ -73,7 +73,7 @@ const BestService = () => {
                           <div className="best-services-img">
                             <img
                               src={service.imgSrc}
-                              alt={`service-img-${service.id}`} loading="lazy"/>
+                              alt={`service-img-${service.id}`} width="453" height="400" loading="lazy"/>
                           </div>
                           <div className="best-services-text">
                             <h5 className="wt-700">

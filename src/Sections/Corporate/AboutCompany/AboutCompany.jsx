@@ -64,7 +64,7 @@ const AboutCompany = () => {
                     <SlickSlider {...settings}>
                       {companyImages.map((img, index) => (
                         <div key={index} className="about-company-img">
-                          <img src={img} alt={`about-company-${index}`} loading="lazy"/>
+                          <img src={img} alt={`about-company-${index}`} width="600" height="400" loading="lazy"/>
                         </div>
                       ))}
                     </SlickSlider>
