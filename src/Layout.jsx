@@ -142,20 +142,7 @@ const Layout = ({ pageTitle, scrollVariant, children }) => {
         {/* apple touch icon included here */}
         <link rel="apple-touch-icon" href="/favicon.png" />
 
-        {/* All font family included here */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        {/* DM Sans font family */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-          rel="stylesheet"
-        />
-        {/* Inter font family */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
+        {/* Fonts loaded in index.html <head> for optimal performance — not here */}
       </Helmet>
       {/* overlay while mobile menu open */}
       <div className="staco-overly-bg"></div>

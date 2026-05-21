@@ -37,9 +37,13 @@
     <meta name="twitter:description" content="Premier manufacturer and supplier of Cleanroom Systems, Laminar Air Flow Cabinets, Biosafety Cabinets, Fume Hoods, and Pass Boxes with 30+ years of expertise." />
     <meta name="twitter:image" content="https://www.cleanairindia.co/logo-blue-svg.svg" />
 
-    <!-- Google Fonts Preconnect (prevents render-blocking font requests) -->
+    <!-- Google Fonts — loaded here so it fires in parallel with CSS (NOT inside CSS @import which creates a chain) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    />
 
     <!-- Bootstrap CSS — loaded via CDN (browser-cached across sites) with local fallback -->
     <!-- NOTE: Bootstrap grid (container/row/col-*) is used across 50+ components -->
