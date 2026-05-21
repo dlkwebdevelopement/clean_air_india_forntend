@@ -30,6 +30,8 @@ const CorporateBannerStyle = styled.section`
     padding: 0px 20px;
 
     h4 {
+      font-size: 28px;
+      font-weight: 600;
       margin-bottom: 19px;
     }
     h1 {
@@ -53,6 +55,9 @@ const CorporateBannerStyle = styled.section`
     .overlay {
       padding: 120px 0px;
     }
+    .corporate-banner-text h4 {
+      font-size: 22px;
+    }
     .corporate-banner-text h1 {
       font-size: 55px;
     }
@@ -60,6 +65,9 @@ const CorporateBannerStyle = styled.section`
   @media screen and (max-width: 767px) {
     .overlay {
       padding: 120px 0px 80px 0px;
+    }
+    .corporate-banner-text h4 {
+      font-size: 18px;
     }
     .corporate-banner-text h1 {
       font-size: 40px;

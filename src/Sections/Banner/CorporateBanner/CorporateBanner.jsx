@@ -29,8 +29,8 @@ const CorporateBanner = () => {
       <div className="overlay">
         <ScrollAnimate delay={200}>
           <div className="corporate-banner-text">
-            <h4 className="text-white text-center">We are</h4>
             <h1 className="text-white text-center">
+              We are <br />
               Clean Air <br />
               Systems
             </h1>
