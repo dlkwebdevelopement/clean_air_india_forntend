@@ -36,24 +36,25 @@ const HeaderCorporate = (props) => {
   let lastScroll = 0;
 
   const handleScroll = () => {
-    const bodySection = document.body;
+    let currentScroll = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+    
+    window.requestAnimationFrame(() => {
+      const bodySection = document.body;
+      let diffScroll = currentScroll - lastScroll;
 
-    let currentScroll =
-      document.documentElement.scrollTop || document.body.scrollTop;
-    let diffScroll = currentScroll - lastScroll;
-
-    if (diffScroll > 0 || currentScroll == 0) {
-      HeaderSectionRef.current.classList.remove("sticky");
-      bodySection.classList.remove("nav-expanded");
-      setIsMobileMenu(false);
-    } else {
-      HeaderSectionRef.current.classList.add("sticky");
-    }
-    lastScroll = currentScroll;
+      if (diffScroll > 0 || currentScroll == 0) {
+        HeaderSectionRef.current?.classList.remove("sticky");
+        bodySection.classList.remove("nav-expanded");
+        setIsMobileMenu(false);
+      } else {
+        HeaderSectionRef.current?.classList.add("sticky");
+      }
+      lastScroll = currentScroll;
+    });
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

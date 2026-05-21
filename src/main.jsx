@@ -7,6 +7,7 @@ import TagManager from "react-gtm-module";
 
 import TemplateStyles from "./assets/styles/TemplateStyles.js";
 import GlobalStyles from "./assets/styles/GlobalStyles";
+import "./assets/styles/bootstrap.min.css";
 import "venobox/dist/venobox.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

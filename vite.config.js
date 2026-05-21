@@ -63,7 +63,28 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       target: "esnext",
-      cssCodeSplit: true
+      cssCodeSplit: true,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('react-dom') || id.includes('react-router-dom') || id.includes('react/')) {
+                return 'vendor-core';
+              }
+              if (id.includes('framer-motion') || id.includes('animejs')) {
+                return 'vendor-animation';
+              }
+              if (id.includes('recharts') || id.includes('d3')) {
+                return 'vendor-charts';
+              }
+              if (id.includes('lucide-react') || id.includes('react-icons')) {
+                return 'vendor-icons';
+              }
+              return 'vendor-libs';
+            }
+          }
+        }
+      }
     }
   };
 });

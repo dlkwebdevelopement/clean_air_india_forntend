@@ -7,40 +7,44 @@ const ScrollTop = ({ variant }) => {
   const scrollTopPath = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    // Setup path styling once on mount instead of every scroll event
+    if (scrollTopPath.current) {
       const pathLength = scrollTopPath.current.getTotalLength();
-      const offset = 50;
-
       scrollTopPath.current.style.transition = "none";
       scrollTopPath.current.style.WebkitTransition = "none";
-      scrollTopPath.current.style.strokeDasharray =
-        pathLength + " " + pathLength;
+      scrollTopPath.current.style.strokeDasharray = pathLength + " " + pathLength;
       scrollTopPath.current.style.strokeDashoffset = pathLength;
       scrollTopPath.current.style.transition = "stroke-dashoffset 10ms linear";
-      scrollTopPath.current.style.WebkitTransition =
-        "stroke-dashoffset 10ms linear";
+      scrollTopPath.current.style.WebkitTransition = "stroke-dashoffset 10ms linear";
+      
+      let ticking = false;
 
-      const scroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      const height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const progress = pathLength - (scroll * pathLength) / height;
-      scrollTopPath.current.style.strokeDashoffset = progress;
-      const scrollElementPos =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      if (scrollElementPos >= offset) {
-        scrollTopCard.current.classList.add("progress-done");
-      } else {
-        scrollTopCard.current.classList.remove("progress-done");
-      }
-    };
+      const handleScroll = () => {
+        if (!ticking) {
+          const scroll = document.body.scrollTop || document.documentElement.scrollTop || window.scrollY;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          
+          window.requestAnimationFrame(() => {
+            const progress = pathLength - (scroll * pathLength) / height;
+            scrollTopPath.current.style.strokeDashoffset = progress;
+            
+            if (scroll >= 50) {
+              scrollTopCard.current?.classList.add("progress-done");
+            } else {
+              scrollTopCard.current?.classList.remove("progress-done");
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   const handleScrollToTop = (e) => {

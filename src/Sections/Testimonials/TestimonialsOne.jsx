@@ -96,22 +96,33 @@ const TestimonialsOne = () => {
     // Update cached value on resize only (not scroll)
     window.addEventListener("resize", updateOffsetTop);
 
+    let ticking = false;
+
     const handleScroll = () => {
       if (!rotateIconRef.current) return;
 
-      // Use cached value — no layout read, no reflow
-      const y = window.scrollY;
-      const x = cachedOffsetTop.current - 400;
+      if (!ticking) {
+        // Use cached value — no layout read, no reflow
+        const y = window.scrollY;
+        
+        window.requestAnimationFrame(() => {
+          const x = cachedOffsetTop.current - 400;
 
-      let animationValue = (y - x) / 4;
-      const animationStop = 45;
+          let animationValue = (y - x) / 4;
+          const animationStop = 45;
 
-      animationValue = Math.max(0, Math.min(animationValue, animationStop));
+          animationValue = Math.max(0, Math.min(animationValue, animationStop));
 
-      rotateIconRef.current.style.transform =
-        y > x
-          ? `rotate(-${animationValue}deg)`
-          : `rotate(${animationValue}deg)`;
+          if (rotateIconRef.current) {
+            rotateIconRef.current.style.transform =
+              y > x
+                ? `rotate(-${animationValue}deg)`
+                : `rotate(${animationValue}deg)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
