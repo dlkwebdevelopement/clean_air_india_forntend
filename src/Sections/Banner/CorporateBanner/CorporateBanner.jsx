@@ -8,9 +8,6 @@ import PosterImg from "../../../assets/images/corporate/corporate-banner-bg.webp
 const CorporateBanner = () => {
   return (
     <CorporateBannerStyle className="coroprate-banner-section">
-      <Helmet>
-        <link rel="preload" as="image" href={PosterImg} fetchpriority="high" />
-      </Helmet>
       {/* video background */}
       <video
         className="video-bg"
