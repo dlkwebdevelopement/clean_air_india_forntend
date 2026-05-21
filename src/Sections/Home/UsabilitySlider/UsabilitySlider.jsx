@@ -45,6 +45,7 @@ const UsabilitySlider = () => {
     infinite: true,
     pauseOnHover: false,
     pauseOnFocus: false,
+    lazyLoad: "ondemand",
   };
 
   const settingsNav = {

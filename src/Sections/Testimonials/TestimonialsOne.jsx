@@ -36,6 +36,7 @@ const TestimonialsOne = () => {
     infinite: true,
     pauseOnHover: false,
     pauseOnFocus: false,
+    lazyLoad: "ondemand",
     afterChange: (current) => setCurrentSlide(current),
   };
 
@@ -46,6 +47,7 @@ const TestimonialsOne = () => {
     infinite: true,
     pauseOnHover: false,
     pauseOnFocus: false,
+    lazyLoad: "ondemand",
   };
 
   const handleSliderLeft = () => {
@@ -76,13 +78,29 @@ const TestimonialsOne = () => {
 
   const testimonialRef = useRef(null);
   const rotateIconRef = useRef(null);
+  // Cache offsetTop to avoid forced reflow on every scroll event
+  const cachedOffsetTop = useRef(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!testimonialRef.current || !rotateIconRef.current) return;
+    // Read offsetTop ONCE after mount (not on every scroll)
+    // Reading layout properties inside scroll handlers causes forced reflow (233ms penalty)
+    const updateOffsetTop = () => {
+      if (testimonialRef.current) {
+        cachedOffsetTop.current = testimonialRef.current.getBoundingClientRect().top + window.scrollY;
+      }
+    };
 
+    updateOffsetTop();
+
+    // Update cached value on resize only (not scroll)
+    window.addEventListener("resize", updateOffsetTop);
+
+    const handleScroll = () => {
+      if (!rotateIconRef.current) return;
+
+      // Use cached value — no layout read, no reflow
       const y = window.scrollY;
-      const x = testimonialRef.current.offsetTop - 400;
+      const x = cachedOffsetTop.current - 400;
 
       let animationValue = (y - x) / 4;
       const animationStop = 45;
@@ -95,9 +113,12 @@ const TestimonialsOne = () => {
           : `rotate(${animationValue}deg)`;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", updateOffsetTop);
+    };
   }, []);
 
   return (
