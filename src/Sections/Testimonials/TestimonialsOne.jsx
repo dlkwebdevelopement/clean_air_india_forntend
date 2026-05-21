@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import TestimonialsStyleWrapper from "./Testimonials.style";
 import Slider from "react-slick";
+import LazySlider from "../../Components/LazySlider/LazySlider";
 import Data from "../../assets/data/TestimonialsOne";
 import { FaHeart } from "react-icons/fa";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
@@ -127,87 +128,91 @@ const TestimonialsOne = () => {
         <ScrollAnimate delay={250}>
           <div className="row">
             <div className="col-md-12">
-              <div className="testimonial-card">
-                <div className="testimonial-card-left">
-                  <div className="bg-shape">
-                    <div className="shape-img img-1">
-                      <ScrollAnimate delay={200}>
-                        <img height="204" width="286" src={testimonialShape1} alt="shape-img" loading="lazy"/>
-                      </ScrollAnimate>
-                    </div>
-                    <div className="shape-img img-2">
-                      <ScrollAnimate delay={220}>
-                        <img height="170" width="248" src={testimonialShape2} alt="shape-img" loading="lazy"/>
-                      </ScrollAnimate>
-                    </div>
-                    <div className="shape-img img-3">
-                      <ScrollAnimate delay={240}>
-                        <img height="143" width="135" src={testimonialShape3} alt="shape-img" loading="lazy"/>
-                      </ScrollAnimate>
-                    </div>
-                    <div className="shape-img img-4">
-                      <img height="70" width="70" className="rotate-icon"
-                        src={QuoteShapeImg}
-                        alt="shape-img"
-                        ref={rotateIconRef} loading="lazy"/>
-                      <div className="icon">
-                        <img height="17" width="27" src={QuoteIconImg} alt="shape-img" loading="lazy"/>
+              {/* LazySlider defers slick init until section is near viewport */}
+              {/* Prevents slick's offsetWidth reads from blocking initial page render */}
+              <LazySlider fallbackHeight="450px" rootMargin="400px">
+                <div className="testimonial-card">
+                  <div className="testimonial-card-left">
+                    <div className="bg-shape">
+                      <div className="shape-img img-1">
+                        <ScrollAnimate delay={200}>
+                          <img height="204" width="286" src={testimonialShape1} alt="shape-img" loading="lazy"/>
+                        </ScrollAnimate>
+                      </div>
+                      <div className="shape-img img-2">
+                        <ScrollAnimate delay={220}>
+                          <img height="170" width="248" src={testimonialShape2} alt="shape-img" loading="lazy"/>
+                        </ScrollAnimate>
+                      </div>
+                      <div className="shape-img img-3">
+                        <ScrollAnimate delay={240}>
+                          <img height="143" width="135" src={testimonialShape3} alt="shape-img" loading="lazy"/>
+                        </ScrollAnimate>
+                      </div>
+                      <div className="shape-img img-4">
+                        <img height="70" width="70" className="rotate-icon"
+                          src={QuoteShapeImg}
+                          alt="shape-img"
+                          ref={rotateIconRef} loading="lazy"/>
+                        <div className="icon">
+                          <img height="17" width="27" src={QuoteIconImg} alt="shape-img" loading="lazy"/>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <Slider
-                    {...settingsNav}
-                    className="testimonial-slider-nav"
-                    asNavFor={nav1}
-                    ref={(slider) => (sliderRef2 = slider)}
-                  >
-                    {Data?.map((item, i) => (
-                      <div className="slider-item" key={i}>
-                        <img src={item.image} alt="slider-img" loading="lazy"/>
-                      </div>
-                    ))}
-                  </Slider>
-                </div>
-
-                <div className="testimonial-card-right">
-                  <ScrollAnimate delay={250}>
-                    <div className="section-title">
-                      <span className="sub-title">Testimonials</span>
-                      <h2 className="title white-color love-icon">
-                        We
-                        <FaHeart />
-                        Feedback
-                      </h2>
-                    </div>
-                  </ScrollAnimate>
-
-                  <ScrollAnimate delay={300}>
                     <Slider
-                      {...settingsFor}
-                      className="testimonial-slider-for"
-                      asNavFor={nav2}
-                      ref={(slider) => (sliderRef1 = slider)}
+                      {...settingsNav}
+                      className="testimonial-slider-nav"
+                      asNavFor={nav1}
+                      ref={(slider) => (sliderRef2 = slider)}
                     >
                       {Data?.map((item, i) => (
                         <div className="slider-item" key={i}>
-                          <p>{item.review}</p>
-                          <div className="slider-item-user">
-                            <div className="author-info">
-                              <span className="name">{item.name},</span>
-                              <span className="duration">
-                                {item.designation}
-                              </span>
-                            </div>
-                          </div>
+                          <img src={item.image} alt="slider-img" loading="lazy"/>
                         </div>
                       ))}
                     </Slider>
+                  </div>
 
-                    {<CustomSliderInfo />}
-                  </ScrollAnimate>
+                  <div className="testimonial-card-right">
+                    <ScrollAnimate delay={250}>
+                      <div className="section-title">
+                        <span className="sub-title">Testimonials</span>
+                        <h2 className="title white-color love-icon">
+                          We
+                          <FaHeart />
+                          Feedback
+                        </h2>
+                      </div>
+                    </ScrollAnimate>
+
+                    <ScrollAnimate delay={300}>
+                      <Slider
+                        {...settingsFor}
+                        className="testimonial-slider-for"
+                        asNavFor={nav2}
+                        ref={(slider) => (sliderRef1 = slider)}
+                      >
+                        {Data?.map((item, i) => (
+                          <div className="slider-item" key={i}>
+                            <p>{item.review}</p>
+                            <div className="slider-item-user">
+                              <div className="author-info">
+                                <span className="name">{item.name},</span>
+                                <span className="duration">
+                                  {item.designation}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </Slider>
+
+                      {<CustomSliderInfo />}
+                    </ScrollAnimate>
+                  </div>
                 </div>
-              </div>
+              </LazySlider>
             </div>
           </div>
         </ScrollAnimate>

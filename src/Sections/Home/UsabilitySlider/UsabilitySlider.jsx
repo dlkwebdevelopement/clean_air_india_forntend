@@ -11,6 +11,7 @@ import MouseCircleIcon from "../../../assets/images/main-demo/mouse-circle.png";
 import Shape1Img from "../../../assets/images/main-demo/shape1.png";
 import Shape2Img from "../../../assets/images/main-demo/shape2.png";
 import ScrollAnimate from "../../../Components/ScrollAnimate";
+import LazySlider from "../../../Components/LazySlider/LazySlider";
 
 const UsabilitySlider = () => {
   const slides = [
@@ -69,59 +70,61 @@ const UsabilitySlider = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <div className="usability-card">
-              <div className="bg-shape">
-                <div className="shape-img img-1">
-                  <img height="201" width="202" src={Shape1Img} alt="shape-img" loading="lazy"/>
+            <LazySlider fallbackHeight="400px" rootMargin="400px">
+              <div className="usability-card">
+                <div className="bg-shape">
+                  <div className="shape-img img-1">
+                    <img height="201" width="202" src={Shape1Img} alt="shape-img" loading="lazy"/>
+                  </div>
+                  <div className="shape-img img-2">
+                    <img height="202" width="200" src={Shape2Img} alt="shape-img" loading="lazy"/>
+                  </div>
                 </div>
-                <div className="shape-img img-2">
-                  <img height="202" width="200" src={Shape2Img} alt="shape-img" loading="lazy"/>
-                </div>
+
+                <ScrollAnimate delay={200}>
+                  <div className="section-title text-center md-mb-40">
+                    <h2 className="white-color">
+                      We made it superb
+                      <br />& usability
+                    </h2>
+                  </div>
+                </ScrollAnimate>
+
+                <ScrollAnimate delay={250}>
+                  <Slider
+                    // {...settingsNav}
+                    className="usability-slider-nav"
+                    asNavFor={nav1}
+                    ref={(slider) => (sliderRef2 = slider)}
+                    slidesToShow={3}
+                    swipeToSlide={true}
+                    focusOnSelect={true}
+                  >
+                    {slides.map((slide, index) => (
+                      <div className="slider-item" key={index}>
+                        <img src={slide.iconSrc} alt="icon" loading="lazy"/>
+                        <span className="slider-item-text">{slide.title}</span>
+                      </div>
+                    ))}
+                  </Slider>
+                </ScrollAnimate>
+
+                <ScrollAnimate delay={300}>
+                  <Slider
+                    {...settingsFor}
+                    className="usability-slider-for"
+                    asNavFor={nav2}
+                    ref={(slider) => (sliderRef1 = slider)}
+                  >
+                    {slides.map((slide, index) => (
+                      <div className="slider-item" key={index}>
+                        <img src={slide.imgSrc} alt={slide.alt} loading="lazy"/>
+                      </div>
+                    ))}
+                  </Slider>
+                </ScrollAnimate>
               </div>
-
-              <ScrollAnimate delay={200}>
-                <div className="section-title text-center md-mb-40">
-                  <h2 className="white-color">
-                    We made it superb
-                    <br />& usability
-                  </h2>
-                </div>
-              </ScrollAnimate>
-
-              <ScrollAnimate delay={250}>
-                <Slider
-                  // {...settingsNav}
-                  className="usability-slider-nav"
-                  asNavFor={nav1}
-                  ref={(slider) => (sliderRef2 = slider)}
-                  slidesToShow={3}
-                  swipeToSlide={true}
-                  focusOnSelect={true}
-                >
-                  {slides.map((slide, index) => (
-                    <div className="slider-item" key={index}>
-                      <img src={slide.iconSrc} alt="icon" loading="lazy"/>
-                      <span className="slider-item-text">{slide.title}</span>
-                    </div>
-                  ))}
-                </Slider>
-              </ScrollAnimate>
-
-              <ScrollAnimate delay={300}>
-                <Slider
-                  {...settingsFor}
-                  className="usability-slider-for"
-                  asNavFor={nav2}
-                  ref={(slider) => (sliderRef1 = slider)}
-                >
-                  {slides.map((slide, index) => (
-                    <div className="slider-item" key={index}>
-                      <img src={slide.imgSrc} alt={slide.alt} loading="lazy"/>
-                    </div>
-                  ))}
-                </Slider>
-              </ScrollAnimate>
-            </div>
+            </LazySlider>
           </div>
         </div>
       </div>
