@@ -156,6 +156,43 @@ const ProductPage5 = () => {
               operator safety. Our after-sales support ensures long-term
               reliability and efficiency.
             </p>
+
+            <h2>Powder Dispensing Booths – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems designs and manufactures advanced Powder Dispensing Booths for safe and controlled powder handling operations. Our Powder Dispensing Booths are engineered to maintain a contamination-free environment during material dispensing processes. As trusted Powder Dispensing Booths Manufacturers in Chennai, we deliver high-quality solutions across industries requiring precision and safety. We also serve clients with competitive Powder Dispensing Booths Price options directly from experienced Powder Dispensing Booths Manufacturers in Chennai, ensuring reliability and affordability.
+            </p>
+
+            <h2>What are Powder Dispensing Booths?</h2>
+            <p>
+              Powder Dispensing Booths are specialized containment systems designed to control airborne powder particles during weighing, sampling, and dispensing operations. These systems ensure operator safety and product purity by maintaining controlled airflow and filtration. At Clean Air Systems, our Powder Dispensing Booths are built with advanced HEPA filtration technology for maximum efficiency. Industries across Powder Dispensing Booths Manufacturers in Chennai rely on our solutions for safe and accurate powder handling operations. We also provide solutions at competitive Powder Dispensing Booths Price for various industrial applications.
+            </p>
+
+            <h2>Applications of Powder Dispensing Booths</h2>
+            <p>
+              Powder Dispensing Booths are widely used in pharmaceutical manufacturing, chemical industries, food processing units, and research laboratories. These systems ensure safe dispensing of powders without contamination or exposure risks. Our Powder Dispensing Booths support precise weighing and material handling operations. Clients across Powder Dispensing Booths Manufacturers in Chennai trust our systems for high safety standards and performance. Demand for reliable Powder Dispensing Booths continues to grow due to strict industry regulations and quality requirements.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system for clean airflow</li>
+              <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for safe powder handling</li>
+              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
+              <li><FaCheckCircle className="tick-icon" /> Low noise operation for better working environment</li>
+              <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility during operations</li>
+              <li><FaCheckCircle className="tick-icon" /> Energy-efficient airflow system design</li>
+              <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance structure</li>
+              <li><FaCheckCircle className="tick-icon" /> Uniform air distribution for maximum safety</li>
+              <li><FaCheckCircle className="tick-icon" /> Ergonomic design for operator comfort</li>
+              <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a trusted name among Powder Dispensing Booths Manufacturers in Chennai, delivering advanced containment solutions for critical industries. Our Powder Dispensing Booths are designed for safety, accuracy, and long-term performance. We provide reliable systems across Powder Dispensing Booths Manufacturers in Chennai with competitive Powder Dispensing Booths Price options. Our solutions are widely used in industries requiring strict contamination control.
+            </p>
+            <p>
+              With strong engineering expertise and quality assurance, Clean Air Systems continues to deliver high-performance Powder Dispensing Booths for pharmaceutical, chemical, and research applications. We are committed to providing safe, efficient, and reliable containment solutions that meet modern industrial standards.
+            </p>
+
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -167,52 +204,6 @@ const ProductPage5 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Powder Dispensing Booths – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures advanced Powder Dispensing Booths for safe and controlled powder handling operations. Our Powder Dispensing Booths are engineered to maintain a contamination-free environment during material dispensing processes. As trusted Powder Dispensing Booths Manufacturers in Chennai, we deliver high-quality solutions across industries requiring precision and safety. We also serve clients with competitive Powder Dispensing Booths Price options directly from experienced Powder Dispensing Booths Manufacturers in Chennai, ensuring reliability and affordability.
-              </p>
-
-              <h3>What are Powder Dispensing Booths?</h3>
-              <p>
-                Powder Dispensing Booths are specialized containment systems designed to control airborne powder particles during weighing, sampling, and dispensing operations. These systems ensure operator safety and product purity by maintaining controlled airflow and filtration. At Clean Air Systems, our Powder Dispensing Booths are built with advanced HEPA filtration technology for maximum efficiency. Industries across Powder Dispensing Booths Manufacturers in Chennai rely on our solutions for safe and accurate powder handling operations. We also provide solutions at competitive Powder Dispensing Booths Price for various industrial applications.
-              </p>
-
-              <h3>Applications of Powder Dispensing Booths</h3>
-              <p>
-                Powder Dispensing Booths are widely used in pharmaceutical manufacturing, chemical industries, food processing units, and research laboratories. These systems ensure safe dispensing of powders without contamination or exposure risks. Our Powder Dispensing Booths support precise weighing and material handling operations. Clients across Powder Dispensing Booths Manufacturers in Chennai trust our systems for high safety standards and performance. Demand for reliable Powder Dispensing Booths continues to grow due to strict industry regulations and quality requirements.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system for clean airflow</li>
-                <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for safe powder handling</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
-                <li><FaCheckCircle className="tick-icon" /> Low noise operation for better working environment</li>
-                <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility during operations</li>
-                <li><FaCheckCircle className="tick-icon" /> Energy-efficient airflow system design</li>
-                <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance structure</li>
-                <li><FaCheckCircle className="tick-icon" /> Uniform air distribution for maximum safety</li>
-                <li><FaCheckCircle className="tick-icon" /> Ergonomic design for operator comfort</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a trusted name among Powder Dispensing Booths Manufacturers in Chennai, delivering advanced containment solutions for critical industries. Our Powder Dispensing Booths are designed for safety, accuracy, and long-term performance. We provide reliable systems across Powder Dispensing Booths Manufacturers in Chennai with competitive Powder Dispensing Booths Price options. Our solutions are widely used in industries requiring strict contamination control.
-              </p>
-              <p>
-                With strong engineering expertise and quality assurance, Clean Air Systems continues to deliver high-performance Powder Dispensing Booths for pharmaceutical, chemical, and research applications. We are committed to providing safe, efficient, and reliable containment solutions that meet modern industrial standards.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -375,84 +366,4 @@ const ProductSection = styled.section`
     }
   }
 `;
-
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;
+

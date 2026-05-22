@@ -117,6 +117,43 @@ const ProductPage4 = () => {
               after-sales support ensures that your cleanroom facility continues
               to operate at peak efficiency with minimal downtime.
             </p>
+
+            <h2>Air Shower Entry System – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems designs and manufactures advanced Air Shower Entry Systems for controlled environments. Our Air Shower Entry System ensures effective removal of dust particles from personnel and materials before entering cleanroom areas. As trusted Air Shower System Manufacturers in Chennai, we deliver high-quality solutions for industries across Air Shower System Chennai and Air Shower System India. We also offer competitive Air Shower System Price options directly from experienced Air Shower System Manufacturers in India, ensuring reliable and cost-effective cleanroom entry solutions.
+            </p>
+
+            <h2>What is the Air Shower System?</h2>
+            <p>
+              Air Shower System is a specialized cleanroom equipment designed to remove dust and contaminants using high-velocity HEPA-filtered air. The Air Shower Entry system is used as a controlled passage between clean and non-clean areas. Our Air Shower System ensures maximum hygiene and contamination control in sensitive environments. From Air Shower System Chennai to large-scale Air Shower System India installations, Clean Air Systems provides reliable and efficient solutions. We also maintain transparent Air Shower System Price structures for various industrial needs.
+            </p>
+
+            <h2>Applications of Air Shower System</h2>
+            <p>
+              Air Shower Systems are widely used in pharmaceutical industries, electronics manufacturing, food processing, and laboratories. The Air Shower Entry system helps maintain strict cleanliness standards in production areas. Our Air Shower System is designed to improve contamination control and operational safety. Industries across Air Shower System Chennai and Air Shower System India depend on our advanced cleanroom entry solutions. We also support clients with competitive Air Shower System Price options from leading Air Shower System Manufacturers in Chennai and Air Shower System Manufacturers in India.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> High-velocity HEPA-filtered air jets for effective dust removal</li>
+              <li><FaCheckCircle className="tick-icon" /> Automatic sensor-based operation for hands-free usage</li>
+              <li><FaCheckCircle className="tick-icon" /> Stainless steel body construction for durability and hygiene</li>
+              <li><FaCheckCircle className="tick-icon" /> Uniform air distribution for complete body coverage</li>
+              <li><FaCheckCircle className="tick-icon" /> Low maintenance and energy-efficient system design</li>
+              <li><FaCheckCircle className="tick-icon" /> Adjustable air shower timing settings</li>
+              <li><FaCheckCircle className="tick-icon" /> Interlocking door system for contamination control</li>
+              <li><FaCheckCircle className="tick-icon" /> Suitable for cleanroom entry and exit applications</li>
+              <li><FaCheckCircle className="tick-icon" /> Noise-reduction design for comfortable operation</li>
+              <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a trusted name in cleanroom technology and Air Shower Entry System manufacturing. Our Air Shower System solutions are designed for high performance and reliability. As leading Air Shower System Manufacturers in Chennai, we deliver quality products across Air Shower System Chennai and Air Shower System India. We provide cost-effective Air Shower System Price options while maintaining strict quality standards. Our systems are widely preferred among Air Shower System Manufacturers in India for their durability, safety, and efficiency.
+            </p>
+            <p>
+              Our Air Shower Entry systems are built for precision, hygiene, and long-term performance. With advanced engineering and strong technical support, Clean Air Systems continues to deliver superior Air Shower System solutions for industries across Air Shower System Chennai and Air Shower System India.
+            </p>
+
               {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -128,52 +165,6 @@ const ProductPage4 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Air Shower Entry System – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures advanced Air Shower Entry Systems for controlled environments. Our Air Shower Entry System ensures effective removal of dust particles from personnel and materials before entering cleanroom areas. As trusted Air Shower System Manufacturers in Chennai, we deliver high-quality solutions for industries across Air Shower System Chennai and Air Shower System India. We also offer competitive Air Shower System Price options directly from experienced Air Shower System Manufacturers in India, ensuring reliable and cost-effective cleanroom entry solutions.
-              </p>
-
-              <h3>What is the Air Shower System?</h3>
-              <p>
-                Air Shower System is a specialized cleanroom equipment designed to remove dust and contaminants using high-velocity HEPA-filtered air. The Air Shower Entry system is used as a controlled passage between clean and non-clean areas. Our Air Shower System ensures maximum hygiene and contamination control in sensitive environments. From Air Shower System Chennai to large-scale Air Shower System India installations, Clean Air Systems provides reliable and efficient solutions. We also maintain transparent Air Shower System Price structures for various industrial needs.
-              </p>
-
-              <h3>Applications of Air Shower System</h3>
-              <p>
-                Air Shower Systems are widely used in pharmaceutical industries, electronics manufacturing, food processing, and laboratories. The Air Shower Entry system helps maintain strict cleanliness standards in production areas. Our Air Shower System is designed to improve contamination control and operational safety. Industries across Air Shower System Chennai and Air Shower System India depend on our advanced cleanroom entry solutions. We also support clients with competitive Air Shower System Price options from leading Air Shower System Manufacturers in Chennai and Air Shower System Manufacturers in India.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> High-velocity HEPA-filtered air jets for effective dust removal</li>
-                <li><FaCheckCircle className="tick-icon" /> Automatic sensor-based operation for hands-free usage</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel body construction for durability and hygiene</li>
-                <li><FaCheckCircle className="tick-icon" /> Uniform air distribution for complete body coverage</li>
-                <li><FaCheckCircle className="tick-icon" /> Low maintenance and energy-efficient system design</li>
-                <li><FaCheckCircle className="tick-icon" /> Adjustable air shower timing settings</li>
-                <li><FaCheckCircle className="tick-icon" /> Interlocking door system for contamination control</li>
-                <li><FaCheckCircle className="tick-icon" /> Suitable for cleanroom entry and exit applications</li>
-                <li><FaCheckCircle className="tick-icon" /> Noise-reduction design for comfortable operation</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a trusted name in cleanroom technology and Air Shower Entry System manufacturing. Our Air Shower System solutions are designed for high performance and reliability. As leading Air Shower System Manufacturers in Chennai, we deliver quality products across Air Shower System Chennai and Air Shower System India. We provide cost-effective Air Shower System Price options while maintaining strict quality standards. Our systems are widely preferred among Air Shower System Manufacturers in India for their durability, safety, and efficiency.
-              </p>
-              <p>
-                Our Air Shower Entry systems are built for precision, hygiene, and long-term performance. With advanced engineering and strong technical support, Clean Air Systems continues to deliver superior Air Shower System solutions for industries across Air Shower System Chennai and Air Shower System India.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -335,84 +326,4 @@ const ProductSection = styled.section`
     }
   }
 `;
-
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;
+

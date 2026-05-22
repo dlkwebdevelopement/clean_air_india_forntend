@@ -150,6 +150,43 @@ const ProductPage7 = () => {
               sterility, and are trusted across pharma, biotech, research, and
               healthcare facilities PAN India.
             </p>
+
+            <h2>Sterile Garment Storage Cabinet – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems designs and manufactures high-performance Sterile Garment Storage Cabinets for controlled environments. Our Sterile Garment Storage Cabinets are engineered to keep cleanroom apparel free from contamination during storage. As trusted Sterile Garment Storage Cabinet Manufacturers in Chennai, we deliver advanced storage solutions across Sterile Garment Storage Cabinet Chennai and Sterile Garment Storage Cabinet India. We also provide competitive Sterile Garment Storage Cabinet Price options directly from leading manufacturers, ensuring reliability, safety, and hygiene compliance.
+            </p>
+
+            <h2>What is a Sterile Garment Storage Cabinet?</h2>
+            <p>
+              A Sterile Garment Storage Cabinet is a specialized cleanroom enclosure designed to maintain the sterility of protective clothing. It utilizes continuous HEPA filtration and UV sterilization to prevent dust and microbial growth on stored garments. At Clean Air Systems, our Sterile Garment Cabinets provide a steady flow of class 100 air to preserve gowning integrity. From Sterile Garment Storage Cabinet Chennai to installations across Sterile Garment Storage Cabinet India, we supply high-quality and durable cabinets. We also ensure cost-effective Sterile Garment Storage Cabinet Price options for various laboratory setups.
+            </p>
+
+            <h2>Applications of Sterile Garment Cabinets</h2>
+            <p>
+              Sterile Garment Storage Cabinets are essential in pharmaceutical manufacturing, biotechnology laboratories, hospital surgery units, and semiconductor cleanrooms. These cabinets protect masks, coveralls, and hoods from airborne particulates before use. Our systems support compliance with strict cleanroom clothing storage regulations. Industries across Sterile Garment Storage Cabinet Chennai and Sterile Garment Storage Cabinet India rely on our solutions to maintain process control. We offer customizable designs from trusted Sterile Garment Storage Cabinet Manufacturers in Chennai and Sterile Garment Storage Cabinet Manufacturers in India.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> Constant HEPA-filtered vertical laminar airflow for clean storage</li>
+              <li><FaCheckCircle className="tick-icon" /> UV germicidal lamp for effective bacterial sterilization</li>
+              <li><FaCheckCircle className="tick-icon" /> Infrared (IR) drying lamp for moisture control in garments</li>
+              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction (SS 304 or SS 316) for high hygiene</li>
+              <li><FaCheckCircle className="tick-icon" /> Toughened glass or polycarbonate doors with magnetic gaskets</li>
+              <li><FaCheckCircle className="tick-icon" /> Adjustable hanging rods and shelves for organized storage</li>
+              <li><FaCheckCircle className="tick-icon" /> Differential pressure gauge to monitor filter efficiency</li>
+              <li><FaCheckCircle className="tick-icon" /> Low noise operation with energy-saving blowers</li>
+              <li><FaCheckCircle className="tick-icon" /> LED status indicators and light controls</li>
+              <li><FaCheckCircle className="tick-icon" /> Customizable sizes to fit cleanroom gowning areas</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a reputed brand among Sterile Garment Storage Cabinet Manufacturers in Chennai, known for engineering high-quality cleanroom systems. Our cabinets are designed to meet ISO 14644 cleanliness standards. We provide reliable solutions across Sterile Garment Storage Cabinet Chennai and Sterile Garment Storage Cabinet India with competitive Sterile Garment Storage Cabinet Price options. Our products are trusted among experienced Sterile Garment Storage Cabinet Manufacturers in India for their long-term performance and robust design.
+            </p>
+            <p>
+              Our Sterile Garment Cabinets are built for durability, efficiency, and absolute contamination control. Clean Air Systems continues to support pharmaceutical and research facilities across India with state-of-the-art cleanroom storage equipment.
+            </p>
+
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -161,52 +198,6 @@ const ProductPage7 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Sterile Garment Storage Cabinet – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures high-performance Sterile Garment Storage Cabinets for controlled environments. Our Sterile Garment Storage Cabinets are engineered to keep cleanroom apparel free from contamination during storage. As trusted Sterile Garment Storage Cabinet Manufacturers in Chennai, we deliver advanced storage solutions across Sterile Garment Storage Cabinet Chennai and Sterile Garment Storage Cabinet India. We also provide competitive Sterile Garment Storage Cabinet Price options directly from leading manufacturers, ensuring reliability, safety, and hygiene compliance.
-              </p>
-
-              <h3>What is a Sterile Garment Storage Cabinet?</h3>
-              <p>
-                A Sterile Garment Storage Cabinet is a specialized cleanroom enclosure designed to maintain the sterility of protective clothing. It utilizes continuous HEPA filtration and UV sterilization to prevent dust and microbial growth on stored garments. At Clean Air Systems, our Sterile Garment Cabinets provide a steady flow of class 100 air to preserve gowning integrity. From Sterile Garment Storage Cabinet Chennai to installations across Sterile Garment Storage Cabinet India, we supply high-quality and durable cabinets. We also ensure cost-effective Sterile Garment Storage Cabinet Price options for various laboratory setups.
-              </p>
-
-              <h3>Applications of Sterile Garment Cabinets</h3>
-              <p>
-                Sterile Garment Storage Cabinets are essential in pharmaceutical manufacturing, biotechnology laboratories, hospital surgery units, and semiconductor cleanrooms. These cabinets protect masks, coveralls, and hoods from airborne particulates before use. Our systems support compliance with strict cleanroom clothing storage regulations. Industries across Sterile Garment Storage Cabinet Chennai and Sterile Garment Storage Cabinet India rely on our solutions to maintain process control. We offer customizable designs from trusted Sterile Garment Storage Cabinet Manufacturers in Chennai and Sterile Garment Storage Cabinet Manufacturers in India.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> Constant HEPA-filtered vertical laminar airflow for clean storage</li>
-                <li><FaCheckCircle className="tick-icon" /> UV germicidal lamp for effective bacterial sterilization</li>
-                <li><FaCheckCircle className="tick-icon" /> Infrared (IR) drying lamp for moisture control in garments</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction (SS 304 or SS 316) for high hygiene</li>
-                <li><FaCheckCircle className="tick-icon" /> Toughened glass or polycarbonate doors with magnetic gaskets</li>
-                <li><FaCheckCircle className="tick-icon" /> Adjustable hanging rods and shelves for organized storage</li>
-                <li><FaCheckCircle className="tick-icon" /> Differential pressure gauge to monitor filter efficiency</li>
-                <li><FaCheckCircle className="tick-icon" /> Low noise operation with energy-saving blowers</li>
-                <li><FaCheckCircle className="tick-icon" /> LED status indicators and light controls</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable sizes to fit cleanroom gowning areas</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a reputed brand among Sterile Garment Storage Cabinet Manufacturers in Chennai, known for engineering high-quality cleanroom systems. Our cabinets are designed to meet ISO 14644 cleanliness standards. We provide reliable solutions across Sterile Garment Storage Cabinet Chennai and Sterile Garment Storage Cabinet India with competitive Sterile Garment Storage Cabinet Price options. Our products are trusted among experienced Sterile Garment Storage Cabinet Manufacturers in India for their long-term performance and robust design.
-              </p>
-              <p>
-                Our Sterile Garment Cabinets are built for durability, efficiency, and absolute contamination control. Clean Air Systems continues to support pharmaceutical and research facilities across India with state-of-the-art cleanroom storage equipment.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -377,83 +368,3 @@ const ProductSection = styled.section`
   }
 `;
 
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;

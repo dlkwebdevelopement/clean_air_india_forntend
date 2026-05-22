@@ -81,6 +81,43 @@ const ProductPage10 = () => {
             <p>
               We bring over 30 years of cleanroom expertise to design robust containment booths compliance with international safety and quality standards. Our Reverse Flow Booth systems offer durability, ease of maintenance, and reliable after-sales support across India.
             </p>
+
+            <h2>Reverse Flow Booth – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems designs and manufactures high-performance Reverse Flow Booth systems for advanced powder containment and cleanroom applications. Our Reverse Flow Booth solutions are engineered to provide safe handling of hazardous powders by controlling airflow direction and preventing contamination spread. As a trusted cleanroom equipment provider, we supply reliable systems across Reverse Flow Booth Chennai and Reverse Flow Booth India with strong focus on safety, efficiency, and compliance.
+            </p>
+
+            <h2>What is Reverse Flow Booth?</h2>
+            <p>
+              A Reverse Flow Booth is a specialized containment system where airflow is designed in a reverse direction to capture and control airborne particles effectively. It is commonly used for high-risk powder handling operations where maximum containment is required. At Clean Air Systems, our Reverse Flow Booth systems are built with advanced HEPA filtration and precise airflow control to ensure operator safety and product protection. From Reverse Flow Booth Chennai to large-scale Reverse Flow Booth India installations, we deliver dependable cleanroom solutions.
+            </p>
+
+            <h2>Applications of Reverse Flow Booth</h2>
+            <p>
+              Reverse Flow Booth systems are widely used in pharmaceutical manufacturing, chemical processing, food industries, and research laboratories. These systems are essential for handling potent powders and hazardous materials safely. Our Reverse Flow Booth ensures contamination control during critical processes. Industries across Reverse Flow Booth Chennai and Reverse Flow Booth India rely on our systems for safe and compliant operations.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> Advanced reverse airflow containment technology</li>
+              <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system</li>
+              <li><FaCheckCircle className="tick-icon" /> Negative pressure environment for maximum safety</li>
+              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
+              <li><FaCheckCircle className="tick-icon" /> Transparent panels for operator visibility</li>
+              <li><FaCheckCircle className="tick-icon" /> Low noise and energy-efficient operation</li>
+              <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning design</li>
+              <li><FaCheckCircle className="tick-icon" /> Uniform and controlled airflow system</li>
+              <li><FaCheckCircle className="tick-icon" /> Suitable for high-potency powder handling</li>
+              <li><FaCheckCircle className="tick-icon" /> Customizable design based on application needs</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a trusted provider of Reverse Flow Booth solutions with strong expertise in cleanroom and containment technology. Our systems are designed for maximum safety, precision, and long-term reliability. We serve industries across Reverse Flow Booth Chennai and Reverse Flow Booth India with high-quality engineering standards.
+            </p>
+            <p>
+              With strict manufacturing practices and advanced design capabilities, Clean Air Systems continues to deliver efficient Reverse Flow Booth systems for pharmaceutical, biotech, and industrial applications across India, ensuring safe and contamination-free working environments.
+            </p>
+
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -92,52 +129,6 @@ const ProductPage10 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Reverse Flow Booth – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures high-performance Reverse Flow Booth systems for advanced powder containment and cleanroom applications. Our Reverse Flow Booth solutions are engineered to provide safe handling of hazardous powders by controlling airflow direction and preventing contamination spread. As a trusted cleanroom equipment provider, we supply reliable systems across Reverse Flow Booth Chennai and Reverse Flow Booth India with strong focus on safety, efficiency, and compliance.
-              </p>
-
-              <h3>What is Reverse Flow Booth?</h3>
-              <p>
-                A Reverse Flow Booth is a specialized containment system where airflow is designed in a reverse direction to capture and control airborne particles effectively. It is commonly used for high-risk powder handling operations where maximum containment is required. At Clean Air Systems, our Reverse Flow Booth systems are built with advanced HEPA filtration and precise airflow control to ensure operator safety and product protection. From Reverse Flow Booth Chennai to large-scale Reverse Flow Booth India installations, we deliver dependable cleanroom solutions.
-              </p>
-
-              <h3>Applications of Reverse Flow Booth</h3>
-              <p>
-                Reverse Flow Booth systems are widely used in pharmaceutical manufacturing, chemical processing, food industries, and research laboratories. These systems are essential for handling potent powders and hazardous materials safely. Our Reverse Flow Booth ensures contamination control during critical processes. Industries across Reverse Flow Booth Chennai and Reverse Flow Booth India rely on our systems for safe and compliant operations.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> Advanced reverse airflow containment technology</li>
-                <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system</li>
-                <li><FaCheckCircle className="tick-icon" /> Negative pressure environment for maximum safety</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
-                <li><FaCheckCircle className="tick-icon" /> Transparent panels for operator visibility</li>
-                <li><FaCheckCircle className="tick-icon" /> Low noise and energy-efficient operation</li>
-                <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning design</li>
-                <li><FaCheckCircle className="tick-icon" /> Uniform and controlled airflow system</li>
-                <li><FaCheckCircle className="tick-icon" /> Suitable for high-potency powder handling</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable design based on application needs</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a trusted provider of Reverse Flow Booth solutions with strong expertise in cleanroom and containment technology. Our systems are designed for maximum safety, precision, and long-term reliability. We serve industries across Reverse Flow Booth Chennai and Reverse Flow Booth India with high-quality engineering standards.
-              </p>
-              <p>
-                With strict manufacturing practices and advanced design capabilities, Clean Air Systems continues to deliver efficient Reverse Flow Booth systems for pharmaceutical, biotech, and industrial applications across India, ensuring safe and contamination-free working environments.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -302,83 +293,3 @@ const ProductSection = styled.section`
   }
 `;
 
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;

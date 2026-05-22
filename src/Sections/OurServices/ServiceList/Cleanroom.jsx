@@ -134,6 +134,43 @@ const ProductPage8 = () => {
               <li>Wide range of construction options for cost-effectiveness</li>
               <li>Trusted PAN India installations</li>
             </ul>
+
+            <h2>Modular Cleanrooms – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems designs and manufactures high-performance Modular Cleanrooms for critical industrial operations. Our Modular Cleanrooms are engineered to maintain controlled environments with strict temperature, humidity, and particle levels. As trusted Modular Cleanroom Manufacturers in Chennai, we deliver customized setups across Modular Cleanroom Chennai and Modular Cleanroom India. We also provide competitive Modular Cleanroom Price options directly from experienced Modular Cleanroom Manufacturers in India, ensuring quality, compliance, and long-term reliability.
+            </p>
+
+            <h2>What are Modular Cleanrooms?</h2>
+            <p>
+              Modular Cleanrooms are prefabricated structures designed to control dust particles, temperature, and microbial growth. These systems ensure process integrity and product safety using advanced HEPA filtration and HVAC designs. At Clean Air Systems, our Modular Cleanrooms are built with PUF/EPS panels and epoxy flooring for high durability. From Modular Cleanroom Chennai projects to nationwide Modular Cleanroom India installations, we provide customized cleanroom design and installation services. We also offer affordable Modular Cleanroom Price structures to fit different budgets.
+            </p>
+
+            <h2>Applications of Modular Cleanrooms</h2>
+            <p>
+              Modular Cleanrooms are widely used in pharmaceutical production, biotechnology laboratories, medical device packaging, microelectronics fabrication, and food processing. These environments are essential for protecting sensitive operations from cross-contamination. Our modular cleanroom installations support compliance with international quality standards (such as ISO and WHO-GMP). Industries across Modular Cleanroom Chennai and Modular Cleanroom India rely on our systems for safety and precision. We support clients with cost-effective solutions from leading Modular Cleanroom Manufacturers in Chennai.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filter terminals for clean air delivery</li>
+              <li><FaCheckCircle className="tick-icon" /> Double-skin insulated modular wall and ceiling panels</li>
+              <li><FaCheckCircle className="tick-icon" /> Air handling units (AHU) with integrated cooling and filtration</li>
+              <li><FaCheckCircle className="tick-icon" /> Corner coving design to eliminate dust accumulation areas</li>
+              <li><FaCheckCircle className="tick-icon" /> Double-glazed flush-mounted viewing windows</li>
+              <li><FaCheckCircle className="tick-icon" /> Heavy-duty epoxy or vinyl flooring options</li>
+              <li><FaCheckCircle className="tick-icon" /> Automated cleanroom interlocking door systems</li>
+              <li><FaCheckCircle className="tick-icon" /> Digital monitoring systems for differential pressure and humidity</li>
+              <li><FaCheckCircle className="tick-icon" /> Energy-efficient LED light fixtures for cleanrooms</li>
+              <li><FaCheckCircle className="tick-icon" /> Compliance with ISO 14644-1 cleanroom standards (Class 5 to 8)</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a respected brand among Modular Cleanroom Manufacturers in Chennai, offering complete turn-key solutions. Our Modular Cleanrooms are designed for flexibility, scalability, and high performance. We provide cost-effective Modular Cleanroom Price options across Modular Cleanroom Chennai and Modular Cleanroom India. Our systems are preferred among Modular Cleanroom Manufacturers in India for their robust engineering and expert execution.
+            </p>
+            <p>
+              Our Modular Cleanrooms are built to ensure process control and environmental stability. Clean Air Systems continues to deliver superior cleanroom solutions for pharmaceutical, scientific, and industrial applications across India.
+            </p>
+
              {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -145,52 +182,6 @@ const ProductPage8 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Modular Cleanrooms – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures high-performance Modular Cleanrooms for critical industrial operations. Our Modular Cleanrooms are engineered to maintain controlled environments with strict temperature, humidity, and particle levels. As trusted Modular Cleanroom Manufacturers in Chennai, we deliver customized setups across Modular Cleanroom Chennai and Modular Cleanroom India. We also provide competitive Modular Cleanroom Price options directly from experienced Modular Cleanroom Manufacturers in India, ensuring quality, compliance, and long-term reliability.
-              </p>
-
-              <h3>What are Modular Cleanrooms?</h3>
-              <p>
-                Modular Cleanrooms are prefabricated structures designed to control dust particles, temperature, and microbial growth. These systems ensure process integrity and product safety using advanced HEPA filtration and HVAC designs. At Clean Air Systems, our Modular Cleanrooms are built with PUF/EPS panels and epoxy flooring for high durability. From Modular Cleanroom Chennai projects to nationwide Modular Cleanroom India installations, we provide customized cleanroom design and installation services. We also offer affordable Modular Cleanroom Price structures to fit different budgets.
-              </p>
-
-              <h3>Applications of Modular Cleanrooms</h3>
-              <p>
-                Modular Cleanrooms are widely used in pharmaceutical production, biotechnology laboratories, medical device packaging, microelectronics fabrication, and food processing. These environments are essential for protecting sensitive operations from cross-contamination. Our modular cleanroom installations support compliance with international quality standards (such as ISO and WHO-GMP). Industries across Modular Cleanroom Chennai and Modular Cleanroom India rely on our systems for safety and precision. We support clients with cost-effective solutions from leading Modular Cleanroom Manufacturers in Chennai.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filter terminals for clean air delivery</li>
-                <li><FaCheckCircle className="tick-icon" /> Double-skin insulated modular wall and ceiling panels</li>
-                <li><FaCheckCircle className="tick-icon" /> Air handling units (AHU) with integrated cooling and filtration</li>
-                <li><FaCheckCircle className="tick-icon" /> Corner coving design to eliminate dust accumulation areas</li>
-                <li><FaCheckCircle className="tick-icon" /> Double-glazed flush-mounted viewing windows</li>
-                <li><FaCheckCircle className="tick-icon" /> Heavy-duty epoxy or vinyl flooring options</li>
-                <li><FaCheckCircle className="tick-icon" /> Automated cleanroom interlocking door systems</li>
-                <li><FaCheckCircle className="tick-icon" /> Digital monitoring systems for differential pressure and humidity</li>
-                <li><FaCheckCircle className="tick-icon" /> Energy-efficient LED light fixtures for cleanrooms</li>
-                <li><FaCheckCircle className="tick-icon" /> Compliance with ISO 14644-1 cleanroom standards (Class 5 to 8)</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a respected brand among Modular Cleanroom Manufacturers in Chennai, offering complete turn-key solutions. Our Modular Cleanrooms are designed for flexibility, scalability, and high performance. We provide cost-effective Modular Cleanroom Price options across Modular Cleanroom Chennai and Modular Cleanroom India. Our systems are preferred among Modular Cleanroom Manufacturers in India for their robust engineering and expert execution.
-              </p>
-              <p>
-                Our Modular Cleanrooms are built to ensure process control and environmental stability. Clean Air Systems continues to deliver superior cleanroom solutions for pharmaceutical, scientific, and industrial applications across India.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -354,83 +345,3 @@ const ProductSection = styled.section`
   }
 `;
 
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;

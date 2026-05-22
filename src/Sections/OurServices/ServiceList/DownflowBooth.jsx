@@ -81,6 +81,43 @@ const ProductPage12 = () => {
             <p>
               As a trusted manufacturer, we supply high-quality Downflow Booths with custom dimensions, strict quality checks, and optimal containment performance across Chennai and India.
             </p>
+
+            <h2>Downflow Booth – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems is a leading Downflow Booth Manufacturer delivering advanced containment solutions for powder handling and dust control applications. Our Downflow Booth systems are engineered to provide safe, clean, and controlled environments during weighing, sampling, and dispensing operations. As a trusted Downflow Booth Manufacturer, we supply high-quality systems across Downflow Booth Chennai and Downflow Booth India with reliable performance and long service life.
+            </p>
+
+            <h2>What is Downflow Booth?</h2>
+            <p>
+              A Downflow Booth is a controlled air containment system designed to capture airborne dust and powder particles using downward HEPA-filtered laminar airflow. This system protects both operators and the working environment from contamination. At Clean Air Systems, our Downflow Booth Manufacturer solutions are built with precision airflow technology for maximum safety and efficiency. From Downflow Booth Chennai installations to large-scale Downflow Booth India requirements, we ensure high-performance containment systems.
+            </p>
+
+            <h2>Applications of Downflow Booth</h2>
+            <p>
+              Downflow Booth systems are widely used in pharmaceutical industries, chemical processing units, food manufacturing, and research laboratories. These booths are essential for safe powder weighing and dispensing operations. As a reliable Downflow Booth Manufacturer, Clean Air Systems ensures contamination-free handling environments. Industries across Downflow Booth Chennai and Downflow Booth India depend on our systems for safe and compliant operations.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> Vertical laminar airflow for effective dust control</li>
+              <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system</li>
+              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
+              <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for operator safety</li>
+              <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility</li>
+              <li><FaCheckCircle className="tick-icon" /> Energy-efficient and low-noise operation</li>
+              <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance design</li>
+              <li><FaCheckCircle className="tick-icon" /> Uniform airflow distribution system</li>
+              <li><FaCheckCircle className="tick-icon" /> Suitable for pharmaceutical and industrial applications</li>
+              <li><FaCheckCircle className="tick-icon" /> Customizable design based on process requirements</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a trusted Downflow Booth Manufacturer known for delivering high-quality containment solutions. Our Downflow Booth systems are designed for safety, precision, and long-term reliability. We serve industries across Downflow Booth Chennai and Downflow Booth India with advanced engineering standards and strict quality control.
+            </p>
+            <p>
+              With strong expertise in cleanroom technology, Clean Air Systems continues to provide efficient Downflow Booth solutions for pharmaceutical, biotech, and industrial applications across India, ensuring safe and contamination-free working environments.
+            </p>
+
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -92,52 +129,6 @@ const ProductPage12 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Downflow Booth – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems is a leading Downflow Booth Manufacturer delivering advanced containment solutions for powder handling and dust control applications. Our Downflow Booth systems are engineered to provide safe, clean, and controlled environments during weighing, sampling, and dispensing operations. As a trusted Downflow Booth Manufacturer, we supply high-quality systems across Downflow Booth Chennai and Downflow Booth India with reliable performance and long service life.
-              </p>
-
-              <h3>What is Downflow Booth?</h3>
-              <p>
-                A Downflow Booth is a controlled air containment system designed to capture airborne dust and powder particles using downward HEPA-filtered laminar airflow. This system protects both operators and the working environment from contamination. At Clean Air Systems, our Downflow Booth Manufacturer solutions are built with precision airflow technology for maximum safety and efficiency. From Downflow Booth Chennai installations to large-scale Downflow Booth India requirements, we ensure high-performance containment systems.
-              </p>
-
-              <h3>Applications of Downflow Booth</h3>
-              <p>
-                Downflow Booth systems are widely used in pharmaceutical industries, chemical processing units, food manufacturing, and research laboratories. These booths are essential for safe powder weighing and dispensing operations. As a reliable Downflow Booth Manufacturer, Clean Air Systems ensures contamination-free handling environments. Industries across Downflow Booth Chennai and Downflow Booth India depend on our systems for safe and compliant operations.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> Vertical laminar airflow for effective dust control</li>
-                <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
-                <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for operator safety</li>
-                <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility</li>
-                <li><FaCheckCircle className="tick-icon" /> Energy-efficient and low-noise operation</li>
-                <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance design</li>
-                <li><FaCheckCircle className="tick-icon" /> Uniform airflow distribution system</li>
-                <li><FaCheckCircle className="tick-icon" /> Suitable for pharmaceutical and industrial applications</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable design based on process requirements</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a trusted Downflow Booth Manufacturer known for delivering high-quality containment solutions. Our Downflow Booth systems are designed for safety, precision, and long-term reliability. We serve industries across Downflow Booth Chennai and Downflow Booth India with advanced engineering standards and strict quality control.
-              </p>
-              <p>
-                With strong expertise in cleanroom technology, Clean Air Systems continues to provide efficient Downflow Booth solutions for pharmaceutical, biotech, and industrial applications across India, ensuring safe and contamination-free working environments.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -302,83 +293,3 @@ const ProductSection = styled.section`
   }
 `;
 
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-.section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;

@@ -146,37 +146,49 @@ const ProductPage1 = () => {
               </ul>
             </div>
 
-            {/* Special Features */}
+            {/* Features & Technical Advantages */}
             <div className="features-section">
-              <h2>Special Features</h2>
+              <h2>Features & Technical Advantages</h2>
               <ul>
                 <li>
                   <FaCheckCircle className="tick-icon" />
-                  International standard Mini Pleat HEPA filters
+                  International standard Mini Pleat HEPA filters for unidirectional airflow and maximum cleanliness
                 </li>
                 <li>
                   <FaCheckCircle className="tick-icon" />
-                  High-efficiency, washable primary filters
+                  High-efficiency, washable primary filters with an advanced contamination control system
                 </li>
                 <li>
                   <FaCheckCircle className="tick-icon" />
-                  Magnahelic gauges for accurate pressure monitoring
+                  Spring-suspended DIDW blower assembly for low noise and energy-efficient airflow
                 </li>
                 <li>
                   <FaCheckCircle className="tick-icon" />
-                  Spring-suspended DIDW blower assembly
+                  Magnahelic gauges for accurate differential pressure monitoring
                 </li>
                 <li>
                   <FaCheckCircle className="tick-icon" />
-                  Stainless steel working surface with ergonomic design
+                  Ergonomic stainless steel working surface for durability and hygiene
                 </li>
                 <li>
                   <FaCheckCircle className="tick-icon" />
-                  Rigid or flexible clear side screens
+                  Uniform air distribution across the entire work surface
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Easy maintenance and cleanroom-compliant cleaning system
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Rigid or flexible clear side screens for operator visibility
                 </li>
                 <li>
                   <FaCheckCircle className="tick-icon" />
                   Available in self-standing or ceiling-suspended types
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Customizable models and sizes based on specific industry requirements
                 </li>
               </ul>
             </div>
@@ -187,38 +199,37 @@ const ProductPage1 = () => {
             <h1>Laminar Airflow Clean Benches</h1>
             <p>
               At <strong>Clean Air Systems</strong>, we design and manufacture
-              high-performance Laminar Airflow Clean Benches that provide a
-              contamination-free working environment for laboratories,
-              pharmaceutical companies, research facilities, and industries
-              requiring sterile operations.
+              high-performance Laminar Airflow systems and Clean Benches for controlled environments. Our units are engineered to maintain sterile, contamination-free working conditions in laboratories, pharmaceutical companies, research facilities, and industries requiring sterile operations. As trusted Laminar Airflow Manufacturers in Chennai, we deliver advanced cleanroom solutions across Laminar Airflow Chennai and Laminar Airflow India. We also provide competitive Laminar Airflow Price options directly from leading Laminar Airflow Manufacturers in India, ensuring quality, safety, and affordability.
             </p>
 
             <h2>What is a Laminar Airflow Clean Bench?</h2>
             <p>
-              A Laminar Airflow Clean Bench is a self-contained workstation that
-              delivers unidirectional airflow filtered through high-efficiency
-              HEPA filters. The constant flow of clean air at a velocity of 90 ±
+              A Laminar Airflow Clean Bench is a self-contained workstation and controlled airflow system that
+              delivers uniform, unidirectional air filtered through high-efficiency
+              HEPA filters to maintain a sterile environment. The constant flow of clean air at a velocity of 90 ±
               20 FPM prevents particle intrusion from the external environment,
               achieving ISO Class 5 cleanliness (as per ISO 14644-1) and US FED
-              STD 209E standards.
+              STD 209E standards. Laminar Airflow Clean Benches and Work Stations are widely used to prevent contamination in sensitive operations and are designed for precision handling in laboratory and industrial applications. From Laminar Airflow Chennai to large-scale Laminar Airflow India projects, we provide reliable cleanroom airflow solutions with strict quality standards and transparent Laminar Airflow Price structures.
             </p>
 
             <h2>Applications</h2>
+            <p>
+              Laminar Airflow systems are essential for sterile sample handling, testing, and high-precision operations in controlled environments. Our Laminar Airflow Work Stations and Clean Benches support various industries across Laminar Airflow Chennai and Laminar Airflow India.
+            </p>
             <ul>
-              <li>Pharmaceutical production, filling & packaging</li>
-              <li>Microelectronics assembly & inspection</li>
-              <li>Biotechnology & life science research</li>
+              <li>Pharmaceutical production, filling, packaging, and biotechnology labs</li>
+              <li>Microelectronics assembly, inspection, and electronics manufacturing</li>
+              <li>Biotechnology, life science, and medical research centers</li>
               <li>Food & beverage quality control labs</li>
               <li>Aerospace & ultra-clean environments</li>
             </ul>
+            <p>
+              We supply customized solutions through trusted Laminar Airflow Manufacturers in Chennai and Laminar Airflow Manufacturers in India.
+            </p>
 
             <h2>Why Choose Clean Air Systems?</h2>
             <p>
-              With over 35+ years of experience, Clean Air Systems is a trusted
-              laminar airflow manufacturer in Chennai and across India. Every
-              unit is tested for airflow uniformity, filter integrity, and noise
-              levels before delivery. Our commitment to after-sales support
-              ensures your cleanroom operations continue without disruption.
+              With over 35+ years of experience, <strong>Clean Air Systems</strong> is a trusted name among Laminar Airflow Manufacturers in Chennai and across India, delivering advanced cleanroom solutions for various industries. Every unit is tested for airflow uniformity, filter integrity, and noise levels before delivery. Our Laminar Airflow systems, including Clean Benches and Work Stations, are designed for reliability, safety, precision, and long-term contamination-free performance. We serve clients across Laminar Airflow Chennai and Laminar Airflow India with high-quality engineering, technical expertise, and competitive, transparent Laminar Airflow Price structures. Our strong commitment to after-sales support ensures your cleanroom operations continue without disruption.
             </p>
             
             {/* Hover Button with Options */}
@@ -254,52 +265,6 @@ const ProductPage1 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Laminar Airflow – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures high-performance Laminar Airflow systems for controlled environments. Our Laminar Airflow units are engineered to maintain sterile and contamination-free working conditions in laboratories and industries. As trusted Laminar Airflow Manufacturers in Chennai, we deliver advanced cleanroom solutions across Laminar Airflow Chennai and Laminar Airflow India. We also provide competitive Laminar Airflow Price options directly from leading Laminar Airflow Manufacturers in India, ensuring quality, safety, and affordability.
-              </p>
-
-              <h3>What is Laminar Airflow?</h3>
-              <p>
-                Laminar Airflow is a controlled airflow system that delivers uniform, unidirectional air through HEPA filtration to maintain a sterile environment. Laminar Airflow Clean Benches are widely used to prevent contamination in sensitive operations. At Clean Air Systems, our Laminar Airflow Work Stations are designed for precision handling in laboratory and industrial applications. From Laminar Airflow Chennai to large-scale Laminar Airflow India projects, we provide reliable cleanroom airflow solutions with strict quality standards. We also ensure transparent Laminar Airflow Price structures for different industrial needs.
-              </p>
-
-              <h3>Applications of Laminar Airflow</h3>
-              <p>
-                Laminar Airflow systems are widely used in pharmaceutical industries, biotechnology labs, medical research centers, and electronics manufacturing. Laminar Airflow Clean Benches are essential for sterile sample handling and testing procedures. Our Laminar Airflow Work Stations support high-precision operations in controlled environments. Industries across Laminar Airflow Chennai and Laminar Airflow India rely on our systems for contamination-free workflows. We also supply solutions through trusted Laminar Airflow Manufacturers in Chennai and Laminar Airflow Manufacturers in India.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> HEPA-filtered unidirectional airflow for maximum cleanliness</li>
-                <li><FaCheckCircle className="tick-icon" /> High-efficiency contamination control system</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
-                <li><FaCheckCircle className="tick-icon" /> Low noise operation for comfortable working conditions</li>
-                <li><FaCheckCircle className="tick-icon" /> Energy-efficient airflow design</li>
-                <li><FaCheckCircle className="tick-icon" /> Uniform air distribution across work surface</li>
-                <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning system</li>
-                <li><FaCheckCircle className="tick-icon" /> Ergonomic design for operator convenience</li>
-                <li><FaCheckCircle className="tick-icon" /> Suitable for Laminar Airflow Clean Benches and Work Stations</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a trusted name among Laminar Airflow Manufacturers in Chennai, delivering advanced cleanroom solutions for various industries. Our Laminar Airflow systems are designed for reliability, safety, and long-term performance. We serve clients across Laminar Airflow Chennai and Laminar Airflow India with high-quality engineering and technical expertise. Our Laminar Airflow Price options are competitive and transparent, making us a preferred choice among Laminar Airflow Manufacturers in India.
-              </p>
-              <p>
-                Our Laminar Airflow Clean Benches and Work Stations are built for precision and contamination-free performance. With strong quality control and advanced manufacturing standards, Clean Air Systems continues to deliver reliable Laminar Airflow solutions for laboratories and industries across Laminar Airflow Chennai and Laminar Airflow India.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
 
       {/* Modal Form */}
@@ -708,85 +673,4 @@ const Message = styled.div`
     color: #721c24;
     border: 1px solid #f5c6cb;
   }
-`;
-
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;
+`;

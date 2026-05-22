@@ -146,6 +146,49 @@ const ProductPage2 = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Key Features & Advantages */}
+            <div className="features-section">
+              <h2>Features & Technical Advantages</h2>
+              <ul>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  HEPA/ULPA filtration system for high-efficiency air purification
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Vertical laminar airflow for a contamination-free workspace
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Aerodynamically designed airflow systems for maximum stability
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Negative pressure plenum design for reliable containment and contamination control
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Ergonomic stainless steel interior work surface for hygiene and durability
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  UV sterilization lamp for thorough surface decontamination
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Low-noise operation with energy-efficient motor and blower systems
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Digital real-time airflow monitoring and auditable alarm systems
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Full compliance with international biosafety safety standards (NSF / EN / ISO)
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* RIGHT: Product Content */}
@@ -153,61 +196,27 @@ const ProductPage2 = () => {
             <h1>Biosafety Cabinet</h1>
             <p>
               At <strong>Clean Air Systems</strong>, we design and manufacture
-              advanced Biosafety Cabinets (BSCs) that ensure personnel, product,
+              advanced, high-quality Biosafety Cabinets (BSCs) that ensure personnel, product,
               and environmental protection during sensitive laboratory
-              operations. Engineered for pharmaceutical, biotechnology,
+              operations. Engineered for laboratory safety, pharmaceutical, biotechnology,
               research, and healthcare applications, our biosafety cabinets meet
-              international safety and performance standards.
+              strict international safety and performance standards. Based in Biosafety Cabinets Chennai, we serve across Biosafety Cabinets India with reliable solutions, and provide competitive Biosafety Cabinets Price options directly from trusted Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
             </p>
 
             <h2>What is a Biosafety Cabinet?</h2>
             <p>
-              A Biosafety Cabinet is a ventilated, enclosed workspace that
-              protects the operator, the product, and the environment from
-              exposure to biohazards and contaminants. It achieves this through:
-            </p>
-            <ul>
-              <li>Inward airflow for personnel protection</li>
-              <li>HEPA-filtered laminar downflow for product protection</li>
-              <li>HEPA-filtered exhaust air for environmental protection</li>
-            </ul>
-            <p>
-              Our cabinets are manufactured to ISO Class 5 conditions and comply
-              with EN 12469:2000 (product and environmental protection) and EN
-              61010-1:2010 (electrical safety requirements).
+              A Biosafety Cabinet is a ventilated, enclosed workspace designed to provide safe handling of biological materials and protect the operator, product, and environment from exposure to biohazards. Our Biosafety Cabinets Class II are widely used in laboratories for routine research and testing, while advanced Biosafety Cabinets Class III are fully sealed glove-box systems designed for maximum containment in high-risk environments. Biosafety Cabinets A2 are commonly used for general microbiological work, while Biosafety Cabinets B2 provide full exhaust safety for hazardous applications without recirculation. From Biosafety Cabinets Chennai to nationwide Biosafety Cabinets India projects, we deliver reliable systems with competitive Biosafety Cabinets Price from top Biosafety Cabinets Manufacturers in Chennai and leading Biosafety Cabinets Manufacturers in India.
             </p>
 
             <h2>Applications</h2>
-            <ul>
-              <li>Pharmaceutical manufacturing and quality control labs</li>
-              <li>Biotechnology and life sciences research</li>
-              <li>Clinical and diagnostic laboratories</li>
-              <li>Healthcare and hospital infection control labs</li>
-              <li>Food and beverage testing facilities</li>
-            </ul>
+            <p>
+              Biosafety Cabinets are widely used in pharmaceutical industries, biotechnology labs, microbiology labs, research centers, clinical/diagnostic laboratories, healthcare systems, and food & beverage testing facilities. Biosafety Cabinets Class II are ideal for routine testing and clinical applications, Biosafety Cabinets Class III are used for highly infectious materials requiring maximum safety, Biosafety Cabinets A2 are suitable for general lab environments, and Biosafety Cabinets B2 are used for toxic and chemical handling. In Biosafety Cabinets Chennai industries, demand is growing rapidly, while across Biosafety Cabinets India laboratories, usage is increasing. We supply customized solutions through leading Biosafety Cabinets Manufacturers in Chennai and trusted Biosafety Cabinets Manufacturers in India with competitive Biosafety Cabinets Price.
+            </p>
 
             <h2>Why Choose Clean Air Systems?</h2>
             <p>
-              With more than 35+ years of expertise, Clean Air Systems is one of
-              the most trusted biosafety cabinet manufacturers in India. Every
-              unit is rigorously tested in our in-house facility for airflow
-              integrity, filter performance, and safety compliance before
-              installation. Our strong after-sales service network ensures
-              uninterrupted operation for critical laboratory processes.
+              With more than 35+ years of expertise, <strong>Clean Air Systems</strong> is trusted for delivering high-performance laboratory safety equipment. Our Biosafety Cabinets Class II and Biosafety Cabinets Class III ensure maximum protection, precision, and long-term performance. Every unit is rigorously tested in our in-house facility for airflow integrity, filter performance, and safety compliance before installation. We offer the best Biosafety Cabinets Price with support from leading Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
             </p>
-           
-            {/* Key Features */}
-            <div className="features-section">
-              <h2>Key Features of Our Biosafety Cabinets</h2>
-              <ul>
-                <li>High-efficiency Mini Pleat HEPA filters</li>
-                <li>Aerodynamically designed airflow systems for stability</li>
-                <li>Negative pressure plenum design for contamination control</li>
-                <li>Ergonomic stainless steel working surface</li>
-                <li>Low-noise operation with energy-efficient blowers</li>
-                <li>Compliance with international biosafety standards</li>
-              </ul>
-            </div>
             
             {/* Hover Button with Options */}
             <div className="interest-btn-wrap">
@@ -236,57 +245,6 @@ const ProductPage2 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Biosafety Cabinets</h2>
-              <p>
-                Clean Air Systems is a leading manufacturer of high-quality Biosafety Cabinets designed for laboratory safety and contamination control. Our Biosafety Cabinets Class II provide superior protection for personnel, product, and environment. We offer advanced Biosafety Cabinets Class III for high-risk applications and Biosafety Cabinets A2 and Biosafety Cabinets B2 for specialized laboratory requirements. Based in Biosafety Cabinets Chennai, we serve across Biosafety Cabinets India with reliable solutions. We also provide competitive Biosafety Cabinets Price options directly from trusted Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
-              </p>
-
-              <h3>What is a Biosafety Cabinet?</h3>
-              <p>
-                A Biosafety Cabinet is a ventilated enclosure designed to provide safe handling of biological materials. Biosafety Cabinets Class II are widely used in laboratories for routine research and testing. Advanced Biosafety Cabinets Class III are designed for maximum containment in high-risk environments. Biosafety Cabinets A2 are commonly used for general microbiological work, while Biosafety Cabinets B2 provide full exhaust safety for hazardous applications. From Biosafety Cabinets Chennai to nationwide Biosafety Cabinets India projects, we deliver reliable systems. We ensure competitive Biosafety Cabinets Price from top Biosafety Cabinets Manufacturers in Chennai and leading Biosafety Cabinets Manufacturers in India.
-              </p>
-
-              <h3>Applications of Biosafety Cabinets</h3>
-              <p>
-                Biosafety Cabinets are widely used in pharmaceutical industries, microbiology labs, and research centers. Biosafety Cabinets Class II are ideal for routine testing and clinical applications. Biosafety Cabinets Class III are used for highly infectious materials requiring maximum safety. Biosafety Cabinets A2 are suitable for general lab environments, while Biosafety Cabinets B2 are used for toxic and chemical handling. In Biosafety Cabinets Chennai industries, demand is growing rapidly, while across Biosafety Cabinets India laboratories, usage is increasing. We also provide competitive Biosafety Cabinets Price from leading Biosafety Cabinets Manufacturers in Chennai and trusted Biosafety Cabinets Manufacturers in India.
-              </p>
-
-              <h3>Types of Biosafety Cabinets</h3>
-              <p>
-                We manufacture different models based on application requirements. Biosafety Cabinets Class II are the most commonly used laboratory systems. Biosafety Cabinets Class III are fully sealed glove-box systems for maximum protection. Biosafety Cabinets A2 offer balanced airflow with partial recirculation, while Biosafety Cabinets B2 provide 100% exhaust systems. From Biosafety Cabinets Chennai to Biosafety Cabinets India installations, we ensure high-quality engineering. Our Biosafety Cabinets Price remains affordable from top Biosafety Cabinets Manufacturers in Chennai and experienced Biosafety Cabinets Manufacturers in India.
-              </p>
-
-              <h3>Key Features of Biosafety Cabinets</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> HEPA/ULPA filtration system for high-efficiency air purification</li>
-                <li><FaCheckCircle className="tick-icon" /> Vertical laminar airflow for contamination-free environment</li>
-                <li><FaCheckCircle className="tick-icon" /> Negative pressure containment system for safety</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel interior work surface for durability</li>
-                <li><FaCheckCircle className="tick-icon" /> UV sterilization lamp for decontamination</li>
-                <li><FaCheckCircle className="tick-icon" /> Low noise operation for laboratory comfort</li>
-                <li><FaCheckCircle className="tick-icon" /> Digital airflow monitoring and alarm system</li>
-                <li><FaCheckCircle className="tick-icon" /> Ergonomic design for easy operation</li>
-                <li><FaCheckCircle className="tick-icon" /> Energy-efficient motor system</li>
-                <li><FaCheckCircle className="tick-icon" /> Compliance with international safety standards (NSF / EN / ISO)</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is trusted for delivering high-performance laboratory safety equipment. Our Biosafety Cabinets Class II and Biosafety Cabinets Class III ensure maximum protection and reliability. Biosafety Cabinets A2 and Biosafety Cabinets B2 are designed for precision applications. From Biosafety Cabinets Chennai to large-scale Biosafety Cabinets India projects, we ensure quality manufacturing. We offer the best Biosafety Cabinets Price with support from leading Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
-              </p>
-              <p>
-                Our Biosafety Cabinets are engineered for safety, precision, and long-term performance. With advanced filtration technology and strict quality standards, we ensure contamination-free environments for laboratories, pharmaceutical industries, and research institutions across India.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
 
       {/* Modal Form */}
@@ -696,85 +654,4 @@ const Message = styled.div`
     color: #721c24;
     border: 1px solid #f5c6cb;
   }
-`;
-
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;
+`;

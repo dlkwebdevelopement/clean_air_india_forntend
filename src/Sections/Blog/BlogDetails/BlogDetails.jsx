@@ -159,11 +159,11 @@ const BlogDetails = () => {
             <div className="col-lg-8">
               {/* blog details content */}
               <div className="blog-details-content">
-                {/* <ScrollAnimate>
+                <ScrollAnimate>
                   <div className="blog-details-img">
-                    <img src={blog.featuredImage || BlogDetailsImg} alt={blog.title} loading="lazy"/>
+                    <img src={getBlogImageUrl(blog.featuredImage, BlogDetailsImg)} alt={blog.title} loading="lazy"/>
                   </div>
-                </ScrollAnimate> */}
+                </ScrollAnimate>
                 <div className="blog-details-inner">
                   <div className="blog-details-info-list">
                     <ScrollAnimate>

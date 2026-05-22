@@ -81,6 +81,43 @@ const ProductPage11 = () => {
             <p>
               With more than 30 years of manufacturing excellence, Clean Air Systems delivers robust containment booths optimized for pharmaceutical compliance, operator safety, and long-term durability. We serve clients across Chennai and India with reliable support.
             </p>
+
+            <h2>Pharma Weighing Booths – Clean Air Systems</h2>
+            <p>
+              Clean Air Systems designs and manufactures high-performance Pharma Weighing Booths for safe and precise powder handling in pharmaceutical environments. Our Pharma Weighing Booths are engineered to provide controlled airflow, dust containment, and operator protection during weighing and dispensing processes. As a trusted cleanroom equipment provider, we deliver reliable solutions across Pharma Weighing Booths Chennai and Pharma Weighing Booths India with strict quality and compliance standards.
+            </p>
+
+            <h2>What are Pharma Weighing Booths?</h2>
+            <p>
+              Pharma Weighing Booths are specialized containment systems designed to control airborne particles generated during powder weighing operations. These booths maintain a clean and safe environment using HEPA-filtered laminar airflow. At Clean Air Systems, our Pharma Weighing Booths are built to ensure high accuracy, contamination control, and operator safety. From Pharma Weighing Booths Chennai installations to large-scale Pharma Weighing Booths India requirements, we provide dependable cleanroom solutions.
+            </p>
+
+            <h2>Applications of Pharma Weighing Booths</h2>
+            <p>
+              Pharma Weighing Booths are widely used in pharmaceutical manufacturing, chemical industries, food processing units, and research laboratories. These systems are essential for weighing active pharmaceutical ingredients (APIs) and sensitive powders. Our Pharma Weighing Booths help maintain strict hygiene and regulatory compliance. Industries across Pharma Weighing Booths Chennai and Pharma Weighing Booths India rely on our systems for safe and precise operations.
+            </p>
+
+            <h2>Features &amp; Technical Advantages</h2>
+            <ul className="advantages-list">
+              <li><FaCheckCircle className="tick-icon" /> HEPA-filtered vertical laminar airflow system</li>
+              <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for dust control</li>
+              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for hygiene and durability</li>
+              <li><FaCheckCircle className="tick-icon" /> High-efficiency particle capture system</li>
+              <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility</li>
+              <li><FaCheckCircle className="tick-icon" /> Energy-efficient and low-noise operation</li>
+              <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance design</li>
+              <li><FaCheckCircle className="tick-icon" /> Uniform airflow distribution for operator safety</li>
+              <li><FaCheckCircle className="tick-icon" /> Suitable for pharmaceutical weighing operations</li>
+              <li><FaCheckCircle className="tick-icon" /> Customizable design based on industry requirements</li>
+            </ul>
+
+            <p>
+              Clean Air Systems is a trusted provider of Pharma Weighing Booths with strong expertise in cleanroom and containment solutions. Our Pharma Weighing Booths are designed for precision, safety, and long-term performance. We serve clients across Pharma Weighing Booths Chennai and Pharma Weighing Booths India with high-quality engineering and reliable support.
+            </p>
+            <p>
+              With strict quality control and advanced manufacturing standards, Clean Air Systems continues to deliver efficient Pharma Weighing Booths for pharmaceutical and industrial applications across India, ensuring safe, accurate, and contamination-free weighing operations.
+            </p>
+
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
@@ -92,52 +129,6 @@ const ProductPage11 = () => {
             </div>
           </div>
         </div>
-
-        {/* Detailed SEO & Overview Content */}
-        <DetailedContentRow>
-          <div className="col-12">
-            <hr className="section-divider" />
-            
-            <article className="detailed-info-section">
-              <h2 className="main-title">Pharma Weighing Booths – Clean Air Systems</h2>
-              <p>
-                Clean Air Systems designs and manufactures high-performance Pharma Weighing Booths for safe and precise powder handling in pharmaceutical environments. Our Pharma Weighing Booths are engineered to provide controlled airflow, dust containment, and operator protection during weighing and dispensing processes. As a trusted cleanroom equipment provider, we deliver reliable solutions across Pharma Weighing Booths Chennai and Pharma Weighing Booths India with strict quality and compliance standards.
-              </p>
-
-              <h3>What are Pharma Weighing Booths?</h3>
-              <p>
-                Pharma Weighing Booths are specialized containment systems designed to control airborne particles generated during powder weighing operations. These booths maintain a clean and safe environment using HEPA-filtered laminar airflow. At Clean Air Systems, our Pharma Weighing Booths are built to ensure high accuracy, contamination control, and operator safety. From Pharma Weighing Booths Chennai installations to large-scale Pharma Weighing Booths India requirements, we provide dependable cleanroom solutions.
-              </p>
-
-              <h3>Applications of Pharma Weighing Booths</h3>
-              <p>
-                Pharma Weighing Booths are widely used in pharmaceutical manufacturing, chemical industries, food processing units, and research laboratories. These systems are essential for weighing active pharmaceutical ingredients (APIs) and sensitive powders. Our Pharma Weighing Booths help maintain strict hygiene and regulatory compliance. Industries across Pharma Weighing Booths Chennai and Pharma Weighing Booths India rely on our systems for safe and precise operations.
-              </p>
-
-              <h3>Features & Technical Advantages</h3>
-              <ul className="advantages-list">
-                <li><FaCheckCircle className="tick-icon" /> HEPA-filtered vertical laminar airflow system</li>
-                <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for dust control</li>
-                <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for hygiene and durability</li>
-                <li><FaCheckCircle className="tick-icon" /> High-efficiency particle capture system</li>
-                <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility</li>
-                <li><FaCheckCircle className="tick-icon" /> Energy-efficient and low-noise operation</li>
-                <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance design</li>
-                <li><FaCheckCircle className="tick-icon" /> Uniform airflow distribution for operator safety</li>
-                <li><FaCheckCircle className="tick-icon" /> Suitable for pharmaceutical weighing operations</li>
-                <li><FaCheckCircle className="tick-icon" /> Customizable design based on industry requirements</li>
-              </ul>
-
-              <h3>Why Choose Clean Air Systems?</h3>
-              <p>
-                Clean Air Systems is a trusted provider of Pharma Weighing Booths with strong expertise in cleanroom and containment solutions. Our Pharma Weighing Booths are designed for precision, safety, and long-term performance. We serve clients across Pharma Weighing Booths Chennai and Pharma Weighing Booths India with high-quality engineering and reliable support.
-              </p>
-              <p>
-                With strict quality control and advanced manufacturing standards, Clean Air Systems continues to deliver efficient Pharma Weighing Booths for pharmaceutical and industrial applications across India, ensuring safe, accurate, and contamination-free weighing operations.
-              </p>
-            </article>
-          </div>
-        </DetailedContentRow>
       </div>
     </ProductSection>
   );
@@ -302,83 +293,3 @@ const ProductSection = styled.section`
   }
 `;
 
-const DetailedContentRow = styled.div`
-  margin-top: 60px;
-  
-  .section-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 97, 166, 0), rgba(0, 97, 166, 0.4), rgba(0, 97, 166, 0));
-    margin-bottom: 50px;
-  }
-
-  .detailed-info-section {
-    max-width: 900px;
-    margin: 0 auto;
-    
-    h2.main-title {
-      font-size: 32px;
-      color: #0061a6;
-      margin-bottom: 25px;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 10px;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 60px;
-        height: 3px;
-        background-color: #007bff;
-        border-radius: 2px;
-      }
-    }
-
-    h3 {
-      font-size: 22px;
-      color: #333;
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    .advantages-list {
-      list-style: none;
-      padding: 0;
-      margin: 25px 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px 30px;
-
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-
-      li {
-        display: flex;
-        align-items: flex-start;
-        font-size: 15px;
-        color: #555;
-        line-height: 1.5;
-
-        .tick-icon {
-          color: #28a745;
-          margin-right: 10px;
-          margin-top: 3px;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-`;
