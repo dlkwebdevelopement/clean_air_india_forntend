@@ -352,7 +352,7 @@ useEffect(() => {
                   {blogs.map((blog, i) => (
                     <div key={blog._id} className="col-md-6">
                       <BlogItem 
-                        id={blog._id}
+                        id={blog.slug}
                         thumbnail={getBlogImageUrl(blog.featuredImage)} 
                         category={blog.category?.name || "Uncategorized"} 
                         date={new Date(blog.createdAt).toLocaleDateString()} 

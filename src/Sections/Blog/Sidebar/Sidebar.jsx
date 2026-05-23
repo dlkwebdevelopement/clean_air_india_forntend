@@ -69,8 +69,8 @@ const Sidebar = () => {
     navigate(`/blog?tag=${tagId}`);
   };
 
-  const handleRecentPostClick = (postId) => {
-    navigate(`/blog/${postId}`);
+  const handleRecentPostClick = (postSlug) => {
+    navigate(`/blog/${postSlug}`);
   };
 
   const handleSearch = (e) => {
@@ -146,7 +146,7 @@ const Sidebar = () => {
                     to="#" 
                     onClick={(e) => {
                       e.preventDefault();
-                      handleRecentPostClick(post._id);
+                      handleRecentPostClick(post.slug);
                     }}
                     className="recent-post-img"
                   >
@@ -159,7 +159,7 @@ const Sidebar = () => {
                         to="#" 
                         onClick={(e) => {
                           e.preventDefault();
-                          handleRecentPostClick(post._id);
+                          handleRecentPostClick(post.slug);
                         }}
                       >
                         {post.title}

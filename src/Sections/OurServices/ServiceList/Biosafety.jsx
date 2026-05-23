@@ -147,9 +147,9 @@ const ProductPage2 = () => {
               </ul>
             </div>
 
-            {/* Key Features & Advantages */}
+            {/* Special Features */}
             <div className="features-section">
-              <h2>Features & Technical Advantages</h2>
+              <h2>Special Features</h2>
               <ul>
                 <li>
                   <FaCheckCircle className="tick-icon" />
@@ -213,7 +213,7 @@ const ProductPage2 = () => {
               Biosafety Cabinets are widely used in pharmaceutical industries, biotechnology labs, microbiology labs, research centers, clinical/diagnostic laboratories, healthcare systems, and food & beverage testing facilities. Biosafety Cabinets Class II are ideal for routine testing and clinical applications, Biosafety Cabinets Class III are used for highly infectious materials requiring maximum safety, Biosafety Cabinets A2 are suitable for general lab environments, and Biosafety Cabinets B2 are used for toxic and chemical handling. In Biosafety Cabinets Chennai industries, demand is growing rapidly, while across Biosafety Cabinets India laboratories, usage is increasing. We supply customized solutions through leading Biosafety Cabinets Manufacturers in Chennai and trusted Biosafety Cabinets Manufacturers in India with competitive Biosafety Cabinets Price.
             </p>
 
-            <h2>Why Choose Clean Air Systems?</h2>
+            <h2>Why Choose Clean Air India?</h2>
             <p>
               With more than 35+ years of expertise, <strong>Clean Air Systems</strong> is trusted for delivering high-performance laboratory safety equipment. Our Biosafety Cabinets Class II and Biosafety Cabinets Class III ensure maximum protection, precision, and long-term performance. Every unit is rigorously tested in our in-house facility for airflow integrity, filter performance, and safety compliance before installation. We offer the best Biosafety Cabinets Price with support from leading Biosafety Cabinets Manufacturers in Chennai and reputed Biosafety Cabinets Manufacturers in India.
             </p>

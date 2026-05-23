@@ -8,7 +8,62 @@ import { useNavigate } from "react-router-dom"; // ✅ for navigation
 const ProductPage10 = () => {
   const images = [picture2, picture1];
   const [selectedImage, setSelectedImage] = useState(images[0]);
-  const navigate = useNavigate(); // ✅ hook for navigation
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    city: "",
+    country: "",
+    product: "Reverse Flow Booth"
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({...formData, [name]: value});
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/product-catalogue`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage(data.message);
+        setTimeout(() => {
+          setShowModal(false);
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            city: "",
+            country: "",
+            product: "Reverse Flow Booth"
+          });
+        }, 3000);
+      } else {
+        setSubmitMessage(data.message || 'Failed to submit request');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage('Network error. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <ProductSection>
@@ -33,9 +88,9 @@ const ProductPage10 = () => {
               ))}
             </div>
 
-            {/* Key Advantages */}
-            <div className="models-section">
-              <h2>Key Advantages</h2>
+            {/* Special Features */}
+            <div className="features-section">
+              <h2>Special Features</h2>
               <ul>
                 <li>
                   <FaCheckCircle className="tick-icon" />
@@ -60,27 +115,6 @@ const ProductPage10 = () => {
           {/* RIGHT: Product Content */}
           <div className="col-lg-6 col-md-12 product-details">
             <h1>Reverse Flow Booth</h1>
-            <p>
-              At <strong>Clean Air Systems</strong>, we design and manufacture high-performance Reverse Flow Booth systems for advanced powder containment and cleanroom applications. Our Reverse Flow Booth solutions are engineered to provide safe handling of hazardous powders by controlling airflow direction and preventing contamination spread.
-            </p>
-
-            <h2>Operator & Product Protection</h2>
-            <p>
-              By establishing a controlled, negative pressure environment with unidirectional reverse airflow, the booth ensures that fine powder dust generated during weighing and dispensing operations is kept away from the operator's breathing zone and contained safely within the filtration system.
-            </p>
-
-            <h2>Applications</h2>
-            <ul>
-              <li>Pharmaceutical powder dispensing and weighing</li>
-              <li>Chemical and biochemical industries</li>
-              <li>Food and cosmetic ingredient handling</li>
-              <li>Research laboratories and cleanroom suites</li>
-            </ul>
-
-            <h2>Why Choose Clean Air Systems?</h2>
-            <p>
-              We bring over 30 years of cleanroom expertise to design robust containment booths compliance with international safety and quality standards. Our Reverse Flow Booth systems offer durability, ease of maintenance, and reliable after-sales support across India.
-            </p>
 
             <h2>Reverse Flow Booth – Clean Air Systems</h2>
             <p>
@@ -97,32 +131,29 @@ const ProductPage10 = () => {
               Reverse Flow Booth systems are widely used in pharmaceutical manufacturing, chemical processing, food industries, and research laboratories. These systems are essential for handling potent powders and hazardous materials safely. Our Reverse Flow Booth ensures contamination control during critical processes. Industries across Reverse Flow Booth Chennai and Reverse Flow Booth India rely on our systems for safe and compliant operations.
             </p>
 
-            <h2>Features &amp; Technical Advantages</h2>
-            <ul className="advantages-list">
-              <li><FaCheckCircle className="tick-icon" /> Advanced reverse airflow containment technology</li>
-              <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system</li>
-              <li><FaCheckCircle className="tick-icon" /> Negative pressure environment for maximum safety</li>
-              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
-              <li><FaCheckCircle className="tick-icon" /> Transparent panels for operator visibility</li>
-              <li><FaCheckCircle className="tick-icon" /> Low noise and energy-efficient operation</li>
-              <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning design</li>
-              <li><FaCheckCircle className="tick-icon" /> Uniform and controlled airflow system</li>
-              <li><FaCheckCircle className="tick-icon" /> Suitable for high-potency powder handling</li>
-              <li><FaCheckCircle className="tick-icon" /> Customizable design based on application needs</li>
+            <h2>Operator & Product Protection</h2>
+            <p>
+              By establishing a controlled, negative pressure environment with unidirectional reverse airflow, the booth ensures that fine powder dust generated during weighing and dispensing operations is kept away from the operator's breathing zone and contained safely within the filtration system.
+            </p>
+
+            <h2>Applications</h2>
+            <ul>
+              <li>Pharmaceutical powder dispensing and weighing</li>
+              <li>Chemical and biochemical industries</li>
+              <li>Food and cosmetic ingredient handling</li>
+              <li>Research laboratories and cleanroom suites</li>
             </ul>
 
+            <h2>Why Choose Clean Air India?</h2>
             <p>
-              Clean Air Systems is a trusted provider of Reverse Flow Booth solutions with strong expertise in cleanroom and containment technology. Our systems are designed for maximum safety, precision, and long-term reliability. We serve industries across Reverse Flow Booth Chennai and Reverse Flow Booth India with high-quality engineering standards.
-            </p>
-            <p>
-              With strict manufacturing practices and advanced design capabilities, Clean Air Systems continues to deliver efficient Reverse Flow Booth systems for pharmaceutical, biotech, and industrial applications across India, ensuring safe and contamination-free working environments.
+              We bring over 30 years of cleanroom expertise to design robust containment booths compliance with international safety and quality standards. Our Reverse Flow Booth systems offer durability, ease of maintenance, and reliable after-sales support across India.
             </p>
 
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
                 className="interest-btn"
-                onClick={() => navigate("/contact-us")}
+                onClick={() => setShowModal(true)}
               >
                 Yes I'm Interested
               </button>
@@ -130,6 +161,102 @@ const ProductPage10 = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal Form */}
+      {showModal && (
+        <ModalOverlay>
+          <ModalContent>
+            <CloseButton onClick={() => setShowModal(false)}>×</CloseButton>
+            <h3>Request Information for {formData.product}</h3>
+            
+            {submitMessage && (
+              <Message className={submitMessage.includes('Thank you') ? 'success' : 'error'}>
+                {submitMessage}
+              </Message>
+            )}
+            
+            <form onSubmit={handleSubmit}>
+              <FormGroup>
+                <label htmlFor="name">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleInputChange}
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="country">Country</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleInputChange}
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="product">Selected Product</label>
+                <input
+                  type="text"
+                  id="product"
+                  name="product"
+                  value={formData.product}
+                  readOnly
+                  className="read-only"
+                />
+              </FormGroup>
+              
+              <SubmitButton type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Processing...' : 'Submit Request'}
+              </SubmitButton>
+            </form>
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </ProductSection>
   );
 };
@@ -290,6 +417,120 @@ const ProductSection = styled.section`
     .thumbnail-list {
       justify-content: center;
     }
+  }
+`;
+
+// Modal Styles
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  h3 {
+    margin-bottom: 20px;
+    color: #0061a6;
+    text-align: center;
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  
+  &:hover {
+    color: #000;
+  }
+`;
+
+const FormGroup = styled.div`
+  margin-bottom: 15px;
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+    &.read-only {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+    
+    &:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+`;
+
+const SubmitButton = styled.button`
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  
+  &:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  &:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+`;
+
+const Message = styled.div`
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  
+  &.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
   }
 `;
 

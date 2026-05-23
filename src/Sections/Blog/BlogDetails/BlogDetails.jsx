@@ -20,7 +20,7 @@ import ScrollAnimate from "../../../Components/ScrollAnimate";
 import { getBlogImageUrl } from "../../../utils/image";
 
 const BlogDetails = () => {
-  const { blogId } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,7 +32,7 @@ const BlogDetails = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/${blogId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/blogs/${slug}`, {
         // headers: {
         //   'Authorization': `Bearer ${token}`
         // }
@@ -60,7 +60,7 @@ const BlogDetails = () => {
         if (relatedResponse.ok) {
           const relatedData = await relatedResponse.json();
           // Filter out the current blog from related posts
-          const filteredRelated = relatedData.blogs?.filter(blog => blog._id !== blogId) || [];
+          const filteredRelated = relatedData.blogs?.filter(blog => blog.slug !== slug) || [];
           setRelatedBlogs(filteredRelated.slice(0, 2)); // Take only 2 related posts
         }
       }
@@ -74,7 +74,7 @@ const BlogDetails = () => {
 
   useEffect(() => {
    fetchBlogDetails();
-  }, [blogId, navigate]);
+  }, [slug, navigate]);
 
   const handleCategoryClick = (categoryId) => {
     navigate(`/blog?category=${categoryId}`);
@@ -244,13 +244,13 @@ const BlogDetails = () => {
                       <div className="col-sm-6">
                         <ScrollAnimate>
                           <div className="blog-card">
-                            <NavLink to={`/blog/${relatedBlogs[0]._id}`} className="blog-card-img">
+                            <NavLink to={`/blog/${relatedBlogs[0].slug}`} className="blog-card-img">
                               <img src={getBlogImageUrl(relatedBlogs[0].featuredImage, PrevImg)} alt={relatedBlogs[0].title} loading="lazy"/>
                             </NavLink>
                             <div className="blog-card-text">
-                              <NavLink to={`/blog/${relatedBlogs[0]._id}`}>Previous</NavLink>
+                              <NavLink to={`/blog/${relatedBlogs[0].slug}`}>Previous</NavLink>
                               <h6>
-                                <NavLink to={`/blog/${relatedBlogs[0]._id}`}>
+                                <NavLink to={`/blog/${relatedBlogs[0].slug}`}>
                                   {relatedBlogs[0].title}
                                 </NavLink>
                               </h6>
@@ -265,13 +265,13 @@ const BlogDetails = () => {
                       <div className="col-sm-6">
                         <ScrollAnimate>
                           <div className="blog-card justify-right">
-                            <NavLink to={`/blog/${relatedBlogs[1]._id}`} className="blog-card-img">
+                            <NavLink to={`/blog/${relatedBlogs[1].slug}`} className="blog-card-img">
                               <img src={getBlogImageUrl(relatedBlogs[1].featuredImage, NextImg)} alt={relatedBlogs[1].title} loading="lazy"/>
                             </NavLink>
                             <div className="blog-card-text">
-                              <NavLink to={`/blog/${relatedBlogs[1]._id}`}>Next</NavLink>
+                              <NavLink to={`/blog/${relatedBlogs[1].slug}`}>Next</NavLink>
                               <h6>
-                                <NavLink to={`/blog/${relatedBlogs[1]._id}`}>
+                                <NavLink to={`/blog/${relatedBlogs[1].slug}`}>
                                   {relatedBlogs[1].title}
                                 </NavLink>
                               </h6>

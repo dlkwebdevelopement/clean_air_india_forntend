@@ -290,14 +290,16 @@ const BlogDetailsStyleWrapper = styled.section`
       margin-bottom: 20px;
 
       .blog-card-img {
-        min-width: 100px;
-        min-height: 80px;
+        width: 100px;
+        height: 80px;
+        flex-shrink: 0;
         overflow: hidden;
         border-radius: 10px;
 
         img {
           height: 100%;
           width: 100%;
+          object-fit: cover;
         }
       }
 

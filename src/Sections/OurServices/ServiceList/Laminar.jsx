@@ -146,9 +146,9 @@ const ProductPage1 = () => {
               </ul>
             </div>
 
-            {/* Features & Technical Advantages */}
+            {/* Special Features */}
             <div className="features-section">
-              <h2>Features & Technical Advantages</h2>
+              <h2>Special Features</h2>
               <ul>
                 <li>
                   <FaCheckCircle className="tick-icon" />
@@ -227,7 +227,7 @@ const ProductPage1 = () => {
               We supply customized solutions through trusted Laminar Airflow Manufacturers in Chennai and Laminar Airflow Manufacturers in India.
             </p>
 
-            <h2>Why Choose Clean Air Systems?</h2>
+            <h2>Why Choose Clean Air India?</h2>
             <p>
               With over 35+ years of experience, <strong>Clean Air Systems</strong> is a trusted name among Laminar Airflow Manufacturers in Chennai and across India, delivering advanced cleanroom solutions for various industries. Every unit is tested for airflow uniformity, filter integrity, and noise levels before delivery. Our Laminar Airflow systems, including Clean Benches and Work Stations, are designed for reliability, safety, precision, and long-term contamination-free performance. We serve clients across Laminar Airflow Chennai and Laminar Airflow India with high-quality engineering, technical expertise, and competitive, transparent Laminar Airflow Price structures. Our strong commitment to after-sales support ensures your cleanroom operations continue without disruption.
             </p>

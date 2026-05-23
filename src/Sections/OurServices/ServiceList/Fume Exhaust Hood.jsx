@@ -185,6 +185,46 @@ const ProductPage3 = () => {
                   Material options: GI (Powder-coated), Polypropylene (PP), SS
                   304 & SS 316
                 </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  High-efficiency exhaust system for safe fume removal
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Advanced airflow design for maximum user protection
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Chemical-resistant interior surface for durability
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Transparent sash for safe visibility during operations
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Low noise and energy-efficient performance
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Adjustable airflow control for different applications
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Built-in safety alarms and monitoring systems
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Easy maintenance and cleaning design
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Suitable for Walk-In Fume Hoods and Distillation Fume Hoods
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Customizable models based on laboratory requirements
+                </li>
               </ul>
             </div>
           </div>
@@ -192,50 +232,6 @@ const ProductPage3 = () => {
           {/* RIGHT: Product Content */}
           <div className="col-lg-6 col-md-12 product-details">
             <h1>Laboratory Fume Exhaust Hood</h1>
-            <p>
-              At <strong>Clean Air Systems</strong>, we manufacture
-              high-quality Fume Exhaust Laboratory Hoods designed to protect
-              laboratory personnel from hazardous fumes, vapors, and gases
-              generated during chemical processes. Our fume hoods ensure a safe
-              working environment by effectively driving out harmful
-              contaminants, making them an essential part of modern
-              laboratories.
-            </p>
-
-            <h2>Types of Fume Exhaust Hoods</h2>
-            <ul>
-              <li>
-                Ducted Fume Hoods – Direct exhaust to the outside environment
-                for maximum safety
-              </li>
-              <li>
-                Ductless Fume Hoods – Equipped with specialized filters for labs
-                where ducting is not feasible
-              </li>
-              <li>
-                Walk-in Fume Hoods – Designed for handling large equipment or
-                high-volume experiments
-              </li>
-            </ul>
-
-            <h2>Applications</h2>
-            <ul>
-              <li>Pharmaceutical R&D labs</li>
-              <li>Chemical and analytical laboratories</li>
-              <li>Biotechnology research facilities</li>
-              <li>Food and beverage testing labs</li>
-              <li>Academic and industrial research centers</li>
-            </ul>
-
-            <h2>Why Choose Clean Air Systems?</h2>
-            <p>
-              With over 35+ years of experience, Clean Air Systems is a trusted
-              fume hood manufacturer in India. Each fume exhaust system is
-              rigorously tested for airflow performance, durability, and safety
-              before installation. Backed by our strong after-sales support, we
-              ensure that laboratories across India can rely on our equipment
-              for uninterrupted and safe operations.
-            </p>
 
             <h2>Laboratory Fume Hoods – Clean Air Systems</h2>
             <p>
@@ -252,20 +248,29 @@ const ProductPage3 = () => {
               Fume Exhaust Hoods are widely used in pharmaceutical labs, chemical research centers, educational institutions, and industrial testing facilities. Laboratory Fume Hoods ensure safe handling of volatile chemicals and hazardous substances. Our Walk-In Fume Hoods and Distillation Fume Hoods are designed for specialized laboratory applications. Industries across Fume Exhaust Hoods Chennai and Fume Exhaust Hoods India rely on our systems for safety and compliance. We also support clients with cost-effective solutions from trusted Fume Exhaust Hoods Manufacturers in Chennai and Fume Exhaust Hoods Manufacturers in India.
             </p>
 
-            <h2>Features & Technical Advantages</h2>
-            <ul className="advantages-list">
-              <li><FaCheckCircle className="tick-icon" /> High-efficiency exhaust system for safe fume removal</li>
-              <li><FaCheckCircle className="tick-icon" /> Advanced airflow design for maximum user protection</li>
-              <li><FaCheckCircle className="tick-icon" /> Chemical-resistant interior surface for durability</li>
-              <li><FaCheckCircle className="tick-icon" /> Transparent sash for safe visibility during operations</li>
-              <li><FaCheckCircle className="tick-icon" /> Low noise and energy-efficient performance</li>
-              <li><FaCheckCircle className="tick-icon" /> Adjustable airflow control for different applications</li>
-              <li><FaCheckCircle className="tick-icon" /> Built-in safety alarms and monitoring systems</li>
-              <li><FaCheckCircle className="tick-icon" /> Easy maintenance and cleaning design</li>
-              <li><FaCheckCircle className="tick-icon" /> Suitable for Walk-In Fume Hoods and Distillation Fume Hoods</li>
-              <li><FaCheckCircle className="tick-icon" /> Customizable models based on laboratory requirements</li>
+            <h2>Types of Fume Exhaust Hoods</h2>
+            <ul>
+              <li>
+                Ducted Fume Hoods – Direct exhaust to the outside environment for maximum safety
+              </li>
+              <li>
+                Ductless Fume Hoods – Equipped with specialized filters for labs where ducting is not feasible
+              </li>
+              <li>
+                Walk-in Fume Hoods – Designed for handling large equipment or high-volume experiments
+              </li>
             </ul>
 
+            <h2>Applications</h2>
+            <ul>
+              <li>Pharmaceutical R&D labs</li>
+              <li>Chemical and analytical laboratories</li>
+              <li>Biotechnology research facilities</li>
+              <li>Food and beverage testing labs</li>
+              <li>Academic and industrial research centers</li>
+            </ul>
+
+            <h2>Why Choose Clean Air India?</h2>
             <p>
               Clean Air Systems is a trusted name in laboratory safety equipment and Fume Exhaust Hoods manufacturing. Our Laboratory Fume Hoods are designed for high performance, durability, and safety compliance. As leading Fume Exhaust Hoods Manufacturers in Chennai, we deliver quality solutions across Fume Exhaust Hoods Chennai and Fume Exhaust Hoods India. We offer competitive Fume Exhaust Hoods Price options while maintaining strict quality standards. Our systems are widely preferred among Fume Exhaust Hoods Manufacturers in India for their reliability and advanced engineering.
             </p>
@@ -709,4 +714,4 @@ const Message = styled.div`
     border: 1px solid #f5c6cb;
   }
 `;
-
+

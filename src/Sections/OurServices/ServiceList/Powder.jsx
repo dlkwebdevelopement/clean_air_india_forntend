@@ -8,7 +8,62 @@ import { useNavigate } from "react-router-dom"; // ✅ for navigation
 const ProductPage5 = () => {
   const images = [ picture2,  picture1];
   const [selectedImage, setSelectedImage] = useState(images[0]);
-    const navigate = useNavigate(); // ✅ hook for navigation
+  const [showModal, setShowModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    city: "",
+    country: "",
+    product: "Powder Dispensing Booth"
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({...formData, [name]: value});
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api'}/product-catalogue`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitMessage(data.message);
+        setTimeout(() => {
+          setShowModal(false);
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            city: "",
+            country: "",
+            product: "Powder Dispensing Booth"
+          });
+        }, 3000);
+      } else {
+        setSubmitMessage(data.message || 'Failed to submit request');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage('Network error. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <ProductSection>
@@ -71,7 +126,7 @@ const ProductPage5 = () => {
             </div>
 
             {/* Special Features */}
-            {/* <div className="features-section">
+            <div className="features-section">
               <h2>Special Features</h2>
               <ul>
                 <li>
@@ -98,64 +153,33 @@ const ProductPage5 = () => {
                   <FaCheckCircle className="tick-icon" />
                   Compliance with international cleanroom standards
                 </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Negative pressure containment for safe powder handling
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Transparent panels for clear visibility during operations
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Easy cleaning and maintenance structure
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Uniform air distribution for maximum safety
+                </li>
+                <li>
+                  <FaCheckCircle className="tick-icon" />
+                  Ergonomic design for operator comfort
+                </li>
               </ul>
-            </div> */}
+            </div>
           </div>
 
           {/* RIGHT: Product Content */}
           <div className="col-lg-6 col-md-12 product-details">
             <h1>Powder Dispensing Booth</h1>
-            <p>
-              At <strong>Clean Air Systems</strong>, we design and manufacture
-              high-performance Powder Dispensing Booths that provide a safe and
-              controlled environment for handling powders, chemicals, and
-              hazardous substances. These booths protect operators, products, and
-              the surrounding environment from cross-contamination during powder
-              dispensing, product sampling, and bag emptying operations.
-            </p>
-
-            <h2>How It Works</h2>
-            <p>
-              The system uses vertical laminar airflow with a downward suction
-              mechanism to capture airborne dust at the operator’s working area,
-              ensuring that particles are contained before they reach the
-              breathing zone.
-            </p>
-            <ul>
-              <li>
-                Airflow is directed vertically downward across the work zone to
-                suppress airborne particles.
-              </li>
-              <li>
-                Contaminated air is drawn through low-level exhaust grills and
-                passes through a three-stage filtration system (pre-filter,
-                intermediate filter, and final HEPA filter).
-              </li>
-              <li>
-                The cleaned air is then recirculated back into the booth while a
-                controlled percentage is exhausted, ensuring both efficiency and
-                operator safety.
-              </li>
-            </ul>
-
-            <h2>Applications</h2>
-            <ul>
-              <li>Pharmaceutical powder handling and sampling</li>
-              <li>Chemical and cosmetic industries</li>
-              <li>Food and beverage ingredient dispensing</li>
-              <li>Research laboratories and R&D facilities</li>
-              <li>Any environment requiring safe material transfer</li>
-            </ul>
-
-            <h2>Why Choose Clean Air Systems?</h2>
-            <p>
-              With over 30 years of expertise in cleanroom and containment
-              solutions, Clean Air Systems delivers robust and efficient Powder
-              Dispensing Booths that meet the highest international standards.
-              Each unit is tested for airflow performance, filter integrity, and
-              operator safety. Our after-sales support ensures long-term
-              reliability and efficiency.
-            </p>
 
             <h2>Powder Dispensing Booths – Clean Air Systems</h2>
             <p>
@@ -172,32 +196,41 @@ const ProductPage5 = () => {
               Powder Dispensing Booths are widely used in pharmaceutical manufacturing, chemical industries, food processing units, and research laboratories. These systems ensure safe dispensing of powders without contamination or exposure risks. Our Powder Dispensing Booths support precise weighing and material handling operations. Clients across Powder Dispensing Booths Manufacturers in Chennai trust our systems for high safety standards and performance. Demand for reliable Powder Dispensing Booths continues to grow due to strict industry regulations and quality requirements.
             </p>
 
-            <h2>Features &amp; Technical Advantages</h2>
-            <ul className="advantages-list">
-              <li><FaCheckCircle className="tick-icon" /> High-efficiency HEPA filtration system for clean airflow</li>
-              <li><FaCheckCircle className="tick-icon" /> Negative pressure containment for safe powder handling</li>
-              <li><FaCheckCircle className="tick-icon" /> Stainless steel construction for durability and hygiene</li>
-              <li><FaCheckCircle className="tick-icon" /> Low noise operation for better working environment</li>
-              <li><FaCheckCircle className="tick-icon" /> Transparent panels for clear visibility during operations</li>
-              <li><FaCheckCircle className="tick-icon" /> Energy-efficient airflow system design</li>
-              <li><FaCheckCircle className="tick-icon" /> Easy cleaning and maintenance structure</li>
-              <li><FaCheckCircle className="tick-icon" /> Uniform air distribution for maximum safety</li>
-              <li><FaCheckCircle className="tick-icon" /> Ergonomic design for operator comfort</li>
-              <li><FaCheckCircle className="tick-icon" /> Customizable models based on industry requirements</li>
+            <h2>How It Works</h2>
+            <p>
+              The system uses vertical laminar airflow with a downward suction mechanism to capture airborne dust at the operator’s working area, ensuring that particles are contained before they reach the breathing zone.
+            </p>
+            <ul>
+              <li>
+                Airflow is directed vertically downward across the work zone to suppress airborne particles.
+              </li>
+              <li>
+                Contaminated air is drawn through low-level exhaust grills and passes through a three-stage filtration system (pre-filter, intermediate filter, and final HEPA filter).
+              </li>
+              <li>
+                The cleaned air is then recirculated back into the booth while a controlled percentage is exhausted, ensuring both efficiency and operator safety.
+              </li>
             </ul>
 
+            <h2>Applications</h2>
+            <ul>
+              <li>Pharmaceutical powder handling and sampling</li>
+              <li>Chemical and cosmetic industries</li>
+              <li>Food and beverage ingredient dispensing</li>
+              <li>Research laboratories and R&D facilities</li>
+              <li>Any environment requiring safe material transfer</li>
+            </ul>
+
+            <h2>Why Choose Clean Air India?</h2>
             <p>
-              Clean Air Systems is a trusted name among Powder Dispensing Booths Manufacturers in Chennai, delivering advanced containment solutions for critical industries. Our Powder Dispensing Booths are designed for safety, accuracy, and long-term performance. We provide reliable systems across Powder Dispensing Booths Manufacturers in Chennai with competitive Powder Dispensing Booths Price options. Our solutions are widely used in industries requiring strict contamination control.
-            </p>
-            <p>
-              With strong engineering expertise and quality assurance, Clean Air Systems continues to deliver high-performance Powder Dispensing Booths for pharmaceutical, chemical, and research applications. We are committed to providing safe, efficient, and reliable containment solutions that meet modern industrial standards.
+              With over 30 years of expertise in cleanroom and containment solutions, Clean Air Systems delivers robust and efficient Powder Dispensing Booths that meet the highest international standards. Each unit is tested for airflow performance, filter integrity, and operator safety. Our after-sales support ensures long-term reliability and efficiency.
             </p>
 
             {/* ✅ BUTTON at the end */}
             <div className="interest-btn-wrap">
               <button
                 className="interest-btn"
-                onClick={() => navigate("/contact-us")}
+                onClick={() => setShowModal(true)}
               >
                 Yes I'm Interested
               </button>
@@ -205,6 +238,102 @@ const ProductPage5 = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal Form */}
+      {showModal && (
+        <ModalOverlay>
+          <ModalContent>
+            <CloseButton onClick={() => setShowModal(false)}>×</CloseButton>
+            <h3>Request Information for {formData.product}</h3>
+            
+            {submitMessage && (
+              <Message className={submitMessage.includes('Thank you') ? 'success' : 'error'}>
+                {submitMessage}
+              </Message>
+            )}
+            
+            <form onSubmit={handleSubmit}>
+              <FormGroup>
+                <label htmlFor="name">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="company">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  value={formData.city}
+                  onChange={handleInputChange}
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="country">Country</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  value={formData.country}
+                  onChange={handleInputChange}
+                  disabled={isSubmitting}
+                />
+              </FormGroup>
+              
+              <FormGroup>
+                <label htmlFor="product">Selected Product</label>
+                <input
+                  type="text"
+                  id="product"
+                  name="product"
+                  value={formData.product}
+                  readOnly
+                  className="read-only"
+                />
+              </FormGroup>
+              
+              <SubmitButton type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Processing...' : 'Submit Request'}
+              </SubmitButton>
+            </form>
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </ProductSection>
   );
 };
@@ -366,4 +495,119 @@ const ProductSection = styled.section`
     }
   }
 `;
+
+// Modal Styles
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+`;
+
+const ModalContent = styled.div`
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  h3 {
+    margin-bottom: 20px;
+    color: #0061a6;
+    text-align: center;
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  
+  &:hover {
+    color: #000;
+  }
+`;
+
+const FormGroup = styled.div`
+  margin-bottom: 15px;
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+    &.read-only {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+    
+    &:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+    }
+  }
+`;
+
+const SubmitButton = styled.button`
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  
+  &:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  &:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+`;
+
+const Message = styled.div`
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  text-align: center;
+  
+  &.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+  
+  &.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+`;
+
 
