@@ -12,14 +12,18 @@ const CorporateBanner = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
-    // Delay video loading to allow LCP image to load and paint first
+    // Only load background video on desktop/tablet to save mobile bandwidth & battery
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    if (isMobile) return;
+
+    // Delay video loading significantly (3.5 seconds) to guarantee LCP completes on the responsive WebP poster
     const timer = setTimeout(() => {
       if ("requestIdleCallback" in window) {
         window.requestIdleCallback(() => setCanPlayVideo(true));
       } else {
         window.requestAnimationFrame(() => setCanPlayVideo(true));
       }
-    }, 1500);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
