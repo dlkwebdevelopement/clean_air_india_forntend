@@ -1,35 +1,17 @@
 // ProductPage2.js
 import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-
-const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
+import styled, { keyframes } from "styled-components";
 
 const Rp1 = () => {
   return (
     <ProductSection>
       <div className="container">
-        <motion.h1
-          className="main-title"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <h1 className="main-title fadeIn">
           Recommended Practices for Clean Rooms
-        </motion.h1>
+        </h1>
 
         {/* INTRODUCTION */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Introduction</h2>
           <p>
             Cleanrooms are controlled environments designed to limit particulate
@@ -40,16 +22,10 @@ const Rp1 = () => {
             essential procedures and classification systems for cleanroom
             operations.
           </p>
-        </motion.div>
+        </div>
 
         {/* PROCEDURES */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Procedures to Maintain Cleanroom Cleanliness</h2>
 
           {/* Entry and Exit Protocols */}
@@ -153,17 +129,11 @@ const Rp1 = () => {
               <li>Follow validated SOPs for all processes and equipment use.</li>
             </ul>
           </div>
-        </motion.div>
+        </div>
 
         {/* CGMP REQUIREMENT */}
                {/* CGMP REQUIREMENT */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>CGMP Requirement</h2>
           <p>
             Selection of airborne particulate cleanliness classes for clean
@@ -236,16 +206,10 @@ const Rp1 = () => {
               </li>
             </ul>
           </div>
-        </motion.div>
+        </div>
 
                 {/* FEDERAL STANDARD 209E REQUIREMENT */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Federal Standard 209E Class Limits</h2>
           <p>
             Federal Standard 209E defines airborne particulate cleanliness
@@ -371,16 +335,10 @@ const Rp1 = () => {
               </tr>
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
         {/* ISO 14644-1 CLEANROOM CLASSIFICATION */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>ISO 14644-1 Cleanroom Classification</h2>
           <p>
             Selection of airborne particulate cleanliness classes for cleanrooms and clean zones.
@@ -484,16 +442,10 @@ const Rp1 = () => {
               </tr>
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
         {/* MEANINGS OF CLEANROOM CLASSIFICATIONS */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Meanings of the Cleanroom Classifications</h2>
           <table>
             <thead>
@@ -554,16 +506,10 @@ const Rp1 = () => {
               </tr>
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
                {/* SCOPE OF CLEANROOM STANDARDS */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Scope of Various Cleanroom Standards</h2>
 
           <p>
@@ -603,16 +549,10 @@ const Rp1 = () => {
             <strong>ISO 14698-3 – Methodology for measuring efficiency:</strong> 
            This standard concerns the efficiency of various processes that incorporated one or more of the following actions: rinsing, cleaning, disinfection, combined cleaning and disinfection by either biochemical or mechanical means. Methods of measuring the efficiency of the processes of rinsing and/ or cleaning and /or disinfection and/or combined cleaning and disinfection of wet soiled surfaces on which microorganisms may be present either with or without the formation of a bio-film, is explained in relation to the application of cleanroom technology.
           </p>
-        </motion.div>
+        </div>
 
                 {/* AIR VELOCITIES & AIR CHANGES */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Air Velocities & Air Changes in Cleanrooms</h2>
 
           <table>
@@ -678,16 +618,10 @@ const Rp1 = () => {
           <p>
             <strong>Note:</strong> N = Non-unidirectional, M = Mixed flow, U = Unidirectional flow.
           </p>
-        </motion.div>
+        </div>
 
         {/* FILTER CLASSIFICATION - EN 1822 */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Classification of Filters According to EN 1822</h2>
 
           <table>
@@ -759,17 +693,11 @@ const Rp1 = () => {
               </tr>
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
 
                 {/* SCHEDULE OF TESTS - CONTINUING COMPLIANCE */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Schedule of Tests to Demonstrate Continuing Compliance</h2>
 
           <table>
@@ -837,16 +765,10 @@ const Rp1 = () => {
           <p style={{ marginTop: "15px" }}>
             <strong>*</strong> = Suggested time interval
           </p>
-        </motion.div>
+        </div>
 
                {/* SOURCES, ROUTE OF TRANSFER, CONTROL & MONITORING METHODS */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Sources, Route of Transfer and Control & Monitoring Methods Used in Cleanrooms</h2>
 
           <table>
@@ -913,17 +835,11 @@ const Rp1 = () => {
           <p style={{ marginTop: "15px" }}>
             <strong>Legend:</strong> R = Recommended,&nbsp; NR = Not Recommended,&nbsp; AS = Application Specific,&nbsp; NR* = Not recommended in non-directional flow
           </p>
-        </motion.div>
+        </div>
 
 
                 {/* GARMENT SYSTEMS ACCORDING TO IEST-RP-CC-003.2 */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Garment Systems for Different Classes of Cleanrooms (IEST-RP-CC-003.2)</h2>
 
           <table>
@@ -1034,17 +950,11 @@ const Rp1 = () => {
           <p style={{ marginTop: "15px" }}>
             <strong>Legend:</strong> R = Recommended,&nbsp; NR = Not Recommended,&nbsp; AS = Application Specific,&nbsp; NR* = Not recommended in non-directional flow
           </p>
-        </motion.div>
+        </div>
 
 
         {/* GARMENT SYSTEMS FOR ASEPTIC CLEANROOMS (IEST RP CC-003.2) */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Garment Systems for Aseptic Cleanrooms (IEST RP CC-003.2)</h2>
 
           <table>
@@ -1141,16 +1051,10 @@ const Rp1 = () => {
           <p style={{ marginTop: "15px" }}>
             <strong>Legend:</strong> R = Recommended, NR = Not Recommended, AS = Application Specific, R** = Surgical Mask Recommended
           </p>
-        </motion.div>
+        </div>
 
         {/* RECOMMENDED FREQUENCY OF GARMENT CHANGE (IEST RP-CC-003) */}
-        <motion.div
-          className="section"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
+        <div className="section fadeIn">
           <h2>Recommended Frequency of Garment Change (IEST RP-CC-003)</h2>
 
           <table>
@@ -1175,7 +1079,7 @@ const Rp1 = () => {
               </tr>
             </tbody>
           </table>
-        </motion.div>
+        </div>
 
 
 
@@ -1188,8 +1092,43 @@ const Rp1 = () => {
 
 export default Rp1;
 
+const fadeInUpAnim = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 // Styled Components
 const ProductSection = styled.section`
+  .fadeIn {
+    opacity: 0;
+    animation: ${fadeInUpAnim} 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .main-title.fadeIn {
+    animation-delay: 0.1s;
+  }
+  
+  .section.fadeIn:nth-of-type(1) { animation-delay: 0.15s; }
+  .section.fadeIn:nth-of-type(2) { animation-delay: 0.20s; }
+  .section.fadeIn:nth-of-type(3) { animation-delay: 0.25s; }
+  .section.fadeIn:nth-of-type(4) { animation-delay: 0.30s; }
+  .section.fadeIn:nth-of-type(5) { animation-delay: 0.35s; }
+  .section.fadeIn:nth-of-type(6) { animation-delay: 0.40s; }
+  .section.fadeIn:nth-of-type(7) { animation-delay: 0.45s; }
+  .section.fadeIn:nth-of-type(8) { animation-delay: 0.50s; }
+  .section.fadeIn:nth-of-type(9) { animation-delay: 0.55s; }
+  .section.fadeIn:nth-of-type(10) { animation-delay: 0.60s; }
+  .section.fadeIn:nth-of-type(11) { animation-delay: 0.65s; }
+  .section.fadeIn:nth-of-type(12) { animation-delay: 0.70s; }
+  .section.fadeIn:nth-of-type(13) { animation-delay: 0.75s; }
+  .section.fadeIn:nth-of-type(14) { animation-delay: 0.80s; }
+  .section.fadeIn:nth-of-type(15) { animation-delay: 0.85s; }
   padding: 80px 0;
   text-align: center;
 

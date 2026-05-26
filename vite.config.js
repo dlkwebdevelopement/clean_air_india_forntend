@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import viteCompression from 'vite-plugin-compression';
+import purgecss from '@fullhuman/postcss-purgecss';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -39,6 +40,20 @@ function remoteImagesPlugin(env) {
   };
 }
 
+function nonBlockingCssPlugin() {
+  return {
+    name: 'non-blocking-css',
+    transformIndexHtml(html) {
+      return html.replace(
+        /<link rel="stylesheet"([^>]*?)href="([^"]+?\.css)"([^>]*?)>/g,
+        (match, p1, p2, p3) => {
+          return `<link rel="stylesheet"${p1}href="${p2}"${p3} media="print" onload="this.media='all'"><noscript><link rel="stylesheet"${p1}href="${p2}"${p3}></noscript>`;
+        }
+      );
+    }
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
@@ -47,6 +62,7 @@ export default defineConfig(({ mode }) => {
       react(), 
       tailwindcss(), 
       remoteImagesPlugin(env),
+      nonBlockingCssPlugin(),
       viteCompression({
         algorithm: 'gzip',
         ext: '.gz',
@@ -61,6 +77,41 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       include: ['react-slick'],
     },
+    css: {
+      postcss: {
+        plugins: mode === 'production' ? [
+          purgecss({
+            content: [
+              './index.html',
+              './src/**/*.{js,jsx,ts,tsx}',
+            ],
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+            safelist: {
+              standard: [
+                /:where/,
+                /vbox/,
+                /slick/,
+                /swal2/,
+                /splitting/,
+                /CircularProgressbar/,
+                'word',
+                'char',
+                'active',
+                'show',
+                'fade',
+              ],
+              deep: [
+                /vbox/,
+                /slick/,
+                /swal2/,
+                /splitting/,
+                /CircularProgressbar/,
+              ],
+            },
+          })
+        ] : [],
+      },
+    },
     build: {
       target: "esnext",
       cssCodeSplit: true,
@@ -70,9 +121,6 @@ export default defineConfig(({ mode }) => {
             if (id.includes('node_modules')) {
               if (id.includes('react-dom') || id.includes('react-router-dom') || id.includes('react/')) {
                 return 'vendor-core';
-              }
-              if (id.includes('framer-motion') || id.includes('animejs')) {
-                return 'vendor-animation';
               }
               if (id.includes('recharts') || id.includes('d3')) {
                 return 'vendor-charts';

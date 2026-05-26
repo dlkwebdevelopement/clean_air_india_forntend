@@ -30,7 +30,7 @@ import s1 from "../../../assets/images/gallery/Ste1.webp"
 import m11 from "../../../assets/images/gallery/modular-room1.webp"
 import m1 from "../../../assets/images/gallery/modular-room1.webp"
 import m2 from "../../../assets/images/gallery/modular-room2.webp"
-import { summary } from "framer-motion/client"
+
 
 export const galleryData = [
   {
