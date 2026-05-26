@@ -19,13 +19,6 @@ const LazySlider = ({ children, fallbackHeight = "300px", rootMargin = "200px" }
     const el = ref.current;
     if (!el) return;
 
-    // Already in viewport on mount (e.g. above-the-fold slider)
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight + 200) {
-      setIsVisible(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

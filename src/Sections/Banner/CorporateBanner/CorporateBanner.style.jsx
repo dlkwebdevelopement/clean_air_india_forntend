@@ -14,6 +14,8 @@ const CorporateBannerStyle = styled.section`
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    transform: translateZ(0); /* Force GPU acceleration */
+    will-change: transform;
   }
 
   /* Background Video */
@@ -25,6 +27,14 @@ const CorporateBannerStyle = styled.section`
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    transform: translateZ(0); /* Force GPU acceleration */
+    will-change: opacity;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  .video-bg.loaded {
+    opacity: 1;
   }
 
   /* Overlay */

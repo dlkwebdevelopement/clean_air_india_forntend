@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import CorporateBannerStyle from "./CorporateBanner.style";
@@ -7,6 +8,22 @@ import PosterImg from "../../../assets/images/corporate/corporate-banner-bg.webp
 import PosterImgMobile from "../../../assets/images/corporate/corporate-banner-bg-mobile.webp";
 
 const CorporateBanner = () => {
+  const [canPlayVideo, setCanPlayVideo] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  useEffect(() => {
+    // Delay video loading to allow LCP image to load and paint first
+    const timer = setTimeout(() => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(() => setCanPlayVideo(true));
+      } else {
+        window.requestAnimationFrame(() => setCanPlayVideo(true));
+      }
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -34,19 +51,22 @@ const CorporateBanner = () => {
           decoding="async"
         />
 
-        {/* Video Background */}
-        <video
-          className="video-bg"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster={PosterImgMobile}
-        >
-          <source src={BgVideoWebM} type="video/webm" />
-          <source src={BgVideoMP4} type="video/mp4" />
-        </video>
+        {/* Video Background - Loaded and played only after initial LCP paint */}
+        {canPlayVideo && (
+          <video
+            className={`video-bg ${isVideoPlaying ? "loaded" : ""}`}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster={PosterImgMobile}
+            onPlay={() => setIsVideoPlaying(true)}
+          >
+            <source src={BgVideoWebM} type="video/webm" />
+            <source src={BgVideoMP4} type="video/mp4" />
+          </video>
+        )}
 
         {/* Overlay */}
         <div className="overlay">

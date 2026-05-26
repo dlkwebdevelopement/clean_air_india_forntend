@@ -33,23 +33,32 @@ const HeaderCorporate = (props) => {
 
   // handle sticky header
   const HeaderSectionRef = useRef(null);
-  let lastScroll = 0;
+  const lastScroll = useRef(0);
+  const isSticky = useRef(false);
 
   const handleScroll = () => {
-    let currentScroll = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+    const currentScroll = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
     
     window.requestAnimationFrame(() => {
-      const bodySection = document.body;
-      let diffScroll = currentScroll - lastScroll;
+      const header = HeaderSectionRef.current;
+      if (!header) return;
 
-      if (diffScroll > 0 || currentScroll == 0) {
-        HeaderSectionRef.current?.classList.remove("sticky");
-        bodySection.classList.remove("nav-expanded");
-        setIsMobileMenu(false);
+      const diffScroll = currentScroll - lastScroll.current;
+
+      if (diffScroll > 0 || currentScroll === 0) {
+        if (isSticky.current) {
+          header.classList.remove("sticky");
+          document.body.classList.remove("nav-expanded");
+          setIsMobileMenu(false);
+          isSticky.current = false;
+        }
       } else {
-        HeaderSectionRef.current?.classList.add("sticky");
+        if (!isSticky.current) {
+          header.classList.add("sticky");
+          isSticky.current = true;
+        }
       }
-      lastScroll = currentScroll;
+      lastScroll.current = currentScroll;
     });
   };
 
