@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import anime from "animejs";
 import CryptoTokenBannerStyle from "./CryptoTokenBanner.style";
 import Splitting from "splitting";
 import ScrollOut from "scroll-out";
@@ -14,16 +13,6 @@ const CryptoTokenBanner = () => {
     Splitting();
     ScrollOut({
       targets: "[data-splitting]",
-    });
-
-    anime({
-      targets: "fadeInUp",
-      translateY: [50, 0], // Move from 50px below to the original position
-      scale: [0.9, 1], // Scale from 0.9 to 1
-      opacity: [0, 1], // Fade in from opacity 0 to 1
-      easing: "easeOutQuad", // Easing function
-      duration: 1000, // Duration of 1000ms
-      delay: 500, // Delay before animation starts
     });
   }, []);
 

@@ -95,9 +95,9 @@ const HeaderMain = (props) => {
                     <button
                       className="btn"
                       type="button"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target="#offcanvasStaco"
-                      aria-controls="offcanvasStaco"
+                      onClick={handleMobileMenu}
+                      aria-label="Open menu"
+                      aria-expanded={isMobileMenu}
                     >
                       <img height="16" width="20" src={MenuImg} alt="menu" />
                     </button>
@@ -195,7 +195,7 @@ const HeaderMain = (props) => {
       </HeaderStyleWrapper>
 
       {/* mobile menu */}
-      <MobileMenu />
+      <MobileMenu isOpen={isMobileMenu || isAnimating} onClose={handleMobileMenu} />
     </>
   );
 };
