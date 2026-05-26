@@ -19,14 +19,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <!-- Preload LCP Background Image with High Priority -->
-    <link
-      rel="preload"
-      as="image"
-      href="https://api.cleanairindia.com/uploads/images/corporate/corporate-banner-bg.webp"
-      fetchpriority="high"
-    />
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.cleanairindia.co/" />
 
@@ -45,38 +37,51 @@
     <meta name="twitter:description" content="Premier manufacturer and supplier of Cleanroom Systems, Laminar Air Flow Cabinets, Biosafety Cabinets, Fume Hoods, and Pass Boxes with 30+ years of expertise." />
     <meta name="twitter:image" content="https://www.cleanairindia.co/logo-blue-svg.svg" />
 
-    <!-- Google Fonts — loaded asynchronously to prevent render-blocking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Self-Hosted Fonts (Optimized for maximum speed, zero external DNS/TLS lookups) -->
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="/fonts/fonts.css"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="/fonts/fonts.css"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="/fonts/fonts.css"
       />
     </noscript>
 
     <!-- NOTE: reCAPTCHA removed from global head — lazily loaded only on Contact page via SayHello component -->
     <meta name="google-site-verification" content="I1h48xWcNQncUuWV4iGBvWR1N-W8yztWNaFtzj1Q264" />
  
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKJRERJLCC"></script>
+    <!-- Google tag (gtag.js) - Deferred and loaded lazily to maximize main thread performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-     
-      gtag('config', 'G-LKJRERJLCC');
+      window.addEventListener('load', function() {
+        const delayTimer = setTimeout(function() {
+          const loadTag = function() {
+            const script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-LKJRERJLCC";
+            script.async = true;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-LKJRERJLCC');
+          };
+          if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadTag);
+          } else {
+            loadTag();
+          }
+        }, 3000); // 3 seconds delay after page load to prioritize main thread FCP/LCP
+      });
     </script>
   </head>
 
