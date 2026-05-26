@@ -2,13 +2,8 @@ import { NavLink } from "react-router-dom";
 import CorporateBannerStyle from "./CorporateBanner.style";
 import BgVideoMP4 from "../../../assets/images/videos/10800_optimized.mp4";
 import BgVideoWebM from "../../../assets/images/videos/10800_optimized.webm";
-import PosterImg from "../../../assets/images/corporate/corporate-banner-bg.webp";
-import PosterImgMobile from "../../../assets/images/corporate/corporate-banner-bg-mobile.webp";
 
 const CorporateBanner = () => {
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-  const poster = isMobile ? PosterImgMobile : PosterImg;
-
   return (
     <>
       <CorporateBannerStyle className="coroprate-banner-section">
@@ -20,7 +15,6 @@ const CorporateBanner = () => {
           muted
           playsInline
           preload="auto"
-          poster={poster}
         >
           <source src={BgVideoWebM} type="video/webm" />
           <source src={BgVideoMP4} type="video/mp4" />
