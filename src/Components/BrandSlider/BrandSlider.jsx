@@ -1,10 +1,10 @@
 import BrandSliderStyleWrapper from "./BrandSlider.style";
-import SliderImg1 from "../../assets/images/brands/1.png";
-import SliderImg2 from "../../assets/images/brands/2.png";
-import SliderImg3 from "../../assets/images/brands/3.png";
-import SliderImg4 from "../../assets/images/brands/4.png";
-import SliderImg5 from "../../assets/images/brands/5.png";
-import SliderImg6 from "../../assets/images/brands/6.png";
+import SliderImg1 from "../../assets/images/brands/1.webp";
+import SliderImg2 from "../../assets/images/brands/2.webp";
+import SliderImg3 from "../../assets/images/brands/3.webp";
+import SliderImg4 from "../../assets/images/brands/4.webp";
+import SliderImg5 from "../../assets/images/brands/5.webp";
+import SliderImg6 from "../../assets/images/brands/6.webp";
 import ScrollAnimate from "../ScrollAnimate";
 
 const BrandSlider = ({ titleClass, sliderClass }) => {

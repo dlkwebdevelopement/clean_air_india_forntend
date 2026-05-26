@@ -1,14 +1,14 @@
 // Import images
-import brandImage1 from '../../../assets/images/brands/1.png';
-import brandImage2 from '../../../assets/images/brands/2.png';
-import brandImage3 from '../../../assets/images/brands/3.png';
-import brandImage4 from '../../../assets/images/brands/4.png';
-import brandImage5 from '../../../assets/images/brands/5.png';
-import brandImage6 from '../../../assets/images/brands/6.png';
-import brandImage7 from '../../../assets/images/brands/7.png';
-import brandImage8 from '../../../assets/images/brands/8.png';
-import brandImage9 from '../../../assets/images/brands/9.png';
-import brandImage10 from '../../../assets/images/brands/10.png';
+import brandImage1 from '../../../assets/images/brands/1.webp';
+import brandImage2 from '../../../assets/images/brands/2.webp';
+import brandImage3 from '../../../assets/images/brands/3.webp';
+import brandImage4 from '../../../assets/images/brands/4.webp';
+import brandImage5 from '../../../assets/images/brands/5.webp';
+import brandImage6 from '../../../assets/images/brands/6.webp';
+import brandImage7 from '../../../assets/images/brands/7.webp';
+import brandImage8 from '../../../assets/images/brands/8.webp';
+import brandImage9 from '../../../assets/images/brands/9.webp';
+import brandImage10 from '../../../assets/images/brands/10.webp';
 // Case studies data
 export const caseStudiesData = [
   { link: '#', image: brandImage1 },
