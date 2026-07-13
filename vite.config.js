@@ -72,7 +72,7 @@ export default defineConfig(({ mode }) => {
         ext: '.br',
       })
     ],
-    base: "./",
+    base: "/",
     server: { port: 3000 },
     optimizeDeps: {
       include: ['react-slick'],
