@@ -83,18 +83,27 @@ const App = () => {
         <Route path="/blog/laminar-airflow-systems-for-cleanroom-solutions-india" element={<Ourproduct1 />} />
         <Route path="/fume-exhaust-hood" element={<OurProduct3 />} />
         <Route path="/blog/fume-exhaust-hood" element={<OurProduct3 />} />
+        <Route path="/blog/laboratory-fume-hoods-laboratory-hoods-manufacturers-in-india" element={<OurProduct3 />} />
+        <Route path="/blog/walk-in-fume-hoods-manufacturers-in-chennai-and-india" element={<OurProduct3 />} />
+        <Route path="/blog/distillation-fume-hoods-manufacturers-in-chennai-and-india" element={<OurProduct3 />} />
         <Route path="/air-shower-system" element={<OurProduct4 />} />
         <Route path="/blog/air-shower-system" element={<OurProduct4 />} />
+        <Route path="/blog/air-shower-entry-system" element={<OurProduct4 />} />
         <Route path="/powder-dispensing-booth" element={<OurProduct5 />} />
         <Route path="/blog/powder-dispensing-booth" element={<OurProduct5 />} />
+        <Route path="/blog/powder-dispensing-booths-manufacturers-in-chennai-and-india" element={<OurProduct5 />} />
+        <Route path="/blog/powder-sampling-booths-manufacturers-in-chennai-and-india" element={<OurProduct5 />} />
         <Route path="/pass-box" element={<OurProduct6 />} />
         <Route path="/blog/pass-box" element={<OurProduct6 />} />
+        <Route path="/blog/pass-boxes-manufacturers-in-chennai-india-clean-air-systems" element={<OurProduct6 />} />
+        <Route path="/blog/static-pass-box-manufacturers-in-chennai-india" element={<OurProduct6 />} />
         <Route path="/sterile-garment-storage-cabinet" element={<OurProduct7 />} />
         <Route path="/blog/sterile-garment-storage-cabinet" element={<OurProduct7 />} />
         <Route path="/softwall-cleanrooms" element={<OurProduct9 />} />
         <Route path="/blog/softwall-cleanrooms" element={<OurProduct9 />} />
         <Route path="/modular-cleanroom" element={<OurProduct8 />} />
         <Route path="/blog/modular-cleanroom" element={<OurProduct8 />} />
+        <Route path="/blog/modular-cleanrooms" element={<OurProduct8 />} />
         <Route path="/reverse-flow-booth" element={<Ourproduct10 />} />
         <Route path="/blog/reverse-flow-booth" element={<Ourproduct10 />} />
         <Route path="/pharma-weighing-booths" element={<Ourproduct11 />} />
@@ -105,6 +114,7 @@ const App = () => {
         <Route path="/blog/fan-filter-units" element={<Ourproduct13 />} />
         <Route path="/powder-containment-booths" element={<Ourproduct14 />} />
         <Route path="/blog/powder-containment-booths" element={<Ourproduct14 />} />
+        <Route path="/blog/powder-containment-booths-manufacturers-in-chennai-india" element={<Ourproduct14 />} />
         <Route path="/home" element={<Corporate />} />
         <Route path="/recommended-practices-for-clean-rooms" element={<Ourrp1 />} />
         <Route path="/blog/recommended-practices-for-clean-rooms" element={<Ourrp1 />} />
