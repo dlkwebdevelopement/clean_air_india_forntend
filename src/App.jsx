@@ -77,8 +77,10 @@ const App = () => {
         <Route path="/blog/product2" element={<ProductPage2 />} />
         <Route path="/biosafety-cabinet" element={<OurProduct2 />} />
         <Route path="/blog/biosafety-cabinet" element={<OurProduct2 />} />
+        <Route path="/blog/biosafety-cabinets-class-ii-iii-a2-b2-manufacturers-in-india" element={<OurProduct2 />} />
         <Route path="/laminar-airflow" element={<Ourproduct1 />} />
         <Route path="/blog/laminar-airflow" element={<Ourproduct1 />} />
+        <Route path="/blog/laminar-airflow-systems-for-cleanroom-solutions-india" element={<Ourproduct1 />} />
         <Route path="/fume-exhaust-hood" element={<OurProduct3 />} />
         <Route path="/blog/fume-exhaust-hood" element={<OurProduct3 />} />
         <Route path="/air-shower-system" element={<OurProduct4 />} />
