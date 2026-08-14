@@ -74,24 +74,42 @@ const App = () => {
         <Route path="admin-list" element={<AdminList />} />
         <Route path="/blog-list" element={<BlogList />} />
         <Route path="/product2" element={<ProductPage2 />} />
+        <Route path="/blog/product2" element={<ProductPage2 />} />
         <Route path="/biosafety-cabinet" element={<OurProduct2 />} />
+        <Route path="/blog/biosafety-cabinet" element={<OurProduct2 />} />
         <Route path="/laminar-airflow" element={<Ourproduct1 />} />
+        <Route path="/blog/laminar-airflow" element={<Ourproduct1 />} />
         <Route path="/fume-exhaust-hood" element={<OurProduct3 />} />
+        <Route path="/blog/fume-exhaust-hood" element={<OurProduct3 />} />
         <Route path="/air-shower-system" element={<OurProduct4 />} />
+        <Route path="/blog/air-shower-system" element={<OurProduct4 />} />
         <Route path="/powder-dispensing-booth" element={<OurProduct5 />} />
+        <Route path="/blog/powder-dispensing-booth" element={<OurProduct5 />} />
         <Route path="/pass-box" element={<OurProduct6 />} />
+        <Route path="/blog/pass-box" element={<OurProduct6 />} />
         <Route path="/sterile-garment-storage-cabinet" element={<OurProduct7 />} />
+        <Route path="/blog/sterile-garment-storage-cabinet" element={<OurProduct7 />} />
         <Route path="/softwall-cleanrooms" element={<OurProduct9 />} />
+        <Route path="/blog/softwall-cleanrooms" element={<OurProduct9 />} />
         <Route path="/modular-cleanroom" element={<OurProduct8 />} />
+        <Route path="/blog/modular-cleanroom" element={<OurProduct8 />} />
         <Route path="/reverse-flow-booth" element={<Ourproduct10 />} />
+        <Route path="/blog/reverse-flow-booth" element={<Ourproduct10 />} />
         <Route path="/pharma-weighing-booths" element={<Ourproduct11 />} />
+        <Route path="/blog/pharma-weighing-booths" element={<Ourproduct11 />} />
         <Route path="/downflow-booth" element={<Ourproduct12 />} />
+        <Route path="/blog/downflow-booth" element={<Ourproduct12 />} />
         <Route path="/fan-filter-units" element={<Ourproduct13 />} />
+        <Route path="/blog/fan-filter-units" element={<Ourproduct13 />} />
         <Route path="/powder-containment-booths" element={<Ourproduct14 />} />
+        <Route path="/blog/powder-containment-booths" element={<Ourproduct14 />} />
         <Route path="/home" element={<Corporate />} />
         <Route path="/recommended-practices-for-clean-rooms" element={<Ourrp1 />} />
+        <Route path="/blog/recommended-practices-for-clean-rooms" element={<Ourrp1 />} />
         <Route path="/recommended-practices-for-fume-exhaust-hoods" element={<Ourrp2 />} />
+        <Route path="/blog/recommended-practices-for-fume-exhaust-hoods" element={<Ourrp2 />} />
         <Route path="/recommended-practices-for-biosafety-cabinets" element={<Ourrp3 />} />
+        <Route path="/blog/recommended-practices-for-biosafety-cabinets" element={<Ourrp3 />} />
         <Route path="/accreditation" element={<Cer />} />
         <Route path="/gallery" element={<Gar />} />
         <Route path="/products" element={<Pro />} />
