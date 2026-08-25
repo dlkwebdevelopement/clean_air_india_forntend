@@ -42,6 +42,17 @@ async function prerender() {
     process.exit(1);
   }
   
+  // Vite's compression plugin compresses index.html into index.html.gz and .br BEFORE we modify it.
+  // Because Nginx has gzip_static enabled, it will serve the old compressed files, hiding our new canonical tags.
+  // We must delete the compressed html files so Nginx serves our modified HTML (or compresses it on the fly).
+  ['index.html.gz', 'index.html.br', 'sitemap.html.gz', 'sitemap.html.br'].forEach(file => {
+    const filePath = path.join(distDir, file);
+    if (fs.existsSync(filePath)) {
+      fs.unlinkSync(filePath);
+      console.log(`Deleted stale compressed file: ${file}`);
+    }
+  });
+  
   const indexHtml = fs.readFileSync(indexPath, 'utf-8');
   const allRoutes = [...staticRoutes];
 
