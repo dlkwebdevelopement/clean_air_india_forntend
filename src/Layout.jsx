@@ -112,7 +112,14 @@ const Layout = ({ pageTitle, scrollVariant, children }) => {
 
   const title = matchedMeta.title || pageTitle || "Clean Air Systems India | Cleanroom Solutions & Equipment";
   const description = matchedMeta.description || "Premier manufacturer of cleanroom systems, laminar air flow systems, biosafety cabinets, fume hoods, and pass boxes with 30+ years of excellence.";
-  const canonicalUrl = `https://www.cleanairindia.com${currentPath === "/" ? "" : currentPath}`;
+  
+  // Normalize path to prevent duplicate slashes and remove trailing slash (except for root)
+  const normalizedPath = currentPath.replace(/\/+/g, '/').replace(/(.+)\/$/, '$1');
+  const canonicalUrl = `https://www.cleanairindia.com${normalizedPath === "/" ? "/" : normalizedPath}`;
+
+  // Do not generate canonical URLs for private/admin pages
+  const excludedPrefixes = ['/admin', '/admin-list', '/dashboard', '/create-childadmin', '/create-new-blog', '/sign-up'];
+  const isExcluded = excludedPrefixes.some(prefix => currentPath === prefix || currentPath.startsWith(prefix + '/'));
 
   return (
     <HelmetProvider>
@@ -124,15 +131,15 @@ const Layout = ({ pageTitle, scrollVariant, children }) => {
         <meta name="description" content={description} />
 
         {/* Canonical URL */}
-        <link rel="canonical" href={canonicalUrl} />
+        {!isExcluded && <link rel="canonical" href={canonicalUrl} />}
 
         {/* Open Graph / Facebook Meta Tags */}
-        <meta property="og:url" content={canonicalUrl} />
+        {!isExcluded && <meta property="og:url" content={canonicalUrl} />}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
 
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:url" content={canonicalUrl} />
+        {!isExcluded && <meta name="twitter:url" content={canonicalUrl} />}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
 
