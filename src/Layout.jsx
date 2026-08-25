@@ -1,6 +1,5 @@
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
 import ScrollTop from "./Components/ScrollTop/ScrollTop";
+import SEO from "./Components/SEO";
 
 const metaDataMap = {
   "/": {
@@ -112,45 +111,11 @@ const Layout = ({ pageTitle, scrollVariant, children }) => {
 
   const title = matchedMeta.title || pageTitle || "Clean Air Systems India | Cleanroom Solutions & Equipment";
   const description = matchedMeta.description || "Premier manufacturer of cleanroom systems, laminar air flow systems, biosafety cabinets, fume hoods, and pass boxes with 30+ years of excellence.";
-  
-  // Normalize path to prevent duplicate slashes and remove trailing slash (except for root)
-  const normalizedPath = currentPath.replace(/\/+/g, '/').replace(/(.+)\/$/, '$1');
-  const canonicalUrl = `https://www.cleanairindia.com${normalizedPath === "/" ? "/" : normalizedPath}`;
-
-  // Do not generate canonical URLs for private/admin pages
-  const excludedPrefixes = ['/admin', '/admin-list', '/dashboard', '/create-childadmin', '/create-new-blog', '/sign-up'];
-  const isExcluded = excludedPrefixes.some(prefix => currentPath === prefix || currentPath.startsWith(prefix + '/'));
 
   return (
-    <HelmetProvider>
-      <Helmet>
-        {/* title tag */}
-        <title>{title}</title>
-
-        {/* description tag */}
-        <meta name="description" content={description} />
-
-        {/* Canonical URL */}
-        {!isExcluded && <link rel="canonical" href={canonicalUrl} />}
-
-        {/* Open Graph / Facebook Meta Tags */}
-        {!isExcluded && <meta property="og:url" content={canonicalUrl} />}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-
-        {/* Twitter Card Meta Tags */}
-        {!isExcluded && <meta name="twitter:url" content={canonicalUrl} />}
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-
-        {/* favicon included here  */}
-        <link rel="shortcut icon" href="/logo-blue-svg.svg" type="image/x-icon" />
-
-        {/* apple touch icon included here */}
-        <link rel="apple-touch-icon" href="/favicon.png" />
-
-        {/* Fonts loaded in index.html <head> for optimal performance — not here */}
-      </Helmet>
+    <>
+      <SEO title={title} description={description} />
+      
       {/* overlay while mobile menu open */}
       <div className="staco-overly-bg"></div>
 
@@ -159,7 +124,7 @@ const Layout = ({ pageTitle, scrollVariant, children }) => {
 
       {/* scroll top component */}
       {/* <ScrollTop variant={scrollVariant} /> */}
-    </HelmetProvider>
+    </>
   );
 };
 

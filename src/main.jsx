@@ -4,6 +4,7 @@ import { BrowserRouter, useLocation } from "react-router-dom";
 import { ThemeProvider as TemplateProvider } from "styled-components";
 import App from "./App.jsx";
 import TagManager from "react-gtm-module";
+import { HelmetProvider } from "react-helmet-async";
 
 import TemplateStyles from "./assets/styles/TemplateStyles.js";
 import GlobalStyles from "./assets/styles/GlobalStyles";
@@ -40,11 +41,13 @@ function GTMRouteTracker() {
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <TemplateProvider theme={TemplateStyles}>
-      <BrowserRouter>
-        <GlobalStyles />
-        <GTMRouteTracker />
-        <App />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <GlobalStyles />
+          <GTMRouteTracker />
+          <App />
+        </BrowserRouter>
+      </HelmetProvider>
     </TemplateProvider>
   </React.StrictMode>
 );
