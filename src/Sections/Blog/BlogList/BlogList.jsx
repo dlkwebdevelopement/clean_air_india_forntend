@@ -7,6 +7,27 @@ import Pagination from "../../../Components/Pagination/Pagination";
 import Sidebar from "../Sidebar/Sidebar";
 import { getBlogImageUrl } from "../../../utils/image";
 
+const staticBlogs = [
+  { _id: "static1", slug: "biosafety-cabinets-class-ii-iii-a2-b2-manufacturers-in-india", title: "Biosafety Cabinets Class II, III, A2, B2 Manufacturers in India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Explore our range of high-quality Biosafety Cabinets Class II, III, A2, and B2 manufactured in India." },
+  { _id: "static2", slug: "laminar-airflow-systems-for-cleanroom-solutions-india", title: "Laminar Airflow Systems for Cleanroom Solutions India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Discover our premium Laminar Airflow Systems designed for optimal cleanroom solutions in India." },
+  { _id: "static3", slug: "laboratory-fume-hoods-laboratory-hoods-manufacturers-in-india", title: "Laboratory Fume Hoods Manufacturers in India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Leading manufacturers of Laboratory Fume Hoods and extraction systems in India." },
+  { _id: "static4", slug: "air-shower-entry-system", title: "Air Shower Entry System", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "High-performance Air Shower Entry Systems for maintaining cleanroom integrity." },
+  { _id: "static5", slug: "powder-dispensing-booths-manufacturers-in-chennai-and-india", title: "Powder Dispensing Booths Manufacturers in Chennai and India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Top quality powder dispensing and sampling booths manufactured in Chennai, India." },
+  { _id: "static6", slug: "pass-boxes-manufacturers-in-chennai-india-clean-air-systems", title: "Pass Boxes Manufacturers in Chennai, India - Clean Air Systems", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Dynamic and static pass boxes for safe material transfer in cleanrooms." },
+  { _id: "static7", slug: "modular-cleanrooms", title: "Modular Cleanrooms", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Custom-built modular cleanrooms and softwall cleanroom solutions." },
+  { _id: "static8", slug: "downflow-booth", title: "Downflow Booths", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "High-quality downflow booths for cleanroom operations." },
+  { _id: "static9", slug: "pharma-weighing-booths", title: "Pharma Weighing Booths", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Precision pharma weighing booths for pharmaceutical industries." },
+  { _id: "static10", slug: "reverse-flow-booth", title: "Reverse Flow Booths", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Advanced reverse flow booths for optimal operator protection." },
+  { _id: "static11", slug: "walk-in-fume-hoods-manufacturers-in-chennai-and-india", title: "Walk-in Fume Hoods Manufacturers in Chennai and India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Custom walk-in fume hoods for large-scale laboratory applications." },
+  { _id: "static12", slug: "distillation-fume-hoods-manufacturers-in-chennai-and-india", title: "Distillation Fume Hoods Manufacturers in Chennai and India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Specialized distillation fume hoods for chemical extraction processes." },
+  { _id: "static13", slug: "powder-containment-booths-manufacturers-in-chennai-india", title: "Powder Containment Booths Manufacturers in Chennai, India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Effective powder containment booths for safe material handling." },
+  { _id: "static14", slug: "powder-sampling-booths-manufacturers-in-chennai-and-india", title: "Powder Sampling Booths Manufacturers in Chennai and India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Reliable powder sampling booths ensuring safety and precision." },
+  { _id: "static15", slug: "static-pass-box-manufacturers-in-chennai-india", title: "Static Pass Box Manufacturers in Chennai, India", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "High-quality static pass boxes for controlled environment transfers." },
+  { _id: "static16", slug: "fan-filter-units", title: "Fan Filter Units", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Efficient fan filter units for maintaining cleanroom air quality." },
+  { _id: "static17", slug: "sterile-garment-storage-cabinet", title: "Sterile Garment Storage Cabinet", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Sterile garment storage cabinets to maintain garment integrity." },
+  { _id: "static18", slug: "softwall-cleanrooms", title: "Softwall Cleanrooms", category: { name: "Products" }, createdAt: new Date().toISOString(), excerpt: "Flexible and modular softwall cleanrooms for varied applications." }
+];
+
 const BlogList = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -115,39 +136,56 @@ useEffect(() => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      // Build query parameters
       const queryParams = new URLSearchParams({
         page: currentPage.toString(),
         limit: itemsPerPage.toString(),
         status: 'published'
       });
 
-      // Add filters to query parameters
       if (filters.category) queryParams.append('category', filters.category);
       if (filters.tag) queryParams.append('tag', filters.tag);
       if (filters.search) queryParams.append('search', filters.search);
 
       const apiUrl = import.meta.env.VITE_API_URL || 'https://api.cleanairindia.com/api';
-      console.log('Fetching from:', apiUrl);
       
-      const response = await fetch(`${apiUrl}/blogs?${queryParams.toString()}`, {
-        // headers: {
-        //   'Authorization': `Bearer ${token}`
-        // }
-      });
+      const response = await fetch(`${apiUrl}/blogs?${queryParams.toString()}`);
       
-      if (!response.ok) {
-        throw new Error('Failed to fetch blogs');
+      let data = { blogs: [], pagination: { pages: 0, total: 0 } };
+      if (response.ok) {
+        data = await response.json();
+      }
+
+      let finalBlogs = data.blogs || [];
+      let total = data.pagination?.total || 0;
+      
+      if (!filters.search && !filters.category && !filters.tag) {
+        if (finalBlogs.length === 0) {
+          const startIndex = (currentPage - 1) * itemsPerPage;
+          finalBlogs = staticBlogs.slice(startIndex, startIndex + itemsPerPage);
+          total = staticBlogs.length;
+        } else {
+          if (currentPage === 1) {
+            finalBlogs = [...staticBlogs, ...finalBlogs];
+            total += staticBlogs.length;
+          }
+        }
       }
       
-      const data = await response.json();
-      console.log('Fetched blogs data:', data);
-      
-      setBlogs(data.blogs || []);
-      setTotalPages(data.pagination?.pages || 1);
-      setTotalItems(data.pagination?.total || 0);
+      setBlogs(finalBlogs);
+      setTotalPages(Math.ceil(total / itemsPerPage) || 1);
+      setTotalItems(total);
     } catch (error) {
       console.error('Error fetching blogs:', error);
+      if (!filters.search && !filters.category && !filters.tag) {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        setBlogs(staticBlogs.slice(startIndex, startIndex + itemsPerPage));
+        setTotalPages(Math.ceil(staticBlogs.length / itemsPerPage) || 1);
+        setTotalItems(staticBlogs.length);
+      } else {
+        setBlogs([]);
+        setTotalPages(1);
+        setTotalItems(0);
+      }
     } finally {
       setLoading(false);
     }
@@ -339,7 +377,14 @@ useEffect(() => {
           {/* blog section */}
           <div className="col-lg-8">
             <div className="latest-blog-content">
-              {blogs.length === 0 ? (
+              {loading ? (
+                <div className="loading-container" style={{ textAlign: 'center', padding: '100px 0' }}>
+                  <div className="spinner-border" style={{ width: '3rem', height: '3rem', color: '#0095ff' }} role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
+                  <p style={{ marginTop: '15px', color: '#666' }}>Loading articles...</p>
+                </div>
+              ) : blogs.length === 0 ? (
                 <div className="no-blogs-found">
                   <h3>No blogs found</h3>
                   <p>Try adjusting your filters or search terms.</p>
@@ -353,7 +398,7 @@ useEffect(() => {
                     <div key={blog._id} className="col-md-6">
                       <BlogItem 
                         id={blog.slug}
-                        thumbnail={getBlogImageUrl(blog.featuredImage)} 
+                        thumbnail={blog.featuredImage} 
                         category={blog.category?.name || "Uncategorized"} 
                         date={new Date(blog.createdAt).toLocaleDateString()} 
                         title={blog.title}

@@ -6,7 +6,6 @@ import { getBlogImageUrl } from "../../../utils/image";
 
 const BlogItem = ({ id, thumbnail, category, date, title, details, delay }) => {
   return (
-    <ScrollAnimate delay={delay}>
       <BlogItemStyleWrapper>
         <NavLink to={`/blog/${id}`} className="letest-blog-img">
           <img src={getBlogImageUrl(thumbnail)} alt="post thumbnail" loading="lazy"/>
@@ -27,7 +26,6 @@ const BlogItem = ({ id, thumbnail, category, date, title, details, delay }) => {
           </div>
         </div>
       </BlogItemStyleWrapper>
-    </ScrollAnimate>
   );
 };
 
