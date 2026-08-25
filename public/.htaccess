@@ -2,7 +2,7 @@
   RewriteEngine On
   RewriteBase /
 
-  # Redirect index.php to the main homepage
+  # Redirect /index.php to the main homepage
   RewriteCond %{THE_REQUEST} \s/+index\.php(?:[\s?]|$) [NC]
   RewriteRule ^index\.php$ / [R=301,L]
 
